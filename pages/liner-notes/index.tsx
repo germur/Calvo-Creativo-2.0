@@ -1,125 +1,178 @@
+import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
-import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
 
-export async function getStaticProps() {
-    const allPostsData = getSortedPostsData();
-    return {
-        props: {
-            allPostsData,
-        },
-    };
-}
+// Mock Data para el diseño visual si no hay posts reales aun
+const MOCK_POSTS = [
+    {
+        id: 'retail-giant',
+        date: '2025-01-10',
+        title: 'Cómo llevamos a Retail Giant de 0 a 100k visitas.',
+        subtitle: 'Un desglose técnico de la arquitectura de la info y la estrategia long-tail.',
+        client: 'E-COMMERCE A',
+        duration: '5:00 READ',
+        track: '01',
+        type: 'CASOS DE ÉXITO',
+        metric: 'TRAFFIC: HOT',
+        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=300'
+    },
+    {
+        id: 'knockout-tecnico',
+        date: '2025-01-05',
+        title: 'El Knockout Técnico: Recuperación de penalización.',
+        subtitle: 'Análisis forense de una caída del 60% y cómo revertimos la situación en 90 días.',
+        client: 'FIGHTER BRAND',
+        duration: '7:12 READ',
+        track: '02',
+        type: 'GUÍAS TÉCNICAS',
+        metric: 'TRAFFIC: STEADY',
+        img: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=300'
+    },
+    {
+        id: 'local-seo',
+        date: '2024-12-28',
+        title: 'SEO Local: Dominando el Octágono de Google Maps.',
+        subtitle: 'Estrategias hiperlocales para franquicias de gimnasios y dojos.',
+        client: 'GYM CHAIN',
+        duration: '4:20 READ',
+        track: '03',
+        type: 'CASOS DE ÉXITO',
+        metric: 'TRAFFIC: RISING',
+        img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=300'
+    }
+];
 
-export default function Blog({ allPostsData }: { allPostsData: any[] }) {
-    // Mock data for demo purposes if no files found, seamlessly mixed
-    const demoPosts = [
-        { id: 'mock-1', title: 'Cómo llevamos a Retail Giant de 0 a 100k visitas', category: 'Casos de Éxito', time: '5:00 READ', traffic: 'HOT', link: '#' },
-        { id: 'mock-2', title: 'El Knockout Técnico: Recuperación de penalización', category: 'Guías Técnicas', time: '7:12 READ', traffic: 'STEADY', link: '#' },
-        { id: 'mock-3', title: 'SEO Local: Dominando el Octágono de Maps', category: 'Casos de Éxito', time: '4:20 READ', traffic: 'RISING', link: '#' },
-    ];
-
-    const realPosts = allPostsData.map((post, idx) => ({
-        id: post.id,
-        title: post.title,
-        category: 'Estrategia', // Default category for MD files
-        time: '10:00 READ',
-        traffic: 'HOT',
-        link: `/liner-notes/${post.id}`
-    }));
-
-    const posts = [...realPosts, ...demoPosts].map((p, i) => ({ ...p, track: String(i + 1).padStart(2, '0') }));
-
+export default function LinerNotes() {
     return (
         <>
-            <SeoHead title="Liner Notes - Blog" description="Artículos sobre SEO, estrategia y tecnología." />
-            <div className="flex min-h-screen flex-col bg-paper text-ink selection:bg-primary selection:text-black font-display">
-                <Navigation />
-                <main className="flex-grow py-16 px-6 md:px-12">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="border-b-4 border-ink pb-8 mb-12">
-                            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-                                <div className="flex flex-col gap-2">
-                                    <span className="inline-block bg-primary text-black px-2 py-1 text-[10px] font-mono font-bold uppercase w-fit">Stereo LP • 33⅓ RPM</span>
-                                    <h1 className="text-5xl md:text-7xl font-headline leading-[0.85] tracking-tighter uppercase text-ink">
-                                        Notas de Producción<br />y Archivos
-                                    </h1>
-                                    <p className="text-lg font-mono text-ink/60 italic">(La Contraportada: Categorías, Tags & Artículos de Fondo)</p>
-                                </div>
-                                <div className="text-right font-mono text-xs text-ink/40 leading-relaxed border-r-2 border-primary pr-4">
-                                    <p>PRODUCED BY: VIBECODING STUDIOS</p>
-                                    <p>EXECUTIVE PRODUCER: THE ALGORITHM</p>
-                                    <p className="text-primary font-bold mt-1 uppercase tracking-widest">Vol. 2 — "Salsa Dura"</p>
-                                </div>
-                            </div>
+            <SeoHead title="Liner Notes: El Blog | Calvo Creativo" />
+            <Navigation />
+
+            <main className="min-h-screen bg-[#f2efe9] font-sans pt-12 pb-24 px-4 md:px-8">
+
+                <div className="max-w-6xl mx-auto border-t-4 border-black pt-8">
+
+                    {/* Header: Vinilo Back Cover Style */}
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+                        <div>
+                            <div className="bg-[#d32f2f] text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 inline-block mb-4">Stereo LP • 33⅓ RPM</div>
+                            <h1 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-4">
+                                Notas de Producción<br />y Archivos
+                            </h1>
+                            <p className="font-mono text-gray-500 uppercase tracking-wider text-sm">
+                                (La Contraportada: Categorías, Tags & Artículos de Fondo)
+                            </p>
                         </div>
 
-                        {/* Side A Section */}
-                        <div className="mb-16">
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className="w-12 h-12 bg-ink text-white rounded-full flex items-center justify-center font-headline text-2xl">A</div>
-                                <h2 className="text-3xl font-headline uppercase tracking-tight">Side A: Casos de Éxito</h2>
-                                <div className="h-1 bg-ink flex-grow ml-4"></div>
-                            </div>
+                        <div className="text-right font-mono text-xs text-gray-400 uppercase leading-relaxed border-l-2 border-gray-300 pl-4">
+                            <p>Produced by: Vibecoding Studios</p>
+                            <p>Executive Producer: The Algorithm</p>
+                            <p>Recorded in: Santiago / NYC / Cloud</p>
+                            <p className="text-[#d32f2f] font-bold">Vol. 2 - "Salsa Dura"</p>
+                        </div>
+                    </div>
 
-                            <div className="flex flex-col border-2 border-ink bg-white/50">
-                                {posts.map((post, idx) => (
-                                    <Link href={post.link} key={idx} className="group flex flex-col md:flex-row border-b border-ink/10 last:border-0 hover:bg-primary/5 transition-colors p-6 gap-6 items-center">
-                                        <div className="w-full md:w-40 aspect-square bg-gray-200 grayscale contrast-125 overflow-hidden border border-ink/20 relative">
-                                            {/* Placeholder image generator */}
-                                            <div className="absolute inset-0 bg-gray-300 flex items-center justify-center font-headline text-gray-400 text-4xl opacity-50">{idx + 1}</div>
-                                        </div>
-                                        <div className="flex-grow flex flex-col justify-between h-full w-full">
-                                            <div className="flex justify-between items-center mb-2">
-                                                <span className="font-mono text-primary font-bold text-xs">TRACK {post.track}</span>
-                                                <span className="text-[10px] border border-ink px-2 py-0.5 rounded-full uppercase font-bold">{post.category}</span>
-                                            </div>
-                                            <h3 className="text-2xl font-headline group-hover:text-primary transition-colors cursor-pointer mb-2 leading-tight">
-                                                {post.title}
-                                            </h3>
-                                            <div className="flex items-center justify-between mt-4">
-                                                <div className="flex gap-4 font-mono text-[10px] uppercase font-bold text-ink/50">
-                                                    <span>Client: Internal</span>
-                                                    <span>{post.time}</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <span className={`text-[10px] font-mono font-bold uppercase ${post.traffic === 'HOT' ? 'text-primary' : 'text-ink/40'}`}>Traffic: {post.traffic}</span>
-                                                    <div className="flex items-end gap-0.5 h-6">
-                                                        {[...Array(5)].map((_, i) => (
-                                                            <div key={i} className={`w-1 ${post.traffic === 'HOT' ? 'bg-primary' : 'bg-ink/30'}`} style={{ height: `${Math.random() * 100}%` }}></div>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                ))}
-                            </div>
+                    {/* Side A: Main Articles */}
+                    <div className="mb-20">
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="size-12 bg-black text-white rounded-full flex items-center justify-center font-black text-2xl">A</div>
+                            <h2 className="text-3xl font-bold uppercase tracking-tight">Side A: Casos de Éxito <span className="text-[#d32f2f] font-normal">(Sesiones de Grabación)</span></h2>
+                            <div className="h-1 bg-black flex-1"></div>
                         </div>
 
-                        {/* Side B Newsletter */}
+                        <div className="grid grid-cols-1 gap-0 border-t-2 border-gray-200">
+                            {MOCK_POSTS.map((post) => (
+                                <Link href={`/liner-notes/${post.id}`} key={post.id} className="group bg-white grid grid-cols-1 md:grid-cols-12 gap-6 p-6 border-b-2 border-gray-200 hover:bg-[#fffdf5] transition-colors relative overflow-hidden">
+
+                                    {/* Image Vinyl Effect */}
+                                    <div className="md:col-span-3 aspect-video md:aspect-square bg-gray-200 overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
+                                        <img src={post.img} alt={post.title} className="w-full h-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
+                                        <div className="absolute bottom-2 left-2 text-white font-mono text-[10px] uppercase">{post.track}</div>
+                                    </div>
+
+                                    <div className="md:col-span-7 flex flex-col justify-center">
+                                        <div className="flex justify-between items-center mb-2">
+                                            <span className="text-[#d32f2f] font-bold text-xs uppercase tracking-widest">Track {post.track}</span>
+                                            <span className="border border-gray-400 rounded-full px-2 py-0.5 text-[10px] uppercase font-bold text-gray-500">{post.type}</span>
+                                        </div>
+                                        <h3 className="text-2xl md:text-4xl font-black leading-tight mb-2 group-hover:text-[#d32f2f] transition-colors">{post.title}</h3>
+                                        <p className="font-mono text-gray-500 text-sm">{post.subtitle}</p>
+
+                                        <div className="mt-6 flex gap-6 font-mono text-[10px] uppercase text-gray-400">
+                                            <div>
+                                                <span className="block text-gray-300">Client</span>
+                                                <span className="text-black font-bold font-sans">{post.client}</span>
+                                            </div>
+                                            <div>
+                                                <span className="block text-gray-300">Duration</span>
+                                                <span className="text-black font-bold font-sans">{post.duration}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="md:col-span-2 flex flex-col justify-end items-end">
+                                        <div className="text-[9px] font-bold text-[#d32f2f] uppercase tracking-widest mb-1">{post.metric}</div>
+                                        {/* Audio Viz Bars */}
+                                        <div className="flex items-end gap-1 h-8">
+                                            {[30, 60, 45, 80, 50, 90, 40].map((h, i) => (
+                                                <div key={i} className="w-1 bg-[#d32f2f]" style={{ height: `${h}%` }}></div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Side B: Deep Cuts */}
+                    <div>
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="size-12 bg-white border-2 border-black text-black rounded-full flex items-center justify-center font-black text-2xl">B</div>
+                            <h2 className="text-3xl font-bold uppercase tracking-tight">Side B: Deep Cuts <span className="text-[#d32f2f] font-normal">(Editoriales & Guías)</span></h2>
+                            <div className="h-1 bg-gray-300 border-t border-dashed border-gray-400 flex-1"></div>
+                        </div>
+
                         <div className="grid md:grid-cols-2 gap-8">
-                            <div className="bg-ink text-white p-8 rounded-sm">
-                                <h3 className="text-2xl font-headline uppercase text-primary mb-4 italic">Bonus Track: Newsletter</h3>
-                                <p className="text-sm font-mono text-white/60 mb-6">Recibe las Liner Notes directamente en tu bandeja de entrada. Sin spam, solo ritmo puro.</p>
-                                <div className="flex gap-2">
-                                    <input className="flex-grow bg-transparent border-b border-white/30 font-mono text-sm px-2 focus:border-primary outline-none" placeholder="email@dominio.com" />
-                                    <button className="bg-primary text-black font-headline px-4 py-2 uppercase text-sm hover:bg-white transition-colors">Join</button>
+                            {[
+                                { title: 'La Rima Interna del Link Building', track: '04', snippet: '¿Por qué construir enlaces es como escribir un verso de 16 barras?' },
+                                { title: 'Core Web Vitals: El Ritmo Cardiaco', track: '05', snippet: 'Si tu sitio no carga rápido, has perdido la audiencia antes del coro.' }
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white p-8 border border-gray-200 hover:border-[#d32f2f] transition-all group cursor-pointer relative">
+                                    <div className="flex items-center gap-2 mb-4 text-[#d32f2f]">
+                                        <span className="material-symbols-outlined text-sm">mic</span>
+                                        <span className="text-[10px] font-bold uppercase tracking-widest">Track {item.track}</span>
+                                    </div>
+                                    <h3 className="text-xl font-black uppercase mb-3 leading-snug">{item.title}</h3>
+                                    <p className="font-mono text-xs text-gray-500 leading-relaxed mb-8">{item.snippet}</p>
+                                    <div className="absolute bottom-6 right-6">
+                                        <span className="material-symbols-outlined text-[#d32f2f] group-hover:scale-125 transition-transform">play_circle_filled</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="bg-primary/10 border-2 border-dashed border-primary p-8 flex flex-col justify-center">
-                                <span className="material-symbols-outlined text-4xl text-primary mb-2">graphic_eq</span>
-                                <h4 className="font-headline text-xl uppercase mb-1">Mezcla cultural</h4>
-                                <p className="text-xs font-mono text-ink/60 italic">Mezclando estrategias SEO pesadas con ritmo cultural. Sin autotune.</p>
+                            ))}
+
+                            {/* Newsletter Box */}
+                            <div className="bg-[#fce4ec] border-2 border-dashed border-[#d32f2f] p-8">
+                                <div className="flex items-center gap-2 text-[#d32f2f] mb-2">
+                                    <span className="material-symbols-outlined text-sm">radio</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-widest">Bonus Track</span>
+                                </div>
+                                <h3 className="font-black text-xl mb-2">Subscribe to the Newsletter</h3>
+                                <p className="font-mono text-xs text-gray-500 mb-4">Get the liner notes directly in your inbox. No spam, just pure rhythm.</p>
+                                <div className="flex gap-2">
+                                    <input type="email" placeholder="email@domain.com" className="bg-white border text-sm p-2 flex-1 font-mono outline-none" />
+                                    <button className="bg-[#d32f2f] text-white font-bold text-xs uppercase px-4 hover:bg-black transition-colors">Join</button>
+                                </div>
                             </div>
                         </div>
 
                     </div>
-                </main>
-                <Footer />
-            </div>
+
+                </div>
+            </main>
+            <Footer />
         </>
     );
 }
