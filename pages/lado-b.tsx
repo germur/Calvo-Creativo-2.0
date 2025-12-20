@@ -77,10 +77,10 @@ export default function LadoB() {
 
             window.speechSynthesis.speak(utterance);
 
-        } catch (error) {
+        } catch (error: any) {
             console.error("Error generating demo:", error);
             setIsLoading(false);
-            alert("Hubo un error conectando con el estudio. Inténtalo de nuevo.");
+            alert(`Error técnico detalle: ${error.message || JSON.stringify(error)}. Por favor verifica tu API Key en Netlify.`);
         }
     };
 
