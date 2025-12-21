@@ -3,174 +3,233 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
 import { getSortedPostsData } from '@/lib/posts';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
-// Mock Data para el diseño visual si no hay posts reales aun
-const MOCK_POSTS = [
-    {
-        id: 'retail-giant',
-        date: '2025-01-10',
-        title: 'Cómo llevamos a Retail Giant de 0 a 100k visitas.',
-        subtitle: 'Un desglose técnico de la arquitectura de la info y la estrategia long-tail.',
-        client: 'E-COMMERCE A',
-        duration: '5:00 READ',
-        track: '01',
-        type: 'CASOS DE ÉXITO',
-        metric: 'TRAFFIC: HOT',
-        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=300'
-    },
-    {
-        id: 'knockout-tecnico',
-        date: '2025-01-05',
-        title: 'El Knockout Técnico: Recuperación de penalización.',
-        subtitle: 'Análisis forense de una caída del 60% y cómo revertimos la situación en 90 días.',
-        client: 'FIGHTER BRAND',
-        duration: '7:12 READ',
-        track: '02',
-        type: 'GUÍAS TÉCNICAS',
-        metric: 'TRAFFIC: STEADY',
-        img: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=300'
-    },
-    {
-        id: 'local-seo',
-        date: '2024-12-28',
-        title: 'SEO Local: Dominando el Octágono de Google Maps.',
-        subtitle: 'Estrategias hiperlocales para franquicias de gimnasios y dojos.',
-        client: 'GYM CHAIN',
-        duration: '4:20 READ',
-        track: '03',
-        type: 'CASOS DE ÉXITO',
-        metric: 'TRAFFIC: RISING',
-        img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=300'
-    }
-];
+// Define the Post type
+type Post = {
+    id: string;
+    date: string;
+    title: string;
+    excerpt?: string;
+    tags?: string[];
+    [key: string]: any;
+};
 
-export default function LinerNotes() {
+export async function getStaticProps() {
+    const allPostsData = getSortedPostsData();
+    return {
+        props: {
+            allPostsData,
+        },
+    };
+}
+
+export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
+    // Blog Schema
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Liner Notes | Ensayos sobre SEO, IA y Estrategia",
+        "description": "No es otro blog de marketing. Análisis profundo sobre GEO, Vibe Coding y la nueva era de la búsqueda.",
+        "author": {
+            "@type": "Person",
+            "name": "Roger Calvo"
+        }
+    };
+
+    // Define posts for the map loop
+    const posts = allPostsData || [];
+
     return (
         <>
-            <SeoHead title="Liner Notes: El Blog | Calvo Creativo" />
+            <SeoHead
+                title="Liner Notes | Ensayos sobre SEO, IA y Estrategia Digital"
+                description="Liner Notes: El contexto detrás del caos. Análisis estratégico sobre el fin del SEO, Marketer-Builders y el factor humano."
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
             <Navigation />
 
-            <main className="min-h-screen bg-[#f2efe9] font-sans pt-12 pb-24 px-4 md:px-8">
+            <main className="min-h-screen bg-paper font-sans pt-12 pb-24 px-4 md:px-8 selection:bg-accent selection:text-ink">
 
-                <div className="max-w-6xl mx-auto border-t-4 border-black pt-8">
+                {/* --- INTRO: THE ALBUM SLEEVE --- */}
+                <div className="max-w-6xl mx-auto border-t-8 border-ink pt-12 mb-20">
+                    <div className="mb-8">
+                        <Breadcrumbs theme="light" />
+                    </div>
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative">
+                        {/* Decorative background element */}
+                        <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
+                            <span className="text-[10rem] font-display text-ink leading-none">LINER</span>
+                        </div>
 
-                    {/* Header: Vinilo Back Cover Style */}
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-                        <div>
-                            <div className="bg-[#d32f2f] text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 inline-block mb-4">Stereo LP • 33⅓ RPM</div>
-                            <h1 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-4">
-                                Notas de Producción<br />y Archivos
+                        <div className="relative z-10 w-full md:w-2/3">
+                            <div className="bg-primary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 inline-block mb-4 transform -rotate-2 border-2 border-ink shadow-brutal-sm">
+                                VOL. 2.5: CONTEXTO
+                            </div>
+                            <h1 className="text-6xl md:text-8xl font-display uppercase leading-[0.85] tracking-tighter mb-8 text-ink">
+                                Liner <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-600">Notes_</span>
                             </h1>
-                            <p className="font-mono text-gray-500 uppercase tracking-wider text-sm">
-                                (La Contraportada: Categorías, Tags & Artículos de Fondo)
-                            </p>
-                        </div>
 
-                        <div className="text-right font-mono text-xs text-gray-400 uppercase leading-relaxed border-l-2 border-gray-300 pl-4">
-                            <p>Produced by: Vibecoding Studios</p>
-                            <p>Executive Producer: The Algorithm</p>
-                            <p>Recorded in: Santiago / NYC / Cloud</p>
-                            <p className="text-[#d32f2f] font-bold">Vol. 2 - "Salsa Dura"</p>
-                        </div>
-                    </div>
-
-                    {/* Side A: Main Articles */}
-                    <div className="mb-20">
-                        <div className="flex items-center gap-4 mb-8">
-                            <div className="size-12 bg-black text-white rounded-full flex items-center justify-center font-black text-2xl">A</div>
-                            <h2 className="text-3xl font-bold uppercase tracking-tight">Side A: Casos de Éxito <span className="text-[#d32f2f] font-normal">(Sesiones de Grabación)</span></h2>
-                            <div className="h-1 bg-black flex-1"></div>
-                        </div>
-
-                        <div className="grid grid-cols-1 gap-0 border-t-2 border-gray-200">
-                            {MOCK_POSTS.map((post) => (
-                                <Link href={`/liner-notes/${post.id}`} key={post.id} className="group bg-white grid grid-cols-1 md:grid-cols-12 gap-6 p-6 border-b-2 border-gray-200 hover:bg-[#fffdf5] transition-colors relative overflow-hidden">
-
-                                    {/* Image Vinyl Effect */}
-                                    <div className="md:col-span-3 aspect-video md:aspect-square bg-gray-200 overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
-                                        <img src={post.img} alt={post.title} className="w-full h-full object-cover" />
-                                        <div className="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
-                                        <div className="absolute bottom-2 left-2 text-white font-mono text-[10px] uppercase">{post.track}</div>
-                                    </div>
-
-                                    <div className="md:col-span-7 flex flex-col justify-center">
-                                        <div className="flex justify-between items-center mb-2">
-                                            <span className="text-[#d32f2f] font-bold text-xs uppercase tracking-widest">Track {post.track}</span>
-                                            <span className="border border-gray-400 rounded-full px-2 py-0.5 text-[10px] uppercase font-bold text-gray-500">{post.type}</span>
-                                        </div>
-                                        <h3 className="text-2xl md:text-4xl font-black leading-tight mb-2 group-hover:text-[#d32f2f] transition-colors">{post.title}</h3>
-                                        <p className="font-mono text-gray-500 text-sm">{post.subtitle}</p>
-
-                                        <div className="mt-6 flex gap-6 font-mono text-[10px] uppercase text-gray-400">
-                                            <div>
-                                                <span className="block text-gray-300">Client</span>
-                                                <span className="text-black font-bold font-sans">{post.client}</span>
-                                            </div>
-                                            <div>
-                                                <span className="block text-gray-300">Duration</span>
-                                                <span className="text-black font-bold font-sans">{post.duration}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="md:col-span-2 flex flex-col justify-end items-end">
-                                        <div className="text-[9px] font-bold text-[#d32f2f] uppercase tracking-widest mb-1">{post.metric}</div>
-                                        {/* Audio Viz Bars */}
-                                        <div className="flex items-end gap-1 h-8">
-                                            {[30, 60, 45, 80, 50, 90, 40].map((h, i) => (
-                                                <div key={i} className="w-1 bg-[#d32f2f]" style={{ height: `${h}%` }}></div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Side B: Deep Cuts */}
-                    <div>
-                        <div className="flex items-center gap-4 mb-8">
-                            <div className="size-12 bg-white border-2 border-black text-black rounded-full flex items-center justify-center font-black text-2xl">B</div>
-                            <h2 className="text-3xl font-bold uppercase tracking-tight">Side B: Deep Cuts <span className="text-[#d32f2f] font-normal">(Editoriales & Guías)</span></h2>
-                            <div className="h-1 bg-gray-300 border-t border-dashed border-gray-400 flex-1"></div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {[
-                                { title: 'La Rima Interna del Link Building', track: '04', snippet: '¿Por qué construir enlaces es como escribir un verso de 16 barras?' },
-                                { title: 'Core Web Vitals: El Ritmo Cardiaco', track: '05', snippet: 'Si tu sitio no carga rápido, has perdido la audiencia antes del coro.' }
-                            ].map((item, i) => (
-                                <div key={i} className="bg-white p-8 border border-gray-200 hover:border-[#d32f2f] transition-all group cursor-pointer relative">
-                                    <div className="flex items-center gap-2 mb-4 text-[#d32f2f]">
-                                        <span className="material-symbols-outlined text-sm">mic</span>
-                                        <span className="text-[10px] font-bold uppercase tracking-widest">Track {item.track}</span>
-                                    </div>
-                                    <h3 className="text-xl font-black uppercase mb-3 leading-snug">{item.title}</h3>
-                                    <p className="font-mono text-xs text-gray-500 leading-relaxed mb-8">{item.snippet}</p>
-                                    <div className="absolute bottom-6 right-6">
-                                        <span className="material-symbols-outlined text-[#d32f2f] group-hover:scale-125 transition-transform">play_circle_filled</span>
-                                    </div>
-                                </div>
-                            ))}
-
-                            {/* Newsletter Box */}
-                            <div className="bg-[#fce4ec] border-2 border-dashed border-[#d32f2f] p-8">
-                                <div className="flex items-center gap-2 text-[#d32f2f] mb-2">
-                                    <span className="material-symbols-outlined text-sm">radio</span>
-                                    <span className="text-[10px] font-bold uppercase tracking-widest">Bonus Track</span>
-                                </div>
-                                <h3 className="font-black text-xl mb-2">Subscribe to the Newsletter</h3>
-                                <p className="font-mono text-xs text-gray-500 mb-4">Get the liner notes directly in your inbox. No spam, just pure rhythm.</p>
-                                <div className="flex gap-2">
-                                    <input type="email" placeholder="email@domain.com" className="bg-white border text-sm p-2 flex-1 font-mono outline-none" />
-                                    <button className="bg-[#d32f2f] text-white font-bold text-xs uppercase px-4 hover:bg-black transition-colors">Join</button>
-                                </div>
+                            {/* Concept Block */}
+                            <div className="bg-white border-4 border-ink p-8 shadow-brutal relative">
+                                <h3 className="font-display text-2xl uppercase mb-4 text-ink flex items-center gap-2">
+                                    <span className="material-symbols-outlined">album</span> The Album Sleeve
+                                </h3>
+                                <p className="font-body text-lg text-ink/80 leading-relaxed mb-4">
+                                    En la era del "contenido infinito", el contexto es el nuevo lujo. Aquí no encontrarás noticias de última hora.
+                                </p>
+                                <p className="font-mono text-sm text-ink/60 border-l-4 border-accent pl-4">
+                                    Esta sección está dedicada al <strong>Information Gain</strong>: ensayos estratégicos para líderes que necesitan entender hacia dónde va la tecnología, no solo cómo usarla hoy.
+                                </p>
                             </div>
                         </div>
 
+                        {/* Author/Meta Box (Differential Element) */}
+                        <div className="bg-ink text-paper p-6 border-4 border-ink shadow-brutal-sm md:w-1/3 transform rotate-1 hover:rotate-0 transition-transform w-full">
+                            <div className="flex items-center gap-4 mb-4 border-b border-paper/20 pb-4">
+                                <div className="size-12 bg-accent rounded-full border-2 border-white flex items-center justify-center font-display text-ink text-xl">RC</div>
+                                <div>
+                                    <div className="font-bold uppercase tracking-wider">Roger Calvo</div>
+                                    <div className="font-mono text-xs opacity-60">Strategic SEO Consultant</div>
+                                </div>
+                            </div>
+                            <div className="space-y-2 font-mono text-xs opacity-80">
+                                <div className="flex justify-between">
+                                    <span>STATUS:</span>
+                                    <span className="text-primary">ONLINE</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>LOC:</span>
+                                    <span>CLOUD / SCL</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>UPDATED:</span>
+                                    <span>DEC 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* --- TRACKS (Dynamic Feed) --- */}
+                <div className="max-w-6xl mx-auto mb-24">
+                    <div className="flex items-center gap-4 mb-12">
+                        <span className="bg-ink text-white w-8 h-8 flex items-center justify-center font-display text-xl">A</span>
+                        <h2 className="text-4xl md:text-5xl font-display uppercase tracking-tighter text-ink">
+                            Featured Tracks
+                        </h2>
                     </div>
 
+                    <div className="grid grid-cols-1 gap-12">
+                        {posts.length > 0 ? (
+                            posts.map((post, index) => (
+                                <Link href={`/liner-notes/${post.id}`} key={post.id} className="group relative block">
+                                    <div className="bg-white border-4 border-ink p-0 shadow-brutal group-hover:shadow-brutal-hover group-hover:-translate-y-1 transition-all duration-300 grid md:grid-cols-12 gap-0">
+
+                                        {/* Dynamic "Album Art" Column based on Index/ID */}
+                                        <div className={`md:col-span-3 p-6 flex flex-col justify-between border-b-4 md:border-b-0 md:border-r-4 border-ink text-white relative overflow-hidden ${index % 2 === 0 ? 'bg-primary' : 'bg-gray-900'}`}>
+                                            <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                                            <div className="font-mono text-xs opacity-70 z-10">TRACK {String(index + 1).padStart(2, '0')}</div>
+                                            <div className="mt-4 md:mt-0 z-10">
+                                                <div className="text-white font-display text-5xl leading-none">
+                                                    {post.tags && post.tags[0] ? post.tags[0].split(' ')[0].substring(0, 4) : 'POST'}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Content Column */}
+                                        <div className="md:col-span-9 p-8 flex flex-col justify-center bg-paper group-hover:bg-white transition-colors">
+                                            <div className="flex flex-wrap gap-2 mb-4">
+                                                {post.tags && post.tags.map((tag: string) => (
+                                                    <span key={tag} className="bg-ink text-white text-[10px] font-bold uppercase px-2 py-0.5 font-mono">
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                            <h3 className="text-3xl md:text-4xl font-display uppercase leading-[0.9] text-ink mb-4 group-hover:text-primary transition-colors">
+                                                {post.title}
+                                            </h3>
+                                            <p className="font-body text-ink/80 text-lg leading-snug max-w-3xl mb-6">
+                                                {post.excerpt || 'Click to read full article...'}
+                                            </p>
+                                            <div className="flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest group-hover:translate-x-2 transition-transform">
+                                                Reproducir Track <span className="material-symbols-outlined text-sm">play_circle</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))
+                        ) : (
+                            <div className="text-center py-20 border-4 border-dashed border-ink/20">
+                                <h3 className="font-display text-3xl text-ink/50 uppercase">No hay tracks aún</h3>
+                                <p className="font-mono text-sm text-ink/40 mt-2">Estamos grabando en el estudio...</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
+
+                {/* --- THE DEEP CUTS (Categories) --- */}
+                <div className="max-w-6xl mx-auto mb-24 border-t-4 border-ink pt-12">
+                    <div className="flex items-center gap-4 mb-12">
+                        <span className="bg-ink text-white w-8 h-8 flex items-center justify-center font-display text-xl">B</span>
+                        <h2 className="text-3xl md:text-4xl font-display uppercase tracking-tighter text-ink">
+                            The Deep Cuts
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Tech Cut */}
+                        <div className="bg-paper border-2 border-ink p-6 hover:bg-white transition-colors">
+                            <span className="text-4xl mb-4 block">🎛️</span>
+                            <h4 className="font-bold text-ink uppercase mb-2">Ingeniería de Búsqueda</h4>
+                            <p className="font-mono text-xs text-ink/70 mb-4 leading-relaxed">
+                                Análisis sobre Schema Markup, Grafos de Conocimiento y cómo estructurar tu web.
+                            </p>
+                        </div>
+
+                        {/* Editorial Cut */}
+                        <div className="bg-paper border-2 border-ink p-6 hover:bg-white transition-colors">
+                            <span className="text-4xl mb-4 block">🎹</span>
+                            <h4 className="font-bold text-ink uppercase mb-2">Composición,</h4>
+                            <p className="font-mono text-xs text-ink/70 mb-4 leading-relaxed">
+                                Cómo crear "Topic Clusters" que dominen nichos y por qué la Autoridad vence a los backlinks.
+                            </p>
+                        </div>
+
+                        {/* Auto Cut */}
+                        <div className="bg-paper border-2 border-ink p-6 hover:bg-white transition-colors">
+                            <span className="text-4xl mb-4 block">🎚️</span>
+                            <h4 className="font-bold text-ink uppercase mb-2">Automatización</h4>
+                            <p className="font-mono text-xs text-ink/70 mb-4 leading-relaxed">
+                                Tutoriales sobre el uso de Agentes de IA para escalar operaciones sin perder el alma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* --- THE HIDDEN TRACK (CTA) --- */}
+                <div className="max-w-4xl mx-auto">
+                    <div className="bg-accent border-4 border-ink p-8 md:p-12 text-center rotate-1 hover:rotate-0 transition-transform shadow-brutal relative overflow-hidden">
+                        <div className="absolute top-0 right-0 bg-ink text-white text-[10px] font-bold px-2 py-1 uppercase">Hidden Track</div>
+                        <h2 className="text-4xl md:text-5xl font-display uppercase tracking-tighter mb-4 text-ink">
+                            Únete al Backstage
+                        </h2>
+                        <p className="font-mono text-sm md:text-base mb-8 max-w-xl mx-auto font-bold border-l-4 border-white pl-4 text-left md:text-center md:border-none md:pl-0">
+                            La mayoría de las estrategias se vuelven obsoletas al publicarse.
+                            Mis suscriptores reciben los "Raw Tapes": hallazgos crudos y scripts antes de que sean mainstream.
+                        </p>
+                        <form className="flex flex-col md:flex-row gap-4 justify-center max-w-md mx-auto">
+                            <input type="email" placeholder="tu@email.com" className="bg-white border-2 border-ink px-4 py-3 font-mono text-sm w-full placeholder:text-ink/40" />
+                            <button className="bg-ink text-white font-display text-xl uppercase px-8 py-3 hover:bg-primary border-2 border-transparent transition-colors whitespace-nowrap">
+                                Suscribirse
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
             </main>
             <Footer />
         </>

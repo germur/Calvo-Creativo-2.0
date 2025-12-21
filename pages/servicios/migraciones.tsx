@@ -6,188 +6,135 @@ import SeoHead from '@/components/SeoHead';
 export default function MigracionesService() {
     return (
         <>
-            <SeoHead title="Migraciones SEO: La Mudanza Sin Perder El Ritmo | Calvo Creativo" />
+            <SeoHead title="Migraciones SEO: Éxodo Digital | Calvo Creativo" />
             <Navigation />
 
-            <main className="min-h-screen bg-[#1b1b1b] font-sans text-gray-200 pt-20">
+            <main className="min-h-screen bg-background-dark font-display text-white antialiased overflow-x-hidden selection:bg-gold selection:text-stone-dark flex flex-col items-center">
 
-                {/* Header Hero */}
-                <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 overflow-hidden border-b-4 border-[#ff2e2e]">
-                    {/* Sea Background */}
-                    <div className="absolute inset-0 z-0">
-                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2670')] bg-cover bg-center opacity-40 mix-blend-luminosity"></div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#1b1b1b] via-transparent to-black/80"></div>
-                    </div>
+                {/* Hero Section */}
+                <section className="relative w-full max-w-7xl px-4 py-12 md:py-24 md:px-8">
+                    <div className="relative overflow-hidden rounded-xl border border-stone-lighter bg-stone-light shadow-2xl">
+                        <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }}></div>
 
-                    <div className="relative z-10 max-w-4xl mx-auto">
-                        <div className="bg-[#fff700] text-black font-black text-[10px] uppercase font-mono px-3 py-1 inline-block mb-6 transform -rotate-1">
-                            ⚠️ Bitácora de Navegación v3.0
+                        <div className="relative z-10 grid gap-12 lg:grid-cols-2 p-8 md:p-12 items-center">
+                            <div className="flex flex-col gap-6">
+                                <div className="inline-flex items-center gap-2 text-gold text-xs font-bold tracking-[0.2em] uppercase">
+                                    <span className="h-px w-8 bg-gold"></span>
+                                    <span>Travesía Segura</span>
+                                </div>
+                                <h1 className="text-4xl md:text-6xl font-black leading-[0.9] tracking-tighter text-white uppercase">
+                                    Éxodo<br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-[#b88c12]">Digital</span>
+                                </h1>
+                                <p className="text-lg md:text-xl text-parchment max-w-md font-light border-l-2 border-gold pl-4">
+                                    Mudamos tu imperio digital sin perder ni una moneda de oro de tu autoridad. Mapeo 301, validación de staging y monitoreo post-lanzamiento.
+                                </p>
+                                <div className="flex flex-wrap gap-4 pt-4">
+                                    <button className="flex h-12 items-center justify-center rounded bg-gold px-6 text-stone-dark font-bold hover:bg-white transition-colors uppercase tracking-wider">
+                                        Iniciar Migración
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="relative flex items-center justify-center min-h-[300px]">
+                                <div className="relative w-full aspect-square max-w-sm rounded bg-stone-dark border border-stone-lighter p-8 shadow-2xl overflow-hidden flex flex-col items-center justify-center text-center">
+                                    <span className="material-symbols-outlined text-8xl text-stone-lighter mb-4">map</span>
+                                    <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/2000px-World_map_blank_without_borders.svg.png')] bg-cover opacity-10 invert"></div>
+                                    <div className="z-10 bg-gold/10 border border-gold px-4 py-2 rounded text-gold font-mono text-xs">
+                                        301 Redirect: /old -&gt; /new<br />
+                                        Authority: <span className="text-white">PRESERVED</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </section>
 
-                        <h1 className="text-6xl md:text-8xl font-black uppercase text-white leading-[0.85] mb-8 drop-shadow-2xl">
-                            La Mudanza<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-white">Sin Perder</span><br />
-                            <span className="text-[#0070f3] drop-shadow-[0_0_20px_rgba(0,112,243,0.5)]">El Ritmo</span>
-                        </h1>
+                {/* Timeline Section */}
+                <section className="w-full max-w-5xl px-4 py-20">
+                    <h2 className="text-3xl font-bold text-center text-white uppercase mb-12 flex items-center justify-center gap-4">
+                        <span className="h-px w-12 bg-stone-lighter"></span>
+                        La Ruta del Éxodo
+                        <span className="h-px w-12 bg-stone-lighter"></span>
+                    </h2>
 
-                        <div className="bg-black/80 backdrop-blur-md border border-white/10 p-6 md:p-8 max-w-2xl mx-auto mb-10 border-l-4 border-l-[#fff700]">
-                            <p className="text-lg md:text-xl font-light leading-relaxed text-gray-300">
-                                Navegando los mares turbulentos de las migraciones SEO. Preservando el alma y la autoridad de tu sitio a través de la transición digital.
+                    <div className="relative border-l-2 border-stone-lighter ml-4 md:ml-12 space-y-12">
+                        {/* Step 1 */}
+                        <div className="relative pl-8 md:pl-12">
+                            <div className="absolute -left-[11px] top-0 size-5 rounded-full bg-gold border-4 border-background-dark box-content"></div>
+                            <h3 className="text-xl font-bold text-white uppercase mb-2">Auditoría Pre-Migración</h3>
+                            <p className="text-parchment text-sm">
+                                Inventario total de URLs. Identificamos las páginas con backlinks y tráfico vital. Nada se queda atrás.
                             </p>
                         </div>
-
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <button className="bg-[#ff2e2e] hover:bg-[#d32f2f] text-white px-8 py-3 font-black uppercase rounded-sm flex items-center gap-2 transition-all">
-                                Iniciar Travesía <span className="material-symbols-outlined">sailing</span>
-                            </button>
-                            <button className="border-2 border-white/30 hover:border-white text-white px-8 py-3 font-black uppercase rounded-sm flex items-center gap-2 transition-all">
-                                Ver Mapa <span className="material-symbols-outlined">map</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Philosophy Section */}
-                <section className="py-24 px-4 bg-[#1f1f1f]">
-                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                        <div className="bg-[#2a2a2a] border border-gray-700 p-8 shadow-2xl relative">
-                            <div className="absolute -top-3 -left-3 bg-[#fff700] text-black font-bold text-xs px-2 py-1 transform -rotate-2">EL CAPITÁN HABLA</div>
-                            <div className="text-[#0070f3] font-black uppercase text-xl mb-4">Filosofía:<br /><span className="text-white text-4xl">Transmigración Digital</span></div>
-                            <div className="border-l-2 border-[#ff2e2e] pl-4 mb-4 text-gray-400 italic">
-                                "Una migración web no es simplemente mover archivos. Es una <span className="text-white bg-[#ff2e2e] px-1 font-bold not-italic">reencarnación del alma</span> de su negocio digital."
-                            </div>
-                            <p className="text-sm text-gray-500 font-mono leading-relaxed mb-6">
-                                Como una banda de Salsa Dura manteniendo la clave intacta, nosotros mantenemos su tráfico, ranking y autoridad. <span className="text-[#fff700]">Sin saltos. Sin silencios.</span>
+                        {/* Step 2 */}
+                        <div className="relative pl-8 md:pl-12">
+                            <div className="absolute -left-[11px] top-0 size-5 rounded-full bg-stone-500 border-4 border-background-dark box-content"></div>
+                            <h3 className="text-xl font-bold text-white uppercase mb-2">Mapeo de Redirecciones</h3>
+                            <p className="text-parchment text-sm">
+                                Diseño del mapa 301. Cada URL antigua debe encontrar su nuevo hogar. Cero errores 404 permitidos.
                             </p>
-                            <div className="flex gap-4">
-                                <div className="flex items-center gap-2 text-xs font-bold uppercase text-gray-400">
-                                    <span className="material-symbols-outlined text-[#fff700]">shield</span> Ranking Protegido
-                                </div>
-                                <div className="flex items-center gap-2 text-xs font-bold uppercase text-gray-400">
-                                    <span className="material-symbols-outlined text-[#ff2e2e]">trending_up</span> Growth Seguro
-                                </div>
-                            </div>
                         </div>
-
-                        <div className="relative h-[400px] border-4 border-[#fff700] p-1 bg-black transform rotate-2">
-                            {/* World Map Dark Style */}
-                            <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/2000px-World_map_blank_without_borders.svg.png')] bg-cover bg-center invert opacity-20"></div>
-                            <div className="relative z-10 w-full h-full border border-gray-800 flex items-end p-4">
-                                <div className="bg-white text-black font-mono text-[10px] px-2 py-1 font-bold">100% TRAFIC POPULAR</div>
-                            </div>
+                        {/* Step 3 */}
+                        <div className="relative pl-8 md:pl-12">
+                            <div className="absolute -left-[11px] top-0 size-5 rounded-full bg-stone-500 border-4 border-background-dark box-content"></div>
+                            <h3 className="text-xl font-bold text-white uppercase mb-2">Validación en Staging</h3>
+                            <p className="text-parchment text-sm">
+                                Simulacro de batalla. Probamos las redirecciones y la indexabilidad en un entorno seguro antes de salir en vivo.
+                            </p>
                         </div>
-                    </div>
-                </section>
-
-                {/* Timeline / Battle Plan */}
-                <section className="py-24 px-4 bg-[#1b1b1b] border-t border-gray-800">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="text-center mb-16">
-                            <div className="bg-[#ff2e2e] text-white text-xs font-bold uppercase px-2 py-1 inline-block mb-4">Plan de Batalla</div>
-                            <h2 className="text-4xl md:text-6xl font-black uppercase text-white">El Diario de a Bordo</h2>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-8 relative">
-                            {/* Card 1 */}
-                            <div className="bg-[#252525] border border-gray-700 p-6 relative">
-                                <div className="absolute -top-4 -left-4 size-10 bg-[#0070f3] rounded-full flex items-center justify-center font-black text-white border-4 border-[#1b1b1b] z-10">01</div>
-                                <div className="flex items-center gap-2 text-[#fff700] mb-2 font-bold uppercase text-xs">
-                                    <span className="material-symbols-outlined text-sm">radar</span> Semana 1-2
-                                </div>
-                                <h3 className="text-2xl font-black uppercase mb-2">Auditoría del Compás</h3>
-                                <p className="text-sm text-gray-400 mb-4 border-l-2 border-[#0070f3] pl-2">
-                                    Evaluación estructural del sitio actual. Identificación de todos los activos SEO, backlinks y contenido vital que debe ser transportado. <span className="text-white font-bold">¡Nada se queda atrás!</span>
-                                </p>
-                            </div>
-
-                            {/* Card 2 */}
-                            <div className="bg-[#252525] border border-[#ff2e2e] p-6 relative md:mt-12">
-                                <div className="absolute -top-4 -right-4 size-10 bg-[#ff2e2e] rounded-full flex items-center justify-center font-black text-white border-4 border-[#1b1b1b] z-10">02</div>
-                                <div className="flex items-center gap-2 text-[#ff2e2e] mb-2 font-bold uppercase text-xs">
-                                    <span className="material-symbols-outlined text-sm">map</span> Semana 3 - Redirección
-                                </div>
-                                <h3 className="text-2xl font-black uppercase mb-2">Trazo del Mapa</h3>
-                                <p className="text-sm text-gray-400 mb-4 border-l-2 border-[#ff2e2e] pl-2">
-                                    Mapeo 1:1 de URLs antiguas a nuevas. Configuración de reglas .htaccess para evitar el temido error 404.
-                                </p>
-                                <div className="bg-black p-2 font-mono text-[10px] text-green-500 truncate">
-                                    301 Redirect: /old-page -&gt; /new-page
-                                </div>
-                            </div>
-
-                            {/* Card 3 */}
-                            <div className="bg-[#fff700] p-6 relative md:col-span-2 text-black max-w-2xl mx-auto w-full transform -rotate-1">
-                                <div className="absolute -top-4 -left-4 size-10 bg-black text-white rounded-full flex items-center justify-center font-black border-4 border-[#1b1b1b] z-10">03</div>
-                                <div className="grid md:grid-cols-2 gap-8 items-center">
-                                    <div>
-                                        <h3 className="text-xl font-black uppercase mb-2">La Travesía</h3>
-                                        <p className="text-xs font-bold uppercase">Despliegue a producción en horas de menor marea.</p>
-                                        <div className="w-full bg-black h-2 mt-4"><div className="bg-white h-full w-3/4"></div></div>
-                                    </div>
-                                    <div className="border-l-2 border-black pl-4">
-                                        <h4 className="font-bold uppercase text-sm mb-1">Navegación Celeste</h4>
-                                        <p className="text-[10px] leading-tight">Vigilancia constante de Google Search Console. Recuperación de indexación asegurada.</p>
-                                    </div>
-                                </div>
-                                <div className="absolute bottom-2 right-2 font-black text-4xl opacity-10">GO!</div>
-                            </div>
+                        {/* Step 4 */}
+                        <div className="relative pl-8 md:pl-12">
+                            <div className="absolute -left-[11px] top-0 size-5 rounded-full bg-gold border-4 border-background-dark box-content animate-pulse"></div>
+                            <h3 className="text-xl font-bold text-white uppercase mb-2">Lanzamiento & Monitoreo</h3>
+                            <p className="text-parchment text-sm">
+                                Go Live. Vigilancia extrema en Search Console durante las primeras 72 horas para asegurar la indexación.
+                            </p>
                         </div>
                     </div>
                 </section>
 
-                {/* Data Constellations Chart */}
-                <section className="py-24 px-4 bg-[#141414]">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="flex justify-between items-end mb-8">
-                            <div>
-                                <div className="bg-[#0070f3] text-white text-[10px] font-bold px-2 py-0.5 inline-block mb-2">SISTEMA DE MONITOREO</div>
-                                <h2 className="text-4xl font-black uppercase text-white leading-none">Constelaciones<br /><span className="text-[#ff2e2e]">De Datos</span></h2>
-                            </div>
-                            <div className="font-mono text-[10px] text-[#fff700] text-right">
-                                STATUS: ONLINE<br />
-                                LOC: 40.7128° N, 74.0060° W
+                {/* Stats / Constellations */}
+                <section className="w-full bg-stone-dark border-y border-stone-lighter py-16">
+                    <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 className="text-2xl font-bold text-white uppercase mb-4">Continuidad del Negocio</h3>
+                            <p className="text-parchment mb-6 leading-relaxed">
+                                Una migración mal ejecutada puede destruir años de trabajo SEO en días. Nuestro proceso garantiza <span className="text-gold font-bold">Cero Pérdida de Tráfico</span>.
+                            </p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-background-dark p-4 border-l-2 border-gold">
+                                    <div className="text-3xl font-black text-white">99%</div>
+                                    <div className="text-xs text-stone-400 uppercase">Traffic Retention</div>
+                                </div>
+                                <div className="bg-background-dark p-4 border-l-2 border-gold">
+                                    <div className="text-3xl font-black text-white">100%</div>
+                                    <div className="text-xs text-stone-400 uppercase">Uptime</div>
+                                </div>
                             </div>
                         </div>
-
-                        <div className="grid md:grid-cols-3 gap-4">
-                            {/* Big Chart */}
-                            <div className="md:col-span-2 bg-[#1f1f1f] border border-gray-800 p-6 relative">
-                                <div className="flex justify-between items-center mb-6">
-                                    <h4 className="font-bold text-white uppercase text-sm">Retención de Tráfico</h4>
-                                    <span className="material-symbols-outlined text-[#fff700]">water_drop</span>
-                                </div>
-                                <div className="flex items-end gap-2 h-40 px-4">
-                                    <div className="flex-1 bg-gray-800 h-[30%]"></div>
-                                    <div className="flex-1 bg-gray-800 h-[40%]"></div>
-                                    <div className="flex-1 bg-[#0070f3] h-[50%] relative">
-                                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#ff2e2e] text-white text-[8px] px-1 font-bold">MIGRATION</div>
-                                        <div className="absolute top-0 bottom-0 left-1/2 w-px border-l border-dashed border-[#ff2e2e]"></div>
-                                    </div>
-                                    <div className="flex-1 bg-[#ff2e2e] h-[45%]"></div>
-                                    <div className="flex-1 bg-[#fff700] h-[60%]"></div>
-                                    <div className="flex-1 bg-[#0070f3] h-[55%]"></div>
-                                    <div className="flex-1 bg-[#ff2e2e] h-[70%]"></div>
-                                    <div className="flex-1 bg-[#fff700] h-[75%]"></div>
-                                </div>
+                        <div className="h-64 bg-background-dark border border-stone-lighter relative overflow-hidden flex items-end px-4 gap-2">
+                            {/* Fake Chart */}
+                            <div className="w-full bg-stone-lighter h-[30%] opacity-50"></div>
+                            <div className="w-full bg-stone-lighter h-[40%] opacity-50"></div>
+                            <div className="w-full bg-stone-lighter h-[55%] opacity-50"></div>
+                            <div className="w-full bg-gold h-[60%] shadow-[0_0_20px_rgba(244,192,37,0.3)] relative group">
+                                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-stone-light text-gold text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">MIGRATION</div>
                             </div>
-
-                            {/* Stats */}
-                            <div className="flex flex-col gap-4">
-                                <div className="bg-[#0070f3] p-6 text-white text-center flex-1 flex flex-col justify-center border-b-4 border-black">
-                                    <div className="text-5xl font-black mb-1">99.8%</div>
-                                    <div className="text-[10px] font-bold bg-black inline-block px-4 py-1 uppercase">Uptime</div>
-                                    <span className="material-symbols-outlined absolute top-2 right-2 opacity-30">dns</span>
-                                </div>
-                                <div className="bg-white p-6 text-black text-center flex-1 flex flex-col justify-center border-b-4 border-[#ff2e2e]">
-                                    <div className="text-4xl font-black mb-1 uppercase">ZERO</div>
-                                    <div className="text-[10px] font-bold border border-[#ff2e2e] text-[#ff2e2e] inline-block px-1 uppercase">Ranking Loss</div>
-                                    <div className="w-0 h-0 border-l-[20px] border-l-transparent border-t-[20px] border-t-[#ff2e2e] border-r-[20px] border-r-transparent absolute bottom-0 left-0"></div>
-                                </div>
-                            </div>
+                            <div className="w-full bg-gold h-[70%] shadow-[0_0_20px_rgba(244,192,37,0.3)]"></div>
+                            <div className="w-full bg-gold h-[85%] shadow-[0_0_20px_rgba(244,192,37,0.3)]"></div>
+                            <div className="w-full bg-gold h-[90%] shadow-[0_0_20px_rgba(244,192,37,0.3)]"></div>
                         </div>
                     </div>
                 </section>
 
+                {/* CTA */}
+                <section className="py-24 px-4 text-center">
+                    <h2 className="text-4xl font-bold text-white uppercase mb-8">¿Listo para mover tu imperio?</h2>
+                    <button className="bg-gold text-stone-dark font-bold text-lg px-12 py-4 rounded hover:bg-white transition-colors border-2 border-transparent hover:border-gold uppercase tracking-wider">
+                        Planificar Migración
+                    </button>
+                </section>
             </main>
             <Footer />
         </>

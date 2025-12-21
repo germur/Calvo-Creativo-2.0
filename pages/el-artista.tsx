@@ -1,167 +1,289 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
+import SpotifyWidget from '@/components/SpotifyWidget';
+import Breadcrumbs from '@/components/Breadcrumbs';
+
+// Icons for the Hall of Fame (RESTORED)
+const idols = [
+    {
+        name: 'Lionel Messi',
+        role: 'The Vision',
+        desc: 'Comprensión del juego más allá del talento. Ver los espacios antes de que existan.',
+        img: '/assets/hall-of-fame/messi-salsa.jpg',
+        color: 'from-blue-500 to-white'
+    },
+    {
+        name: 'Zinedine Zidane',
+        role: 'The Elegance',
+        desc: 'La técnica al servicio de la eficacia. Hacer que lo difícil parezca fácil.',
+        img: '/assets/hall-of-fame/zidane-salsa.jpg',
+        color: 'from-blue-900 to-white'
+    },
+    {
+        name: 'Ronaldo Nazário',
+        role: 'The Power',
+        desc: 'Potencia explosiva y definición clínica. Resolver problemas con contundencia.',
+        img: '/assets/hall-of-fame/ronaldo-salsa.jpg',
+        color: 'from-yellow-400 to-green-600'
+    },
+    {
+        name: 'Kobe Bryant',
+        role: 'The Mindset',
+        desc: 'Mamba Mentality. Obsesión por mejorar. Trabajo silencioso cuando nadie mira.',
+        img: '/assets/hall-of-fame/kobe-salsa.jpg',
+        color: 'from-purple-600 to-yellow-400'
+    }
+];
 
 export default function ElArtista() {
-    const [isFighting, setIsFighting] = useState(false);
+    const [activeIdol, setActiveIdol] = useState<number | null>(null);
+
+    const generatePersonSchema = () => {
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Roger Calvo",
+            "jobTitle": "Consultor SEO & Marketer-Builder",
+            "url": "https://calvocreativo.com/el-artista",
+            "sameAs": [
+                "https://www.linkedin.com/in/rogermur/",
+                "https://github.com/rogermur"
+            ],
+            "knowsAbout": ["SEO", "Python", "Generative Engine Optimization", "Content Strategy", "Digital Marketing"],
+            "description": "Roger Calvo es un Consultor SEO y Marketer-Builder especializado en estrategias B2B, automatización con Python y optimización para motores generativos (GEO)."
+        };
+        return JSON.stringify(schema);
+    };
 
     return (
-        <>
-            <SeoHead title="El Artista | Calvo Creativo" />
+        <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-black font-sans">
+            <SeoHead
+                title="El Artista: Roger Calvo | The Architect & The Fighter"
+                description="Consultor SEO y Marketer-Builder. La fusión entre la estrategia técnica (The Architect) y la mentalidad competitiva (The Fighter)."
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: generatePersonSchema() }}
+            />
             <Navigation />
-            <main className="min-h-screen bg-black text-white selection:bg-primary selection:text-black">
-                <div className="mx-auto max-w-7xl px-4 py-12 md:px-12 lg:px-40">
-                    <div className="flex flex-col gap-2 border-l-4 border-primary pl-6 py-2 mb-12 relative">
-                        <div className="absolute -left-1 top-0 h-4 w-1 bg-white"></div>
-                        <div className="absolute -left-1 bottom-0 h-4 w-1 bg-white"></div>
-                        <h1 className="text-5xl md:text-7xl font-headline tracking-tighter leading-none uppercase italic text-white">Sobre Mí</h1>
-                        <p className="text-primary text-xl font-headline tracking-[0.2em] uppercase flex items-center gap-2">
-                            <span className="w-8 h-0.5 bg-primary"></span>
-                            Tale of the Tape
-                        </p>
-                    </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                        {/* Left: Fighter Image */}
-                        <div className="lg:col-span-5 flex flex-col gap-6">
-                            <div
-                                onMouseEnter={() => setIsFighting(true)}
-                                onMouseLeave={() => setIsFighting(false)}
-                                className="group relative w-full aspect-[3/4] rounded-lg overflow-hidden border-2 border-border bg-card cursor-pointer ring-1 ring-white/10 shadow-2xl transition-all"
-                            >
-                                {/* Base Image */}
-                                <div className={`absolute inset-0 transition-opacity duration-500 bg-cover bg-center ${isFighting ? 'opacity-0' : 'opacity-100'}`} style={{ backgroundImage: "url('https://picsum.photos/id/1025/800/1200')" }}>
-                                    <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/40 to-transparent pt-20">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className="size-2 rounded-full bg-blue-500"></span>
-                                            <p className="text-blue-300 font-bold tracking-widest text-xs uppercase font-mono">Corner: Blue</p>
-                                        </div>
-                                        <h3 className="text-3xl font-headline text-white uppercase tracking-tight">The Strategist</h3>
-                                    </div>
-                                </div>
+            {/* Breadcrumbs for Architecture */}
+            <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-24 pt-20">
+                <Breadcrumbs theme="dark" />
+            </div>
 
-                                {/* Fighter Mode Image */}
-                                <div className={`absolute inset-0 transition-opacity duration-500 bg-cover bg-center contrast-125 saturate-150 ${isFighting ? 'opacity-100' : 'opacity-0'}`} style={{ backgroundImage: "url('https://picsum.photos/id/1035/800/1200')", filter: 'sepia(0.5) hue-rotate(-20deg) contrast(1.5)' }}>
-                                    <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent pt-20">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className="size-2 rounded-full bg-red-500 animate-pulse"></span>
-                                            <p className="text-white font-black tracking-widest text-xs uppercase font-mono">Corner: Red</p>
-                                        </div>
-                                        <h3 className="text-3xl font-headline text-white uppercase tracking-tight italic">The Optimizer</h3>
-                                    </div>
-                                </div>
+            {/* --- SECTION 1: THE ARCHITECT (Original Identity RESTORED) --- */}
+            <section className="relative pt-12 pb-24 px-4 md:px-12 lg:px-24 overflow-hidden">
+                {/* Background Grid */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#2a2a2a_1px,transparent_1px),linear-gradient(to_bottom,#2a2a2a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
 
-                                <div className="absolute top-4 right-4 z-30 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-sm uppercase tracking-wider border border-white/20">
-                                    {isFighting ? 'Fight Mode Active' : 'Hover for Stats'}
-                                </div>
-                            </div>
+                <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div className="inline-block px-3 py-1 mb-6 border border-white/20 rounded-full bg-white/5 backdrop-blur-sm">
+                            <span className="text-xs font-mono text-gray-400 uppercase tracking-widest">Profile: Marketer-Builder</span>
+                        </div>
+                        <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.9] mb-8">
+                            THE<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">ARCHITECT.</span>
+                        </h1>
 
-                            <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-4 opacity-5">
-                                    <span className="material-symbols-outlined text-8xl">mic_external_on</span>
-                                </div>
-                                <h4 className="text-primary font-headline uppercase text-sm mb-3 tracking-widest italic">Biografía (The Bio)</h4>
-                                <p className="text-gray-300 text-lg leading-relaxed font-light">
-                                    "<span className="text-white font-bold bg-gradient-to-r from-primary to-orange-600 bg-clip-text text-transparent italic">Peleando desde la esquina roja...</span> Fighting out of the red corner! A heavy hitter in Technical SEO with a reach spanning Python, JS, and SQL. Undefeated in migrations, representing the Vibecoding Gym..."
-                                </p>
-                            </div>
+                        {/* 3rd Person Bio Snippet (Entity) - Integrated subtly */}
+                        <div className="mb-6 opacity-60 text-xs font-mono max-w-lg border-l border-gray-700 pl-3">
+                            <p>Roger Calvo: Consultor SEO Estratégico & Python Developer.<br />Especialista en Information Gain y GEO.</p>
                         </div>
 
-                        {/* Right: Stats Section */}
-                        <div className="lg:col-span-7">
-                            <div className="bg-[#1a1111] border-2 border-border rounded-xl overflow-hidden relative shadow-2xl">
-                                <div className="bg-primary px-6 py-4 flex items-center justify-between border-b-4 border-black/20">
-                                    <h3 className="text-white text-3xl font-headline tracking-tighter uppercase italic transform -skew-x-6">Tale of the Tape</h3>
-                                    <div className="flex items-center gap-2 bg-black/30 px-3 py-1 rounded-full border border-white/10">
-                                        <span className="size-2 rounded-full bg-green-500 animate-pulse"></span>
-                                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/90">Official Stats</span>
-                                    </div>
-                                </div>
+                        <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light max-w-xl">
+                            <p>
+                                <strong className="text-white">Resumen profesional.</strong> Soy estratega SEO con enfoque técnico, creativo y orientado a negocio. No vendo humo ni fórmulas mágicas. Construyo arquitecturas sólidas y sistemas que escalan.
+                            </p>
+                            <p>
+                                Mi trabajo une estrategia, criterio editorial y código. Desde <span className="text-white font-mono bg-white/10 px-1">Python</span> para automatizar, hasta <span className="text-white font-mono bg-white/10 px-1">React/Astro</span> para construir.
+                            </p>
+                            <p className="border-l-4 border-accent pl-4 italic text-white/80">
+                                "El SEO no es solo posicionar. Es competir con criterio, resistir a largo plazo y ganar con inteligencia."
+                            </p>
+                        </div>
 
-                                <div className="divide-y divide-border/30">
-                                    <div className="grid grid-cols-1 md:grid-cols-2">
-                                        <div className="p-8 border-r border-border/30 hover:bg-white/5 transition-colors">
-                                            <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-2 font-mono">Peso (Weight Class)</p>
-                                            <p className="text-white text-3xl font-headline uppercase leading-tight italic">SEO Técnico Pesado</p>
-                                            <p className="text-[10px] text-primary font-mono mt-1">&lt;Heavyweight /&gt;</p>
-                                        </div>
-                                        <div className="p-8 hover:bg-white/5 transition-colors">
-                                            <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-2 font-mono">Estilo de Pelea</p>
-                                            <div className="inline-flex items-center px-3 py-1 rounded bg-white/10 border border-white/20 text-white font-black uppercase text-xs">
-                                                Agresivo White Hat
-                                            </div>
-                                            <p className="text-[10px] text-gray-500 mt-2 italic font-mono">Technical KO Specialist</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2">
-                                        <div className="p-8 border-r border-border/30 hover:bg-white/5 transition-colors">
-                                            <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-2 font-mono">Ciudad (Hometown)</p>
-                                            <p className="text-white text-xl font-bold font-headline uppercase">Digital Nomad / Global</p>
-                                            <div className="flex items-center gap-2 mt-2">
-                                                <div className="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
-                                                    <div className="h-full bg-primary w-full animate-pulse"></div>
-                                                </div>
-                                                <span className="text-[10px] text-gray-500 font-mono">24ms</span>
-                                            </div>
-                                        </div>
-                                        <div className="p-8 hover:bg-white/5 transition-colors">
-                                            <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-2 font-mono">Récord</p>
-                                            <div className="flex items-baseline gap-2">
-                                                <p className="text-primary text-5xl font-headline italic tracking-tighter">+50</p>
-                                                <p className="text-white text-base font-headline uppercase">Proyectos</p>
-                                            </div>
-                                            <div className="flex items-center gap-2 mt-1">
-                                                <span className="material-symbols-outlined text-green-500 text-sm">check_circle</span>
-                                                <p className="text-gray-400 text-[10px] font-bold uppercase font-mono">0 Penalizaciones</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-8">
-                                        <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-6 font-mono">Alcance (Reach)</p>
-                                        <div className="space-y-6">
-                                            {['Python', 'JavaScript', 'SQL'].map((tech, i) => (
-                                                <div key={tech} className="space-y-2">
-                                                    <div className="flex justify-between font-headline text-sm text-white uppercase">
-                                                        <span>{tech}</span>
-                                                        <span className="font-mono text-[10px] text-gray-500">{i === 0 ? '80"' : i === 1 ? '76"' : '82"'}</span>
-                                                    </div>
-                                                    <div className="flex gap-1 h-2">
-                                                        {[...Array(5)].map((_, j) => (
-                                                            <div key={j} className={`flex-1 rounded-sm ${j < 4 ? (i % 2 === 0 ? 'bg-primary' : 'bg-white') : 'bg-white/10'}`}></div>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
+                        {/* Tech Stack Icons (Restored) */}
+                        <div className="mt-12 flex flex-wrap gap-4">
+                            {['Technical SEO', 'Python Automations', 'React / Next.js', 'Information Gain', 'Entity Graph'].map((skill) => (
+                                <div key={skill} className="bg-white/5 border border-white/10 px-4 py-2 rounded flex items-center gap-2 hover:bg-white/10 transition-colors cursor-default">
+                                    <span className="w-2 h-2 bg-accent rounded-full"></span>
+                                    <span className="text-xs font-mono uppercase tracking-wide">{skill}</span>
                                 </div>
-                                <div className="bg-black/50 p-3 flex justify-between items-center px-6">
-                                    <span className="text-[9px] text-gray-500 font-mono tracking-widest uppercase">WWWA Certified</span>
-                                    <div className="flex gap-1">
-                                        {[...Array(3)].map((_, i) => <div key={i} className="w-1 h-1 bg-gray-700 rounded-full"></div>)}
-                                    </div>
-                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        {/* Abstract Visual Representation of "Structure" */}
+                        <div className="aspect-square rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent relative overflow-hidden p-8 flex items-center justify-center">
+                            <div className="absolute inset-0 opacity-30 animate-pulse bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                            {/* Central Graphic */}
+                            <div className="relative z-10 text-center">
+                                <span className="material-symbols-outlined text-9xl text-white/20 mb-4">architecture</span>
+                                <div className="font-mono text-xs text-gray-500 uppercase tracking-[0.3em]">Building Digital Assets</div>
                             </div>
-
-                            <div className="grid grid-cols-2 gap-4 mt-8">
-                                <button className="clip-fighter flex items-center justify-center gap-2 bg-white text-black h-14 px-6 font-headline uppercase tracking-wider hover:bg-gray-200 transition-all active:scale-95">
-                                    <span className="material-symbols-outlined">download</span>
-                                    <span>Descargar Bio</span>
-                                </button>
-                                <button className="clip-fighter flex items-center justify-center gap-2 bg-primary text-white h-14 px-6 font-headline uppercase tracking-wider hover:bg-red-700 shadow-xl transition-all active:scale-95">
-                                    <span className="material-symbols-outlined">mail</span>
-                                    <span>Contact Fighter</span>
-                                </button>
-                            </div>
+                            {/* Floating "Nodes" - Added these back for flavor */}
+                            <div className="absolute top-10 left-10 bg-black border border-white/20 p-2 rounded text-xs font-mono text-accent">Indexability</div>
+                            <div className="absolute bottom-20 right-10 bg-black border border-white/20 p-2 rounded text-xs font-mono text-blue-400">Crawl Budget</div>
+                            <div className="absolute top-1/2 right-4 bg-black border border-white/20 p-2 rounded text-xs font-mono text-purple-400">Semantic HTML</div>
                         </div>
                     </div>
                 </div>
-            </main>
+            </section>
+
+            {/* --- SECTION 2: CREDENTIALS & TRUST (NEW COMPLEMENT) --- */}
+            <section className="py-12 bg-black border-y border-white/10">
+                <div className="max-w-7xl mx-auto px-6">
+                    <p className="text-center font-mono text-xs uppercase tracking-widest text-gray-500 mb-8">Trayectoria & Validación (E-E-A-T)</p>
+                    <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                        {/* Mock Logos / Validation */}
+                        <div className="flex items-center gap-2">
+                            <span className="material-symbols-outlined text-2xl">verified</span>
+                            <span className="font-bold">Google Analytics Certified</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="material-symbols-outlined text-2xl">code</span>
+                            <span className="font-bold">Python IBM Data Science</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="material-symbols-outlined text-2xl">mic</span>
+                            <span className="font-bold">Speaker @ SEO Summit</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- SECTION 3: THE FIGHTER & HALL OF FAME (Original Identity RESTORED) --- */}
+            <section className="bg-ink text-paper relative py-24 px-4 md:px-12 lg:px-24 border-t-8 border-accent">
+                {/* Section Header */}
+                <div className="max-w-7xl mx-auto mb-20 text-center">
+                    <span className="bg-red-600 text-white font-bold uppercase px-3 py-1 text-xs tracking-widest inline-block mb-4 transform -rotate-2">
+                        Mindset & Culture
+                    </span>
+                    <h2 className="text-5xl md:text-7xl font-display uppercase tracking-tighter mb-6 text-paper">
+                        The <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">Fighter</span>_
+                    </h2>
+                    <p className="font-mono text-paper/70 max-w-2xl mx-auto">
+                        Mi forma de trabajar está moldeada por el deporte. Disciplina diaria, análisis frío y respeto por el proceso. No todo se gana rápido, pero todo se construye con método.
+                    </p>
+                </div>
+
+                {/* Dashboard Grid */}
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    {/* Left: Tale of the Tape (Stats) */}
+                    <div className="lg:col-span-4 bg-black/20 border-2 border-paper/10 rounded-xl p-8 backdrop-blur-sm">
+                        <div className="flex items-center justify-between mb-8 pb-4 border-b-2 border-paper/10">
+                            <h3 className="font-display text-2xl uppercase">Tale of the Tape</h3>
+                            <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full"></span>
+                        </div>
+                        <div className="space-y-6 font-mono">
+                            <div>
+                                <div className="text-xs uppercase text-paper/50 mb-1">Discipline</div>
+                                <div className="text-xl font-bold">MMA / BJJ / Boxing</div>
+                            </div>
+                            <div>
+                                <div className="text-xs uppercase text-paper/50 mb-1">Team</div>
+                                <div className="text-xl font-bold text-red-500">Liverpool FC</div>
+                                <div className="text-xs text-paper/40 italic">"You'll Never Walk Alone"</div>
+                            </div>
+
+                            {/* Spotify Rap Mix */}
+                            <div className="mt-12 max-w-md mx-auto transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                                <SpotifyWidget
+                                    url="https://open.spotify.com/embed/playlist/5h7E5rBunS8Wckl2l4HmzU?utm_source=generator"
+                                    title="Training Mix"
+                                    subtitle="Ritmo para picar código"
+                                    theme="rap"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right: Hall of Fame (Visual Grid) RESTORED */}
+                    <div className="lg:col-span-8">
+                        <h3 className="font-display text-2xl uppercase mb-8 flex items-center gap-4">
+                            Hall of Fame <span className="h-px bg-paper/20 flex-grow"></span>
+                        </h3>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {idols.map((idol, i) => (
+                                <div
+                                    key={i}
+                                    onMouseEnter={() => setActiveIdol(i)}
+                                    onMouseLeave={() => setActiveIdol(null)}
+                                    className="relative group h-64 rounded-xl overflow-hidden cursor-pointer border-2 border-transparent hover:border-paper/50 transition-all shadow-lg bg-black"
+                                >
+                                    {/* Background Image - RESTORED */}
+                                    <Image
+                                        src={idol.img}
+                                        alt={idol.name}
+                                        width={600}
+                                        height={800}
+                                        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0"
+                                    />
+
+                                    {/* Gradient Overlay */}
+                                    <div className={`absolute inset-0 bg-gradient-to-t ${idol.color} opacity-80 mix-blend-multiply group-hover:opacity-60 transition-opacity`}></div>
+
+                                    {/* Content */}
+                                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                                        <div className={`transform transition-all duration-300 ${activeIdol === i ? '-translate-y-2' : 'translate-y-0'}`}>
+                                            <div className="font-mono text-xs uppercase tracking-widest text-white/70 mb-1">{idol.role}</div>
+                                            <h4 className="font-display text-3xl uppercase leading-none text-white mb-2">{idol.name}</h4>
+
+                                            <div className={`overflow-hidden transition-all duration-300 ${activeIdol === i ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                                <p className="text-sm text-white/90 leading-tight font-light border-l-2 border-white pl-3 mt-2">
+                                                    {idol.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="absolute top-4 right-4 bg-black/50 backdrop-blur rounded p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <span className="material-symbols-outlined text-white text-sm">trophy</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Liverpool / Culture Banner */}
+                <div className="max-w-7xl mx-auto mt-20 relative rounded-xl overflow-hidden border-2 border-red-900/30 group">
+                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579952363873-1b9a2d677688?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30 grayscale group-hover:grayscale-0 transition-all duration-1000"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-900/90 to-transparent"></div>
+
+                    {/* Hip Hop / Culture Badges - RESTORED */}
+                    <div className="absolute top-4 right-4 md:top-8 md:right-8 flex gap-4 z-50">
+                        <div title="Notorious B.I.G." className="w-12 h-12 bg-black/80 backdrop-blur rounded-full flex items-center justify-center border-2 border-yellow-500 hover:scale-110 transition-transform cursor-help shadow-[0_0_15px_rgba(234,179,8,0.5)]">
+                            <span className="material-symbols-outlined text-yellow-500 text-2xl">crown</span>
+                        </div>
+                        <div title="Wu-Tang Clan" className="w-12 h-12 bg-black/80 backdrop-blur rounded-full flex items-center justify-center border-2 border-yellow-500 hover:scale-110 transition-transform cursor-help group/wu shadow-[0_0_15px_rgba(234,179,8,0.5)]">
+                            <span className="font-display font-bold text-yellow-500 text-xs tracking-tighter">WTC</span>
+                        </div>
+                        <div title="UFC Champion" className="w-12 h-12 bg-black/80 backdrop-blur rounded-full flex items-center justify-center border-2 border-red-500 hover:scale-110 transition-transform cursor-help shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+                            <span className="material-symbols-outlined text-red-500 text-2xl">sports_mma</span>
+                        </div>
+                    </div>
+
+                    <div className="relative p-12 md:p-24 flex flex-col justify-center">
+                        <span className="font-display text-red-400 text-xl uppercase tracking-widest mb-2 mix-blend-plus-lighter">Culture & Origins</span>
+                        <h2 className="text-6xl md:text-9xl font-display font-black text-white leading-[0.8] uppercase tracking-tighter opacity-90 drop-shadow-2xl">
+                            You'll Never<br />
+                            Walk Alone
+                        </h2>
+                        <p className="mt-8 text-white/80 max-w-lg font-mono text-sm leading-relaxed border-l-4 border-red-500 pl-6">
+                            Soy hincha del Liverpool. No solo por los títulos, sino por su identidad. La cultura competitiva, la historia y la conexión con la gente.
+                        </p>
+                    </div>
+                </div>
+            </section>
             <Footer />
-        </>
+        </div>
     );
 }

@@ -6,170 +6,159 @@ import SeoHead from '@/components/SeoHead';
 export default function UfcCase() {
     return (
         <>
-            <SeoHead title="TOP SECRET: UFC Audit | Calvo Creativo" />
+            <SeoHead title="CONFIDENTIAL: UFC SEO Audit | Calvo Creativo" />
             <Navigation />
 
-            {/* Dossier Background */}
-            <main className="min-h-screen bg-[#050505] font-mono text-white pt-20 pb-20 relative overflow-hidden selection:bg-[#ff1744] selection:text-white">
+            <main className="min-h-screen bg-[#0a0a0a] font-mono text-[#e0e0e0] pt-20 selection:bg-[#ff0000] selection:text-white relative overflow-hidden">
 
-                {/* Grid Overlay */}
-                <div className="absolute inset-0 z-0 pointer-events-none opacity-20"
-                    style={{ backgroundImage: 'linear-gradient(#1f1f1f 1px, transparent 1px), linear-gradient(90deg, #1f1f1f 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
+                {/* Background Grid */}
+                <div className="absolute inset-0 z-0 pointer-events-none opacity-20" style={{ backgroundImage: 'linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                <div className="absolute inset-0 bg-[#0a0a0a]/80 z-0 pointer-events-none"></div>
+
+                {/* Top Bar Status */}
+                <div className="border-b border-red-900/50 bg-[#1a0505] px-4 py-2 relative z-10 flex justify-between items-center text-[10px] uppercase tracking-widest text-red-500">
+                    <div className="flex gap-4">
+                        <span className="animate-pulse">● REC</span>
+                        <span>root@vibecoding:/el-artista/stats-ufc/</span>
+                    </div>
+                    <div className="border border-red-900 px-2 py-0.5 rounded">Status: DECRYPTED</div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                <section className="max-w-7xl mx-auto px-4 py-12 relative z-10">
 
-                    {/* Top Bar Status */}
-                    <div className="flex justify-between items-center text-[10px] text-gray-500 border-b border-gray-800 pb-2 mb-8 uppercase tracking-[0.2em]">
-                        <div>
-                            <span className="text-[#ff1744] mr-2">🔒 root@vibecoding:</span>
-                            /el-artista/stats-ufc/
-                        </div>
-                        <div className="flex gap-4">
-                            <span className="border border-[#ff1744] text-[#ff1744] px-1">EASTER_EGG_LVL_01</span>
-                            <Link href="/el-artista" className="hover:text-white transition-colors">&lt; RETURN TO PROFILE</Link>
-                        </div>
-                    </div>
+                    {/* Header Docket */}
+                    <div className="border-l-4 border-red-600 pl-8 mb-16 relative">
+                        <div className="absolute -left-[5px] top-0 w-3 h-3 bg-red-600 rounded-full"></div>
+                        <div className="inline-block bg-red-600 text-white px-2 py-0.5 text-[10px] font-bold uppercase mb-2">Top Secret</div>
+                        <div className="text-red-600 text-[10px] font-bold uppercase tracking-widest mb-1">CASE: UFC_SEO_AUDIT_V2 | ANALYST: CALVO CREATIVO</div>
 
-                    {/* Header: Classified Stamp */}
-                    <div className="relative mb-16 border-l-4 border-[#ff1744] pl-6 py-4 bg-gradient-to-r from-white/5 to-transparent">
-                        <div className="inline-block bg-[#ff1744] text-black text-xs font-black px-2 py-0.5 mb-2">TOP SECRET</div>
-                        <div className="text-gray-400 text-xs mb-1 tracking-wider uppercase">Case: UFC_SEO_AUDIT_V2</div>
-                        <h1 className="text-5xl md:text-7xl font-black uppercase text-white leading-[0.85] tracking-tight mb-4">
-                            STATS UFC<br />
-                            <span className="text-gray-600">RECONNAISSANCE</span>
+                        <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.85] mb-6 tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-600">
+                            Stats UFC<br />Reconnaissance
                         </h1>
-                        <p className="text-[#ff1744] text-xs uppercase tracking-widest animate-pulse">
-                            &gt;&gt; Unsolicited Technical Analysis of UFC.COM Mobile Performance Infrastructure.
-                        </p>
+
+                        <div className="text-red-500 text-xs uppercase tracking-widest mb-2">{'>>'} Unsolicited Technical Analysis of UFC.com Mobile Performance Infrastructure.</div>
 
                         {/* Stamp */}
-                        <div className="absolute top-0 right-0 md:right-20 transform rotate-12 border-4 border-[#ff1744]/30 p-4 text-[#ff1744]/30 font-black text-4xl uppercase tracking-widest pointer-events-none select-none">
+                        <div className="absolute top-0 right-0 hidden md:block transform rotate-12 border-4 border-red-900/40 text-red-900/40 font-black text-4xl p-4 uppercase tracking-widest mask-grunge">
                             Confidential<br />Dossier
                         </div>
                     </div>
 
-                    {/* Executive Summary Console */}
-                    <div className="bg-[#0a0a0a] border border-gray-800 p-6 mb-12 font-mono text-sm leading-relaxed shadow-2xl relative">
-                        <div className="flex items-center gap-2 mb-4 text-[#ff1744]">
-                            <span className="material-symbols-outlined text-sm">terminal</span>
-                            <h3 className="uppercase tracking-widest font-bold">Executive Summary</h3>
-                        </div>
+                    {/* Executive Summary */}
+                    <div className="mb-20">
+                        <h3 className="text-red-500 font-bold uppercase text-lg mb-4 flex items-center gap-2">
+                            <span className="material-symbols-outlined">terminal</span> Executive Summary
+                        </h3>
+                        <div className="bg-[#110505] border border-red-900/30 p-8 rounded-lg relative overflow-hidden">
+                            {/* Scanning Line Effect */}
+                            <div className="absolute top-0 left-0 w-full h-[2px] bg-red-500/50 shadow-[0_0_20px_#ff0000] animate-scan-y opacity-30"></div>
 
-                        <p className="text-gray-300 mb-4">
-                            <span className="text-white font-bold">&gt; [INIT_SCAN]:</span> Target URL <span className="bg-gray-800 px-1 text-white">ufc.com/rankings</span> exhibits dominant domain authority but suffers from critical <span className="bg-[#ff1744] text-black px-1">LCP LATENCY</span> latency on mobile networks.
-                        </p>
-                        <p className="text-gray-400">
-                            While the "fighter reach" (backlink profile) is heavyweight-class, the <span className="bg-[#ff1744] text-black px-1">CORE WEB VITALS</span> suggest poor defensive movement against Google's latest algorithm updates. <span className="text-white font-bold">Strategy:</span> Neutralize <span className="bg-[#ff1744] text-black px-1">RENDER BLOCKING JS</span> to secure the belt in SERP rankings.
-                        </p>
-
-                        <div className="mt-6 border border-[#ff1744]/50 border-dashed p-2 text-[#ff1744] text-xs text-center uppercase bg-[#ff1744]/5">
-                            [ ! ] ALERT: Unused Javascript Payloads Detected in HEAD
-                        </div>
-                    </div>
-
-                    {/* Tale of the Tape - Comparison */}
-                    <div className="border border-gray-800 bg-[#0a0a0a] p-8 relative">
-                        <div className="absolute top-0 left-0 bg-[#ff1744] text-black text-[10px] font-bold px-2 uppercase">Red Corner</div>
-                        <div className="absolute top-0 right-0 text-white/50 text-[10px] font-bold px-2 uppercase border-l border-b border-gray-800">Vs. Industry Benchmark</div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8 items-center">
-
-                            {/* Input: UFC.COM */}
-                            <div className="text-center">
-                                <h3 className="text-2xl font-black uppercase mb-8">UFC.COM</h3>
-
-                                <div className="mb-8">
-                                    <div className="text-5xl font-black text-white">91</div>
-                                    <div className="h-0.5 w-full bg-white mt-1 mb-2"></div>
-                                    <div className="text-[10px] text-gray-500 uppercase tracking-widest">Domain Rating</div>
-                                </div>
-
-                                <div className="mb-8">
-                                    <div className="text-5xl font-black text-[#ff1744]">2.4s</div>
-                                    <div className="h-0.5 w-full bg-[#ff1744] mt-1 mb-2"></div>
-                                    <div className="text-[10px] text-[#ff1744] uppercase tracking-widest">Load Speed (LCP)</div>
-                                </div>
-
-                                <div>
-                                    <div className="text-3xl font-bold text-white">12.5M</div>
-                                    <div className="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Backlinks</div>
-                                </div>
-                            </div>
-
-                            {/* VS Graphic */}
-                            <div className="flex flex-col items-center justify-center opacity-80">
-                                <div className="size-16 border border-[#ff1744] rounded-full flex items-center justify-center text-[#ff1744] mb-4 animate-pulse">
-                                    <span className="material-symbols-outlined text-3xl">equalizer</span>
-                                </div>
-                                <h4 className="text-xl font-black uppercase text-white tracking-tighter italic">Technical<br />Matchup</h4>
-                                <div className="flex gap-1 mt-2">
-                                    <div className="w-8 h-px bg-gray-700"></div>
-                                    <div className="text-[10px] text-gray-700 uppercase">Stats</div>
-                                    <div className="w-8 h-px bg-gray-700"></div>
-                                </div>
-                            </div>
-
-                            {/* Input: Benchmark */}
-                            <div className="text-center opacity-60">
-                                <h3 className="text-xl font-bold uppercase mb-8 text-gray-400">Benchmark</h3>
-
-                                <div className="mb-8">
-                                    <div className="text-4xl font-bold text-gray-300">89</div>
-                                    <div className="h-0.5 w-full bg-gray-700 mt-1 mb-2"></div>
-                                    <div className="text-[10px] text-gray-600 uppercase tracking-widest">Avg. Rating</div>
-                                </div>
-
-                                <div className="mb-8">
-                                    <div className="text-4xl font-bold text-[#00e676]">1.2s</div>
-                                    <div className="h-0.5 w-full bg-[#00e676] mt-1 mb-2"></div>
-                                    <div className="text-[10px] text-[#00e676] uppercase tracking-widest">Ideal Speed</div>
-                                </div>
-
-                                <div>
-                                    <div className="text-2xl font-bold text-gray-300">8.2M</div>
-                                    <div className="text-[10px] text-gray-600 uppercase tracking-widest mt-1">Avg. Reach</div>
+                            <div className="font-mono text-sm leading-loose text-gray-400 max-w-4xl">
+                                <p className="mb-4">
+                                    <span className="text-white font-bold">{'>'} [INIT_SCAN]:</span> Target URL <span className="bg-gray-800 text-white px-1">ufc.com/rankings</span> exhibits dominant domain authority but suffers from critical <span className="bg-red-900/50 text-red-200 px-1">latency on mobile networks</span>.
+                                </p>
+                                <p className="mb-4">
+                                    While the "fighter reach" (backlink profile) is heavyweight-class, the <span className="bg-black text-transparent select-none">Core Web Vitals scores</span> suggest poor defensive movement against Google's latest algorithm updates. Strategy: Neutralize <span className="bg-black text-transparent select-none">unused javascript</span> to secure the belt in SERP rankings.
+                                </p>
+                                <div className="mt-8 border border-red-900/50 border-dashed p-2 inline-block text-[10px] text-red-500 uppercase">
+                                    [ ! ] ALERT: Unused JavaScript Payloads Detected in Head
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Bottom Actions */}
-                    <div className="grid md:grid-cols-3 gap-6 mt-12">
-                        <div className="border border-gray-800 bg-[#0f0f0f] p-4 flex items-center justify-between group cursor-pointer hover:border-gray-600">
-                            <div>
-                                <div className="text-[10px] bg-gray-800 text-gray-400 inline-block px-1 mb-1">RAW DATA</div>
-                                <h4 className="text-lg font-bold text-white uppercase">Lighthouse.json</h4>
-                                <p className="text-[10px] text-gray-500">Size: 4.2 MB // Encrypted</p>
-                            </div>
-                            <span className="material-symbols-outlined text-gray-500">description</span>
+                    {/* Tale of the Tape (Comparison) */}
+                    <div className="mb-20 relative">
+                        <div className="flex justify-between items-end mb-6 border-b border-gray-800 pb-2">
+                            <h3 className="text-white font-bold uppercase text-2xl flex items-center gap-2">
+                                <span className="material-symbols-outlined text-red-600">sports_mma</span> Tale of the Tape
+                            </h3>
+                            <div className="text-[10px] uppercase bg-gray-900 px-2 py-1 text-gray-500">Vs. Industry Benchmark</div>
                         </div>
 
-                        <div className="border border-gray-800 bg-[#0f0f0f] p-4 flex items-center justify-between group cursor-pointer hover:border-gray-600">
-                            <div>
-                                <div className="text-[10px] bg-gray-800 text-gray-400 inline-block px-1 mb-1">EVIDENCE</div>
-                                <h4 className="text-lg font-bold text-white uppercase">Screenshot_Mobile.png</h4>
-                                <p className="text-[10px] text-gray-500">Size: 12.8 MB // Uncompressed</p>
+                        <div className="grid md:grid-cols-2 gap-px bg-red-900/20 border border-gray-800">
+                            {/* Red Corner */}
+                            <div className="bg-[#0f0505] p-8 relative">
+                                <div className="text-[10px] font-bold text-red-500 uppercase absolute top-4 left-4">Red Corner</div>
+                                <h4 className="text-3xl font-black uppercase text-white mb-12 text-center">UFC.com</h4>
+
+                                <div className="space-y-8">
+                                    <div>
+                                        <div className="flex justify-between text-xs uppercase text-gray-500 mb-1">Domain Rating</div>
+                                        <div className="text-5xl font-black text-white">91 <span className="text-sm font-normal text-gray-600">DR</span></div>
+                                        <div className="h-1 bg-gray-800 w-full mt-2"><div className="h-full bg-white w-[91%]"></div></div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between text-xs uppercase text-gray-500 mb-1">Load Speed</div>
+                                        <div className="text-5xl font-black text-red-500">2.4s <span className="text-sm font-normal text-gray-600">LCP</span></div>
+                                        <div className="h-1 bg-gray-800 w-full mt-2"><div className="h-full bg-red-600 w-[60%]"></div></div>
+                                    </div>
+                                </div>
                             </div>
-                            <span className="material-symbols-outlined text-gray-500">image</span>
+
+                            {/* Blue Corner */}
+                            <div className="bg-[#0a0a0a] p-8 relative">
+                                <div className="text-[10px] font-bold text-blue-500 uppercase absolute top-4 right-4">Blue Corner</div>
+                                <h4 className="text-3xl font-black uppercase text-gray-400 mb-12 text-center">Benchmark</h4>
+
+                                <div className="space-y-8">
+                                    <div className="text-right">
+                                        <div className="flex justify-end text-xs uppercase text-gray-500 mb-1">Avg. Rating</div>
+                                        <div className="text-5xl font-black text-gray-500">89 <span className="text-sm font-normal text-gray-700">DR</span></div>
+                                        <div className="h-1 bg-gray-800 w-full mt-2 flex justify-end"><div className="h-full bg-gray-600 w-[89%]"></div></div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="flex justify-end text-xs uppercase text-gray-500 mb-1">Ideal Speed</div>
+                                        <div className="text-5xl font-black text-green-500">1.2s <span className="text-sm font-normal text-gray-700">LCP</span></div>
+                                        <div className="h-1 bg-gray-800 w-full mt-2 flex justify-end"><div className="h-full bg-green-500 w-[90%]"></div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <button className="bg-[#ff1744] text-white p-4 font-black uppercase tracking-wider hover:bg-red-700 transition-colors flex flex-col items-center justify-center">
-                            <span className="material-symbols-outlined mb-2">download</span>
-                            <span>Extract Dossier</span>
-                            <span className="text-[9px] opacity-70 mt-1">Full PDF Report</span>
-                        </button>
+                        {/* Center VS Circle */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-16 rounded-full bg-black border-2 border-red-600 flex items-center justify-center z-10 shadow-[0_0_20px_#ff0000]">
+                            <span className="font-black italic text-red-600">VS</span>
+                        </div>
                     </div>
 
-                    {/* Warning Footer */}
-                    <div className="mt-20 text-center">
-                        <span className="material-symbols-outlined text-[#ff1744] mb-2">warning</span>
-                        <p className="text-[9px] text-gray-600 uppercase max-w-lg mx-auto leading-relaxed">
-                            WARNING: This document contains proprietary analysis. Unauthorized distribution will result in immediate termination of access privileges. <span className="underline decoration-[#ff1744] text-gray-500 cursor-pointer">Burn after reading.</span>
-                        </p>
+                    {/* Evidence Grid */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                        <div className="border border-gray-800 bg-[#111] p-4 group hover:border-red-600 transition-colors">
+                            <div className="flex justify-between items-center mb-4">
+                                <span className="material-symbols-outlined text-gray-500">description</span>
+                                <div className="bg-gray-800 text-[8px] uppercase px-1">Raw Data</div>
+                            </div>
+                            <div className="font-bold text-white mb-1">LIGHTHOUSE.JSON</div>
+                            <div className="text-[10px] text-gray-500">Size: 4.2 MB // Encrypted</div>
+                        </div>
+
+                        <div className="border border-gray-800 bg-[#111] p-4 group hover:border-red-600 transition-colors">
+                            <div className="flex justify-between items-center mb-4">
+                                <span className="material-symbols-outlined text-gray-500">image</span>
+                                <div className="bg-gray-800 text-[8px] uppercase px-1">Evidence</div>
+                            </div>
+                            <div className="font-bold text-white mb-1">SCREENSHOT_MOBILE.PNG</div>
+                            <div className="text-[10px] text-gray-500">Size: 12.8 MB // Uncompressed</div>
+                        </div>
+
+                        <div className="bg-red-600 p-1 group cursor-pointer hover:bg-red-500 transition-colors flex items-center justify-center">
+                            <div className="border-2 border-black w-full h-full flex flex-col items-center justify-center p-4">
+                                <span className="material-symbols-outlined text-black text-3xl mb-2">download</span>
+                                <div className="font-black uppercase text-black text-xl text-center leading-none">Extract Dossier</div>
+                                <div className="text-[8px] font-bold uppercase text-black/70 mt-1">Full PDF Report</div>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
+                    <div className="text-center opacity-50 text-[9px] uppercase tracking-widest text-red-900 mt-20">
+                        <span className="material-symbols-outlined text-lg block mb-2">warning</span>
+                        Warning: This document contains proprietary analysis by Calvo Creativo.<br />
+                        Unauthorized distribution will result in immediate termination of access privileges.
+                    </div>
+
+                </section>
+
             </main>
             <Footer />
         </>
