@@ -114,23 +114,86 @@ export default function Home() {
                             "No soy una agencia con 50 juniors. Soy tu socio estratégico senior."
                         </div>
                     </div>
-                    {/* Visual Graph: Rhythm vs Impact (Kept as abstraction) */}
-                    <div className="relative h-96 border-2 border-white/20 bg-white/5 p-8 rounded-xl backdrop-blur-sm flex items-center justify-center">
-                        <div className="text-center">
-                            <span className="material-symbols-outlined text-6xl text-white/20 mb-4">psychology</span>
-                            <div className="text-xs font-mono uppercase text-gray-500">Human Connection + Machine Logic</div>
-                        </div>
-                        {/* Dynamic lines */}
-                        <div className="absolute inset-0 overflow-hidden opacity-30">
-                            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <path d="M0 50 Q 25 20 50 50 T 100 50" fill="none" stroke="url(#gradient)" strokeWidth="0.5" />
+                    {/* Visual Graph: The Algorithm Dashboard */}
+                    <div className="relative h-96 border-2 border-white/20 bg-black/80 p-6 rounded-xl backdrop-blur-md overflow-hidden group shadow-2xl">
+                        {/* Grid Background */}
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+
+                        {/* Central HUD */}
+                        <div className="relative z-10 w-full h-full flex flex-col justify-between font-mono text-xs text-white/60">
+                            {/* Header HUD */}
+                            <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
+                                    <span>CALVO_CORE_V.3.5</span>
+                                </div>
+                                <div className="flex gap-4">
+                                    <span>CPU: 12%</span>
+                                    <span className="text-orange-400">LATENCY: 0ms</span>
+                                </div>
+                            </div>
+
+                            {/* The Fusion Visual Content */}
+                            <div className="flex-1 flex items-center justify-around relative px-4">
+
+                                {/* Left: Salsa (Organic Input) */}
+                                <div className="text-center space-y-2">
+                                    <div className="text-[10px] tracking-widest text-orange-400">INPUT: CULTURE</div>
+                                    <div className="flex gap-1 h-24 items-end justify-center">
+                                        {[60, 80, 40, 90, 50].map((h, i) => (
+                                            <div key={i} className="w-3 bg-gradient-to-t from-orange-600 to-red-500 rounded-sm animate-pulse" style={{ height: `${h}%`, animationDelay: `${i * 0.15}s` }}></div>
+                                        ))}
+                                    </div>
+                                    <div className="text-xs text-white/40">Human Signal</div>
+                                </div>
+
+                                {/* Center: The Connector */}
+                                <div className="relative">
+                                    <div className="w-24 h-24 rounded-full border-2 border-white/10 flex items-center justify-center bg-black/50 backdrop-blur shadow-[0_0_50px_rgba(220,38,38,0.2)]">
+                                        <span className="material-symbols-outlined text-4xl text-white">psychology</span>
+                                    </div>
+                                    {/* Spinning Ring */}
+                                    <div className="absolute inset-0 rounded-full border-t-2 border-red-500 animate-[spin_3s_linear_infinite]"></div>
+                                    <div className="absolute -inset-2 rounded-full border-b-2 border-orange-500 animate-[spin_5s_linear_infinite_reverse] opacity-50"></div>
+                                </div>
+
+                                {/* Right: Fight (Tech Output) */}
+                                <div className="text-center space-y-2">
+                                    <div className="text-[10px] tracking-widest text-red-500">OUTPUT: RANKING</div>
+                                    <div className="flex flex-col gap-1 items-end w-24">
+                                        <div className="w-full h-1 bg-white/10 rounded overflow-hidden">
+                                            <div className="h-full bg-white w-3/4 animate-[pulse_2s_infinite]"></div>
+                                        </div>
+                                        <div className="w-full h-1 bg-white/10 rounded overflow-hidden">
+                                            <div className="h-full bg-white w-1/2"></div>
+                                        </div>
+                                        <div className="font-mono text-[9px] text-right text-green-400 mt-2 leading-tight">
+                                            {`> SEARCH_INTENT: MATCH`} <br />
+                                            {`> INDEXING: TRUE`} <br />
+                                            {`> AUTHORITY: HIGH`}
+                                        </div>
+                                    </div>
+                                    <div className="text-xs text-white/40">Machine Code</div>
+                                </div>
+                            </div>
+
+                            {/* Connecting Lines (SVG Overlay) */}
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none -z-10 opacity-20">
+                                <path d="M 80 150 Q 150 150 220 150" stroke="url(#gradient-line)" strokeWidth="2" fill="none" className="animate-pulse" />
+                                <path d="M 450 150 Q 380 150 310 150" stroke="white" strokeWidth="1" strokeDasharray="4 4" fill="none" />
                                 <defs>
-                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stopColor="#ef4444" />
-                                        <stop offset="100%" stopColor="#f97316" />
+                                    <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stopColor="#f97316" />
+                                        <stop offset="100%" stopColor="#ef4444" />
                                     </linearGradient>
                                 </defs>
                             </svg>
+
+                            {/* Footer HUD */}
+                            <div className="flex justify-between items-center border-t border-white/10 pt-4 text-[10px] text-white/30">
+                                <div>NON-LINEAR_PROCESS.EXE</div>
+                                <div>STATUS: <span className="text-green-500 font-bold">OPTIMIZED</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>

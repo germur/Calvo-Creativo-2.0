@@ -45,6 +45,7 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
             trackNumber="03"
             trackTitle="Deep Dives"
             themeColor="acid-purple"
+            mode="light"
         >
             <script
                 type="application/ld+json"
@@ -52,11 +53,11 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
             />
 
             {/* GEO Definition Block */}
-            <div className="mb-12 border-l-2 border-acid-purple pl-4 py-2 bg-acid-purple/5">
+            <div className="mb-12 border-l-4 border-acid-purple pl-4 py-2 bg-acid-purple/5">
                 <p className="font-mono text-xs text-acid-purple uppercase tracking-widest mb-1">
                     $ define --context "Human Element"
                 </p>
-                <p className="text-white/80 font-mono text-sm leading-relaxed">
+                <p className="text-ink/80 font-mono text-sm leading-relaxed">
                     <strong>Information Gain</strong>: En una web saturada de "promedios" generados por IA, Google prioriza la <strong>Experiencia (E-E-A-T)</strong>.
                     La opinión fundamentada y contraria es el único antídoto contra el "slop".
                 </p>
@@ -64,29 +65,29 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
 
             {/* Hero Section with Visual Noise */}
             <div className="relative mb-24 py-12">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-acid-purple/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-acid-purple/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
 
                 {/* Visual Badges/Stickers - Floating */}
                 <div className="hidden md:block absolute top-10 right-10 rotate-12">
-                    <div className="bg-white text-black font-black uppercase text-xs px-4 py-2 border-2 border-black shadow-[4px_4px_0px_#ccff00]">
+                    <div className="bg-ink text-white font-black uppercase text-xs px-4 py-2 border-2 border-transparent shadow-[4px_4px_0px_#8B5CF6]">
                         Verified Human_
                     </div>
                 </div>
 
-                <h1 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white via-acid-purple to-white" style={{ fontFamily: 'Spline Sans, sans-serif' }}>
+                <h1 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-8 text-ink" style={{ fontFamily: 'Spline Sans, sans-serif' }}>
                     Lo que la IA <br />
-                    <span className="text-white relative">
+                    <span className="relative">
                         No Puede
                         <svg className="absolute w-full h-3 -bottom-1 left-0 text-acid-purple" viewBox="0 0 100 10" preserveAspectRatio="none">
-                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
                         </svg>
                     </span> <br />
-                    <span className="text-acid-purple font-display">Alucinar.</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-acid-purple to-purple-900 font-display">Alucinar.</span>
                 </h1>
 
-                <p className="text-xl text-white/60 max-w-2xl leading-relaxed">
+                <p className="text-xl text-ink/70 max-w-2xl leading-relaxed">
                     Opinión sin filtro. Estrategia sin relleno. <br />
-                    <span className="text-acid-purple">100% Biológico. 0% Sintético.</span>
+                    <span className="text-acid-purple font-bold">100% Biológico. 0% Sintético.</span>
                 </p>
             </div>
 
@@ -98,11 +99,11 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
                             <span className="material-symbols-outlined">fingerprint</span>
                             El Manifiesto
                         </h2>
-                        <div className="prose prose-invert">
-                            <p className="text-lg text-white font-light leading-relaxed">
+                        <div className="prose">
+                            <p className="text-lg text-ink font-light leading-relaxed">
                                 "En un mar de contenido sintético, la humanidad es el nuevo lujo."
                             </p>
-                            <p className="text-white/60 leading-relaxed">
+                            <p className="text-ink/60 leading-relaxed">
                                 Si le pides a ChatGPT un artículo sobre SEO, te dará el promedio.
                                 Yo no escribo promedio. Escribo desde la trinchera.
                             </p>
@@ -110,32 +111,32 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
                     </div>
 
                     {/* Visual Graphic: Human vs AI */}
-                    <div className="relative bg-[#181114] border-2 border-white/10 p-8 rounded-2xl overflow-hidden group hover:border-acid-purple transition-colors">
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
+                    <div className="relative bg-white border-4 border-ink p-8 shadow-brutal overflow-hidden group hover:-translate-y-1 transition-transform">
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-5"></div>
 
                         <div className="relative z-10 flex justify-between items-center text-center">
                             {/* Human Side */}
                             <div className="flex flex-col items-center gap-2">
-                                <div className="w-20 h-20 bg-acid-purple rounded-full flex items-center justify-center border-4 border-black shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                                <div className="w-20 h-20 bg-acid-purple rounded-full flex items-center justify-center border-4 border-ink shadow-[4px_4px_0px_#000]">
                                     <span className="material-symbols-outlined text-4xl text-white">accessibility_new</span>
                                 </div>
-                                <span className="font-mono text-xs uppercase tracking-widest text-white">Human Insight</span>
+                                <span className="font-mono text-xs uppercase tracking-widest text-ink font-bold">Human Insight</span>
                             </div>
 
-                            <div className="text-white/20 font-black text-2xl">VS</div>
+                            <div className="text-ink/20 font-black text-2xl">VS</div>
 
                             {/* AI Side */}
                             <div className="flex flex-col items-center gap-2 opacity-50 grayscale group-hover:grayscale-0 transition-all">
-                                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border-2 border-white/20">
-                                    <span className="material-symbols-outlined text-3xl text-white">smart_toy</span>
+                                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-300">
+                                    <span className="material-symbols-outlined text-3xl text-gray-400">smart_toy</span>
                                 </div>
-                                <span className="font-mono text-xs uppercase tracking-widest text-white/40">AI Average</span>
+                                <span className="font-mono text-xs uppercase tracking-widest text-ink/40">AI Average</span>
                             </div>
                         </div>
 
                         {/* Data Point */}
-                        <div className="mt-8 bg-black/50 p-4 rounded text-center border border-white/5">
-                            <div className="text-3xl font-black text-white mb-1">100%</div>
+                        <div className="mt-8 bg-ink text-white p-4 text-center border-2 border-transparent">
+                            <div className="text-3xl font-black mb-1">100%</div>
                             <div className="text-[10px] font-mono uppercase text-acid-purple">Information Gain</div>
                         </div>
                     </div>
@@ -145,21 +146,21 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
             {/* The Essays (Deep Dives) - Visual Grid */}
             <section className="mb-24">
                 <div className="flex items-center gap-4 mb-12">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black font-black text-xl">
+                    <div className="w-12 h-12 bg-ink text-white rounded-full flex items-center justify-center font-black text-xl">
                         01
                     </div>
-                    <h2 className="text-4xl font-black uppercase font-display text-white">Deep Dives</h2>
+                    <h2 className="text-4xl font-black uppercase font-display text-ink">Deep Dives</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {allPostsData.length > 0 ? (
                         allPostsData.map((post, index) => (
                             <Link href={`/lab/opinion/${post.id}`} key={post.id} className="group cursor-pointer block">
-                                <div className="bg-[#120810] border border-white/10 rounded-2xl overflow-hidden hover:border-acid-purple transition-all hover:-translate-y-2 duration-300 shadow-xl">
+                                <div className="bg-white border-4 border-ink overflow-hidden hover:shadow-brutal transition-all hover:-translate-y-2 duration-300 shadow-xl">
 
                                     {/* Visual Cover Art (CSS Generated) */}
-                                    <div className={`h-48 relative overflow-hidden ${index % 2 === 0 ? 'bg-gradient-to-br from-acid-purple to-black' : 'bg-gradient-to-br from-indigo-900 to-black'}`}>
-                                        <div className="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                                    <div className={`h-48 relative overflow-hidden ${index % 2 === 0 ? 'bg-ink' : 'bg-primary'}`}>
+                                        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
 
                                         {/* Floating Icon */}
                                         <div className="absolute bottom-4 right-4">
@@ -169,20 +170,20 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
                                         </div>
 
                                         <div className="absolute top-4 left-4">
-                                            <span className="bg-black/50 backdrop-blur text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full border border-white/10">
+                                            <span className="bg-white text-ink text-[10px] font-bold uppercase px-3 py-1 border-2 border-ink shadow-sm">
                                                 Ensayo {String(index + 1).padStart(2, '0')}
                                             </span>
                                         </div>
                                     </div>
 
                                     <div className="p-8">
-                                        <h3 className="text-2xl font-bold text-white mb-4 leading-tight group-hover:text-acid-purple transition-colors font-display uppercase">
+                                        <h3 className="text-2xl font-bold text-ink mb-4 leading-tight group-hover:text-primary transition-colors font-display uppercase">
                                             {post.title}
                                         </h3>
-                                        <p className="text-white/60 mb-6 text-sm line-clamp-3">
+                                        <p className="text-ink/70 mb-6 text-sm line-clamp-3 font-medium">
                                             {post.excerpt || 'Click to read full analysis...'}
                                         </p>
-                                        <div className="flex items-center gap-2 text-acid-purple font-bold text-xs uppercase tracking-widest">
+                                        <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
                                             Leer Artículo <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
                                         </div>
                                     </div>
@@ -190,9 +191,9 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
                             </Link>
                         ))
                     ) : (
-                        <div className="col-span-2 text-center py-20 border-2 border-dashed border-white/20 rounded-xl">
-                            <h3 className="font-display text-2xl text-white/50 uppercase">No hay ensayos aún</h3>
-                            <p className="font-mono text-xs text-white/40 mt-2">Roger está escribiendo...</p>
+                        <div className="col-span-2 text-center py-20 border-4 border-dashed border-ink/10 rounded-xl">
+                            <h3 className="font-display text-2xl text-ink/50 uppercase">No hay ensayos aún</h3>
+                            <p className="font-mono text-xs text-ink/40 mt-2">Roger está escribiendo...</p>
                         </div>
                     )}
                 </div>
@@ -201,64 +202,69 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
             {/* Hot Takes (Micro-Blogging) */}
             <section className="mb-24">
                 <div className="flex items-center gap-4 mb-8">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black font-black text-xl">
+                    <div className="w-12 h-12 bg-ink text-white rounded-full flex items-center justify-center font-black text-xl">
                         02
                     </div>
-                    <h2 className="text-4xl font-black uppercase font-display text-white">Hot Takes</h2>
+                    <h2 className="text-4xl font-black uppercase font-display text-ink">Hot Takes</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Take 1 */}
-                    <div className="bg-[#181114] p-6 rounded-xl border border-white/10 hover:border-acid-purple transition-all group">
-                        <div className="flex items-start gap-4 mb-4">
-                            <div className="size-10 rounded-full bg-gradient-to-r from-acid-purple to-pink-600 flex items-center justify-center text-white font-bold text-xs ring-2 ring-black">RC</div>
+                    <div className="bg-white p-6 border-4 border-ink hover:shadow-brutal transition-all group relative">
+                        {/* Quote Mark Decoration */}
+                        <div className="absolute top-4 right-4 text-6xl text-ink/5 font-serif font-black">"</div>
+
+                        <div className="flex items-start gap-4 mb-4 relative z-10">
+                            <div className="size-10 rounded-full bg-ink flex items-center justify-center text-white font-bold text-xs ring-2 ring-white shadow-md">RC</div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <span className="font-bold text-white text-sm">Roger Calvo</span>
-                                    <span className="text-acid-purple material-symbols-outlined text-[14px]">verified</span>
-                                    <span className="text-white/40 text-xs">@calvoseo</span>
+                                    <span className="font-bold text-ink text-sm">Roger Calvo</span>
+                                    <span className="text-primary material-symbols-outlined text-[14px]">verified</span>
+                                    <span className="text-ink/40 text-xs">@calvoseo</span>
                                 </div>
-                                <span className="text-white/20 text-xs font-mono">Just Now</span>
+                                <span className="text-ink/30 text-xs font-mono">Just Now</span>
                             </div>
                         </div>
 
-                        <p className="text-white/90 text-lg leading-snug mb-4 font-medium">
-                            Los backlinks siguen importando, pero las <span className="text-acid-purple bg-acid-purple/10 px-1">'Menciones de Marca no enlazadas'</span> son el nuevo PageRank para los LLMs.
+                        <p className="text-ink/90 text-lg leading-snug mb-4 font-medium relative z-10">
+                            Los backlinks siguen importando, pero las <span className="text-white bg-primary px-1 font-bold shadow-sm">'Menciones de Marca'</span> son el nuevo PageRank para los LLMs.
                         </p>
 
                         {/* Mock Social Actions */}
-                        <div className="flex gap-6 border-t border-white/5 pt-4 text-white/40 text-xs group-hover:text-white/60">
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-acid-purple"><span className="material-symbols-outlined text-base">chat_bubble</span> 12</span>
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-green-400"><span className="material-symbols-outlined text-base">repeat</span> 4</span>
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-red-500"><span className="material-symbols-outlined text-base">favorite</span> 89</span>
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-blue-400"><span className="material-symbols-outlined text-base">ios_share</span></span>
+                        <div className="flex gap-6 border-t border-ink/10 pt-4 text-ink/40 text-xs">
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-primary"><span className="material-symbols-outlined text-base">chat_bubble</span> 12</span>
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-green-600"><span className="material-symbols-outlined text-base">repeat</span> 4</span>
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-red-600"><span className="material-symbols-outlined text-base">favorite</span> 89</span>
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-blue-600"><span className="material-symbols-outlined text-base">ios_share</span></span>
                         </div>
                     </div>
 
                     {/* Take 2 */}
-                    <div className="bg-[#181114] p-6 rounded-xl border border-white/10 hover:border-acid-purple transition-all group">
-                        <div className="flex items-start gap-4 mb-4">
-                            <div className="size-10 rounded-full bg-gradient-to-r from-acid-purple to-pink-600 flex items-center justify-center text-white font-bold text-xs ring-2 ring-black">RC</div>
+                    <div className="bg-white p-6 border-4 border-ink hover:shadow-brutal transition-all group relative">
+                        <div className="absolute top-4 right-4 text-6xl text-ink/5 font-serif font-black">"</div>
+
+                        <div className="flex items-start gap-4 mb-4 relative z-10">
+                            <div className="size-10 rounded-full bg-ink flex items-center justify-center text-white font-bold text-xs ring-2 ring-white shadow-md">RC</div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <span className="font-bold text-white text-sm">Roger Calvo</span>
-                                    <span className="text-acid-purple material-symbols-outlined text-[14px]">verified</span>
-                                    <span className="text-white/40 text-xs">@calvoseo</span>
+                                    <span className="font-bold text-ink text-sm">Roger Calvo</span>
+                                    <span className="text-primary material-symbols-outlined text-[14px]">verified</span>
+                                    <span className="text-ink/40 text-xs">@calvoseo</span>
                                 </div>
-                                <span className="text-white/20 text-xs font-mono">2h ago</span>
+                                <span className="text-ink/30 text-xs font-mono">2h ago</span>
                             </div>
                         </div>
 
-                        <p className="text-white/90 text-lg leading-snug mb-4 font-medium">
-                            La IA no va a reemplazar a los consultores SEO. Va a reemplazar a los que se niegan a usar <span className="text-acid-purple bg-acid-purple/10 px-1">Agentes Autónomos</span> para el trabajo sucio.
+                        <p className="text-ink/90 text-lg leading-snug mb-4 font-medium relative z-10">
+                            La IA no va a reemplazar a los consultores SEO. Va a reemplazar a los que se niegan a usar <span className="text-white bg-primary px-1 font-bold shadow-sm">Agentes Autónomos</span> para el trabajo sucio.
                         </p>
 
                         {/* Mock Social Actions */}
-                        <div className="flex gap-6 border-t border-white/5 pt-4 text-white/40 text-xs group-hover:text-white/60">
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-acid-purple"><span className="material-symbols-outlined text-base">chat_bubble</span> 34</span>
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-green-400"><span className="material-symbols-outlined text-base">repeat</span> 12</span>
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-red-500"><span className="material-symbols-outlined text-base">favorite</span> 156</span>
-                            <span className="flex items-center gap-1 cursor-pointer hover:text-blue-400"><span className="material-symbols-outlined text-base">ios_share</span></span>
+                        <div className="flex gap-6 border-t border-ink/10 pt-4 text-ink/40 text-xs">
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-primary"><span className="material-symbols-outlined text-base">chat_bubble</span> 34</span>
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-green-600"><span className="material-symbols-outlined text-base">repeat</span> 12</span>
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-red-600"><span className="material-symbols-outlined text-base">favorite</span> 156</span>
+                            <span className="flex items-center gap-1 cursor-pointer hover:text-blue-600"><span className="material-symbols-outlined text-base">ios_share</span></span>
                         </div>
                     </div>
                 </div>
@@ -283,12 +289,12 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
 
             {/* Bridge to Lado A */}
             <section className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Shrikhand, cursive' }}>¿Estás de acuerdo con mi filosofía?</h2>
-                <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+                <h2 className="text-3xl font-bold text-ink mb-6" style={{ fontFamily: 'Shrikhand, cursive' }}>¿Estás de acuerdo con mi filosofía?</h2>
+                <p className="text-ink/70 mb-8 max-w-2xl mx-auto">
                     Tener una opinión fuerte es el primer paso para tener una marca fuerte.
                     En el Lado A, convierto esta filosofía en estrategia de crecimiento. Sin "slop". Solo experiencia real.
                 </p>
-                <Link href="/consultoria" className="inline-flex items-center gap-2 text-acid-purple font-bold uppercase border-b border-acid-purple pb-1 hover:text-white hover:border-white transition-all">
+                <Link href="/consultoria" className="inline-flex items-center gap-2 text-acid-purple font-bold uppercase border-b border-acid-purple pb-1 hover:text-primary hover:border-primary transition-all">
                     Convierte filosofía en resultados (Lado A) <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
             </section>

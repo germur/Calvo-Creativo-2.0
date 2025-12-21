@@ -69,7 +69,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                             <div className="bg-primary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 inline-block mb-4 transform -rotate-2 border-2 border-ink shadow-brutal-sm">
                                 VOL. 2.5: CONTEXTO
                             </div>
-                            <h1 className="text-6xl md:text-8xl font-display uppercase leading-[0.85] tracking-tighter mb-8 text-ink">
+                            <h1 className="text-5xl md:text-7xl font-display uppercase leading-tight tracking-tight mb-8 text-ink">
                                 Liner <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-600">Notes_</span>
                             </h1>
 
@@ -149,7 +149,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                                                     </span>
                                                 ))}
                                             </div>
-                                            <h3 className="text-3xl md:text-4xl font-display uppercase leading-[0.9] text-ink mb-4 group-hover:text-primary transition-colors">
+                                            <h3 className="text-2xl md:text-4xl font-display uppercase leading-tight text-ink mb-4 group-hover:text-primary transition-colors">
                                                 {post.title}
                                             </h3>
                                             <p className="font-body text-ink/80 text-lg leading-snug max-w-3xl mb-6">

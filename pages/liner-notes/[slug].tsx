@@ -131,7 +131,7 @@ export default function Post({ postData }: { postData: any }) {
                             </header>
 
                             {/* Article Content */}
-                            <article className="prose prose-lg prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tighter prose-headings:text-ink prose-p:font-body prose-p:text-ink/90 prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline prose-strong:text-ink prose-strong:font-black prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-white prose-blockquote:p-4 prose-blockquote:font-mono prose-blockquote:not-italic prose-img:border-4 prose-img:border-ink prose-img:shadow-brutal max-w-none">
+                            <article className="prose prose-lg prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:leading-snug prose-headings:text-ink prose-p:font-body prose-p:text-ink/90 prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline prose-strong:text-ink prose-strong:font-black prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-white prose-blockquote:p-4 prose-blockquote:font-mono prose-blockquote:not-italic prose-img:border-4 prose-img:border-ink prose-img:shadow-brutal max-w-none">
                                 <ReactMarkdown
                                     remarkPlugins={[remarkGfm]}
                                     components={MarkdownComponents as any}
