@@ -30,9 +30,11 @@ export default function ArquitecturaSeoGeo() {
                             Si ChatGPT no te entiende, no te recomienda.
                         </p>
                         <div className="flex gap-4">
-                            <button className="h-14 px-8 rounded bg-[#0A0A0A] text-white font-bold uppercase tracking-wide hover:bg-[#E11D48] transition-colors shadow-xl">
-                                Solicitar Auditoría Técnica
-                            </button>
+                            <Link href="/contacto" className="inline-block">
+                                <button className="h-14 px-8 rounded bg-[#0A0A0A] text-white font-bold uppercase tracking-wide hover:bg-[#E11D48] transition-colors shadow-xl">
+                                    Solicitar Auditoría Técnica
+                                </button>
+                            </Link>
                         </div>
                     </div>
 

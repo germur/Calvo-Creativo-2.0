@@ -163,9 +163,11 @@ export default function AuditoriaService() {
                 {/* CTA */}
                 <section className="py-24 px-4 text-center">
                     <h2 className="text-4xl font-bold text-white uppercase mb-8">¿Tu fortaleza digital resiste?</h2>
-                    <button className="bg-gold text-stone-dark font-bold text-lg px-12 py-4 rounded hover:bg-white transition-colors border-2 border-transparent hover:border-gold uppercase tracking-wider">
-                        Solicitar Auditoría
-                    </button>
+                    <Link href="/contacto">
+                        <button className="bg-gold text-stone-dark font-bold text-lg px-12 py-4 rounded hover:bg-white transition-colors border-2 border-transparent hover:border-gold uppercase tracking-wider">
+                            Solicitar Auditoría
+                        </button>
+                    </Link>
                 </section>
 
             </main>
