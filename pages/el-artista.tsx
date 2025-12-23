@@ -125,7 +125,7 @@ export default function ElArtista() {
                             {/* Central Graphic */}
                             <div className="relative z-10 text-center">
                                 <span className="material-symbols-outlined text-9xl text-white/20 mb-4">architecture</span>
-                                <div className="font-mono text-xs text-gray-500 uppercase tracking-[0.3em]">Building Digital Assets</div>
+                                <div className="font-mono text-xs text-gray-500 uppercase tracking-[0.3em]">System Architecture & Logic</div>
                             </div>
                             {/* Floating "Nodes" - Added these back for flavor */}
                             <div className="absolute top-10 left-10 bg-black border border-white/20 p-2 rounded text-xs font-mono text-accent">Indexability</div>
@@ -151,8 +151,8 @@ export default function ElArtista() {
                             <span className="font-bold">Python IBM Data Science</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-2xl">mic</span>
-                            <span className="font-bold">Speaker @ SEO Summit</span>
+                            <span className="material-symbols-outlined text-2xl">swords</span>
+                            <span className="font-bold">Main Riven (Peak 2.8k 2v2/3v3 WotLK)</span>
                         </div>
                     </div>
                 </div>
@@ -184,12 +184,23 @@ export default function ElArtista() {
                         <div className="space-y-6 font-mono">
                             <div>
                                 <div className="text-xs uppercase text-paper/50 mb-1">Discipline</div>
-                                <div className="text-xl font-bold">MMA / BJJ / Boxing</div>
+                                <div className="text-xl font-bold flex items-center gap-3">
+                                    <span>Boxing</span>
+                                    <span className="text-paper/30">/</span>
+                                    <div className="flex items-center gap-2" title="BJJ White Belt (2 Stripes)">
+                                        <span className="text-sm">BJJ</span>
+                                        <div className="h-6 w-32 bg-white border border-gray-300 rounded-sm flex justify-end relative shadow-sm">
+                                            <div className="h-full w-8 bg-black flex items-center justify-evenly px-1">
+                                                <div className="w-1 h-full bg-white transform -skew-x-12"></div>
+                                                <div className="w-1 h-full bg-white transform -skew-x-12"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div>
-                                <div className="text-xs uppercase text-paper/50 mb-1">Team</div>
-                                <div className="text-xl font-bold text-red-500">Liverpool FC</div>
-                                <div className="text-xs text-paper/40 italic">"You'll Never Walk Alone"</div>
+                                <div className="text-xs uppercase text-paper/50 mb-1">Mojo / Life Philosophy</div>
+                                <div className="text-xl font-bold text-red-500">"I love it when you call me Big Poppa"</div>
                             </div>
 
                             {/* Spotify Rap Mix */}
@@ -259,15 +270,26 @@ export default function ElArtista() {
                     <div className="absolute inset-0 bg-gradient-to-r from-red-900/90 to-transparent"></div>
 
                     {/* Hip Hop / Culture Badges - RESTORED */}
-                    <div className="absolute top-4 right-4 md:top-8 md:right-8 flex gap-4 z-50">
-                        <div title="Notorious B.I.G." className="w-12 h-12 bg-black/80 backdrop-blur rounded-full flex items-center justify-center border-2 border-yellow-500 hover:scale-110 transition-transform cursor-help shadow-[0_0_15px_rgba(234,179,8,0.5)]">
-                            <span className="material-symbols-outlined text-yellow-500 text-2xl">crown</span>
-                        </div>
-                        <div title="Wu-Tang Clan" className="w-12 h-12 bg-black/80 backdrop-blur rounded-full flex items-center justify-center border-2 border-yellow-500 hover:scale-110 transition-transform cursor-help group/wu shadow-[0_0_15px_rgba(234,179,8,0.5)]">
-                            <span className="font-display font-bold text-yellow-500 text-xs tracking-tighter">WTC</span>
-                        </div>
-                        <div title="UFC Champion" className="w-12 h-12 bg-black/80 backdrop-blur rounded-full flex items-center justify-center border-2 border-red-500 hover:scale-110 transition-transform cursor-help shadow-[0_0_15px_rgba(239,68,68,0.5)]">
-                            <span className="material-symbols-outlined text-red-500 text-2xl">sports_mma</span>
+
+
+                    {/* Culture References (RESTORED & CLARIFIED) */}
+                    <div className="absolute top-6 right-6 md:top-10 md:right-10 flex flex-col items-end gap-2 z-50">
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-white/50 bg-black/50 px-2 py-1 rounded backdrop-blur-md">
+                            Cultural References
+                        </span>
+                        <div className="flex gap-3">
+                            <div title="Notorious B.I.G. - The Flow" className="group/icon relative w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-yellow-500/50 hover:border-yellow-500 hover:bg-black/80 transition-all cursor-help">
+                                <span className="material-symbols-outlined text-yellow-500 text-lg">crown</span>
+                                <span className="absolute -bottom-8 right-0 text-[10px] bg-black text-white px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Biggie's Flow</span>
+                            </div>
+                            <div title="Wu-Tang Clan - The Strategy" className="group/icon relative w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-yellow-500/50 hover:border-yellow-500 hover:bg-black/80 transition-all cursor-help">
+                                <span className="font-display font-bold text-yellow-500 text-[10px]">WTC</span>
+                                <span className="absolute -bottom-8 right-0 text-[10px] bg-black text-white px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Wu-Tang Strategy</span>
+                            </div>
+                            <div title="UFC - The Mindset" className="group/icon relative w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-red-500/50 hover:border-red-500 hover:bg-black/80 transition-all cursor-help">
+                                <span className="material-symbols-outlined text-red-500 text-lg">sports_mma</span>
+                                <span className="absolute -bottom-8 right-0 text-[10px] bg-black text-white px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">UFC Mindset</span>
+                            </div>
                         </div>
                     </div>
 

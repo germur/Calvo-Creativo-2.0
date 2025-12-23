@@ -131,6 +131,10 @@ export default function Contacto() {
                                         <input type="radio" name="pain" value="collab" className="text-red-600 focus:ring-red-600" />
                                         <span className="font-sans text-sm font-medium">Solo quiero saludar / Colaborar (Lado B)</span>
                                     </label>
+                                    <label className="flex items-center gap-3 p-3 border-2 border-gray-200 hover:border-black cursor-pointer transition-colors bg-white">
+                                        <input type="radio" name="pain" value="miguel" className="text-red-600 focus:ring-red-600" />
+                                        <span className="font-sans text-sm font-medium">Ayyy Miguel, Migueel</span>
+                                    </label>
                                 </div>
                             </div>
 
