@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 interface SeoProps {
     title: string;
@@ -46,10 +47,14 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
         "url": siteUrl
     };
 
+    const router = useRouter();
+    const canonicalUrl = `${siteUrl}${router.asPath === '/' ? '' : router.asPath}`.split('?')[0];
+
     return (
         <Head>
             <title>{fullTitle}</title>
             <meta name="description" content={metaDescription} />
+            <link rel="canonical" href={canonicalUrl} />
 
             {/* OG Tags */}
             <meta property="og:type" content={type} />
