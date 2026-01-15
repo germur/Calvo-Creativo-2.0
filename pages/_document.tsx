@@ -19,6 +19,8 @@ export default function Document() {
                         `,
                     }}
                 />
+                {/* Google Adsense */}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1504078455666002" crossOrigin="anonymous"></script>
             </Head>
             <body className="bg-paper text-ink font-body grain-overlay">
                 <Main />
