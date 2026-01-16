@@ -6,7 +6,14 @@ import SeoHead from '@/components/SeoHead';
 export default function GeoIaService() {
     return (
         <>
-            <SeoHead title="Geo-IA: Geomancia Digital | Calvo Creativo" />
+            <SeoHead
+                title="Geo-IA: Geomancia Digital | Calvo Creativo"
+                type="service"
+                description="Optimización para Motores Generativos (GEO). Adapta tu presencia local para ChatGPT, Gemini y Google Maps."
+                provider="Calvo Creativo"
+                areaServed="Global, LATAM, USA"
+                offerCatalog="Geomancia Digital Services"
+            />
             <Navigation />
 
             <main className="min-h-screen bg-background-dark font-display text-white antialiased overflow-x-hidden selection:bg-gold selection:text-stone-dark flex flex-col items-center">

@@ -30,6 +30,8 @@ export function getSortedPostsData(type: 'posts' | 'opinion' = 'posts') {
                     date: matterResult.data.date || matterResult.data.publishDate || '',
                     updatedDate: matterResult.data.updatedDate || null,
                     title: matterResult.data.title || '',
+                    tags: matterResult.data.tags || [],
+                    category: matterResult.data.category || null,
                     ...matterResult.data,
                 };
             } catch (error) {
@@ -78,6 +80,8 @@ export async function getPostData(id: string, type: 'posts' | 'opinion' = 'posts
         contentHtml: matterResult.content,
         date: matterResult.data.date || matterResult.data.publishDate || '',
         title: matterResult.data.title || '',
+        tags: matterResult.data.tags || [],
+        category: matterResult.data.category || null,
         ...matterResult.data,
     };
 }

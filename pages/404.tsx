@@ -3,8 +3,21 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
+import { getSortedPostsData } from '@/lib/posts';
 
-export default function Custom404() {
+export async function getStaticProps() {
+    const allPosts = getSortedPostsData();
+    // Simulate "popular" by taking the most recent ones for now, or specific curated ones if a 'popular' tag existed.
+    // Efficient fallback: Take top 3.
+    const popularPosts = allPosts.slice(0, 3);
+    return {
+        props: {
+            popularPosts
+        },
+    };
+}
+
+export default function Custom404({ popularPosts }: { popularPosts: any[] }) {
     return (
         <div className="min-h-screen bg-black text-white selection:bg-red-500 selection:text-white font-sans flex flex-col">
             <SeoHead title="404: Disco Rayado | Calvo Creativo" />
@@ -77,13 +90,27 @@ export default function Custom404() {
                             <div className="font-display text-xl text-white group-hover:text-red-500 transition-colors">Inicio</div>
                             <div className="text-sm text-gray-400">Volver al Album Cover</div>
                         </Link>
-                        <Link href="/consultoria" className="group p-4 border border-transparent hover:border-gray-800 hover:bg-gray-900 transition-all rounded">
-                            <div className="text-xs text-gray-500 font-mono mb-1">Track 02</div>
-                            <div className="font-display text-xl text-white group-hover:text-yellow-500 transition-colors">Lado A</div>
-                            <div className="text-sm text-gray-400">Servicios & Hits</div>
-                        </Link>
+
+                        {/* Dynamic Popular/Recent Posts */}
+                        {popularPosts && popularPosts.length > 0 ? (
+                            popularPosts.map((post, idx) => (
+                                <Link key={post.id} href={`/liner-notes/${post.id}`} className="group p-4 border border-transparent hover:border-gray-800 hover:bg-gray-900 transition-all rounded hidden md:block">
+                                    <div className="text-xs text-gray-500 font-mono mb-1">Track 0{idx + 2}</div>
+                                    <div className="font-display text-lg text-white group-hover:text-yellow-500 transition-colors truncate">{post.title}</div>
+                                    <div className="text-sm text-gray-400">Liner Notes</div>
+                                </Link>
+                            ))
+                        ) : (
+                            <Link href="/consultoria" className="group p-4 border border-transparent hover:border-gray-800 hover:bg-gray-900 transition-all rounded">
+                                <div className="text-xs text-gray-500 font-mono mb-1">Track 02</div>
+                                <div className="font-display text-xl text-white group-hover:text-yellow-500 transition-colors">Lado A</div>
+                                <div className="text-sm text-gray-400">Servicios & Hits</div>
+                            </Link>
+                        )}
+
+                        {/* Always show Lab as last option if space permits or as backup */}
                         <Link href="/lab" className="group p-4 border border-transparent hover:border-gray-800 hover:bg-gray-900 transition-all rounded">
-                            <div className="text-xs text-gray-500 font-mono mb-1">Track 03</div>
+                            <div className="text-xs text-gray-500 font-mono mb-1">Bonus Track</div>
                             <div className="font-display text-xl text-white group-hover:text-acid-green transition-colors">Lado B (Lab)</div>
                             <div className="text-sm text-gray-400">Experimentos & Code</div>
                         </Link>

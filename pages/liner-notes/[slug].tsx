@@ -4,9 +4,9 @@ import SeoHead from '@/components/SeoHead';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { getAllPostIds, getPostData } from '@/lib/posts';
+import { getAllPostIds, getPostData, getSortedPostsData } from '@/lib/posts';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import AuthorBox from '@/components/AuthorBox'; // New E-E-A-T Component
+import AuthorBox from '@/components/AuthorBox';
 import { useState, useEffect } from 'react';
 
 export async function getStaticPaths() {
@@ -19,14 +19,34 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
     const postData = await getPostData(params.slug);
+    const allPosts = getSortedPostsData();
+
+    // Semantic Clustering Logic
+    const relatedPosts = allPosts
+        .filter(post => post.id !== params.slug) // Exclude current
+        .map(post => {
+            // Calculate relevance score
+            let score = 0;
+            if (post.tags && postData.tags) {
+                const sharedTags = post.tags.filter((tag: string) => postData.tags.includes(tag));
+                score += sharedTags.length * 2;
+            }
+            if (post.category === postData.category) score += 3; // Boost same silo/category if exists
+
+            return { ...post, score };
+        })
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3); // Take top 3
+
     return {
         props: {
             postData,
+            relatedPosts
         },
     };
 }
 
-export default function Post({ postData }: { postData: any }) {
+export default function Post({ postData, relatedPosts }: { postData: any, relatedPosts: any[] }) {
     // Generate ToC from raw markdown content
     const [toc, setToc] = useState<{ id: string; text: string; level: number }[]>([]);
 
@@ -201,7 +221,6 @@ export default function Post({ postData }: { postData: any }) {
                                         </ul>
                                     </nav>
 
-                                    {/* Contextual CTA (Placeholder logic for now) */}
                                     <div className="mt-8 bg-black text-white p-4 text-center">
                                         <p className="font-display uppercase text-lg leading-none mb-2">Build The Future</p>
                                         <p className="font-mono text-[10px] text-gray-400 mb-4">Master SEO Engineering.</p>
@@ -210,6 +229,30 @@ export default function Post({ postData }: { postData: any }) {
                                         </Link>
                                     </div>
                                 </div>
+
+                                {/* Related Posts Cluster */}
+                                {(postData as any).relatedPosts && (postData as any).relatedPosts.length > 0 && (
+                                    <div className="mt-8 bg-stone-light border-2 border-ink p-6 shadow-brutal-sm">
+                                        <h4 className="font-mono text-xs uppercase font-bold text-ink mb-4 border-b-2 border-ink pb-2 flex items-center gap-2">
+                                            <span className="material-symbols-outlined text-sm">hub</span>
+                                            Similares
+                                        </h4>
+                                        <ul className="space-y-4">
+                                            {(postData as any).relatedPosts.map((post: any) => (
+                                                <li key={post.id} className="group">
+                                                    <Link href={`/liner-notes/${post.id}`} className="block">
+                                                        <span className="text-[10px] font-bold text-primary uppercase block mb-1">
+                                                            {post.date}
+                                                        </span>
+                                                        <h5 className="font-display text-lg uppercase leading-none group-hover:text-primary transition-colors">
+                                                            {post.title}
+                                                        </h5>
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                         </aside>
 

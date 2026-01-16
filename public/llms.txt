@@ -36,6 +36,14 @@ Objetivo: Repositorio de investigación primaria, experimentos SEO y código ope
 - Liner Notes (Opinión): https://calvocreativo.com/liner-notes/
   > Ensayos sobre el futuro de la búsqueda, ética en IA y estrategia digital.
 
+# 📝 Últimas Transmisiones (Liner Notes)
+
+- El Arte del Storytelling Digital: De la Cultura Pop a la Ingeniería de la Atención: https://calvocreativo.com/liner-notes/arte-storytelling-digital
+  > Cómo Michael Jackson, Daft Punk y TikTok decodificaron los algoritmos humanos antes que los digitales. Una tesis sobre SEO, Growth y Narrativa.
+
+- De SEO a GEO: Guía Visual para la Evolución de tu Estrategia de Contenidos (2025): https://calvocreativo.com/liner-notes/seo-a-geo
+  > El manual definitivo sobre Generative Engine Optimization. Gráficos, datos y la estrategia durable que sobrevivirá al hype.
+
 # 👤 Entidad & Autoridad (E-E-A-T)
 - Sobre Roger Calvo: https://calvocreativo.com/sobre-mi/
   > Perfil del fundador, credenciales, conferencias y filosofía "Marketer-Builder".

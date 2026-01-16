@@ -4,48 +4,104 @@ import { useRouter } from 'next/router';
 interface SeoProps {
     title: string;
     description?: string;
-    type?: 'website' | 'article';
+    type?: 'website' | 'article' | 'service';
     image?: string;
     author?: string;
     publishDate?: string;
     modifiedDate?: string;
+    provider?: string;
+    areaServed?: string;
+    offerCatalog?: string;
 }
 
-const SeoHead = ({ title, description, type = 'website', image, author, publishDate, modifiedDate }: SeoProps) => {
+const SeoHead = ({ title, description, type = 'website', image, author, publishDate, modifiedDate, provider, areaServed, offerCatalog }: SeoProps) => {
     const siteTitle = "EL ESPECIALISTA | Digital Gatefold";
     const fullTitle = title === "Home" ? siteTitle : `${title} | EL ESPECIALISTA`;
     const metaDescription = description || "Portfolio y Blog de Estrategia SEO y Creatividad Digital.";
     const siteUrl = "https://calvocreativo.com";
     const defaultImage = "https://calvocreativo.com/images/og-default.jpg";
-    const ogImage = image ? (image.startsWith('http') ? image : `${siteUrl}${image}`) : defaultImage;
+
+    // Dynamic OG Image Logic
+    let finalOgImage = image;
+    if (!finalOgImage && (type === 'article' || type === 'service')) {
+        finalOgImage = `${siteUrl}/api/og?title=${encodeURIComponent(title)}${publishDate ? `&date=${publishDate}` : ''}`;
+    } else if (finalOgImage && !finalOgImage.startsWith('http')) {
+        finalOgImage = `${siteUrl}${finalOgImage}`;
+    }
+    const ogImage = finalOgImage || defaultImage;
 
     // Construct Schema
-    const schema = type === 'article' ? {
+    const baseSchema = {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": title,
-        "description": metaDescription,
-        "image": ogImage,
-        "author": {
-            "@type": "Person",
-            "name": author || "Roger Calvo"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Calvo Creativo",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://calvocreativo.com/favicon.svg"
-            }
-        },
-        "datePublished": publishDate,
-        "dateModified": modifiedDate || publishDate
-    } : {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": siteTitle,
-        "url": siteUrl
     };
+
+    let schema: any = {};
+
+    if (type === 'article') {
+        schema = {
+            ...baseSchema,
+            "@type": "BlogPosting",
+            "headline": title,
+            "description": metaDescription,
+            "image": ogImage,
+            "author": {
+                "@type": "Person",
+                "name": author || "Roger Calvo",
+                "url": "https://calvocreativo.com/sobre-mi",
+                "sameAs": [
+                    "https://www.linkedin.com/in/rogercalvo/",
+                    "https://twitter.com/rogercalvo"
+                ]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Calvo Creativo",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://calvocreativo.com/favicon.svg"
+                }
+            },
+            "datePublished": publishDate,
+            "dateModified": modifiedDate || publishDate,
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `${siteUrl}${useRouter().asPath}`
+            }
+        };
+    } else if (type === 'service') {
+        schema = {
+            ...baseSchema,
+            "@type": "Service",
+            "name": title,
+            "description": metaDescription,
+            "provider": {
+                "@type": "Organization",
+                "name": provider || "Calvo Creativo",
+                "url": siteUrl
+            },
+            "areaServed": {
+                "@type": "Place",
+                "name": areaServed || "Global"
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": offerCatalog || "Digital Services",
+            },
+            "serviceType": "Digital Marketing & SEO"
+        };
+    } else {
+        schema = {
+            ...baseSchema,
+            "@type": "WebSite",
+            "name": siteTitle,
+            "url": siteUrl,
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": `${siteUrl}/search?q={search_term_string}`,
+                "query-input": "required name=search_term_string"
+            }
+        };
+    }
 
     const router = useRouter();
     const canonicalUrl = `${siteUrl}${router.asPath === '/' ? '' : router.asPath}`.split('?')[0];

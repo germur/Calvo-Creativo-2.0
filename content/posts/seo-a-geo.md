@@ -1,6 +1,9 @@
 ---
 title: "De SEO a GEO: Guía Visual para la Evolución de tu Estrategia de Contenidos (2025)"
 date: "2025-01-20"
+updatedDate: "2025-01-21"
+author: "Roger Calvo"
+related_entities: ["SEO", "AEO", "Generative AI", "Google SGE"]
 excerpt: "El manual definitivo sobre Generative Engine Optimization. Gráficos, datos y la estrategia durable que sobrevivirá al hype."
 tags: ["Estrategia Digital", "IA", "GEO", "Guía Visual"]
 ---

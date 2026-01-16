@@ -46,36 +46,65 @@ const Breadcrumbs = ({ theme = 'light' }: { theme?: 'light' | 'dark' | 'acid' })
 
     const currentStyle = styles[theme as keyof typeof styles] || styles.light;
 
-    return (
-        <nav aria-label="breadcrumb" className="py-4 font-mono text-xs uppercase tracking-wider">
-            <ol className="flex flex-wrap items-center gap-2">
-                <li>
-                    <Link href="/" className={`${currentStyle.text} ${currentStyle.hover} transition-colors`}>
-                        HOME
-                    </Link>
-                </li>
-                {pathSegments.map((segment, index) => {
-                    const href = '/' + pathSegments.slice(0, index + 1).join('/');
-                    const name = pathNames[segment] || segment.replace(/-/g, ' ');
-                    const isLast = index === pathSegments.length - 1;
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://calvocreativo.com"
+            },
+            ...pathSegments.map((segment, index) => {
+                const href = '/' + pathSegments.slice(0, index + 1).join('/');
+                const name = pathNames[segment] || segment.replace(/-/g, ' ');
+                return {
+                    "@type": "ListItem",
+                    "position": index + 2,
+                    "name": name,
+                    "item": `https://calvocreativo.com${href}`
+                };
+            })
+        ]
+    };
 
-                    return (
-                        <li key={href} className="flex items-center gap-2">
-                            <span className={currentStyle.separator}>/</span>
-                            {isLast ? (
-                                <span className={`${currentStyle.text} ${currentStyle.active}`}>
-                                    {name}
-                                </span>
-                            ) : (
-                                <Link href={href} className={`${currentStyle.text} ${currentStyle.hover} transition-colors`}>
-                                    {name}
-                                </Link>
-                            )}
-                        </li>
-                    );
-                })}
-            </ol>
-        </nav>
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <nav aria-label="breadcrumb" className="py-4 font-mono text-xs uppercase tracking-wider">
+                <ol className="flex flex-wrap items-center gap-2">
+                    <li>
+                        <Link href="/" className={`${currentStyle.text} ${currentStyle.hover} transition-colors`}>
+                            HOME
+                        </Link>
+                    </li>
+                    {pathSegments.map((segment, index) => {
+                        const href = '/' + pathSegments.slice(0, index + 1).join('/');
+                        const name = pathNames[segment] || segment.replace(/-/g, ' ');
+                        const isLast = index === pathSegments.length - 1;
+
+                        return (
+                            <li key={href} className="flex items-center gap-2">
+                                <span className={currentStyle.separator}>/</span>
+                                {isLast ? (
+                                    <span className={`${currentStyle.text} ${currentStyle.active}`}>
+                                        {name}
+                                    </span>
+                                ) : (
+                                    <Link href={href} className={`${currentStyle.text} ${currentStyle.hover} transition-colors`}>
+                                        {name}
+                                    </Link>
+                                )}
+                            </li>
+                        );
+                    })}
+                </ol>
+            </nav>
+        </>
     );
 };
 
