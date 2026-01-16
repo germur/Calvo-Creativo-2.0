@@ -300,6 +300,21 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* --- 5.5. FEATURED IN --- */}
+            <section className="py-12 bg-gray-50 border-b-4 border-black">
+                <div className="max-w-7xl mx-auto px-6 text-center">
+                    <p className="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Visto en / Featured In</p>
+                    <div className="flex justify-center items-center gap-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
+                        <Link href="https://backlinkbuilding.io/qa/25-ways-seo-tools-changed-our-keyword-research-approach/" target="_blank" className="group flex flex-col items-center gap-2">
+                            <div className="font-display text-2xl font-black uppercase tracking-tighter text-black group-hover:text-blue-600 transition-colors">
+                                BacklinkBuilding<span className="text-gray-400">.io</span>
+                            </div>
+                            <span className="text-[10px] font-mono bg-black text-white px-2 py-0.5 rounded-sm group-hover:bg-blue-600 transition-colors">Expert Interview Feature</span>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             {/* --- 6. SOCIAL PROOF & FOOTER --- */}
             <section className="py-20 bg-black text-white text-center">
                 <div className="max-w-7xl mx-auto px-6">
@@ -324,8 +339,10 @@ export default function Home() {
                         </div>
                         {/* Screaming Frog */}
                         <div title="Screaming Frog" className="w-16 h-16 hover:scale-110 transition-transform flex items-center justify-center p-1">
-                            <svg viewBox="0 0 576 512" className="w-full h-full fill-[#589e29]">
-                                <path d="M425.8 198.5c-48.6-32.9-72-46.7-72-46.7s-11.7-18.1-13.7-20.9c2.9-10.8 1.4-22.3-4.3-32.1-7.9-13.6-24-19.8-39.2-16.1l-10.1-23.7c-5.1-11.9-18.9-17.6-30.8-12.5L256 46.5l-29.6-1.3c-13.3-.6-22.7 11.2-20.8 24.3l3.8 26.3c-15.6-2.5-31.4 4.5-38.5 18.2-5.1 9.9-5.9 21.2-2.3 32-1.9 2.7-16.5 24.5-16.5 24.5s-23.4 13.8-72 46.7c-17.7 11.9-24.8 33-19.1 53.4 5.9 20.8 24.3 35.8 45.9 36.3 33.1.8 62.6-17.7 73.1-43.2 2.6-6.4 13-33.1 13-33.1s10.4 15.6 15.6 20.8c-1.3 6.9-4 13.5-7.8 19.4-18.6 28.6-11 66.8 17.6 85.4 13 8.3 27.6 11.5 41.6 9.4 11.7 32.7 42.9 56.1 79.5 56.1s67.8-23.4 79.5-56.1c14.1 2.1 28.7-1 41.6-9.4 28.6-18.6 36.2-56.8 17.6-85.4-3.8-5.9-6.5-12.5-7.8-19.4 5.2-5.2 15.6-20.8 15.6-20.8s10.4 26.7 13 33.1c10.5 25.5 40 44 73.1 43.2 21.6-.5 40-15.5 45.9-36.3 5.7-20.4-1.4-41.5-19.1-53.4zM245.8 67.5c2.7-.2 5.1 1.7 5.4 4.3l1.2 8.3-9.5-.4 2.9-12.2z" />
+                            <svg viewBox="0 0 512 512" className="w-full h-full fill-[#589e29]">
+                                <path d="M437 75a66 66 0 100-132 66 66 0 000 132zM75 75a66 66 0 100-132 66 66 0 000 132z" />
+                                <path d="M437 75c-30 0-56-20-63-48-2-8-4-17-4-26 0-36 29-66 66-66s66 30 66 66c0 9-2 18-4 26-7 28-33 48-63 48zM75 75C45 75 19 55 12 27c-2-8-4-17-4-26 0-36 29-66 66-66s66 30 66 66c0 9-2 18-4 26-7 28-33 48-63 48z" />
+                                <path d="M256 128c-68 0-128 35-164 89-12 18-19 39-21 61-2 19 1 39 8 57 11 29 35 53 66 63 15 5 31 8 47 8 10 0 19-3 27-8 12-7 19-20 19-34 0-14-6-27-16-35-17-14-27-35-27-57 0-35 27-64 61-64s61 29 61 64c0 22-10 43-27 57-10 8-16 21-16 35 0 14 7 27 19 35 8 5 17 8 27 8 16 0 32-3 47-8 31-10 55-34 66-63 7-18 10-38 8-57-2-22-9-43-21-61-36-54-96-89-164-89z" />
                             </svg>
                         </div>
                         {/* Semrush (Orange Flame/Pulse) */}
