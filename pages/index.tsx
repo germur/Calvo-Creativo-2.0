@@ -322,9 +322,11 @@ export default function Home() {
                                 <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.0462 6.0462 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0847 5.7197-3.3016a.8381.8381 0 0 0 .3924-.6801v-6.7218l2.1617 1.2483v5.0455a4.454 4.454 0 0 1-5.5393 5.5352zm-7.6974-2.768a4.4444 4.4444 0 0 1-1.2584-3.3512l2.3601 1.3533a.8191.8191 0 0 0 .8095 0l5.8094-3.3441v2.518L7.331 20.0638a4.45 4.45 0 0 1-1.7685-3.4026zm-1.8016-8.9157a4.4444 4.4444 0 0 1 3.1098-4.4716v5.8202l-2.2045 1.2579-2.3458-1.3533a4.4636 4.4636 0 0 1 1.4405-1.2532zm9.3582-6.526a4.4593 4.4593 0 0 1 5.3811 1.3435l-2.1825 1.2533-5.7486-3.3157v-2.5276a4.445 4.445 0 0 1 2.55-.7535zm7.5501 2.9818a4.4664 4.4664 0 0 1 1.8349 3.3931l-2.3553-1.3533a.8306.8306 0 0 0-.8142 0L13.4867 7.218v-2.518l5.8953 3.4182a4.4373 4.4373 0 0 1-.2237-1.3934zm2.1873 7.828a4.464 4.464 0 0 1-2.5833 3.8647v-5.839l2.2045-1.2674 2.3458 1.3533a4.4795 4.4795 0 0 1-1.967 1.8884zm-6.38-1.4674-5.003-2.8809v-5.768l5.003 2.8903z" />
                             </svg>
                         </div>
-                        {/* Screaming Frog (Custom Generic Frog/Spider Path) */}
-                        <div title="Screaming Frog" className="w-16 h-16 hover:scale-110 transition-transform flex items-center justify-center">
-                            <span className="material-symbols-outlined text-6xl">bug_report</span>
+                        {/* Screaming Frog */}
+                        <div title="Screaming Frog" className="w-16 h-16 hover:scale-110 transition-transform flex items-center justify-center p-1">
+                            <svg viewBox="0 0 576 512" className="w-full h-full fill-[#589e29]">
+                                <path d="M425.8 198.5c-48.6-32.9-72-46.7-72-46.7s-11.7-18.1-13.7-20.9c2.9-10.8 1.4-22.3-4.3-32.1-7.9-13.6-24-19.8-39.2-16.1l-10.1-23.7c-5.1-11.9-18.9-17.6-30.8-12.5L256 46.5l-29.6-1.3c-13.3-.6-22.7 11.2-20.8 24.3l3.8 26.3c-15.6-2.5-31.4 4.5-38.5 18.2-5.1 9.9-5.9 21.2-2.3 32-1.9 2.7-16.5 24.5-16.5 24.5s-23.4 13.8-72 46.7c-17.7 11.9-24.8 33-19.1 53.4 5.9 20.8 24.3 35.8 45.9 36.3 33.1.8 62.6-17.7 73.1-43.2 2.6-6.4 13-33.1 13-33.1s10.4 15.6 15.6 20.8c-1.3 6.9-4 13.5-7.8 19.4-18.6 28.6-11 66.8 17.6 85.4 13 8.3 27.6 11.5 41.6 9.4 11.7 32.7 42.9 56.1 79.5 56.1s67.8-23.4 79.5-56.1c14.1 2.1 28.7-1 41.6-9.4 28.6-18.6 36.2-56.8 17.6-85.4-3.8-5.9-6.5-12.5-7.8-19.4 5.2-5.2 15.6-20.8 15.6-20.8s10.4 26.7 13 33.1c10.5 25.5 40 44 73.1 43.2 21.6-.5 40-15.5 45.9-36.3 5.7-20.4-1.4-41.5-19.1-53.4zM245.8 67.5c2.7-.2 5.1 1.7 5.4 4.3l1.2 8.3-9.5-.4 2.9-12.2z" />
+                            </svg>
                         </div>
                         {/* Semrush (Orange Flame/Pulse) */}
                         <div title="Semrush" className="w-14 h-14 hover:scale-110 transition-transform">
@@ -332,9 +334,11 @@ export default function Home() {
                                 <path d="M7.4 0l-7.4 12h7.4l-3.2 12 19.8-13.6h-9.8l5.8-10.4z" />
                             </svg>
                         </div>
-                        {/* Ahrefs (Blue Bar) */}
-                        <div title="Ahrefs" className="w-20 h-10 bg-[#0070F3] rounded flex items-center justify-center hover:scale-110 transition-transform">
-                            <span className="font-display font-black text-white text-xl tracking-tighter">ahrefs</span>
+                        {/* Ahrefs (Bar Chart) */}
+                        <div title="Ahrefs" className="w-14 h-14 bg-[#0070F3] rounded-lg p-3 flex items-center justify-center hover:scale-110 transition-transform">
+                            <svg viewBox="0 0 24 24" className="w-full h-full fill-white">
+                                <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8h2.8v6h-2.8z" />
+                            </svg>
                         </div>
                         {/* Google Gemini */}
                         <div title="Google Gemini" className="w-14 h-14 hover:scale-110 transition-transform">
