@@ -148,7 +148,7 @@ export default function ElArtista() {
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="material-symbols-outlined text-2xl">code</span>
-                            <span className="font-bold">Python IBM Data Science</span>
+                            <span className="font-bold">SEO Specialist</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="material-symbols-outlined text-2xl">swords</span>
