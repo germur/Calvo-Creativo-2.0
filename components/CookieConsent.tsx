@@ -32,7 +32,7 @@ const CookieConsent = () => {
                             System Alert
                         </h4>
                         <p className="text-white/80 text-sm font-mono leading-relaxed max-w-md">
-                            Usamos cookies para trackear cómo consumes este contenido y mejorar nuestros experimentos. Sin datos no hay "Science".
+                            Usamos cookies propias y de terceros (Microsoft Clarity, Google) para trackear cómo consumes este contenido y mejorar nuestros experimentos. Sin datos no hay "Science".
                         </p>
                         <div className="flex gap-4 text-[10px] uppercase tracking-widest text-white/40">
                             <Link href="/politica-privacidad" className="hover:text-white transition-colors border-b border-transparent hover:border-white">Privacidad</Link>
