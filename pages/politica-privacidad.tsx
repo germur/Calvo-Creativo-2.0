@@ -41,6 +41,9 @@ export default function PoliticaPrivacidad() {
 
                     <h3>4. Sus Derechos</h3>
                     <p>Usted tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento. Para ejercer estos derechos, contáctenos en roger@calvocreativo.com.</p>
+
+                    <h3>5. Microsoft Clarity y Publicidad</h3>
+                    <p>Nos asociamos con Microsoft Clarity y Microsoft Advertising para capturar cómo usa e interactúa con nuestro sitio web a través de métricas de comportamiento, mapas de calor y reproducción de sesiones para mejorar y comercializar nuestros productos/servicios. Los datos de uso del sitio web se capturan utilizando cookies propias y de terceros y otras tecnologías de seguimiento para determinar la popularidad de los productos/servicios y la actividad en línea. Además, usamos esta información para la optimización del sitio, fines de fraude/seguridad y publicidad. Para obtener más información sobre cómo Microsoft recopila y usa sus datos, visite la Declaración de Privacidad de Microsoft.</p>
                 </div>
             </main>
 

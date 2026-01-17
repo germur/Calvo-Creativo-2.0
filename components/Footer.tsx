@@ -82,6 +82,10 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
+            {/* Clarity Disclosure */}
+            <div className="max-w-7xl mx-auto px-8 mt-4 text-[9px] text-gray-700 font-mono text-center leading-tight opacity-50">
+                Mejoramos nuestros productos y publicidad usando Microsoft Clarity para ver cómo usas nuestro sitio web. Al usar nuestro sitio, aceptas que nosotros y Microsoft podemos recopilar y usar estos datos.
+            </div>
         </footer>
     );
 };
