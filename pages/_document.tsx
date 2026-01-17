@@ -19,6 +19,18 @@ export default function Document() {
                 />
                 {/* Google Adsense */}
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1504078455666002" crossOrigin="anonymous"></script>
+                {/* Microsoft Clarity */}
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function(c,l,a,r,i,t,y){
+                                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                            })(window, document, "clarity", "script", "v2v2171aj3");
+                        `,
+                    }}
+                />
             </Head>
             <body className="bg-paper text-ink font-body grain-overlay">
                 <Main />
