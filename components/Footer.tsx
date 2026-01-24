@@ -19,9 +19,9 @@ const Footer = () => {
                         Fusionamos la creatividad latina (Salsa) con el rigor técnico (Fight). No hacemos SEO para rellenar espacios, construimos activos digitales que sobreviven a los algoritmos.
                     </p>
                     <div className="flex gap-4 text-xl">
-                        <Link href="https://www.linkedin.com/in/rogermur/" target="_blank" className="hover:text-primary transition-colors" aria-label="LinkedIn"><span className="material-symbols-outlined">work</span></Link>
-                        <Link href="https://x.com/Rogermu47429637" target="_blank" className="hover:text-primary transition-colors" aria-label="Twitter"><span className="material-symbols-outlined">flutter_dash</span></Link>
-                        <Link href="https://github.com/rogermur" target="_blank" className="hover:text-primary transition-colors" aria-label="GitHub"><span className="material-symbols-outlined">code</span></Link>
+                        <Link href="https://www.linkedin.com/in/rogermur/" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="LinkedIn de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">work</span></Link>
+                        <Link href="https://x.com/Rogermu47429637" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="Twitter de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">flutter_dash</span></Link>
+                        <Link href="https://github.com/rogermur" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="GitHub de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">code</span></Link>
                     </div>
                 </div>
 

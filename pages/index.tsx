@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { trackEvent } from '@/lib/analytics';
 
 // Mock Client Logos for Social Proof
 const clients = [
@@ -18,6 +19,84 @@ export default function Home() {
             <Head>
                 <title>Calvo Creativo | Ingeniería de Búsqueda (SEO & GEO) y Estrategia Digital</title>
                 <meta name="description" content="Consultoría SEO estratégica para la era de la IA. Fusionamos creatividad latina (Salsa) con rigor técnico (Fight) para posicionar marcas en EE.UU. y Latam." />
+
+                {/* Schema: Organization */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "@id": "https://calvocreativo.com/#organization",
+                            "name": "Calvo Creativo",
+                            "url": "https://calvocreativo.com",
+                            "logo": "https://calvocreativo.com/assets/logo.png",
+                            "description": "Consultoría SEO estratégica y Generative Engine Optimization (GEO) para la era de la IA.",
+                            "founder": {
+                                "@type": "Person",
+                                "name": "Roger Calvo",
+                                "url": "https://calvocreativo.com/el-artista"
+                            },
+                            "sameAs": [
+                                "https://www.linkedin.com/in/rogermur/",
+                                "https://github.com/rogermur",
+                                "https://x.com/Rogermu47429637"
+                            ],
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "email": "hola@calvocreativo.com",
+                                "contactType": "customer service",
+                                "availableLanguage": ["Spanish", "English"]
+                            },
+                            "areaServed": ["US", "ES", "MX", "CO", "AR"],
+                            "knowsAbout": ["SEO", "GEO", "Generative Engine Optimization", "Technical SEO", "Python Automation", "Content Strategy"]
+                        })
+                    }}
+                />
+
+                {/* Schema: WebSite with SearchAction */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            "@id": "https://calvocreativo.com/#website",
+                            "url": "https://calvocreativo.com",
+                            "name": "Calvo Creativo",
+                            "description": "Ingeniería de Búsqueda para la era de la IA",
+                            "publisher": {
+                                "@id": "https://calvocreativo.com/#organization"
+                            },
+                            "inLanguage": "es"
+                        })
+                    }}
+                />
+
+                {/* Schema: WebPage */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "WebPage",
+                            "@id": "https://calvocreativo.com/#webpage",
+                            "url": "https://calvocreativo.com",
+                            "name": "Calvo Creativo | Ingeniería de Búsqueda (SEO & GEO)",
+                            "description": "Consultoría SEO estratégica para la era de la IA. Fusionamos creatividad latina (Salsa) con rigor técnico (Fight).",
+                            "isPartOf": {
+                                "@id": "https://calvocreativo.com/#website"
+                            },
+                            "about": {
+                                "@id": "https://calvocreativo.com/#organization"
+                            },
+                            "primaryImageOfPage": {
+                                "@type": "ImageObject",
+                                "url": "https://calvocreativo.com/assets/og-image.jpg"
+                            }
+                        })
+                    }}
+                />
             </Head>
 
             <Navigation />
@@ -45,17 +124,26 @@ export default function Home() {
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-700 font-light max-w-lg mb-10 border-l-4 border-black pl-6">
-                            Dejemos de optimizar solo para 10 enlaces azules. Construyamos la autoridad que Google premia y que la Inteligencia Artificial cita.
+                            <strong>Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras.</strong> Nosotros construimos la autoridad que Google premia.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
-                            <Link href="/consultoria" className="group relative px-8 py-4 bg-black text-white font-display text-xl uppercase tracking-wide overflow-hidden shadow-[8px_8px_0px_#dc2626] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
-                                <span className="relative z-10 group-hover:text-red-500 transition-colors">Busco Soluciones (Lado A)</span>
+                            <Link
+                                href="/contacto"
+                                onClick={() => trackEvent('click_schedule_audit', 'Conversion', 'Hero CTA')}
+                                className="group relative px-8 py-4 bg-black text-white font-display text-xl uppercase tracking-wide overflow-hidden shadow-[8px_8px_0px_#dc2626] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+                            >
+                                <span className="relative z-10 group-hover:text-red-500 transition-colors">Solicitar Auditoría (Cupos Limitados) →</span>
                             </Link>
-                            <Link href="/lab" className="group relative px-8 py-4 bg-white text-black border-2 border-black font-display text-xl uppercase tracking-wide hover:bg-red-50 hover:text-red-900 transition-colors">
-                                <span className="relative z-10">Busco Experimentos (Lado B)</span>
+                            <Link
+                                href="/consultoria"
+                                onClick={() => trackEvent('click_view_services', 'Navigation', 'Hero Secondary')}
+                                className="group relative px-8 py-4 bg-white text-black border-2 border-black font-display text-xl uppercase tracking-wide hover:bg-red-50 hover:text-red-900 transition-colors"
+                            >
+                                <span className="relative z-10">Ver Servicios</span>
                             </Link>
                         </div>
+                        <p className="mt-4 text-sm text-gray-500 font-mono">✓ Sin compromiso • ✓ Respuesta en 24h • ✓ Auditoría personalizada</p>
                     </div>
 
                     {/* Visual: The Vinyl Record (Kept as Brand Identity) */}
@@ -92,26 +180,26 @@ export default function Home() {
                             El SEO técnico sin narrativa es aburrido. La creatividad sin datos es inútil. Soy un <strong>Marketer-Builder</strong>.
                         </p>
                         <p className="text-lg text-white font-medium leading-relaxed mb-6">
-                            Fusiono la agilidad técnica de la programación (Python, Automatización) con la psicología del mercado hispano y estadounidense.
+                            Fusiono la agilidad técnica de la programación (Python, Automatización) con la psicología del mercado hispano y estadounidense <strong>para crear estrategias que no solo rankean, sino que venden.</strong>
                         </p>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <span className="text-2xl">💃</span>
                                 <div>
                                     <strong className="text-orange-400 uppercase tracking-wider text-sm block mb-1">Salsa</strong>
-                                    <p className="text-sm text-gray-400">Estrategia de contenidos, identidad de marca y conexión cultural (Human-First).</p>
+                                    <p className="text-sm text-gray-400"><strong>Contenido con pulso.</strong> Marcas que hablan como gente, no como corporaciones. Historias que se comparten, no que se consumen.</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-2xl">🥊</span>
                                 <div>
                                     <strong className="text-red-500 uppercase tracking-wider text-sm block mb-1">Fight</strong>
-                                    <p className="text-sm text-gray-400">Arquitectura técnica, Schema Markup, GEO y datos duros (Machine-First).</p>
+                                    <p className="text-sm text-gray-400"><strong>Código que Google ama.</strong> Estructura técnica impecable, Schema que domina la SERP y decisiones basadas en datos, no en corazonadas.</p>
                                 </div>
                             </li>
                         </ul>
                         <div className="mt-8 pt-8 border-t border-gray-800 font-mono text-xs text-gray-500 italic">
-                            "No soy una agencia con 50 juniors. Soy tu socio estratégico senior."
+                            "No tengo oficinas lujosas ni 50 juniors. Tampoco te cobraré por ellas."
                         </div>
                     </div>
                     {/* Visual Graph: The Algorithm Dashboard */}
@@ -216,14 +304,18 @@ export default function Home() {
                             </div>
                             <h3 className="text-3xl font-display font-bold uppercase mb-4">Consultoría & Servicios</h3>
                             <p className="text-gray-700 font-medium mb-6">
-                                Para empresas que necesitan crecer. Si tienes un negocio en Florida, Latam o España y necesitas dejar de depender de los anuncios pagados.
+                                <strong>Para negocios reales.</strong> Si ya facturas pero estás harto de quemar margen en Google Ads y quieres tráfico que sea tuyo.
                             </p>
                             <ul className="mb-8 space-y-2 font-mono text-sm text-gray-600">
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-600 rounded-full"></span>Arquitectura GEO & SEO Técnico</li>
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-600 rounded-full"></span>Estrategia de Autoridad Temática</li>
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-600 rounded-full"></span>Expansión Internacional (Cross-Border)</li>
                             </ul>
-                            <Link href="/consultoria" className="inline-block w-full text-center bg-black text-white font-bold uppercase py-3 hover:bg-red-600 transition-colors">
+                            <Link
+                                href="/consultoria"
+                                onClick={() => trackEvent('click_view_services', 'Navigation', 'Lado A Selection')}
+                                className="inline-block w-full text-center bg-black text-white font-bold uppercase py-3 hover:bg-red-600 transition-colors"
+                            >
                                 Ir a Servicios →
                             </Link>
                         </div>
@@ -236,14 +328,18 @@ export default function Home() {
                             </div>
                             <h3 className="text-3xl font-display font-bold uppercase mb-4 text-acid-green">The Lab</h3>
                             <p className="text-gray-300 font-medium mb-6">
-                                Para mentes curiosas y técnicos. Donde rompo los algoritmos para ver qué tienen dentro. Scripts de Python y experimentos.
+                                <strong>Para los que rompen cosas.</strong> Si abres la consola del navegador antes de leer el contenido, este es tu sitio.
                             </p>
                             <ul className="mb-8 space-y-2 font-mono text-sm text-gray-400">
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-acid-green rounded-full"></span>SEO Fight Club (Experimentos)</li>
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-acid-green rounded-full"></span>Vibe Coding (Automations)</li>
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-acid-green rounded-full"></span>Liner Notes (Ensayos)</li>
                             </ul>
-                            <Link href="/lab" className="inline-block w-full text-center bg-white text-black font-bold uppercase py-3 hover:bg-acid-green hover:border-acid-green transition-colors">
+                            <Link
+                                href="/lab"
+                                onClick={() => trackEvent('click_enter_lab', 'Navigation', 'Lado B Selection')}
+                                className="inline-block w-full text-center bg-white text-black font-bold uppercase py-3 hover:bg-acid-green hover:border-acid-green transition-colors"
+                            >
                                 Entrar al Lab →
                             </Link>
                         </div>
@@ -255,17 +351,17 @@ export default function Home() {
             <section className="py-24 px-6 md:px-12 bg-gray-100 text-black">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-display font-bold uppercase mb-12 text-center">
-                        El juego ha cambiado. <br />¿Tu estrategia también?
+                        Si tu SEO no está listo para la IA, <br /><span className="text-red-600">eres invisible.</span>
                     </h2>
-                    <p className="text-center max-w-2xl mx-auto text-gray-600 mb-16">
-                        Para 2026, se estima que el tráfico de búsqueda tradicional caerá un 25% a medida que los usuarios adopten respuestas directas de IA.
+                    <p className="text-center max-w-2xl mx-auto text-gray-600 mb-16 font-medium text-lg">
+                        El 60% de las búsquedas ya terminan sin clic. ChatGPT responde directamente. ¿Estás en esa respuesta o te quedaste fuera?
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white p-8 border-2 border-black shadow-sm">
-                            <h4 className="font-bold text-xl mb-4 uppercase text-red-600">De Keywords a Entidades</h4>
+                        <div className="bg-white p-8 border-2 border-black shadow-sm group hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-xl mb-4 uppercase text-red-600">Domina el Grafo de Conocimiento</h4>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Google ya no busca palabras, busca conceptos y relaciones. Si tu web no tiene un Grafo de Conocimiento claro, eres invisible.
+                                Google ya no busca palabras, busca <em>conceptos</em>. Conectamos tu marca con las entidades que definen tu industria para que seas la referencia ineludible.
                             </p>
                         </div>
                         <div className="bg-white p-8 border-2 border-black shadow-sm">
@@ -303,7 +399,7 @@ export default function Home() {
             {/* --- 5.5. FEATURED IN --- */}
             <section className="py-12 bg-gray-50 border-b-4 border-black">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <p className="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Visto en / Featured In</p>
+                    <p className="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Estrategias validadas por / Featured In</p>
                     <div className="flex justify-center items-center gap-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
                         <Link href="https://backlinkbuilding.io/qa/25-ways-seo-tools-changed-our-keyword-research-approach/" target="_blank" className="group flex flex-col items-center gap-2">
                             <div className="font-display text-2xl font-black uppercase tracking-tighter text-black group-hover:text-blue-600 transition-colors">
@@ -371,9 +467,18 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <Link href="/contacto" className="inline-block bg-white text-black font-display text-xl uppercase px-12 py-5 rounded-full hover:scale-105 transition-transform">
-                        Agendar una Auditoría
-                    </Link>
+                    <div className="flex flex-col items-center">
+                        <Link
+                            href="/contacto"
+                            onClick={() => trackEvent('click_schedule_audit', 'Conversion', 'Footer CTA')}
+                            className="inline-block bg-white text-black font-display text-xl uppercase px-12 py-5 rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                        >
+                            Agendar Auditoría Estratégica →
+                        </Link>
+                        <p className="mt-6 text-gray-400 font-mono text-sm tracking-wide">
+                            Tu plan de ataque personalizado en 30 minutos. <span className="text-white border-b border-white pb-0.5">Sin costo.</span>
+                        </p>
+                    </div>
                 </div>
             </section>
 

@@ -41,6 +41,9 @@ Objetivo: Repositorio de investigación primaria, experimentos SEO y código ope
 - El Arte del Storytelling Digital: De la Cultura Pop a la Ingeniería de la Atención: https://calvocreativo.com/liner-notes/arte-storytelling-digital
   > Cómo Michael Jackson, Daft Punk y TikTok decodificaron los algoritmos humanos antes que los digitales. Una tesis sobre SEO, Growth y Narrativa.
 
+- Por qué dejé de usar herramientas SEO tradicionales y empecé a programar (Vibecoding): https://calvocreativo.com/liner-notes/vibecoding-vs-seo-tools
+  > Cuando las herramientas SaaS cuestan $99/mes y hacen lo mismo que un script de Python de 10 líneas, es hora de repensar la estrategia. El nacimiento del "Vibe Coding" en SEO.
+
 - De SEO a GEO: Guía Visual para la Evolución de tu Estrategia de Contenidos (2025): https://calvocreativo.com/liner-notes/seo-a-geo
   > El manual definitivo sobre Generative Engine Optimization. Gráficos, datos y la estrategia durable que sobrevivirá al hype.
 

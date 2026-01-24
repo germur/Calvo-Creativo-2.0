@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -41,22 +41,19 @@ const idols = [
 export default function ElArtista() {
     const [activeIdol, setActiveIdol] = useState<number | null>(null);
 
-    const generatePersonSchema = () => {
-        const schema = {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Roger Calvo",
-            "jobTitle": "Consultor SEO & Marketer-Builder",
-            "url": "https://calvocreativo.com/el-artista",
-            "sameAs": [
-                "https://www.linkedin.com/in/rogermur/",
-                "https://github.com/rogermur"
-            ],
-            "knowsAbout": ["SEO", "Python", "Generative Engine Optimization", "Content Strategy", "Digital Marketing"],
-            "description": "Roger Calvo es un Consultor SEO y Marketer-Builder especializado en estrategias B2B, automatización con Python y optimización para motores generativos (GEO)."
-        };
-        return JSON.stringify(schema);
-    };
+    const personSchema = useMemo(() => JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Roger Calvo",
+        "jobTitle": "Consultor SEO & Marketer-Builder",
+        "url": "https://calvocreativo.com/el-artista",
+        "sameAs": [
+            "https://www.linkedin.com/in/rogermur/",
+            "https://github.com/rogermur"
+        ],
+        "knowsAbout": ["SEO", "Python", "Generative Engine Optimization", "Content Strategy", "Digital Marketing"],
+        "description": "Roger Calvo es un Consultor SEO y Marketer-Builder especializado en estrategias B2B, automatización con Python y optimización para motores generativos (GEO)."
+    }), []);
 
     return (
         <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-black font-sans">
@@ -66,7 +63,7 @@ export default function ElArtista() {
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: generatePersonSchema() }}
+                dangerouslySetInnerHTML={{ __html: personSchema }}
             />
             <Navigation />
 
@@ -143,15 +140,15 @@ export default function ElArtista() {
                     <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
                         {/* Mock Logos / Validation */}
                         <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-2xl">verified</span>
+                            <span className="material-symbols-outlined text-2xl" aria-hidden="true">verified</span>
                             <span className="font-bold">Google Analytics Certified</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-2xl">code</span>
+                            <span className="material-symbols-outlined text-2xl" aria-hidden="true">code</span>
                             <span className="font-bold">SEO Specialist</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-2xl">swords</span>
+                            <span className="material-symbols-outlined text-2xl" aria-hidden="true">swords</span>
                             <span className="font-bold">Main Riven (Peak 2.8k 2v2/3v3 WotLK)</span>
                         </div>
                     </div>

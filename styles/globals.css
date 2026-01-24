@@ -92,3 +92,24 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #E11D48;
 }
+
+/* Accessibility: Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .grain-overlay::before {
+        animation: none;
+    }
+
+    .animate-pulse {
+        animation: none;
+    }
+
+    .brutal-card {
+        transition: none;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

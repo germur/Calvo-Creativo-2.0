@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { trackEvent } from '@/lib/analytics';
 
 export default function Contacto() {
     const contactSchema = {
@@ -99,7 +100,12 @@ export default function Contacto() {
                             Misión Briefing
                         </h2>
 
-                        <form name="contact" method="POST" className="space-y-6">
+                        <form
+                            name="contact"
+                            method="POST"
+                            className="space-y-6"
+                            onSubmit={() => trackEvent('submit_contact_form', 'Conversion', 'Contact Page Form')}
+                        >
                             <input type="hidden" name="form-name" value="contact" />
 
                             <div>
