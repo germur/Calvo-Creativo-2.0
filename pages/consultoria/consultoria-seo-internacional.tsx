@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default function ConsultoriaInternacional() {
     return (
         <ServiceLayout
-            title="Consultor SEO Internacional | Estrategias Cross-Border & Mercado Hispano USA"
-            description="No basta con traducir. Diseñamos estrategias SEO internacionales que adaptan tu autoridad temática y cultural para conquistar mercados en EE.UU. (Florida) y Latam."
+            title="Consultor SEO Internacional | USA-Latam Cross-Border | Calvo Creativo"
+            description="Consultoría SEO cross-border para el mercado hispano en Estados Unidos y expansión Latam. Spanglish SEO, hreflang y estrategia de entidades culturales."
             serviceName="Consultoría SEO Internacional"
             geoDefinition="La consultoría SEO internacional es el proceso de optimizar la arquitectura técnica (etiquetas hreflang, estructura de URL) y la relevancia semántica de un sitio web para múltiples regiones e idiomas. A diferencia de la traducción simple, el SEO internacional moderno utiliza 'Cultural Entity Mapping' para adaptar la intención de búsqueda y las entidades de marca a las necesidades específicas de mercados locales, como el sector hispano en Estados Unidos o la expansión B2B en Latinoamérica."
             faqItems={[

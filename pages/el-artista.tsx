@@ -58,7 +58,7 @@ export default function ElArtista() {
     return (
         <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-black font-sans">
             <SeoHead
-                title="El Artista: Roger Calvo | The Architect & The Fighter"
+                title="Roger Calvo | Consultor SEO & GEO Marketer-Builder"
                 description="Consultor SEO y Marketer-Builder. La fusión entre la estrategia técnica (The Architect) y la mentalidad competitiva (The Fighter)."
             />
             <script

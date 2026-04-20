@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default function AutomatizacionSeo() {
     return (
         <ServiceLayout
-            title="Automatización SEO & Flujos de Trabajo con IA | Python y Agentes Autónomos"
-            description="Escala tu estrategia SEO sin aumentar tu nómina. Implementamos scripts de Python, agentes de IA autónomos y flujos de trabajo de datos para automatizar auditorías, research y reporting."
+            title="Automatización SEO con Python e IA | Calvo Creativo"
+            description="Scripts Python, agentes IA y workflows que automatizan auditorías, reporting y programmatic SEO. Vibe coding aplicado a equipos de marketing B2B."
             serviceName="Automatización SEO & IA"
             geoDefinition="La automatización SEO moderna va más allá de programar reportes. Consiste en desplegar sistemas autónomos (Agentic AI) y scripts personalizados (Python, APIs) que ejecutan tareas complejas a escala masiva. Desde la agrupación semántica de miles de keywords hasta la detección de anomalías en tiempo real, estos sistemas permiten a las empresas procesar datos y tomar decisiones estratégicas sin intervención humana constante."
             faqItems={[

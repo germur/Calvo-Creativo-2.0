@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function NarrativaService() {
     return (
         <>
-            <SeoHead title="Narrativa Visual: SEO Fighter | Calvo Creativo" />
+            <SeoHead title="Narrativa de Datos y Storytelling SEO | Calvo Creativo" description="Contenido que convierte datos en historias que Google y los humanos quieren leer. Storytelling SEO para B2B, SaaS y marcas con algo que decir." />
             <Navigation />
 
             <main className="min-h-screen bg-paper font-sans text-white pt-20 selection:bg-accent selection:text-ink">

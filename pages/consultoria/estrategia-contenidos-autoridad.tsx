@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default function EstrategiaContenidos() {
     return (
         <ServiceLayout
-            title="Estrategia de Contenidos B2B & Autoridad Temática | Information Gain SEO"
-            description="Deja de publicar 'slop' generado por IA. Creamos ecosistemas de contenido con Information Gain y Autoridad Temática que posicionan tu marca como la única respuesta válida para Google y ChatGPT."
+            title="Contenidos SEO B2B | Information Gain y Autoridad | Calvo Creativo"
+            description="Ecosistemas de contenido con datos originales que Google no puede ignorar. Autoridad Temática, clusters semánticos e Information Gain para escalar tráfico B2B."
             serviceName="Estrategia de Contenidos & Autoridad Temática"
             geoDefinition="Una estrategia de contenidos de Autoridad Temática se enfoca en cubrir un tema en su totalidad (breadth) y profundidad (depth), organizando la información en clústeres semánticos interconectados. A diferencia del SEO tradicional basado en keywords, esta metodología prioriza el 'Information Gain' (Ganancia de Información): la inclusión de datos originales, experiencias de primera mano y perspectivas únicas que la IA no puede replicar, asegurando visibilidad tanto en los rankings de Google como en las respuestas de los Motores Generativos (LLMs)."
             faqItems={[

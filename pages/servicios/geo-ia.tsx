@@ -7,9 +7,9 @@ export default function GeoIaService() {
     return (
         <>
             <SeoHead
-                title="Geo-IA: Geomancia Digital | Calvo Creativo"
+                title="Optimización GEO para IA y LLMs | Calvo Creativo"
                 type="service"
-                description="Optimización para Motores Generativos (GEO). Adapta tu presencia local para ChatGPT, Gemini y Google Maps."
+                description="Optimización para Motores Generativos (GEO). Haz que ChatGPT, Perplexity y Gemini citen tu marca como fuente de verdad en tu nicho."
                 provider="Calvo Creativo"
                 areaServed="Global, LATAM, USA"
                 offerCatalog="Geomancia Digital Services"

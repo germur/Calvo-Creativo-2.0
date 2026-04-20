@@ -2,6 +2,8 @@ export const cities = [
     {
         slug: 'miami',
         name: 'Miami',
+        titleName: 'Miami',
+        intentModifier: 'Estrategia Hispano-Americana',
         country: 'EE.UU.',
         demonym: 'en Miami',
         marketChallenges: 'Un mercado saturado donde el Spanglish define las búsquedas. La competencia en Real Estate y Legal es feroz, y el costo por clic (CPC) es prohibitivo.',
@@ -10,6 +12,8 @@ export const cities = [
     {
         slug: 'madrid',
         name: 'Madrid',
+        titleName: 'Madrid',
+        intentModifier: 'Estrategia España y EU',
         country: 'España',
         demonym: 'en Madrid',
         marketChallenges: 'El centro neurálgico de empresas tradicionales digitalizándose. Mucha agencia antigua vendiendo humo.',
@@ -18,6 +22,8 @@ export const cities = [
     {
         slug: 'cdmx',
         name: 'Ciudad de México',
+        titleName: 'CDMX',
+        intentModifier: 'Estrategia México B2B',
         country: 'México',
         demonym: 'en CDMX',
         marketChallenges: 'Un monstruo de 20 millones de personas. El SEO local aquí requiere precisión de colonias (Polanco, Roma, Condesa).',
@@ -26,6 +32,8 @@ export const cities = [
     {
         slug: 'bogota',
         name: 'Bogotá',
+        titleName: 'Bogotá',
+        intentModifier: 'Estrategia Colombia B2B',
         country: 'Colombia',
         demonym: 'en Bogotá',
         marketChallenges: 'Alta adopción digital pero presupuestos ajustados. El reto es demostrar ROI rápido.',

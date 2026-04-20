@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function MigracionesService() {
     return (
         <>
-            <SeoHead title="Migraciones SEO: Éxodo Digital | Calvo Creativo" />
+            <SeoHead title="Migraciones SEO sin Pérdida de Tráfico | Calvo Creativo" description="Migraciones web sin el drama. Protocolo técnico para cambios de CMS, dominio o arquitectura que preserva tu tráfico orgánico y autoridad acumulada." />
             <Navigation />
 
             <main className="min-h-screen bg-background-dark font-display text-white antialiased overflow-x-hidden selection:bg-gold selection:text-stone-dark flex flex-col items-center">

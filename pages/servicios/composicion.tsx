@@ -9,7 +9,7 @@ export default function ComposicionService() {
 
     return (
         <>
-            <SeoHead title="Composición de Hits: SEO Fighter | Calvo Creativo" />
+            <SeoHead title="Arquitectura Editorial SEO | Content Design | Calvo Creativo" description="Diseño de contenido como sistema. Arquitectura editorial para marcas B2B que quieren escalar autoridad temática con consistencia y sin caos." />
             <Navigation />
 
             <main className="min-h-screen bg-paper font-sans text-ink pt-20 selection:bg-accent selection:text-ink">

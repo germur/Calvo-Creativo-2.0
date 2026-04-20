@@ -17,8 +17,8 @@ export default function Home() {
     return (
         <div className="min-h-screen flex flex-col bg-paper font-sans selection:bg-red-600 selection:text-white">
             <Head>
-                <title>Calvo Creativo | Ingeniería de Búsqueda (SEO & GEO) y Estrategia Digital</title>
-                <meta name="description" content="Consultoría SEO estratégica para la era de la IA. Fusionamos creatividad latina (Salsa) con rigor técnico (Fight) para posicionar marcas en EE.UU. y Latam." />
+                <title>Consultor SEO &amp; GEO | Estrategia B2B USA-Latam | Calvo Creativo</title>
+                <meta name="description" content="Ingeniería de búsqueda para la era de la IA. Arquitectura SEO técnica, GEO para LLMs y estrategia de contenidos B2B. Mercado hispano en USA y Latam." />
 
                 {/* Schema: Organization */}
                 <script

@@ -55,8 +55,8 @@ export default function ConsultoriaHub() {
     return (
         <div className="min-h-screen bg-paper text-ink font-body selection:bg-primary selection:text-white">
             <Head>
-                <title>Consultoría SEO Estratégica & Ingeniería de Búsqueda | B2B y SaaS</title>
-                <meta name="description" content="Soluciones de ingeniería de búsqueda para empresas que no pueden permitirse ser invisibles en la era de la IA. Arquitectura GEO, Contenidos de Autoridad y Automatización." />
+                <title>Consultoría SEO B2B | Ingeniería de Búsqueda GEO | Calvo Creativo</title>
+                <meta name="description" content="No vendemos posicionamiento, construimos infraestructura. Consultoría SEO técnica para empresas B2B y SaaS que quieren tráfico orgánico propio, no alquilado." />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

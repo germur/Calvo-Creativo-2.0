@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function SeoFightClub() {
     return (
         <ExperimentLayout
-            title="SEO Fight Club | Experimentos de Ranking y GEO"
+            title="Experimentos SEO & GEO en Vivo | El Laboratorio | Calvo Creativo"
             description="Bienvenido al octágono del algoritmo. Enfrentamos mitos SEO contra datos reales. Experimentos de IA vs. Humano y tests de Schema."
             keyword="SEO Experiments & GEO Testing"
             trackNumber="01"

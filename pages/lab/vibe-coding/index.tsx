@@ -19,7 +19,7 @@ export default function VibeCoding() {
 
     return (
         <ExperimentLayout
-            title="Vibe Coding & Python SEO | Automatización para Marketers"
+            title="Vibe Coding SEO | Python y IA para Marketers | Calvo Creativo"
             description="Deja de escribir briefs. Aprende Vibe Coding: programación asistida por IA para crear tus propias herramientas de análisis y automatización SEO."
             keyword="Python SEO Automation"
             trackNumber="02"

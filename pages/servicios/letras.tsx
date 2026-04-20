@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function LetrasService() {
     return (
         <>
-            <SeoHead title="Letras que Conectan: UX Writing | Calvo Creativo" />
+            <SeoHead title="UX Writing y Copy SEO para Conversión | Calvo Creativo" description="Palabras que guían, persuaden y convierten. UX Writing y copy SEO para interfaces y landing pages que reducen fricción y aumentan el CTR orgánico." />
             <Navigation />
 
             <main className="min-h-screen bg-white font-sans text-ink pt-20 selection:bg-accent selection:text-ink">

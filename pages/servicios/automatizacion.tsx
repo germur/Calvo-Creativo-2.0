@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function AutomatizacionService() {
     return (
         <>
-            <SeoHead title="Automatización SEO: Golems Digitales | Calvo Creativo" />
+            <SeoHead title="Automatización SEO con Python e IA | Calvo Creativo" description="Scripts Python, agentes IA y workflows que automatizan auditorías, reporting y programmatic SEO. Escala tu estrategia sin aumentar tu nómina." />
             <Navigation />
 
             <main className="min-h-screen bg-background-dark font-display text-white antialiased overflow-x-hidden selection:bg-gold selection:text-stone-dark flex flex-col items-center">

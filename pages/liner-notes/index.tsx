@@ -43,7 +43,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
     return (
         <>
             <SeoHead
-                title="Liner Notes | Ensayos sobre SEO, IA y Estrategia Digital"
+                title="Ensayos sobre SEO, GEO e IA | Liner Notes | Calvo Creativo"
                 description="Liner Notes: El contexto detrás del caos. Análisis estratégico sobre el fin del SEO, Marketer-Builders y el factor humano."
             />
             <script

@@ -12,8 +12,8 @@ interface Props {
 export default function CityPage({ city }: Props) {
     if (!city) return null;
 
-    const title = `Consultor SEO ${city.name} | Agencia SEO Experta en ${city.country} | Calvo Creativo`;
-    const description = `Domina las búsquedas en ${city.name}. Estrategia SEO técnica y creativa para superar a la competencia en ${city.country}. Auditoría gratuita.`;
+    const title = `Consultor SEO ${city.titleName} | ${city.intentModifier} | Calvo Creativo`;
+    const description = `Estrategia SEO técnica para empresas en ${city.name}. Arquitectura GEO, contenidos de autoridad y automatización para el mercado de ${city.country}.`;
 
     return (
         <div className="min-h-screen flex flex-col bg-paper font-sans selection:bg-red-600 selection:text-white">

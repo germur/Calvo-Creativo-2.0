@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default function ArquitecturaSeoGeo() {
     return (
         <ServiceLayout
-            title="Arquitectura Web SEO & GEO | Diseño para Visibilidad en Google y ChatGPT"
-            description="No dejes que la IA ignore tu marca. Diseñamos la infraestructura semántica (Schema, Entidades, Grafos de Conocimiento) para que tu web sea entendida por Google, Perplexity y LLMs."
+            title="Arquitectura SEO & GEO | Schema para LLMs | Calvo Creativo"
+            description="Diseñamos la infraestructura semántica para que Google, ChatGPT y Perplexity entiendan tu marca. Schema JSON-LD, Knowledge Graph y Entity Strategy."
             serviceName="Arquitectura SEO & GEO"
             geoDefinition="La Arquitectura GEO (Generative Engine Optimization) es la ingeniería de la estructura de un sitio web enfocada en la comprensión de máquinas. A diferencia del SEO tradicional, que organiza el contenido para palabras clave, la arquitectura GEO utiliza Grafos de Conocimiento y marcado de datos estructurados (Schema) para definir 'Entidades' (personas, lugares, conceptos) y sus relaciones. El objetivo es facilitar que los Modelos de Lenguaje (LLMs) como ChatGPT, Gemini y Perplexity rastreen, comprendan y citen el contenido de una marca como una fuente de verdad confiable."
             faqItems={[
