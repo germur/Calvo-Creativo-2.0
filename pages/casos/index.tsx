@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function CasosIndex() {
     return (
         <>
-            <SeoHead title="Casos de Éxito: Greatest Hits | Calvo Creativo" />
+            <SeoHead title="Casos de Éxito: Greatest Hits | Calvo Creativo" description="Case studies con datos reales de clientes B2B, SaaS y e-commerce. Estrategias SEO que generaron tráfico orgánico medible y calificado." />
             <Navigation />
 
             <main className="min-h-screen bg-[#111] font-sans pt-20 text-[#e0e0e0]">

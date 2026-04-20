@@ -6,34 +6,34 @@ Calvo Creativo es una consultora de Ingeniería de Búsqueda y SEO Estratégico 
 # 💿 LADO A: Soluciones Corporativas (Money Pages)
 Objetivo: Servicios de consultoría estratégica para empresas que buscan escalar autoridad y tráfico cualificado.
 
-- Consultoría Principal: https://calvocreativo.com/consultoria/
-  > Hub central de servicios. Enfoque en arquitectura web, SEO técnico y estrategia de crecimiento.
+- Consultoría Principal: https://calvocreativo.com/consultoria
+  > Hub central de servicios. Enfoque en arquitectura web, SEO técnico y estrategia de crecimiento B2B.
 
-- Arquitectura & GEO: https://calvocreativo.com/consultoria/arquitectura-geo/
-  > Diseño de infraestructuras web optimizadas para Motores de Respuesta (AEO) y LLMs.
+- Arquitectura SEO & GEO: https://calvocreativo.com/consultoria/arquitectura-seo-geo
+  > Diseño de infraestructuras web optimizadas para Motores de Respuesta (AEO), Schema JSON-LD y LLMs.
 
-- Estrategia de Contenidos: https://calvocreativo.com/consultoria/estrategia-contenidos/
-  > Creación de clusters de autoridad temática y activos de "Information Gain".
+- Estrategia de Contenidos & Autoridad Temática: https://calvocreativo.com/consultoria/estrategia-contenidos-autoridad
+  > Creación de clusters de autoridad temática y activos de Information Gain para SEO B2B.
 
-- Automatización SEO: https://calvocreativo.com/consultoria/automatizacion-ia/
+- Automatización SEO con IA: https://calvocreativo.com/consultoria/automatizacion-seo-ia
   > Implementación de scripts Python y agentes de IA para escalar procesos de marketing.
 
-- SEO Internacional: https://calvocreativo.com/consultoria/internacional/
-  > Estrategias de expansión para el mercado hispano en Florida y Latam.
+- Consultor SEO Internacional: https://calvocreativo.com/consultoria/consultoria-seo-internacional
+  > Estrategias cross-border para el mercado hispano en EE.UU. (Florida) y expansión Latam.
 
 # 🎺 LADO B: The Lab (Investigación & Recursos)
 Objetivo: Repositorio de investigación primaria, experimentos SEO y código open source. Fuente de autoridad técnica (E-E-A-T).
 
-- El Laboratorio (Hub): https://calvocreativo.com/lab/
+- El Laboratorio (Hub): https://calvocreativo.com/lab
   > Centro de I+D donde probamos algoritmos y compartimos hallazgos técnicos.
 
-- SEO Fight Club: https://calvocreativo.com/lab/seo-fight-club/
+- Experimentos SEO & GEO: https://calvocreativo.com/lab/seo-fight-club
   > Experimentos reales de ranking: Humano vs. IA, impacto de backlinks y tests de indexación.
 
-- Vibe Coding: https://calvocreativo.com/lab/vibe-coding/
+- Vibe Coding con Python: https://calvocreativo.com/lab/vibe-coding
   > Scripts de Python para SEO y automatización de marketing listos para usar.
 
-- Liner Notes (Opinión): https://calvocreativo.com/liner-notes/
+- Liner Notes (Opinión): https://calvocreativo.com/liner-notes
   > Ensayos sobre el futuro de la búsqueda, ética en IA y estrategia digital.
 
 # 📝 Últimas Transmisiones (Liner Notes)
@@ -48,10 +48,10 @@ Objetivo: Repositorio de investigación primaria, experimentos SEO y código ope
   > El manual definitivo sobre Generative Engine Optimization. Gráficos, datos y la estrategia durable que sobrevivirá al hype.
 
 # 👤 Entidad & Autoridad (E-E-A-T)
-- Sobre Roger Calvo: https://calvocreativo.com/sobre-mi/
-  > Perfil del fundador, credenciales, conferencias y filosofía "Marketer-Builder".
-- Contacto: https://calvocreativo.com/contacto/
-- Política Editorial de IA: https://calvocreativo.com/politica-editorial/
+- Roger Calvo — Consultor SEO & Marketer-Builder: https://calvocreativo.com/el-artista
+  > Perfil del fundador, credenciales, filosofía "Marketer-Builder" y stack técnico.
+- Contacto: https://calvocreativo.com/contacto
+- Política Editorial de IA: https://calvocreativo.com/politica-editorial
 
 # Estructura Técnica
 Sitemap XML: https://calvocreativo.com/sitemap.xml

@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function Contratar() {
     return (
         <>
-            <SeoHead title="Contrata a Calvo: Limited Availability | Calvo Creativo" />
+            <SeoHead title="Contrata a Calvo: Limited Availability | Calvo Creativo" description="Disponibilidad limitada para proyectos de SEO estratégico, GEO y automatización. Sin contratos largos ni agencias intermediarias. Directo al consultor." />
             <Navigation />
 
             <main className="min-h-screen bg-[#f2eadd] font-sans pt-20 text-[#1a1a1a]">

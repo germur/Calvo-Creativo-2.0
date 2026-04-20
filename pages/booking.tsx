@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function Booking() {
     return (
         <>
-            <SeoHead title="Contrataciones | Calvo Creativo" />
+            <SeoHead title="Contrataciones | Calvo Creativo" description="Plazas limitadas para consultoría SEO estratégica. Agenda una sesión de diagnóstico y define si somos el fit correcto antes de comprometerte." />
             <Navigation />
             <main className="min-h-screen bg-[#120505] relative overflow-hidden flex items-center justify-center py-20 px-4">
 

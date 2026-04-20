@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function SeoRumbleArticle() {
     return (
         <>
-            <SeoHead title="The SEO Rumble: Keyword Knockouts | Calvo Creativo" />
+            <SeoHead title="The SEO Rumble: Keyword Knockouts | Calvo Creativo" description="Análisis de batallas de keywords: quién gana, quién pierde y por qué. Datos reales de SERPs competitivas en nichos B2B y tech hispano." />
             <Navigation />
 
             <main className="min-h-screen bg-[#f3f0e6] font-sans pt-20 text-[#1a1a1a] selection:bg-red-600 selection:text-white">

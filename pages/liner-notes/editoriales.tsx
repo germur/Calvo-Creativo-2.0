@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function EditorialesIndex() {
     return (
         <>
-            <SeoHead title="Opinión Editoriales: Con Flow y Sabor | Calvo Creativo" />
+            <SeoHead title="Opinión Editoriales: Con Flow y Sabor | Calvo Creativo" description="Columnas de opinión sobre SEO, IA y estrategia digital. Perspectiva sin filtro de un consultor que vive en el cruce entre algoritmos y creatividad." />
             <Navigation />
 
             <main className="min-h-screen bg-[#e8e8e5] font-serif pt-20 text-[#1a1a1a]">

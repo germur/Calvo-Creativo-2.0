@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function UfcCase() {
     return (
         <>
-            <SeoHead title="CONFIDENTIAL: UFC SEO Audit | Calvo Creativo" />
+            <SeoHead title="CONFIDENTIAL: UFC SEO Audit | Calvo Creativo" description="Auditoría SEO técnica aplicada al dominio de la UFC. Análisis de arquitectura, canonicals, cobertura de índice y oportunidades de tráfico orgánico." />
             <Navigation />
 
             <main className="min-h-screen bg-[#0a0a0a] font-mono text-[#e0e0e0] pt-20 selection:bg-[#ff0000] selection:text-white relative overflow-hidden">

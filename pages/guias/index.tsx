@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function GuiasIndex() {
     return (
         <>
-            <SeoHead title="Guías Técnicas: Partituras SEO | Calvo Creativo" />
+            <SeoHead title="Guías Técnicas: Partituras SEO | Calvo Creativo" description="Guías técnicas de SEO, GEO y automatización con Python. Recursos prácticos para marketers B2B que quieren resultados sin depender de agencias." />
             <Navigation />
 
             <main className="min-h-screen bg-[#f8f9fa] font-sans pt-20 text-[#1d1d1f]">

@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function FightCard() {
     return (
         <>
-            <SeoHead title="Official Fight Card: Calvo vs Algoritmo | Calvo Creativo" />
+            <SeoHead title="Official Fight Card: Calvo vs Algoritmo | Calvo Creativo" description="Los servicios de Calvo Creativo, presentados como un combate de artes marciales mixtas. Elige tu esquina: SEO técnico, contenidos B2B o automatización." />
             <Navigation />
 
             <main className="min-h-screen bg-[#d4a88c] font-sans pt-20 text-[#1a0a00] relative overflow-hidden">
