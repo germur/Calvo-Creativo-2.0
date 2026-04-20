@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -9,7 +10,7 @@ interface ServiceLayoutProps {
     title: string;
     description: string;
     serviceName: string;
-    geoDefinition: string; // The text for the GEO definition block
+    geoDefinition: string;
     faqItems?: { question: string; answer: string }[];
 }
 
@@ -21,49 +22,99 @@ const ServiceLayout = ({
     geoDefinition,
     faqItems = []
 }: ServiceLayoutProps) => {
+    const router = useRouter();
+    const siteUrl = "https://calvocreativo.com";
+    const canonicalUrl = `${siteUrl}${router.asPath}`.split('?')[0];
+    const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(title)}`;
 
-    // Schema Generator
+    // Schema: Service + FAQPage + BreadcrumbList
     const generateSchema = () => {
-        const schema = {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "Service",
-                    "name": serviceName,
-                    "provider": {
-                        "@type": "Person", // Or Organization
-                        "name": "Roger Calvo",
-                        "url": "https://calvocreativo.com" // Ideally dynamic or from config
-                    },
-                    "areaServed": "Worldwide",
-                    "description": description
+        const breadcrumbSegments = router.asPath.split('/').filter(Boolean);
+        const breadcrumbItems = [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+            ...breadcrumbSegments.map((seg, i) => ({
+                "@type": "ListItem",
+                "position": i + 2,
+                "name": seg.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+                "item": `${siteUrl}/${breadcrumbSegments.slice(0, i + 1).join('/')}`
+            }))
+        ];
+
+        const schema: any[] = [
+            {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": serviceName,
+                "description": description,
+                "url": canonicalUrl,
+                "provider": {
+                    "@type": "Person",
+                    "name": "Roger Calvo",
+                    "url": `${siteUrl}/el-artista`,
+                    "sameAs": [
+                        "https://www.linkedin.com/in/rogermur/",
+                        "https://x.com/Rogermu47429637"
+                    ]
                 },
-                faqItems.length > 0 && {
-                    "@type": "FAQPage",
-                    "mainEntity": faqItems.map(item => ({
-                        "@type": "Question",
-                        "name": item.question,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": item.answer
-                        }
-                    }))
-                }
-            ].filter(Boolean)
-        };
+                "areaServed": "Worldwide",
+                "serviceType": "Digital Marketing & SEO"
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": breadcrumbItems
+            }
+        ];
+
+        if (faqItems.length > 0) {
+            schema.push({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map(item => ({
+                    "@type": "Question",
+                    "name": item.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item.answer
+                    }
+                }))
+            });
+        }
+
         return JSON.stringify(schema);
     };
 
     return (
         <div className="min-h-screen bg-[#F8F5F0] text-[#0A0A0A] font-sans selection:bg-[#E11D48] selection:text-white">
             <Head>
-                <title>{title} | Calvo Creativo</title>
+                {/* ✅ title ya incluye "| Calvo Creativo" — no se duplica */}
+                <title>{title}</title>
                 <meta name="description" content={description} />
+                <link rel="canonical" href={canonicalUrl} />
+
+                {/* OG Tags */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={ogImage} />
+                <meta property="og:site_name" content="Calvo Creativo" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={ogImage} />
+
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+                {/* Schema: Service + BreadcrumbList + FAQPage */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: generateSchema() }}
                 />
-                <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&family=Shrikhand&display=swap" rel="stylesheet" />
             </Head>
 
             <Navigation />
@@ -81,10 +132,9 @@ const ServiceLayout = ({
                     <Breadcrumbs theme="light" />
                 </div>
 
-                {/* Hero Wrapper could be here or part of children to allow flexibility */}
                 {children}
 
-                {/* FAQ Section (Auto-generated if items exist) */}
+                {/* FAQ Section */}
                 {faqItems.length > 0 && (
                     <section className="bg-white border-t border-gray-200 py-20 mt-20">
                         <div className="max-w-4xl mx-auto px-6">

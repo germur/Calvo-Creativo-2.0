@@ -15,26 +15,28 @@ interface SeoProps {
 }
 
 const SeoHead = ({ title, description, type = 'website', image, author, publishDate, modifiedDate, provider, areaServed, offerCatalog }: SeoProps) => {
-    const siteTitle = "EL ESPECIALISTA | Digital Gatefold";
-    const fullTitle = title === "Home" ? siteTitle : `${title} | EL ESPECIALISTA`;
-    const metaDescription = description || "Portfolio y Blog de Estrategia SEO y Creatividad Digital.";
+    // ✅ Single useRouter() call at the top — fixes React Hooks rule violation
+    const router = useRouter();
+
     const siteUrl = "https://calvocreativo.com";
-    const defaultImage = "https://calvocreativo.com/images/og-default.jpg";
+    const defaultImage = `${siteUrl}/api/og?title=${encodeURIComponent(title)}`;
+    const metaDescription = description || "Consultoría SEO e ingeniería de búsqueda para la era de la IA. Arquitectura GEO, contenidos B2B y automatización. Mercado hispano en USA y Latam.";
+    const canonicalUrl = `${siteUrl}${router.asPath === '/' ? '' : router.asPath}`.split('?')[0];
+
+    // ✅ Use title as-is — pages already include "| Calvo Creativo" where needed
+    const fullTitle = title;
 
     // Dynamic OG Image Logic
     let finalOgImage = image;
-    if (!finalOgImage && (type === 'article' || type === 'service')) {
+    if (!finalOgImage) {
         finalOgImage = `${siteUrl}/api/og?title=${encodeURIComponent(title)}${publishDate ? `&date=${publishDate}` : ''}`;
-    } else if (finalOgImage && !finalOgImage.startsWith('http')) {
+    } else if (!finalOgImage.startsWith('http')) {
         finalOgImage = `${siteUrl}${finalOgImage}`;
     }
     const ogImage = finalOgImage || defaultImage;
 
-    // Construct Schema
-    const baseSchema = {
-        "@context": "https://schema.org",
-    };
-
+    // Schema
+    const baseSchema = { "@context": "https://schema.org" };
     let schema: any = {};
 
     if (type === 'article') {
@@ -47,10 +49,12 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
             "author": {
                 "@type": "Person",
                 "name": author || "Roger Calvo",
-                "url": "https://calvocreativo.com/sobre-mi",
+                // ✅ Corregido: /sobre-mi no existe → /el-artista
+                "url": "https://calvocreativo.com/el-artista",
+                // ✅ Corregidos: LinkedIn y X reales
                 "sameAs": [
-                    "https://www.linkedin.com/in/rogercalvo/",
-                    "https://twitter.com/rogercalvo"
+                    "https://www.linkedin.com/in/rogermur/",
+                    "https://x.com/Rogermu47429637"
                 ]
             },
             "publisher": {
@@ -65,7 +69,7 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
             "dateModified": modifiedDate || publishDate,
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": `${siteUrl}${useRouter().asPath}`
+                "@id": canonicalUrl
             }
         };
     } else if (type === 'service') {
@@ -93,7 +97,7 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
         schema = {
             ...baseSchema,
             "@type": "WebSite",
-            "name": siteTitle,
+            "name": "Calvo Creativo",
             "url": siteUrl,
             "potentialAction": {
                 "@type": "SearchAction",
@@ -103,9 +107,6 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
         };
     }
 
-    const router = useRouter();
-    const canonicalUrl = `${siteUrl}${router.asPath === '/' ? '' : router.asPath}`.split('?')[0];
-
     return (
         <Head>
             <title>{fullTitle}</title>
@@ -113,13 +114,16 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
             <link rel="canonical" href={canonicalUrl} />
 
             {/* OG Tags */}
-            <meta property="og:type" content={type} />
+            <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+            <meta property="og:url" content={canonicalUrl} />
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={metaDescription} />
             <meta property="og:image" content={ogImage} />
+            <meta property="og:site_name" content="Calvo Creativo" />
 
             {/* Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@Rogermu47429637" />
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={metaDescription} />
             <meta name="twitter:image" content={ogImage} />

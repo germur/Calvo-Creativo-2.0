@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -28,8 +29,11 @@ const ExperimentLayout = ({
     mode = 'dark',
     width = 'standard'
 }: ExperimentLayoutProps) => {
+    const router = useRouter();
+    const siteUrl = "https://calvocreativo.com";
+    const canonicalUrl = `${siteUrl}${router.asPath}`.split('?')[0];
+    const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(title)}`;
 
-    // Map themeColor to specific hex for styles if needed, or just use Tailwind classes dynamically
     const themeClasses = {
         'acid-green': 'text-acid-green border-acid-green decoration-acid-green selection:bg-acid-green',
         'acid-orange': 'text-acid-orange border-acid-orange decoration-acid-orange selection:bg-acid-orange',
@@ -39,7 +43,6 @@ const ExperimentLayout = ({
 
     const currentThemeClass = themeClasses[themeColor] || themeClasses['acid-green'];
 
-    // Theme Colors Definition
     const bgColor = mode === 'dark' ? 'bg-[#120810]' : 'bg-paper';
     const textColor = mode === 'dark' ? 'text-white' : 'text-ink';
     const selectionText = mode === 'dark' ? 'selection:text-black' : 'selection:text-white';
@@ -51,12 +54,31 @@ const ExperimentLayout = ({
     return (
         <div className={`min-h-screen ${bgColor} ${textColor} font-display ${selectionText} ${currentThemeClass}`}>
             <Head>
-                <title>{title} | Calvo Creativo Lab</title>
+                {/* ✅ title ya incluye "| Calvo Creativo" — no se duplica */}
+                <title>{title}</title>
                 <meta name="description" content={description} />
-                <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&family=Shrikhand&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+                <link rel="canonical" href={canonicalUrl} />
+
+                {/* OG Tags */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={ogImage} />
+                <meta property="og:site_name" content="Calvo Creativo" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={ogImage} />
+
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
             </Head>
 
-            {/* Sticky Header specific to Lado B (as requested) */}
+            {/* Sticky Header */}
             <header className={`sticky top-0 z-50 border-b ${borderColor} ${headerBg} backdrop-blur-md`}>
                 <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                     <Link href="/lab" className="flex items-center gap-2 group">
@@ -76,6 +98,7 @@ const ExperimentLayout = ({
                 <div className="mb-8">
                     <Breadcrumbs theme={mode === 'dark' ? "dark" : "light"} />
                 </div>
+
                 {/* Background Glow */}
                 <div className={`absolute top-0 right-0 w-96 h-96 ${themeColor === 'acid-green' ? 'bg-acid-green' : themeColor === 'acid-pink' ? 'bg-acid-pink' : themeColor === 'acid-purple' ? 'bg-acid-purple' : 'bg-acid-orange'} rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none -z-10`}></div>
 
