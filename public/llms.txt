@@ -27,7 +27,7 @@ Objetivo: Repositorio de investigación primaria, experimentos SEO y código ope
 - El Laboratorio (Hub): https://calvocreativo.com/lab
   > Centro de I+D donde probamos algoritmos y compartimos hallazgos técnicos.
 
-- Experimentos SEO & GEO: https://calvocreativo.com/lab/seo-fight-club
+- Experimentos SEO & GEO: https://calvocreativo.com/lab/calvo-fight-club
   > Experimentos reales de ranking: Humano vs. IA, impacto de backlinks y tests de indexación.
 
 - Vibe Coding con Python: https://calvocreativo.com/lab/vibe-coding

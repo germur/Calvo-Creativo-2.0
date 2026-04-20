@@ -2,14 +2,14 @@ import React from 'react';
 import ExperimentLayout from '@/components/ExperimentLayout';
 import Link from 'next/link';
 
-export default function SeoFightClub() {
+export default function CalvoFightClubHumanoVsIa() {
     return (
         <ExperimentLayout
-            title="SEO Fight Club: Humano vs IA | Experimentos"
+            title="Calvo Fight Club: Humano vs IA | Experimentos SEO"
             description="Round 1: Puse a competir un artículo escrito por ChatGPT contra uno optimizado por un humano. Los resultados reales."
             keyword="Contenido IA vs Humano SEO"
             trackNumber="Track 02"
-            trackTitle="SEO Fight Club"
+            trackTitle="Calvo Fight Club"
             themeColor="acid-green"
         >
             <h1 className="text-5xl md:text-7xl font-black mb-8 leading-[0.9]">

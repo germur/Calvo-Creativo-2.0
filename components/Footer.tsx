@@ -42,7 +42,7 @@ const Footer = () => {
                     <h3 className="font-display text-xl uppercase text-acid-green mb-6">Rompe (Lado B)</h3>
                     <ul className="space-y-3 font-mono text-xs uppercase tracking-wide text-gray-400">
                         <li><Link href="/lab" className="hover:text-white transition-colors">El Laboratorio (Hub)</Link></li>
-                        <li><Link href="/lab/seo-fight-club" className="hover:text-white transition-colors">SEO Fight Club</Link></li>
+                        <li><Link href="/lab/calvo-fight-club" className="hover:text-white transition-colors">Calvo Fight Club</Link></li>
                         <li><Link href="/lab/vibe-coding" className="hover:text-white transition-colors">Vibe Coding (Scripts)</Link></li>
                         <li><Link href="/liner-notes" className="hover:text-white transition-colors">Liner Notes (Opinión)</Link></li>
                         <li><Link href="/newsletter" className="hover:text-white transition-colors">Newsletter: The Lab Report</Link></li>

@@ -169,8 +169,8 @@ export default function EstrategiaContenidos() {
                         <p className="text-white/70 mb-8 max-w-lg mx-auto">
                             Mira cómo un artículo humano con Information Gain superó a 10 artículos de IA en tráfico y retención.
                         </p>
-                        <Link href="/lab/seo-fight-club/humano-vs-ia" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
-                            Ver Experimento Fight Club
+                        <Link href="/lab/calvo-fight-club/humano-vs-ia" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
+                            Ver Experimento Calvo Fight Club
                             <span className="material-symbols-outlined">arrow_forward</span>
                         </Link>
                     </div>

@@ -90,12 +90,12 @@ export default function LabHub() {
                     <div className="max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {/* Fight Club */}
-                            <Link href="/lab/seo-fight-club" className="group relative bg-[#181114] border border-white/10 rounded-2xl p-8 hover:border-[#f4258c] transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(244,37,140,0.2)] flex flex-col h-full overflow-hidden">
+                            <Link href="/lab/calvo-fight-club" className="group relative bg-[#181114] border border-white/10 rounded-2xl p-8 hover:border-[#f4258c] transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(244,37,140,0.2)] flex flex-col h-full overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#f4258c] rounded-full filter blur-[60px] opacity-0 group-hover:opacity-20 transition-opacity"></div>
                                 <div className="mb-6">
                                     <span className="material-symbols-outlined text-5xl text-[#f4258c]">sports_mma</span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#f4258c] transition-colors" style={{ fontFamily: 'Spline Sans, sans-serif' }}>SEO Fight Club</h3>
+                                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#f4258c] transition-colors" style={{ fontFamily: 'Spline Sans, sans-serif' }}>Calvo Fight Club</h3>
                                 <p className="text-white/50 text-sm mb-8 flex-grow font-mono leading-relaxed">
                                     Enfrentamos teorías contra la realidad. Casos de estudio en tiempo real donde ponemos a prueba al algoritmo.
                                 </p>
@@ -166,7 +166,7 @@ export default function LabHub() {
                             <span className="text-white font-bold">Resultado preliminar:</span> Tráfico <span className="text-[#ccff00]">+40%</span>, penalización manual en día 28.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link href="/lab/seo-fight-club/frankenstein" className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase hover:bg-[#ccff00] transition-colors flex items-center gap-2 shadow-lg shadow-white/10 hover:shadow-[#ccff00]/20">
+                            <Link href="/lab/calvo-fight-club/frankenstein" className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase hover:bg-[#ccff00] transition-colors flex items-center gap-2 shadow-lg shadow-white/10 hover:shadow-[#ccff00]/20">
                                 Leer Autopsia <span className="material-symbols-outlined text-sm">visibility</span>
                             </Link>
                         </div>

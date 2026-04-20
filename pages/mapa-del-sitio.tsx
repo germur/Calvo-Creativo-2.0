@@ -41,7 +41,7 @@ export default function Sitemap() {
                         </h2>
                         <ul className="space-y-3 font-mono text-sm border-l-2 border-black pl-6">
                             <li><Link href="/lab" className="hover:text-acid-green bg-black text-white px-1">/lab (Index)</Link></li>
-                            <li><Link href="/lab/seo-fight-club" className="hover:text-red-600 hover:underline">/seo-fight-club</Link></li>
+                            <li><Link href="/lab/calvo-fight-club" className="hover:text-red-600 hover:underline">/calvo-fight-club</Link></li>
                             <li><Link href="/lab/vibe-coding" className="hover:text-red-600 hover:underline">/vibe-coding</Link></li>
                             <li><Link href="/liner-notes" className="hover:text-red-600 hover:underline">/liner-notes (Blog)</Link></li>
                         </ul>

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Read(//c/Users/ger-mur/Downloads/**)",
+      "Bash(unzip -o files.zip -d files_extracted)",
+      "Bash(cp \"/c/Users/ger-mur/Downloads/files_extracted/next.config.mjs\" \"/c/Users/ger-mur/Desktop/Calvo Creativo/next.config.mjs\")",
+      "Bash(cp \"/c/Users/ger-mur/Downloads/files_extracted/next-sitemap.config.js\" \"/c/Users/ger-mur/Desktop/Calvo Creativo/next-sitemap.config.js\")",
+      "Bash(cp \"/c/Users/ger-mur/Downloads/files_extracted/Footer.tsx\" \"/c/Users/ger-mur/Desktop/Calvo Creativo/components/Footer.tsx\")",
+      "Bash(cp \"/c/Users/ger-mur/Downloads/files_extracted/validate-redirects.sh\" \"/c/Users/ger-mur/Desktop/Calvo Creativo/validate-redirects.sh\")",
+      "Bash(chmod +x \"/c/Users/ger-mur/Desktop/Calvo Creativo/validate-redirects.sh\")",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(grep -oP 'title=\"[^\"]{55,}\"')",
+      "Bash(sort -t'\"' -k2 -n)"
+    ]
+  }
+}

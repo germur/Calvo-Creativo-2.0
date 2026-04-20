@@ -8,6 +8,15 @@ const nextConfig = {
     async redirects() {
         return [
             // ================================================================
+            // 0. RENAME INTERNO: seo-fight-club → calvo-fight-club
+            // ================================================================
+            {
+                source: '/lab/seo-fight-club/:slug*',
+                destination: '/lab/calvo-fight-club/:slug*',
+                permanent: true,
+            },
+
+            // ================================================================
             // 1. PÁGINAS CORE DE LA VERSIÓN LOVABLE (críticos — tenían tráfico/backlinks)
             // ================================================================
             {

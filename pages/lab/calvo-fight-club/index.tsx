@@ -2,14 +2,14 @@ import React from 'react';
 import ExperimentLayout from '@/components/ExperimentLayout';
 import Link from 'next/link';
 
-export default function SeoFightClub() {
+export default function CalvoFightClub() {
     return (
         <ExperimentLayout
             title="Experimentos SEO & GEO en Vivo | El Laboratorio | Calvo Creativo"
             description="Bienvenido al octágono del algoritmo. Enfrentamos mitos SEO contra datos reales. Experimentos de IA vs. Humano y tests de Schema."
             keyword="SEO Experiments & GEO Testing"
             trackNumber="01"
-            trackTitle="Fight Club"
+            trackTitle="Calvo Fight Club"
             themeColor="acid-green"
         >
             {/* GEO Definition Block */}
@@ -18,7 +18,7 @@ export default function SeoFightClub() {
                     $ define --context "Experimental"
                 </p>
                 <p className="text-white/80 font-mono text-sm leading-relaxed">
-                    El <strong>SEO Fight Club</strong> es el laboratorio de investigación experimental de Calvo Creativo.
+                    El <strong>Calvo Fight Club</strong> es el laboratorio de investigación experimental de Calvo Creativo.
                     Utilizamos scripts de Python y análisis de datos para medir el impacto real de la IA en la visibilidad orgánica.
                 </p>
             </div>
@@ -179,7 +179,7 @@ export default function SeoFightClub() {
                     </p>
                     <div className="flex justify-center">
                         <button className="bg-black text-white px-8 py-3 font-bold uppercase hover:bg-white hover:text-black transition-colors">
-                            Únete al Fight Club
+                            Únete al Calvo Fight Club
                         </button>
                     </div>
                 </div>

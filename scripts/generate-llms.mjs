@@ -58,7 +58,7 @@ Objetivo: Repositorio de investigación primaria, experimentos SEO y código ope
 - El Laboratorio (Hub): ${BASE_URL}/lab
   > Centro de I+D donde probamos algoritmos y compartimos hallazgos técnicos.
 
-- Experimentos SEO & GEO: ${BASE_URL}/lab/seo-fight-club
+- Experimentos SEO & GEO: ${BASE_URL}/lab/calvo-fight-club
   > Experimentos reales de ranking: Humano vs. IA, impacto de backlinks y tests de indexación.
 
 - Vibe Coding con Python: ${BASE_URL}/lab/vibe-coding
