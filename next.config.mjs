@@ -1,30 +1,65 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    // Mantenlo en true si tus canonicals tienen / al final
-    trailingSlash: true,
+    // ⚡ Política: SIN trailing slash. Convención moderna de Next 13+.
+    // URLs más limpias, menos redirects, Netlify lo respeta por defecto.
+    trailingSlash: false,
 
     async redirects() {
         return [
-            // ---------------------------------------------------------
-            // 1. RECURSOS Y MAPAS (Lo que fallaba en el reporte)
-            // ---------------------------------------------------------
+            // ================================================================
+            // 1. PÁGINAS CORE DE LA VERSIÓN LOVABLE (críticos — tenían tráfico/backlinks)
+            // ================================================================
+            {
+                source: '/contact',
+                destination: '/contacto',
+                permanent: true,
+            },
+            {
+                source: '/about',
+                destination: '/el-artista',
+                permanent: true,
+            },
+            {
+                source: '/how-we-work',
+                destination: '/consultoria',
+                permanent: true,
+            },
+            {
+                source: '/privacy-policy',
+                destination: '/politica-privacidad',
+                permanent: true,
+            },
+            {
+                source: '/terms-of-service',
+                destination: '/terminos',
+                permanent: true,
+            },
+            {
+                source: '/cookie-policy',
+                destination: '/politica-privacidad',
+                permanent: true,
+            },
+
+            // ================================================================
+            // 2. RECURSOS Y MAPAS
+            // ================================================================
             {
                 source: '/resources',
-                destination: '/lab', // Redirigimos recursos a tu "Lab" que es donde tienes herramientas y guías
+                destination: '/lab',
                 permanent: true,
             },
             {
-                source: '/sitemap/',
-                destination: '/sitemap.xml', // Corrección técnica para bots
+                source: '/sitemap',
+                destination: '/sitemap.xml',
                 permanent: true,
             },
 
-            // ---------------------------------------------------------
-            // 2. SERVICIOS ESPECÍFICOS (Del reporte CSV a tu nueva oferta)
-            // ---------------------------------------------------------
+            // ================================================================
+            // 3. SERVICIOS ESPECÍFICOS DE LOVABLE → OFERTA ACTUAL
+            // ================================================================
 
-            // Auditoría y Estrategia -> Consultoría
+            // Auditoría y Estrategia → Consultoría
             {
                 source: '/services/seo-audit',
                 destination: '/consultoria',
@@ -48,10 +83,10 @@ const nextConfig = {
                 permanent: true,
             },
 
-            // Ecommerce y Local -> Consultoría (o Automatización si prefieres)
+            // Ecommerce y Local
             {
                 source: '/services/ecommerce-seo',
-                destination: '/servicios/automatizacion', // Asumo que automatización encaja bien con ecom
+                destination: '/servicios/automatizacion',
                 permanent: true,
             },
             {
@@ -72,11 +107,11 @@ const nextConfig = {
                 permanent: true,
             },
 
-            // ---------------------------------------------------------
-            // 3. REGLAS GENERALES (El "cazatodo" para lo que sobre)
-            // ---------------------------------------------------------
+            // ================================================================
+            // 4. REGLAS GENERALES (cazatodo para URLs viejas de Lovable)
+            // ================================================================
 
-            // Cualquier otro servicio en inglés se va a Consultoría
+            // Cualquier otro servicio en inglés → Consultoría
             {
                 source: '/services/:slug*',
                 destination: '/consultoria',

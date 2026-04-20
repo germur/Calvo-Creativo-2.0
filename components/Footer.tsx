@@ -77,9 +77,10 @@ const Footer = () => {
                     Hecho con Salsa & Python 🐍
                 </div>
                 <div>
-                    <Link href="/public/llms.txt" className="flex items-center gap-1 hover:text-acid-green transition-colors">
+                    {/* 🔧 FIX: era /public/llms.txt (ruta interna de Next), ahora /llms.txt (ruta pública real) */}
+                    <a href="/llms.txt" className="flex items-center gap-1 hover:text-acid-green transition-colors">
                         <span className="material-symbols-outlined text-sm">smart_toy</span> Access for AI Agents: llms.txt
-                    </Link>
+                    </a>
                 </div>
             </div>
             {/* Clarity Disclosure */}

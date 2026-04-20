@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
             {/* Google Analytics 4 - Deferred for performance */}
             <Script
-                src="https://www.googletagmanager.com/gtag/js?id=G-GF57274CF0"
+                src="https://www.googletagmanager.com/gtag/js?id=G-985SWJBWRZ"
                 strategy="afterInteractive"
             />
             <Script id="google-analytics" strategy="afterInteractive">
@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'G-GF57274CF0');
+                    gtag('config', 'G-985SWJBWRZ');
                 `}
             </Script>
 
