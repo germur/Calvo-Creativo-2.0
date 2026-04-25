@@ -15,10 +15,11 @@ const CV = {
     title: 'SEO Strategist & Content Architect',
     tagline: 'Search intent · Topical authority · Web architecture · AI-native workflows',
     location: 'Bogotá, Colombia · Miami, FL',
-    email: 'hola@calvocreativo.com',
+    email: 'roger@calvocreativo.com',
     linkedin: 'linkedin.com/in/rogermur',
     github: 'github.com/germur',
     website: 'calvocreativo.com',
+    blog: 'quimbara.org',
 
     summary:
         'SEO Strategist with 7 years of experience across U.S. and LATAM markets. I build sustainable organic growth by combining storytelling, UX thinking, and technical depth — turning search intent into web architecture that compounds. Currently building AI-native SEO workflows with Claude Code to scale analysis and content systems.',
@@ -130,8 +131,9 @@ const personSchema = {
         'https://www.linkedin.com/in/rogermur/',
         'https://github.com/germur',
         'https://calvocreativo.com',
+        'https://quimbara.org',
     ],
-    email: 'hola@calvocreativo.com',
+    email: 'roger@calvocreativo.com',
     knowsAbout: ['SEO', 'Python', 'Generative Engine Optimization', 'Content Strategy', 'Digital Marketing', 'Technical SEO'],
     description: CV.summary,
     knowsLanguage: ['Spanish', 'English', 'German'],
@@ -261,6 +263,10 @@ export default function CVPage() {
                                 <p className="flex items-center gap-2">
                                     <span className="material-symbols-outlined text-sm text-black">language</span>
                                     <a href={`https://${CV.website}`} className="hover:text-black transition-colors">{CV.website}</a>
+                                </p>
+                                <p className="flex items-center gap-2">
+                                    <span className="material-symbols-outlined text-sm text-black">sports_mma</span>
+                                    <a href={`https://${CV.blog}`} target="_blank" rel="noopener" className="hover:text-black transition-colors">{CV.blog} <span className="text-gray-400">(UFC blog)</span></a>
                                 </p>
                             </address>
                         </div>

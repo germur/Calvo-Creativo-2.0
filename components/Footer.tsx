@@ -21,7 +21,8 @@ const Footer = () => {
                     <div className="flex gap-4 text-xl">
                         <Link href="https://www.linkedin.com/in/rogermur/" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="LinkedIn de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">work</span></Link>
                         <Link href="https://x.com/Rogermu47429637" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="Twitter de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">flutter_dash</span></Link>
-                        <Link href="https://github.com/rogermur" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="GitHub de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">code</span></Link>
+                        <Link href="https://github.com/germur" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="GitHub de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">code</span></Link>
+                        <Link href="https://quimbara.org" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="Quimbara: blog de UFC de Roger"><span className="material-symbols-outlined" aria-hidden="true">sports_mma</span></Link>
                     </div>
                 </div>
 
@@ -45,6 +46,7 @@ const Footer = () => {
                         <li><Link href="/lab/calvo-fight-club" className="hover:text-white transition-colors">Calvo Fight Club</Link></li>
                         <li><Link href="/lab/vibe-coding" className="hover:text-white transition-colors">Vibe Coding (Scripts)</Link></li>
                         <li><Link href="/liner-notes" className="hover:text-white transition-colors">Liner Notes (Opinión)</Link></li>
+                        <li><Link href="https://quimbara.org" target="_blank" rel="noopener" className="hover:text-white transition-colors">Quimbara (UFC Blog) ↗</Link></li>
                         <li><Link href="/newsletter" className="hover:text-white transition-colors">Newsletter: The Lab Report</Link></li>
                     </ul>
                 </div>
@@ -59,7 +61,11 @@ const Footer = () => {
                         </li>
                         <li className="flex items-center gap-2">
                             <span className="material-symbols-outlined text-sm">mail</span>
-                            <a href="mailto:hola@calvocreativo.com" className="hover:text-white">hola@calvocreativo.com</a>
+                            <a href="mailto:roger@calvocreativo.com" className="hover:text-white">roger@calvocreativo.com</a>
+                        </li>
+                        <li className="flex items-center gap-2 pt-2">
+                            <span className="material-symbols-outlined text-sm">badge</span>
+                            <Link href="/cv" className="hover:text-white text-acid-green">Curriculum Vitae</Link>
                         </li>
                         <li className="pt-4"><Link href="/politica-privacidad" className="hover:text-white underline decoration-dotted">Política de Privacidad</Link></li>
                         <li><Link href="/terminos" className="hover:text-white underline decoration-dotted">Términos de Servicio</Link></li>

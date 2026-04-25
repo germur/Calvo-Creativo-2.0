@@ -44,7 +44,7 @@ export default function Home() {
                             ],
                             "contactPoint": {
                                 "@type": "ContactPoint",
-                                "email": "hola@calvocreativo.com",
+                                "email": "roger@calvocreativo.com",
                                 "contactType": "customer service",
                                 "availableLanguage": ["Spanish", "English"]
                             },

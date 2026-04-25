@@ -12,7 +12,7 @@ export default function Contacto() {
         "image": "https://calvocreativo.com/images/logo.png",
         "url": "https://calvocreativo.com",
         "telephone": "",
-        "email": "hola@calvocreativo.com",
+        "email": "roger@calvocreativo.com",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Miami",

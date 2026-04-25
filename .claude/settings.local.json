@@ -12,7 +12,14 @@
       "Bash(npm run *)",
       "Bash(npm install *)",
       "Bash(grep -oP 'title=\"[^\"]{55,}\"')",
-      "Bash(sort -t'\"' -k2 -n)"
+      "Bash(sort -t'\"' -k2 -n)",
+      "WebFetch(domain:api.anthropic.com)",
+      "mcp__23d0da81-46dd-438a-8797-c57b7673479c__list_recent_files",
+      "PowerShell($content = Get-Content 'C:\\\\Users\\\\ger-mur\\\\Downloads\\\\Roger Murillo CV - standalone.html' -Raw; $content.Substring\\(0, 3000\\))",
+      "Bash(node -e ' *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }

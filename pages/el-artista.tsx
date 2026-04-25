@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
@@ -151,6 +152,70 @@ export default function ElArtista() {
                             <span className="material-symbols-outlined text-2xl" aria-hidden="true">swords</span>
                             <span className="font-bold">Main Riven (Peak 2.8k 2v2/3v3 WotLK)</span>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- SECTION 2.5: CV BRIDGE --- */}
+            <section className="bg-paper text-ink py-20 px-4 md:px-12 lg:px-24 border-y-2 border-black/10">
+                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+
+                    {/* Left: marker + label */}
+                    <div className="md:col-span-4">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-3 block">
+                            // Track 03 — The Receipts
+                        </span>
+                        <h2 className="text-4xl md:text-5xl font-display font-black uppercase leading-none tracking-tighter mb-4">
+                            ¿Quieres <br /><span className="text-red-600">los recibos?</span>
+                        </h2>
+                        <p className="font-mono text-xs text-gray-500 leading-relaxed">
+                            Bio + filosofía está bien, pero a veces necesitas ver el historial completo: empresas, períodos, resultados con números. Para eso existe el CV.
+                        </p>
+                    </div>
+
+                    {/* Right: CV preview card */}
+                    <div className="md:col-span-8">
+                        <Link
+                            href="/cv"
+                            className="group block bg-white border-4 border-black p-8 md:p-10 shadow-[8px_8px_0px_#000] hover:shadow-[12px_12px_0px_#dc2626] hover:-translate-x-1 hover:-translate-y-1 transition-all relative overflow-hidden"
+                        >
+                            {/* Bag-on-head sticker */}
+                            <div className="absolute -top-2 -right-2 w-20 h-20 bg-black flex flex-col items-center justify-center transform rotate-6 border-2 border-black">
+                                <span className="font-mono text-[8px] uppercase tracking-widest text-white/60">a.k.a.</span>
+                                <span className="font-display italic text-2xl text-white leading-none mt-0.5" style={{ fontFamily: "'Newsreader', Georgia, serif" }}>Mr. X</span>
+                            </div>
+
+                            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-2">Curriculum Vitae</p>
+                            <h3 className="text-3xl md:text-4xl font-display font-black uppercase leading-none mb-4 text-ink">
+                                Roger Murillo
+                            </h3>
+                            <p className="font-mono text-sm text-red-600 font-bold mb-6 uppercase tracking-tight">
+                                SEO Strategist & Content Architect
+                            </p>
+
+                            {/* Mini metrics row */}
+                            <div className="grid grid-cols-3 border-y-2 border-black py-4 mb-6">
+                                <div>
+                                    <div className="text-2xl font-display font-black text-red-600">7y</div>
+                                    <div className="text-[10px] font-mono text-gray-500 leading-tight">U.S. + LATAM</div>
+                                </div>
+                                <div className="border-x-2 border-black px-3">
+                                    <div className="text-2xl font-display font-black text-red-600">4×</div>
+                                    <div className="text-[10px] font-mono text-gray-500 leading-tight">Brands @ Holding</div>
+                                </div>
+                                <div className="pl-3">
+                                    <div className="text-2xl font-display font-black text-red-600">#1</div>
+                                    <div className="text-[10px] font-mono text-gray-500 leading-tight">Organic GBP, $0 ads</div>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between">
+                                <span className="font-mono text-xs uppercase tracking-widest text-gray-500">
+                                    Ver CV completo · Imprimir / PDF
+                                </span>
+                                <span className="material-symbols-outlined text-2xl text-black group-hover:translate-x-2 group-hover:text-red-600 transition-all">arrow_forward</span>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </section>
