@@ -8,6 +8,7 @@ module.exports = {
         '/lab/oracle',
         '/admin/*',
         '/lab/opinion/_template', // template interno, no es contenido real
+        '/cv', // noindex — shared directly, not for broad crawling
     ],
     robotsTxtOptions: {
         additionalSitemaps: [
