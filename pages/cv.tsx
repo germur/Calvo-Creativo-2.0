@@ -222,10 +222,10 @@ export default function CVPage() {
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
 
                             {/* Avatar + Name block */}
-                            <div className="flex items-start gap-8">
+                            <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
                                 {/* Mr. X Avatar — Simpsons S10E13 reference */}
-                                <div className="shrink-0 hidden sm:block">
-                                    <MrXAvatar size={130} photoSrc="/images/roger-calvo.jpg" />
+                                <div className="shrink-0">
+                                    <MrXAvatar size={110} photoSrc="/images/roger-calvo.jpg" />
                                 </div>
 
                                 <div className="pt-1">
