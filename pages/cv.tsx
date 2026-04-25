@@ -1,8 +1,12 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+
+// MrXAvatar uses WebAudio + browser APIs — load client-side only
+const MrXAvatar = dynamic(() => import('@/components/MrXAvatar'), { ssr: false });
 
 // ─── CV Data ─────────────────────────────────────────────────────────────────
 const CV = {
@@ -172,6 +176,8 @@ export default function CVPage() {
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
                 />
+                {/* Hide Mr. X bag & label on print — only the photo shows in PDFs */}
+                <style>{`@media print { .mrx-bag, .mrx-label { display: none !important; } }`}</style>
             </Head>
 
             {/* Screen-only nav */}
@@ -213,20 +219,29 @@ export default function CVPage() {
 
                     {/* Header */}
                     <header className="border-b-4 border-black p-8 md:p-12">
-                        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-                            <div>
-                                <p className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500 mb-2">Curriculum Vitae</p>
-                                <h1 className="text-5xl md:text-7xl font-display font-black uppercase leading-none tracking-tighter mb-3">
-                                    {CV.name}
-                                </h1>
-                                <p className="text-xl md:text-2xl font-display font-bold text-red-600 uppercase tracking-tight">
-                                    {CV.title}
-                                </p>
-                                <p className="font-mono text-sm text-gray-500 mt-2">{CV.tagline}</p>
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+
+                            {/* Avatar + Name block */}
+                            <div className="flex items-start gap-8">
+                                {/* Mr. X Avatar — Simpsons S10E13 reference */}
+                                <div className="shrink-0 hidden sm:block">
+                                    <MrXAvatar size={130} photoSrc="/images/roger-calvo.jpg" />
+                                </div>
+
+                                <div className="pt-1">
+                                    <p className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500 mb-2">Curriculum Vitae</p>
+                                    <h1 className="text-5xl md:text-7xl font-display font-black uppercase leading-none tracking-tighter mb-3">
+                                        {CV.name}
+                                    </h1>
+                                    <p className="text-xl md:text-2xl font-display font-bold text-red-600 uppercase tracking-tight">
+                                        {CV.title}
+                                    </p>
+                                    <p className="font-mono text-sm text-gray-500 mt-2">{CV.tagline}</p>
+                                </div>
                             </div>
 
                             {/* Contact block */}
-                            <address className="not-italic font-mono text-xs space-y-1.5 text-gray-600 shrink-0">
+                            <address className="not-italic font-mono text-xs space-y-1.5 text-gray-600 shrink-0 md:pt-1">
                                 <p className="flex items-center gap-2">
                                     <span className="material-symbols-outlined text-sm text-black">location_on</span>
                                     {CV.location}
