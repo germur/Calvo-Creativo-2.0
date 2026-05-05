@@ -18,7 +18,7 @@ export default function ConsultoriaHub() {
             "name": "Roger Calvo",
             "sameAs": [
                 "https://www.linkedin.com/in/rogermur/",
-                "https://github.com/rogermur"
+                "https://github.com/germur"
             ]
         },
         "mainEntity": {

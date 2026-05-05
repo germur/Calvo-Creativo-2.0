@@ -33,8 +33,8 @@ const Footer = () => {
                         <li><Link href="/consultoria" className="hover:text-white transition-colors">Consultoría Estratégica</Link></li>
                         <li><Link href="/consultoria/arquitectura-seo-geo" className="hover:text-white transition-colors">Arquitectura & GEO</Link></li>
                         <li><Link href="/consultoria/consultoria-seo-internacional" className="hover:text-white transition-colors">SEO Internacional (USA/Latam)</Link></li>
-                        <li><Link href="/contacto" className="hover:text-white transition-colors">Casos de Éxito</Link></li>
-                        <li><Link href="/contacto" className="hover:text-white transition-colors">Auditoría Técnica</Link></li>
+                        <li><Link href="/casos" className="hover:text-white transition-colors">Casos de Éxito</Link></li>
+                        <li><Link href="/consultoria" className="hover:text-white transition-colors">Auditoría Técnica</Link></li>
                     </ul>
                 </div>
 

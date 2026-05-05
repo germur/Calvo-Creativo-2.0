@@ -43,7 +43,7 @@ const AuthorBox = () => {
                             <span className="sr-only">X (Twitter)</span>
                             <span className="material-symbols-outlined">alternate_email</span>
                         </a>
-                        <a href="https://github.com/rogermur" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-primary transition-colors">
+                        <a href="https://github.com/germur" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-primary transition-colors">
                             <span className="sr-only">GitHub</span>
                             <span className="material-symbols-outlined">code</span>
                         </a>

@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -12,7 +11,7 @@ export default function AuthorProfile() {
         "url": "https://calvocreativo.com/autor/roger-calvo",
         "sameAs": [
             "https://www.linkedin.com/in/rogermur/",
-            "https://github.com/rogermur",
+            "https://github.com/germur",
             "https://calvocreativo.com"
         ],
         "image": "https://calvocreativo.com/images/roger-calvo.jpg",

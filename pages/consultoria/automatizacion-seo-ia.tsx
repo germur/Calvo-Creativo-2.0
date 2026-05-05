@@ -173,7 +173,7 @@ export default function AutomatizacionSeo() {
                         <p className="text-white/70 mb-8 max-w-lg mx-auto">
                             ¿Quieres ver cómo automaticé una auditoría de 10,000 URLs usando Python y la API de Claude?
                         </p>
-                        <Link href="/lab/automatizacion-seo-python-script" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
+                        <Link href="/lab/automatizacion-seo-python" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
                             Ver Código y Resultados
                             <span className="material-symbols-outlined">code</span>
                         </Link>

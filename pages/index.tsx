@@ -30,7 +30,7 @@ export default function Home() {
                             "@id": "https://calvocreativo.com/#organization",
                             "name": "Calvo Creativo",
                             "url": "https://calvocreativo.com",
-                            "logo": "https://calvocreativo.com/assets/logo.png",
+                            "logo": "https://calvocreativo.com/favicon.svg",
                             "description": "Consultoría SEO estratégica y Generative Engine Optimization (GEO) para la era de la IA.",
                             "founder": {
                                 "@type": "Person",
@@ -39,7 +39,7 @@ export default function Home() {
                             },
                             "sameAs": [
                                 "https://www.linkedin.com/in/rogermur/",
-                                "https://github.com/rogermur",
+                                "https://github.com/germur",
                                 "https://x.com/Rogermu47429637"
                             ],
                             "contactPoint": {
@@ -92,7 +92,7 @@ export default function Home() {
                             },
                             "primaryImageOfPage": {
                                 "@type": "ImageObject",
-                                "url": "https://calvocreativo.com/assets/og-image.jpg"
+                                "url": "https://calvocreativo.com/api/og?title=Calvo%20Creativo"
                             }
                         })
                     }}

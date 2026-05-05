@@ -1,7 +1,6 @@
 import React from 'react';
 import ExperimentLayout from '@/components/ExperimentLayout';
 import Link from 'next/link';
-import Image from 'next/image';
 import { getSortedPostsData } from '@/lib/posts';
 
 // Define the Post type

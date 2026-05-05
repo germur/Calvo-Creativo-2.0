@@ -9,10 +9,6 @@ module.exports = {
         '/admin/*',
         '/lab/opinion/_template', // template interno, no es contenido real
         '/cv', // noindex — shared directly, not for broad crawling
+        '/gracias', // thank-you page — no indexar
     ],
-    robotsTxtOptions: {
-        additionalSitemaps: [
-            'https://calvocreativo.com/sitemap-0.xml',
-        ],
-    },
 };

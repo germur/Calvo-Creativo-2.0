@@ -64,7 +64,7 @@ export default function Sitemap() {
                         <h2 className="text-xl font-display font-bold uppercase mb-6 text-gray-500">Recursos</h2>
                         <ul className="space-y-2 font-mono text-xs text-gray-600">
                             <li><Link href="/newsletter" className="hover:text-black hover:underline">/newsletter (Lab Report)</Link></li>
-                            <li><Link href="/public/llms.txt" className="hover:text-black hover:underline">/llms.txt</Link></li>
+                            <li><Link href="/llms.txt" className="hover:text-black hover:underline">/llms.txt</Link></li>
                         </ul>
                     </div>
                 </div>

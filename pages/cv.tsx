@@ -445,7 +445,7 @@ export default function CVPage() {
                     <div className="border-t-4 border-black p-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-gray-400">
                         <span>calvocreativo.com · {new Date().getFullYear()}</span>
                         <span className="print:hidden">Generado con Next.js & Tailwind</span>
-                        <span className="hidden print:block">rogermur1990@gmail.com</span>
+                        <span className="hidden print:block">roger@calvocreativo.com</span>
                     </div>
                 </div>
             </main>

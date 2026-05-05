@@ -77,8 +77,8 @@ export default function GlossaryIndex() {
             {/* CTA for Missing Terms */}
             <div className="mt-24 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl text-center">
                 <p className="font-mono text-sm text-gray-500 mb-4">¿Falta algún término crítico?</p>
-                <a href="https://twitter.com/rogerthedodger" target="_blank" className="font-bold text-[#FF0080] hover:underline">
-                    Dímelo en Twitter (@rogerthedodger)
+                <a href="https://x.com/Rogermu47429637" target="_blank" rel="noopener noreferrer" className="font-bold text-[#FF0080] hover:underline">
+                    Dímelo en X (@Rogermu47429637)
                 </a>
             </div>
 

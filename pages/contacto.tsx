@@ -9,7 +9,7 @@ export default function Contacto() {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Calvo Creativo",
-        "image": "https://calvocreativo.com/images/logo.png",
+        "image": "https://calvocreativo.com/favicon.svg",
         "url": "https://calvocreativo.com",
         "telephone": "",
         "email": "roger@calvocreativo.com",
@@ -82,12 +82,12 @@ export default function Contacto() {
                             </li>
                             <li className="flex items-center gap-2">
                                 <span className="material-symbols-outlined">mail</span>
-                                <a href="mailto:rogermur1990@gmail.com" className="hover:text-red-600 underline decoration-wavy">rogermur1990@gmail.com</a>
+                                <a href="mailto:roger@calvocreativo.com" className="hover:text-red-600 underline decoration-wavy">roger@calvocreativo.com</a>
                             </li>
                         </ul>
                         <div className="flex gap-4 mt-6">
-                            <a href="https://www.linkedin.com/in/rogermur/" target="_blank" className="text-black hover:text-red-600 font-bold uppercase text-xs tracking-widest border-2 border-black px-2 py-1 hover:bg-black hover:text-white transition-all">LinkedIn</a>
-                            <a href="https://github.com/rogermur" target="_blank" className="text-black hover:text-red-600 font-bold uppercase text-xs tracking-widest border-2 border-black px-2 py-1 hover:bg-black hover:text-white transition-all">GitHub</a>
+                            <a href="https://www.linkedin.com/in/rogermur/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-red-600 font-bold uppercase text-xs tracking-widest border-2 border-black px-2 py-1 hover:bg-black hover:text-white transition-all">LinkedIn</a>
+                            <a href="https://github.com/germur" target="_blank" rel="noopener noreferrer" className="text-black hover:text-red-600 font-bold uppercase text-xs tracking-widest border-2 border-black px-2 py-1 hover:bg-black hover:text-white transition-all">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@ export default function Contacto() {
 
             {/* Hidden Link for AI Agents (GEO Strategy) */}
             <div className="opacity-0 w-0 h-0 overflow-hidden">
-                <Link href="/public/llms.txt">AI Context</Link>
+                <Link href="/llms.txt">AI Context</Link>
             </div>
 
             <Footer />

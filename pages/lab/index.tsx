@@ -19,7 +19,7 @@ export default function LabHub() {
             "name": "Roger Calvo",
             "sameAs": [
                 "https://www.linkedin.com/in/rogermur/",
-                "https://github.com/rogermur"
+                "https://github.com/germur"
             ]
         }
     };
@@ -166,7 +166,7 @@ export default function LabHub() {
                             <span className="text-white font-bold">Resultado preliminar:</span> Tráfico <span className="text-[#ccff00]">+40%</span>, penalización manual en día 28.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link href="/lab/calvo-fight-club/frankenstein" className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase hover:bg-[#ccff00] transition-colors flex items-center gap-2 shadow-lg shadow-white/10 hover:shadow-[#ccff00]/20">
+                            <Link href="/lab/calvo-fight-club" className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase hover:bg-[#ccff00] transition-colors flex items-center gap-2 shadow-lg shadow-white/10 hover:shadow-[#ccff00]/20">
                                 Leer Autopsia <span className="material-symbols-outlined text-sm">visibility</span>
                             </Link>
                         </div>

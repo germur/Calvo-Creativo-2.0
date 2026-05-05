@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -7,6 +8,9 @@ export default function Gracias() {
     return (
         <>
             <SeoHead title="Acceso Concedido | Calvo Creativo" />
+            <Head>
+                <meta name="robots" content="noindex, follow" />
+            </Head>
             <Navigation />
 
             <main className="min-h-screen bg-[#000] flex flex-col items-center justify-center p-4 pt-20">

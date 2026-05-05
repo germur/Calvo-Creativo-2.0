@@ -99,11 +99,7 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
             "@type": "WebSite",
             "name": "Calvo Creativo",
             "url": siteUrl,
-            "potentialAction": {
-                "@type": "SearchAction",
-                "target": `${siteUrl}/search?q={search_term_string}`,
-                "query-input": "required name=search_term_string"
-            }
+            "inLanguage": "es"
         };
     }
 

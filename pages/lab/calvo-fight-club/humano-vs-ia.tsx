@@ -104,7 +104,7 @@ export default function CalvoFightClubHumanoVsIa() {
                     <p className="mb-6 text-white/70">
                         Combino la velocidad de la IA para cubrir terreno con la profundidad humana para cerrar ventas.
                     </p>
-                    <Link href="/lado-a" className="inline-block px-6 py-3 bg-acid-green text-black font-bold uppercase hover:bg-white transition-colors">
+                    <Link href="/consultoria" className="inline-block px-6 py-3 bg-acid-green text-black font-bold uppercase hover:bg-white transition-colors">
                         Ver Estrategia Híbrida (Lado A)
                     </Link>
                 </div>

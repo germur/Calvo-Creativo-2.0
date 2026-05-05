@@ -50,7 +50,7 @@ export default function ElArtista() {
         "url": "https://calvocreativo.com/el-artista",
         "sameAs": [
             "https://www.linkedin.com/in/rogermur/",
-            "https://github.com/rogermur"
+            "https://github.com/germur"
         ],
         "knowsAbout": ["SEO", "Python", "Generative Engine Optimization", "Content Strategy", "Digital Marketing"],
         "description": "Roger Calvo es un Consultor SEO y Marketer-Builder especializado en estrategias B2B, automatización con Python y optimización para motores generativos (GEO)."
