@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Netlify Forms Detection</title></head>
+<body>
+  <!--
+    Static form for Netlify's build-time form detection.
+    Next.js renders forms client-side, so Netlify can't see them in build.
+    This file mirrors the real form fields in pages/contacto.tsx.
+  -->
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias">
+    <input type="hidden" name="form-name" value="contact" />
+    <p hidden><label>No llenar: <input name="bot-field" /></label></p>
+    <input type="text" name="name" />
+    <input type="url" name="website" />
+    <input type="radio" name="pain" value="traffic" />
+    <input type="radio" name="pain" value="conversion" />
+    <input type="radio" name="pain" value="geo" />
+    <input type="radio" name="pain" value="collab" />
+    <input type="radio" name="pain" value="miguel" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

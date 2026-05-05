@@ -103,10 +103,16 @@ export default function Contacto() {
                         <form
                             name="contact"
                             method="POST"
+                            action="/gracias"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
                             className="space-y-6"
                             onSubmit={() => trackEvent('submit_contact_form', 'Conversion', 'Contact Page Form')}
                         >
                             <input type="hidden" name="form-name" value="contact" />
+                            <p className="hidden" aria-hidden="true">
+                                <label>No llenar si eres humano: <input name="bot-field" /></label>
+                            </p>
 
                             <div>
                                 <label className="block font-mono text-xs font-bold uppercase mb-2">Nombre / Comandante</label>
