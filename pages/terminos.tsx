@@ -9,6 +9,7 @@ export default function Terminos() {
                 <title>Términos y Condiciones | Calvo Creativo</title>
                 <meta name="description" content="Términos de servicio para el uso de Calvo Creativo y sus herramientas." />
                 <meta name="robots" content="noindex" />
+                <link rel="canonical" href="https://calvocreativo.com/terminos" />
             </Head>
 
             <Navigation />

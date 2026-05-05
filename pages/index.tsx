@@ -19,6 +19,7 @@ export default function Home() {
             <Head>
                 <title>Consultor SEO &amp; GEO | Estrategia B2B USA-Latam | Calvo Creativo</title>
                 <meta name="description" content="Ingeniería de búsqueda para la era de la IA. Arquitectura SEO técnica, GEO para LLMs y estrategia de contenidos B2B. Mercado hispano en USA y Latam." />
+                <link rel="canonical" href="https://calvocreativo.com" />
 
                 {/* Schema: Organization */}
                 <script

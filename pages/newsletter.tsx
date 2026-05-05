@@ -8,6 +8,8 @@ export default function Newsletter() {
             <Head>
                 <title>The Lab Report | Newsletter SEO & Vibe Coding</title>
                 <meta name="description" content="Suscríbete al Lab Report. Análisis profundo, scripts de Python y experimentos de SEO técnico directo a tu bandeja de entrada." />
+                <link rel="canonical" href="https://calvocreativo.com/newsletter" />
+                <meta name="robots" content="noindex, follow" />
             </Head>
 
             <Navigation />

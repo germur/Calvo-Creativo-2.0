@@ -8,6 +8,7 @@ export default function PoliticaEditorial() {
             <Head>
                 <title>Política Editorial & Ética IA | Calvo Creativo</title>
                 <meta name="description" content="Nuestra postura sobre el uso de Inteligencia Artificial en la creación de contenido y estrategias SEO. Transparencia ante todo." />
+                <link rel="canonical" href="https://calvocreativo.com/politica-editorial" />
             </Head>
 
             <Navigation />

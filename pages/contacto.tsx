@@ -28,6 +28,7 @@ export default function Contacto() {
             <Head>
                 <title>Contacto Calvo Creativo | Hablemos Sin Pelos en la Lengua</title>
                 <meta name="description" content="¿Listo para dejar de perseguir algoritmos? Agenda una sesión de ingeniería de búsqueda. Sin intermediarios, sin humo, y con mucha estrategia." />
+                <link rel="canonical" href="https://calvocreativo.com/contacto" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}

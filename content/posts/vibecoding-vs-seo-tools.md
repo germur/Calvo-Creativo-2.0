@@ -1,5 +1,5 @@
 ---
-title: 'Por qué dejé de usar herramientas SEO tradicionales y empecé a programar (Vibecoding)'
+title: 'Vibecoding: Por qué dejé las herramientas SEO y empecé a programar'
 date: '2026-01-16'
 excerpt: 'Cuando las herramientas SaaS cuestan $99/mes y hacen lo mismo que un script de Python de 10 líneas, es hora de repensar la estrategia. El nacimiento del "Vibe Coding" en SEO.'
 coverImage: '/images/posts/vibecoding.jpg'
@@ -50,4 +50,13 @@ No te digo que canceles todas tus suscripciones hoy. Pero te invito a abrir una 
 
 El día que ejecutas tu propio código y obtienes datos frescos, sin intermediarios, no hay vuelta atrás. Eres el dueño de tu verdad.
 
-**¿Listo para entrar al Lab?**
+**¿Listo para entrar al Lab?** [Explora todos los experimentos →](/lab)
+
+---
+
+### Sigue explorando
+
+- 📡 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo) — La evolución de tu estrategia de contenidos para la era de la IA.
+- 🎤 [Storytelling Digital y la Ingeniería de la Atención](/liner-notes/arte-storytelling-digital) — Cómo la cultura pop decodificó los algoritmos humanos antes que los digitales.
+- 🥊 [Humano vs IA: Fight Club](/lab/calvo-fight-club/humano-vs-ia) — El experimento que enfrentó contenido humano contra contenido generado por IA.
+- 🛠️ [Automatización SEO con Python](/lab/automatizacion-seo-python) — Scripts y herramientas para auditorías a escala.

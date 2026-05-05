@@ -21,6 +21,7 @@ export default function AgencyComparison() {
             <Head>
                 <title>Calvo Creativo vs Agencia Tradicional | La Verdad Incómoda</title>
                 <meta name="description" content="No contrates una agencia SEO hasta leer esto. Descubre por qué el modelo tradicional está roto y cómo la ingeniería de búsqueda real te ahorra dinero." />
+                <link rel="canonical" href="https://calvocreativo.com/vs/agencia-tradicional" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}

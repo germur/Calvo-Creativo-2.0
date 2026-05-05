@@ -1,5 +1,5 @@
 ---
-title: "El Clic Ha Muerto: Manifiesto para Dominar la Optimización en Motores Generativos (GEO)"
+title: "El Clic Ha Muerto: Manifiesto GEO para Motores Generativos"
 date: "2025-12-21"
 updatedDate: "2025-12-21"
 excerpt: "El apocalipsis del tráfico web no es una predicción; es la realidad operativa de hoy. Un manifiesto táctico sobre cómo sobrevivir al cambio de Motor de Búsqueda a Motor de Respuesta."
@@ -101,3 +101,12 @@ No alimentes al algoritmo con contenido vainilla.
 La ventaja competitiva de 2026 no es quién publica más rápido, sino quién se convierte en la fuente de verdad que la máquina no se atreve a ignorar.
 
 *Adapta tu anatomía de contenido hoy, o sé invisible mañana.*
+
+---
+
+### Sigue explorando
+
+- 📊 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo) — El playbook visual paso a paso para evolucionar tu estrategia de búsqueda.
+- 🎤 [Storytelling Digital: De la Cultura Pop a la Ingeniería SEO](/liner-notes/arte-storytelling-digital) — Cómo construir narrativas que los algoritmos (y los humanos) no pueden ignorar.
+- ⚡ [Vibecoding: Automatización SEO con Python](/liner-notes/vibecoding-vs-seo-tools) — La revolución del "Vibe Coder" en el marketing.
+- 🏗️ [Arquitectura SEO & GEO](/consultoria/arquitectura-seo-geo) — Cómo aplicamos estos principios a tu infraestructura de búsqueda.

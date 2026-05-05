@@ -42,6 +42,7 @@ export default function TermPage({ termData }: TermPageProps) {
             width="standard"
         >
             <Head>
+                <link rel="canonical" href={`https://calvocreativo.com/lab/glosario/${termData.slug}`} />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

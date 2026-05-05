@@ -161,7 +161,7 @@ export default function OpinionPost({ postData }: { postData: any }) {
                                     <div className="font-mono text-xs text-ink/50 uppercase">End of Transmission</div>
                                     <div className="flex gap-4">
                                         <a
-                                            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(postData.title)}&url=https://calvocreativo.com/lab/opinion/${postData.id}`}
+                                            href={`https://x.com/intent/tweet?text=${encodeURIComponent(postData.title)}&url=https://calvocreativo.com/lab/opinion/${postData.id}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="size-10 bg-white border-2 border-ink shadow-brutal-sm flex items-center justify-center hover:translate-y-[-2px] transition-transform text-ink hover:text-primary"

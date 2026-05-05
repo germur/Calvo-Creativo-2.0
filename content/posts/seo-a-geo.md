@@ -1,5 +1,5 @@
 ---
-title: "De SEO a GEO: Guía Visual para la Evolución de tu Estrategia de Contenidos (2025)"
+title: "De SEO a GEO: Guía Visual para Evolucionar tu Estrategia"
 date: "2025-01-20"
 updatedDate: "2025-01-21"
 author: "Roger Calvo"
@@ -107,3 +107,12 @@ El objetivo final no ha cambiado: servir al usuario. Pero ahora, para servir al 
 **Tu misión hoy:** No busques trucos. Busca la claridad. Sé la fuente mejor estructurada, más útil y más confiable de tu industria. Eso es GEO.
 
 > **¿Listo para auditar tu contenido?** En Calvo Creativo aplicamos este Playbook para convertir tu blog en una biblioteca de autoridad. [Contáctanos](/contacto).
+
+---
+
+### Sigue explorando
+
+- 📡 [El Clic Ha Muerto: Manifiesto GEO](/lab/opinion/el-clic-ha-muerto) — El manifiesto táctico sobre cómo sobrevivir al cambio de Motor de Búsqueda a Motor de Respuesta.
+- 🎤 [Storytelling Digital: De la Cultura Pop a la Ingeniería SEO](/liner-notes/arte-storytelling-digital) — Cómo Michael Jackson y Daft Punk decodificaron los algoritmos humanos antes que los digitales.
+- ⚡ [Vibecoding: Por qué dejé las herramientas SEO](/liner-notes/vibecoding-vs-seo-tools) — Cuando un script de Python hace lo mismo que un SaaS de $99/mes.
+- 🏗️ [Consultoría: Arquitectura SEO & GEO](/consultoria/arquitectura-seo-geo) — Mi servicio de ingeniería de búsqueda para la era de la IA.

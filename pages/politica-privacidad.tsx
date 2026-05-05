@@ -9,6 +9,7 @@ export default function PoliticaPrivacidad() {
                 <title>Política de Privacidad | Calvo Creativo</title>
                 <meta name="description" content="Información legal sobre cómo gestionamos los datos, cookies y privacidad en Calvo Creativo." />
                 <meta name="robots" content="noindex" />
+                <link rel="canonical" href="https://calvocreativo.com/politica-privacidad" />
             </Head>
 
             <Navigation />

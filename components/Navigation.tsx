@@ -27,7 +27,7 @@ const Navigation = () => {
                         <span className="material-symbols-outlined font-black">bolt</span>
                     </div>
                     <div className="flex flex-col">
-                        <h1 className="font-display text-4xl leading-none uppercase tracking-tighter text-ink">Calvo</h1>
+                        <span className="font-display text-4xl leading-none uppercase tracking-tighter text-ink">Calvo</span>
                         <div className="flex items-center gap-1">
                             <span className="bg-ink text-white text-[8px] font-mono px-1 font-bold">SEO FIGHTER</span>
                             <span className="bg-accent text-ink text-[8px] font-mono px-1 font-bold">V.2.5</span>

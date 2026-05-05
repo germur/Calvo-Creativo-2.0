@@ -23,6 +23,7 @@ export default function AuthorProfile() {
             <Head>
                 <title>Roger Calvo | SEO Strategist & Marketer-Builder</title>
                 <meta name="description" content="Perfil profesional de Roger Calvo. Ingeniero de Búsqueda, Marketer-Builder y especialista en SEO Técnico y GEO." />
+                <link rel="canonical" href="https://calvocreativo.com/autor/roger-calvo" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

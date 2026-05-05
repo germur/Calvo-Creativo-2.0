@@ -10,5 +10,6 @@ module.exports = {
         '/lab/opinion/_template', // template interno, no es contenido real
         '/cv', // noindex — shared directly, not for broad crawling
         '/gracias', // thank-you page — no indexar
+        '/newsletter', // signup form — no indexar
     ],
 };

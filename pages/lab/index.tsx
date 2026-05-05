@@ -29,6 +29,7 @@ export default function LabHub() {
             <Head>
                 <title>SEO Lab & Vibe Coding | Experimentos de Marketing con IA y Python</title>
                 <meta name="description" content="No confíes en la teoría. En el Lab rompemos algoritmos, probamos agentes de IA y compartimos scripts de Python. Datos reales." />
+                <link rel="canonical" href="https://calvocreativo.com/lab" />
                 <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&family=Shrikhand&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
                 <script
                     type="application/ld+json"
