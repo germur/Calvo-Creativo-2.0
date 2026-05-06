@@ -89,7 +89,24 @@ export default function LabHub() {
                 {/* Categories (The Tracks) - Glass Cards */}
                 <section className="py-20 px-6 border-y border-white/5 bg-white/5 backdrop-blur-sm">
                     <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                            {/* The Playground — Tools */}
+                            <Link href="/lab/tools" className="group relative bg-[#181114] border border-[#4ade80]/30 rounded-2xl p-8 hover:border-[#4ade80] transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(74,222,128,0.2)] flex flex-col h-full overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#4ade80] rounded-full filter blur-[60px] opacity-10 group-hover:opacity-25 transition-opacity"></div>
+                                <div className="absolute top-3 right-3 bg-[#4ade80] text-black text-[9px] font-bold px-2 py-0.5 uppercase rounded-full tracking-widest">Live</div>
+                                <div className="mb-6">
+                                    <span className="material-symbols-outlined text-5xl text-[#4ade80]">construction</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#4ade80] transition-colors" style={{ fontFamily: 'Spline Sans, sans-serif' }}>The Playground</h3>
+                                <p className="text-white/50 text-sm mb-8 flex-grow font-mono leading-relaxed">
+                                    Herramientas SEO gratuitas. Keyword research, clustering semántico, calculadoras de ROI. Sin registro, sin límites.
+                                </p>
+                                <div className="mt-auto flex items-center justify-between border-t border-white/10 pt-4">
+                                    <span className="text-[#4ade80] text-xs font-bold uppercase tracking-widest">Usar Gratis</span>
+                                    <span className="material-symbols-outlined text-[#4ade80] text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </div>
+                            </Link>
+
                             {/* Fight Club */}
                             <Link href="/lab/calvo-fight-club" className="group relative bg-[#181114] border border-white/10 rounded-2xl p-8 hover:border-[#f4258c] transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(244,37,140,0.2)] flex flex-col h-full overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#f4258c] rounded-full filter blur-[60px] opacity-0 group-hover:opacity-20 transition-opacity"></div>
