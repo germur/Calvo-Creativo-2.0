@@ -41,7 +41,25 @@ export default function ToolsHub() {
                     </div>
                 </Link>
 
-                {/* TOOL 02: SERP Simulator (Coming Soon) */}
+                {/* TOOL 02: Keyword Research */}
+                <Link href="/lab/tools/keyword-research" className="group relative block bg-[#1a1a1a] border border-white/10 hover:border-acid-green transition-all p-8 rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(74,222,128,0.1)]">
+                    <div className="absolute top-0 right-0 bg-acid-green text-black text-[10px] font-bold px-2 py-1 uppercase rounded-bl-lg">
+                        v1.0 Live
+                    </div>
+                    <div className="mb-6 text-4xl">🔍</div>
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-acid-green transition-colors">
+                        Keyword Research
+                    </h3>
+                    <p className="text-sm text-gray-400 mb-6 line-clamp-3">
+                        Descubre keywords con Google Suggest y agrúpalas por intención semántica. Sin API key, sin límites, 100% gratis.
+                    </p>
+                    <div className="flex items-center gap-2 text-xs font-mono text-acid-green">
+                        <span>&gt; EJECUTAR_SCRIPT</span>
+                        <span className="w-2 h-4 bg-acid-green animate-pulse"></span>
+                    </div>
+                </Link>
+
+                {/* TOOL 03: SERP Simulator (Coming Soon) */}
                 <div className="group relative block bg-[#1a1a1a] border border-white/5 opacity-60 cursor-not-allowed p-8 rounded-xl overflow-hidden grayscale">
                     <div className="absolute top-0 right-0 bg-white/20 text-white text-[10px] font-bold px-2 py-1 uppercase rounded-bl-lg">
                         In Dev
