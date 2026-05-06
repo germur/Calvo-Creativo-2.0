@@ -17,14 +17,23 @@ interface Cluster {
   keywords: string[]
 }
 
-function clusterKeywords(keywords: string[], maxClusters = 14): Cluster[] {
+function clusterKeywords(keywords: string[], seedTerms: Set<string> = new Set(), maxClusters = 14): Cluster[] {
   if (keywords.length === 0) return []
 
+  // Exclude words that are part of the seed (they'd dominate every cluster)
+  // and words that appear in >70% of keywords (ubiquitous = not differentiating)
   const wordCount = new Map<string, number>()
   keywords.forEach(kw => {
-    const words = kw.split(/\s+/).filter(w => w.length > 2 && !STOPWORDS.has(w))
+    const words = kw.split(/\s+/).filter(w => w.length > 2 && !STOPWORDS.has(w) && !seedTerms.has(w))
     new Set(words).forEach(w => wordCount.set(w, (wordCount.get(w) || 0) + 1))
   })
+
+  const tooFrequent = new Set<string>()
+  const ubiquityThreshold = Math.ceil(keywords.length * 0.7)
+  wordCount.forEach((count, word) => {
+    if (count >= ubiquityThreshold) tooFrequent.add(word)
+  })
+  tooFrequent.forEach(w => wordCount.delete(w))
 
   const minFreq = Math.max(2, Math.ceil(keywords.length * 0.035))
   const centers = Array.from(wordCount.entries())
@@ -40,7 +49,7 @@ function clusterKeywords(keywords: string[], maxClusters = 14): Cluster[] {
   buckets.set('__otros__', [])
 
   keywords.forEach(kw => {
-    const kwWords = new Set(kw.split(/\s+/))
+    const kwWords = new Set(kw.split(/\s+/).filter(w => !seedTerms.has(w)))
     const match = centers.find(c => kwWords.has(c))
     buckets.get(match ?? '__otros__')!.push(kw)
   })
@@ -79,11 +88,14 @@ export default function KeywordResearch() {
   const [activeTab, setActiveTab] = useState<'keywords' | 'clusters'>('keywords')
   const [error, setError] = useState('')
   const [ran, setRan] = useState(false)
+  const [ranSeed, setRanSeed] = useState('')
+  const [ranCountry, setRanCountry] = useState('')
 
   const country = COUNTRIES.find(c => c.code === countryCode) ?? COUNTRIES[0]
 
   const run = useCallback(async () => {
-    if (!seed.trim() || loading) return
+    const trimmedSeed = seed.trim().toLowerCase()
+    if (!trimmedSeed || loading) return
     setLoading(true)
     setError('')
     setKeywords([])
@@ -92,13 +104,16 @@ export default function KeywordResearch() {
 
     try {
       const res = await fetch(
-        `/api/keywords?seed=${encodeURIComponent(seed.trim().toLowerCase())}&country=${country.code}&lang=${country.lang}`
+        `/api/keywords?seed=${encodeURIComponent(trimmedSeed)}&country=${country.code}&lang=${country.lang}`
       )
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
       const kws: string[] = data.keywords ?? []
+      const seedTerms = new Set(trimmedSeed.split(/\s+/).filter(Boolean))
       setKeywords(kws)
-      setClusters(clusterKeywords(kws))
+      setClusters(clusterKeywords(kws, seedTerms))
+      setRanSeed(trimmedSeed)
+      setRanCountry(country.code)
       setRan(true)
     } catch {
       setError('No se pudo conectar con Google Suggest. Intenta de nuevo.')
@@ -106,6 +121,8 @@ export default function KeywordResearch() {
       setLoading(false)
     }
   }, [seed, country, loading])
+
+  const seedChanged = ran && (seed.trim().toLowerCase() !== ranSeed || country.code !== ranCountry)
 
   const downloadCSV = () => {
     const rows = [['keyword', 'cluster']]
@@ -247,6 +264,27 @@ export default function KeywordResearch() {
           {/* Results */}
           {!loading && ran && keywords.length > 0 && (
             <div className="space-y-6">
+              {/* Active seed indicator */}
+              <div className={`flex items-center justify-between gap-4 px-4 py-3 rounded-lg border ${
+                seedChanged
+                  ? 'bg-yellow-500/10 border-yellow-500/40 text-yellow-300'
+                  : 'bg-black/40 border-white/10 text-gray-400'
+              }`}>
+                <div className="text-xs font-mono">
+                  {seedChanged ? '⚠ Resultados anteriores · ' : 'Resultados para: '}
+                  <span className="text-white font-bold">&ldquo;{ranSeed}&rdquo;</span>
+                  <span className="text-gray-500"> · {ranCountry}</span>
+                </div>
+                {seedChanged && (
+                  <button
+                    onClick={run}
+                    className="text-[11px] font-bold uppercase tracking-wide bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-300 px-3 py-1 rounded transition-colors whitespace-nowrap"
+                  >
+                    ↻ Actualizar
+                  </button>
+                )}
+              </div>
+
               {/* Tabs */}
               <div className="flex gap-2 border-b border-white/10 pb-0">
                 {(['keywords', 'clusters'] as const).map(tab => (
