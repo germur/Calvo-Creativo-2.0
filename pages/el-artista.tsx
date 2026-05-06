@@ -249,10 +249,11 @@ export default function ElArtista() {
                                 <div className="text-xl font-bold flex items-center gap-3">
                                     <span>Boxing</span>
                                     <span className="text-paper/30">/</span>
-                                    <div className="flex items-center gap-2" title="BJJ White Belt (2 Stripes)">
+                                    <div className="flex items-center gap-2" title="BJJ White Belt (3 Stripes)">
                                         <span className="text-sm">BJJ</span>
                                         <div className="h-6 w-32 bg-white border border-gray-300 rounded-sm flex justify-end relative shadow-sm">
-                                            <div className="h-full w-8 bg-black flex items-center justify-evenly px-1">
+                                            <div className="h-full w-10 bg-black flex items-center justify-evenly px-1">
+                                                <div className="w-1 h-full bg-white transform -skew-x-12"></div>
                                                 <div className="w-1 h-full bg-white transform -skew-x-12"></div>
                                                 <div className="w-1 h-full bg-white transform -skew-x-12"></div>
                                             </div>
