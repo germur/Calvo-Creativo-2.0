@@ -327,6 +327,55 @@ export default function ElArtista() {
                     </div>
                 </div>
 
+                {/* UFC Blog — Quimbara */}
+                <div className="max-w-7xl mx-auto mt-20">
+                    <a
+                        href="https://quimbara.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative block overflow-hidden rounded-xl border-2 border-red-600/40 hover:border-red-500 transition-all bg-gradient-to-br from-black via-red-950/20 to-black hover:shadow-[0_0_40px_rgba(220,38,38,0.25)]"
+                    >
+                        {/* Background pattern */}
+                        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(220,38,38,0.4),transparent_60%)]"></div>
+
+                        {/* Live badge */}
+                        <div className="absolute top-6 right-6 flex items-center gap-2 z-10">
+                            <span className="relative flex h-2.5 w-2.5">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                            </span>
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-red-400">External · Live</span>
+                        </div>
+
+                        <div className="relative grid md:grid-cols-12 gap-8 p-10 md:p-14">
+                            {/* Left: visual */}
+                            <div className="md:col-span-4 flex flex-col justify-center items-center md:items-start">
+                                <span className="material-symbols-outlined text-7xl text-red-500 mb-2">sports_mma</span>
+                                <span className="bg-red-600 text-white font-bold uppercase px-3 py-1 text-[10px] tracking-widest transform -rotate-2 mt-2">
+                                    Side Project
+                                </span>
+                            </div>
+
+                            {/* Right: copy */}
+                            <div className="md:col-span-8">
+                                <div className="font-mono text-xs uppercase tracking-widest text-red-400 mb-2">
+                                    quimbara.org
+                                </div>
+                                <h3 className="font-display text-4xl md:text-5xl uppercase tracking-tighter text-paper leading-none mb-4">
+                                    Mi blog de <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">UFC</span>
+                                </h3>
+                                <p className="text-paper/70 font-mono text-sm leading-relaxed mb-6 max-w-xl">
+                                    Análisis de peleas, estilos, fighters y la cultura alrededor del MMA. Si te gusta el deporte tanto como a mí, esto es para ti.
+                                </p>
+                                <div className="inline-flex items-center gap-3 text-red-400 font-bold uppercase text-sm tracking-widest border-b-2 border-red-500/40 group-hover:border-red-500 pb-1 transition-all">
+                                    <span>Visitar Quimbara</span>
+                                    <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
                 {/* Liverpool / Culture Banner */}
                 <div className="max-w-7xl mx-auto mt-20 relative rounded-xl overflow-hidden border-2 border-red-900/30 group">
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579952363873-1b9a2d677688?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30 grayscale group-hover:grayscale-0 transition-all duration-1000"></div>
