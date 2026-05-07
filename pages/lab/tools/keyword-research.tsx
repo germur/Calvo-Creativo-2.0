@@ -124,6 +124,17 @@ export default function KeywordResearch() {
 
   const seedChanged = ran && (seed.trim().toLowerCase() !== ranSeed || country.code !== ranCountry)
 
+  const reset = () => {
+    setSeed('')
+    setKeywords([])
+    setClusters([])
+    setRan(false)
+    setRanSeed('')
+    setRanCountry('')
+    setError('')
+    setActiveTab('keywords')
+  }
+
   const downloadCSV = () => {
     const rows = [['keyword', 'cluster']]
     clusters.forEach(c => c.keywords.forEach(kw => rows.push([kw, c.label])))
@@ -194,10 +205,21 @@ export default function KeywordResearch() {
                 <span className="w-4 h-4 border-2 border-black/40 border-t-black rounded-full animate-spin" />
                 Expandiendo...
               </>
+            ) : ran ? (
+              '↻ Buscar de nuevo'
             ) : (
               '> Ejecutar'
             )}
           </button>
+
+          {ran && (
+            <button
+              onClick={reset}
+              className="w-full border border-white/20 text-gray-400 font-bold py-2 rounded-lg uppercase tracking-wide text-sm hover:border-red-500/40 hover:text-red-400 transition-all"
+            >
+              ✕ Nueva búsqueda
+            </button>
+          )}
 
           {ran && keywords.length > 0 && (
             <div className="pt-4 border-t border-white/10 space-y-3">
