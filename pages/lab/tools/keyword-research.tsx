@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useRef } from 'react'
 import ExperimentLayout from '@/components/ExperimentLayout'
 
 // ─── Clustering (pure JS, no dependencies) ────────────────────────────────────
@@ -92,10 +92,12 @@ export default function KeywordResearch() {
   const [ranCountry, setRanCountry] = useState('')
 
   const country = COUNTRIES.find(c => c.code === countryCode) ?? COUNTRIES[0]
+  const loadingRef = useRef(false)
 
-  const run = useCallback(async () => {
+  const run = async () => {
     const trimmedSeed = seed.trim().toLowerCase()
-    if (!trimmedSeed || loading) return
+    if (!trimmedSeed || loadingRef.current) return
+    loadingRef.current = true
     setLoading(true)
     setError('')
     setKeywords([])
@@ -104,7 +106,7 @@ export default function KeywordResearch() {
 
     try {
       const res = await fetch(
-        `/api/keywords?seed=${encodeURIComponent(trimmedSeed)}&country=${country.code}&lang=${country.lang}`
+        `/api/keywords?seed=${encodeURIComponent(trimmedSeed)}&country=${country.code}&lang=${country.lang}&_t=${Date.now()}`
       )
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
@@ -118,9 +120,10 @@ export default function KeywordResearch() {
     } catch {
       setError('No se pudo conectar con Google Suggest. Intenta de nuevo.')
     } finally {
+      loadingRef.current = false
       setLoading(false)
     }
-  }, [seed, country, loading])
+  }
 
   const seedChanged = ran && (seed.trim().toLowerCase() !== ranSeed || country.code !== ranCountry)
 
