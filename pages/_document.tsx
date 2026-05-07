@@ -9,7 +9,12 @@ export default function Document() {
                     rel="stylesheet"
                     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
                 />
-                {/* Third-party scripts (GA, AdSense, Clarity) moved to _app.tsx for better performance */}
+                {/* Google AdSense */}
+                <script
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9760938521576702"
+                    crossOrigin="anonymous"
+                />
             </Head>
             <body className="bg-paper text-ink font-body grain-overlay">
                 <Main />
