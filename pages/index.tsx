@@ -348,121 +348,128 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* --- 4. WHY NOW (CONTEXT 2026) --- */}
-            <section className="relative py-24 px-6 md:px-12 bg-black text-white overflow-hidden border-y-8 border-red-600">
-                {/* Background grid */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_50%,transparent_100%)] opacity-40 pointer-events-none"></div>
+            {/* --- 4. WHY NOW (CONTEXT 2026) — Grid & Grain editorial style --- */}
+            <section className="relative py-20 md:py-32 px-6 md:px-12 bg-paper text-ink overflow-hidden border-t border-b border-black/10">
+                {/* Subtle paper texture */}
+                <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('/textures/paper.png')]"></div>
 
                 <div className="relative max-w-6xl mx-auto">
-                    {/* Editorial header */}
-                    <div className="mb-16">
-                        <div className="flex items-center gap-4 mb-6">
-                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-red-500">// Track 04</span>
-                            <div className="h-px bg-red-600 flex-grow max-w-[100px]"></div>
-                            <span className="font-mono text-xs uppercase tracking-widest text-white/40">Context 2026</span>
+                    {/* Editorial header — small mono label, big serif headline */}
+                    <div className="max-w-3xl mb-16 md:mb-24">
+                        <div className="flex items-center gap-4 mb-8">
+                            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-black/50">// Track 04 — Context 2026</span>
+                            <div className="h-px bg-black/20 flex-grow max-w-[80px]"></div>
                         </div>
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black uppercase tracking-tighter leading-[0.95] mb-6">
+                        <h2 className="font-editorial text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight text-ink mb-8">
                             Si tu SEO no está<br />
                             listo para la IA,<br />
-                            <span className="relative inline-block">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-600 to-orange-500">eres invisible.</span>
-                                <svg className="absolute -bottom-2 left-0 w-full h-3 text-red-600" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                    <path d="M0 5 Q 25 0 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="2" />
-                                </svg>
-                            </span>
+                            <em className="italic font-normal">eres invisible.</em>
                         </h2>
-                        <p className="max-w-2xl text-base md:text-lg text-white/70 font-light border-l-4 border-red-600 pl-6">
-                            El <strong className="text-white">60% de las búsquedas</strong> ya terminan sin clic. ChatGPT responde directamente.{' '}
-                            <span className="text-red-400 italic">¿Estás en esa respuesta o te quedaste fuera?</span>
+                        <p className="font-editorial text-xl md:text-2xl text-black/70 leading-snug max-w-2xl">
+                            El <strong className="font-semibold text-ink">60%</strong> de las búsquedas ya terminan sin clic.
+                            ChatGPT responde directamente. ¿Estás en esa respuesta o te quedaste fuera?
                         </p>
                     </div>
 
-                    {/* Stat strip */}
-                    <div className="grid grid-cols-3 gap-px bg-white/10 border border-white/10 mb-16 rounded-sm overflow-hidden">
-                        <div className="bg-black p-5 md:p-6">
-                            <div className="font-display text-3xl md:text-5xl font-black text-red-500 leading-none">60%</div>
-                            <div className="font-mono text-[10px] md:text-xs uppercase tracking-wider text-white/50 mt-2">Zero-click searches</div>
-                        </div>
-                        <div className="bg-black p-5 md:p-6">
-                            <div className="font-display text-3xl md:text-5xl font-black text-red-500 leading-none">3x</div>
-                            <div className="font-mono text-[10px] md:text-xs uppercase tracking-wider text-white/50 mt-2">Más citaciones en LLMs</div>
-                        </div>
-                        <div className="bg-black p-5 md:p-6">
-                            <div className="font-display text-3xl md:text-5xl font-black text-red-500 leading-none">0</div>
-                            <div className="font-mono text-[10px] md:text-xs uppercase tracking-wider text-white/50 mt-2">Backlinks necesarios</div>
-                        </div>
-                    </div>
-
-                    {/* The 3 shifts */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                        {[
-                            {
-                                number: '01',
-                                icon: 'hub',
-                                title: 'Domina el Grafo de Conocimiento',
-                                before: 'Keywords sueltas',
-                                after: 'Entidades + Conceptos',
-                                desc: 'Google ya no busca palabras, busca conceptos. Conectamos tu marca con las entidades que definen tu industria para que seas la referencia ineludible.',
-                            },
-                            {
-                                number: '02',
-                                icon: 'forum',
-                                title: 'De Búsqueda a Respuesta',
-                                before: '10 links azules',
-                                after: '1 respuesta directa',
-                                desc: 'Si ChatGPT no puede leer tu contenido, no te recomendará. Diseñamos para GEO (Generative Engine Optimization).',
-                            },
-                            {
-                                number: '03',
-                                icon: 'workspace_premium',
-                                title: 'De Cantidad a Autoridad',
-                                before: 'Volumen de posts',
-                                after: 'Information Gain',
-                                desc: 'Publicar mucho ya no sirve. Publicar con datos únicos y experiencia real (Information Gain) es la única defensa.',
-                            },
-                        ].map((shift) => (
+                    {/* The stat-as-art — big textured number, like Grid & Grain p.14 */}
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center mb-20 md:mb-32 border-y border-black/15 py-12 md:py-16">
+                        <div className="md:col-span-7 relative">
                             <div
-                                key={shift.number}
-                                className="group relative bg-[#0a0a0a] border-2 border-white/10 hover:border-red-600 transition-all p-6 md:p-8 hover:-translate-y-1 hover:shadow-[0_10px_0_-2px_rgba(220,38,38,0.5)]"
+                                className="font-editorial font-bold text-[8rem] md:text-[14rem] lg:text-[18rem] leading-[0.85] text-ink select-none"
+                                style={{
+                                    backgroundImage: "url('/textures/cardboard-flat.png')",
+                                    backgroundClip: 'text',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
+                                    filter: 'contrast(1.4) brightness(0.6)',
+                                }}
                             >
-                                {/* Big number watermark */}
-                                <div className="absolute top-4 right-4 font-display text-5xl md:text-6xl font-black text-white/5 group-hover:text-red-600/20 transition-colors leading-none select-none">
-                                    {shift.number}
-                                </div>
-
-                                {/* Icon */}
-                                <div className="relative w-12 h-12 bg-red-600/10 border border-red-600/30 flex items-center justify-center mb-6 rounded">
-                                    <span className="material-symbols-outlined text-red-500 text-2xl">{shift.icon}</span>
-                                </div>
-
-                                {/* Title */}
-                                <h4 className="font-display text-xl md:text-2xl font-black uppercase mb-5 text-white leading-tight">
-                                    {shift.title}
-                                </h4>
-
-                                {/* Before / After */}
-                                <div className="flex items-center gap-2 mb-5 text-[10px] font-mono uppercase tracking-wider">
-                                    <span className="line-through text-white/30">{shift.before}</span>
-                                    <span className="material-symbols-outlined text-red-500 text-base">arrow_right_alt</span>
-                                    <span className="text-red-400 font-bold">{shift.after}</span>
-                                </div>
-
-                                {/* Description */}
-                                <p className="text-sm text-white/60 leading-relaxed font-light">
-                                    {shift.desc}
-                                </p>
+                                ~60<span className="text-red-700">%</span>
                             </div>
-                        ))}
+                        </div>
+                        <div className="md:col-span-5">
+                            <p className="font-editorial text-lg md:text-xl text-ink leading-snug mb-4">
+                                de búsquedas son <strong>zero-click</strong>. Google y los LLMs responden directamente sin enviarte tráfico.
+                            </p>
+                            <p className="font-mono text-xs uppercase tracking-wider text-black/50">
+                                Source: SparkToro 2024 · SimilarWeb 2025
+                            </p>
+                        </div>
                     </div>
 
-                    {/* Bottom callout */}
-                    <div className="mt-12 text-center">
+                    {/* The three shifts — minimal editorial cards with center dividers */}
+                    <div>
+                        <div className="flex items-baseline gap-4 mb-12">
+                            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-black/50">// Los tres cambios</span>
+                            <div className="h-px bg-black/20 flex-grow"></div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-black/15 -mx-6 md:mx-0">
+                            {[
+                                {
+                                    number: '01',
+                                    label: 'Estructura',
+                                    title: 'Domina el grafo de conocimiento.',
+                                    before: 'Keywords sueltas',
+                                    after: 'Entidades & conceptos',
+                                    desc: 'Google ya no busca palabras, busca conceptos. Conectamos tu marca con las entidades que definen tu industria para que seas la referencia ineludible.',
+                                },
+                                {
+                                    number: '02',
+                                    label: 'Lectura',
+                                    title: 'De búsqueda a respuesta.',
+                                    before: '10 links azules',
+                                    after: 'Una respuesta directa',
+                                    desc: 'Si ChatGPT no puede leer tu contenido, no te recomendará. Diseñamos para GEO (Generative Engine Optimization).',
+                                },
+                                {
+                                    number: '03',
+                                    label: 'Autoridad',
+                                    title: 'De cantidad a autoridad.',
+                                    before: 'Volumen de posts',
+                                    after: 'Information Gain',
+                                    desc: 'Publicar mucho ya no sirve. Publicar con datos únicos y experiencia real (Information Gain) es la única defensa.',
+                                },
+                            ].map((shift) => (
+                                <article key={shift.number} className="px-6 md:px-8 py-8 md:py-4 border-t md:border-t-0 border-black/15 first:border-t-0">
+                                    <div className="flex items-baseline gap-3 mb-6">
+                                        <span className="font-editorial italic text-3xl text-red-700 leading-none">{shift.number}</span>
+                                        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-black/40">— {shift.label}</span>
+                                    </div>
+
+                                    <h3 className="font-editorial font-semibold text-2xl md:text-3xl leading-[1.05] text-ink mb-6">
+                                        {shift.title}
+                                    </h3>
+
+                                    {/* Before / After as a quote-style attribution */}
+                                    <div className="mb-6 pb-6 border-b border-black/10">
+                                        <div className="font-mono text-[10px] uppercase tracking-wider text-black/40 mb-1">El ideal · La realidad</div>
+                                        <div className="font-editorial italic text-sm text-black/60">
+                                            <span className="line-through">{shift.before}</span>
+                                            {' → '}
+                                            <span className="not-italic font-semibold text-red-700">{shift.after}</span>
+                                        </div>
+                                    </div>
+
+                                    <p className="font-sans text-[15px] leading-relaxed text-black/75">
+                                        {shift.desc}
+                                    </p>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Bottom — minimal editorial signature */}
+                    <div className="mt-20 md:mt-28 pt-12 border-t border-black/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <p className="font-editorial italic text-xl md:text-2xl text-ink max-w-xl leading-snug">
+                            &ldquo;El reto no es abandonar la estructura, sino asegurar que nuestras estructuras sirvan a las personas.&rdquo;
+                        </p>
                         <Link
                             href="/consultoria/arquitectura-seo-geo"
-                            className="inline-flex items-center gap-3 font-mono text-sm uppercase tracking-widest text-white/60 hover:text-red-500 transition-colors border-b border-white/20 hover:border-red-500 pb-1"
+                            className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink border-b-2 border-ink pb-1 hover:text-red-700 hover:border-red-700 transition-colors whitespace-nowrap"
                         >
-                            <span>Ver cómo construimos para GEO</span>
-                            <span className="material-symbols-outlined text-base">arrow_forward</span>
+                            <span>Ver arquitectura GEO</span>
+                            <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </Link>
                     </div>
                 </div>

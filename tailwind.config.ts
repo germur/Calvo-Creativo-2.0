@@ -38,6 +38,7 @@ const config: Config = {
                 body: ['Outfit', 'sans-serif'],
                 mono: ['JetBrains Mono', 'monospace'],
                 punch: ['Bangers', 'cursive'],
+                editorial: ['var(--font-newsreader)', 'Newsreader', 'Georgia', 'serif'],
                 // Fallbacks for legacy components if needed
                 sans: ['Outfit', 'sans-serif'],
             },

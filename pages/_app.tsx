@@ -2,16 +2,17 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import CookieConsent from '@/components/CookieConsent';
-import { Anton, Bangers, Outfit, JetBrains_Mono } from 'next/font/google';
+import { Anton, Bangers, Outfit, JetBrains_Mono, Newsreader } from 'next/font/google';
 
 const anton = Anton({ weight: "400", subsets: ['latin'], variable: '--font-anton' });
 const bangers = Bangers({ weight: "400", subsets: ['latin'], variable: '--font-bangers' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains-mono' });
+const newsreader = Newsreader({ weight: ["400", "600", "700"], style: ["normal", "italic"], subsets: ['latin'], variable: '--font-newsreader' });
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <main className={`${anton.variable} ${bangers.variable} ${outfit.variable} ${jetbrainsMono.variable} font-body`}>
+        <main className={`${anton.variable} ${bangers.variable} ${outfit.variable} ${jetbrainsMono.variable} ${newsreader.variable} font-body`}>
             <Component {...pageProps} />
             <CookieConsent />
 
