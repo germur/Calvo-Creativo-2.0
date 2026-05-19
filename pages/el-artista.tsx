@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
@@ -40,8 +40,6 @@ const idols = [
 ];
 
 export default function ElArtista() {
-    const [activeIdol, setActiveIdol] = useState<number | null>(null);
-
     const personSchema = useMemo(() => JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Person",
@@ -117,18 +115,51 @@ export default function ElArtista() {
                     </div>
 
                     <div className="relative">
-                        {/* Abstract Visual Representation of "Structure" */}
-                        <div className="aspect-square rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent relative overflow-hidden p-8 flex items-center justify-center">
-                            <div className="absolute inset-0 opacity-30 animate-pulse bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-                            {/* Central Graphic */}
-                            <div className="relative z-10 text-center">
-                                <span className="material-symbols-outlined text-9xl text-white/20 mb-4">architecture</span>
-                                <div className="font-mono text-xs text-gray-500 uppercase tracking-[0.3em]">System Architecture & Logic</div>
+                        {/* Terminal-style system overview */}
+                        <div className="rounded-2xl border border-white/10 bg-[#0d1117] overflow-hidden shadow-2xl">
+                            {/* Terminal header */}
+                            <div className="bg-[#161b22] px-4 py-3 flex items-center gap-2 border-b border-white/10">
+                                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span className="ml-3 font-mono text-xs text-gray-500">roger@calvo ~ /system-architecture</span>
                             </div>
-                            {/* Floating "Nodes" - Added these back for flavor */}
-                            <div className="absolute top-10 left-10 bg-black border border-white/20 p-2 rounded text-xs font-mono text-accent">Indexability</div>
-                            <div className="absolute bottom-20 right-10 bg-black border border-white/20 p-2 rounded text-xs font-mono text-blue-400">Crawl Budget</div>
-                            <div className="absolute top-1/2 right-4 bg-black border border-white/20 p-2 rounded text-xs font-mono text-purple-400">Semantic HTML</div>
+                            {/* Terminal content */}
+                            <div className="p-6 font-mono text-sm space-y-4">
+                                <div>
+                                    <span className="text-green-400">$</span> <span className="text-white">cat</span> <span className="text-yellow-300">stack.yml</span>
+                                </div>
+                                <div className="space-y-3 text-gray-400 pl-2 border-l-2 border-green-500/30">
+                                    <div>
+                                        <span className="text-purple-400">search_engineering:</span>
+                                        <div className="pl-4 space-y-1 mt-1">
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Topical Authority Architecture</span></div>
+                                            <div><span className="text-blue-400">- </span><span className="text-white">GEO (Generative Engine Optimization)</span></div>
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Entity Graph & Schema.org</span></div>
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Technical SEO & Crawl Engineering</span></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span className="text-purple-400">automation:</span>
+                                        <div className="pl-4 space-y-1 mt-1">
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Python</span> <span className="text-gray-600"># scripts, scrapers, auditorías</span></div>
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Claude API + Agents</span> <span className="text-gray-600"># LLM workflows</span></div>
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Google APIs</span> <span className="text-gray-600"># GSC, GA4, Sheets</span></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span className="text-purple-400">frontend:</span>
+                                        <div className="pl-4 space-y-1 mt-1">
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Next.js / React</span></div>
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Tailwind CSS</span></div>
+                                            <div><span className="text-blue-400">- </span><span className="text-white">Netlify (CI/CD)</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="pt-2">
+                                    <span className="text-green-400">$</span> <span className="text-gray-500 animate-pulse">_</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,48 +309,45 @@ export default function ElArtista() {
                         </div>
                     </div>
 
-                    {/* Right: Hall of Fame (Visual Grid) RESTORED */}
+                    {/* Right: Hall of Fame — Idols that shaped my philosophy */}
                     <div className="lg:col-span-8">
-                        <h3 className="font-display text-2xl uppercase mb-8 flex items-center gap-4">
+                        <h3 className="font-display text-2xl uppercase mb-3 flex items-center gap-4">
                             Hall of Fame <span className="h-px bg-paper/20 flex-grow"></span>
                         </h3>
+                        <p className="font-mono text-xs text-paper/50 uppercase tracking-wide mb-8">
+                            Los atletas que moldearon mi filosofía de trabajo
+                        </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {idols.map((idol, i) => (
                                 <div
                                     key={i}
-                                    onMouseEnter={() => setActiveIdol(i)}
-                                    onMouseLeave={() => setActiveIdol(null)}
-                                    className="relative group h-64 rounded-xl overflow-hidden cursor-pointer border-2 border-transparent hover:border-paper/50 transition-all shadow-lg bg-black"
+                                    className="group relative rounded-xl overflow-hidden border border-paper/10 hover:border-paper/40 transition-all shadow-lg bg-black"
                                 >
-                                    {/* Background Image - RESTORED */}
-                                    <Image
-                                        src={idol.img}
-                                        alt={idol.name}
-                                        width={600}
-                                        height={800}
-                                        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                                    />
+                                    {/* Background Image */}
+                                    <div className="relative h-48 overflow-hidden">
+                                        <Image
+                                            src={idol.img}
+                                            alt={idol.name}
+                                            width={600}
+                                            height={400}
+                                            className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                        {/* Dark gradient from bottom */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
-                                    {/* Gradient Overlay */}
-                                    <div className={`absolute inset-0 bg-gradient-to-t ${idol.color} opacity-80 mix-blend-multiply group-hover:opacity-60 transition-opacity`}></div>
-
-                                    {/* Content */}
-                                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                                        <div className={`transform transition-all duration-300 ${activeIdol === i ? '-translate-y-2' : 'translate-y-0'}`}>
-                                            <div className="font-mono text-xs uppercase tracking-widest text-white/70 mb-1">{idol.role}</div>
-                                            <h4 className="font-display text-3xl uppercase leading-none text-white mb-2">{idol.name}</h4>
-
-                                            <div className={`overflow-hidden transition-all duration-300 ${activeIdol === i ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                                <p className="text-sm text-white/90 leading-tight font-light border-l-2 border-white pl-3 mt-2">
-                                                    {idol.desc}
-                                                </p>
-                                            </div>
+                                        {/* Name overlay on image */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-5">
+                                            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent mb-1">{idol.role}</div>
+                                            <h4 className="font-display text-2xl md:text-3xl uppercase leading-none text-white font-bold">{idol.name}</h4>
                                         </div>
                                     </div>
 
-                                    <div className="absolute top-4 right-4 bg-black/50 backdrop-blur rounded p-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span className="material-symbols-outlined text-white text-sm">trophy</span>
+                                    {/* Description always visible */}
+                                    <div className="p-5 bg-[#111]">
+                                        <p className="text-sm text-paper/70 leading-relaxed">
+                                            {idol.desc}
+                                        </p>
                                     </div>
                                 </div>
                             ))}
