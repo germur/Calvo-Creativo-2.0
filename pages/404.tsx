@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -26,7 +26,7 @@ export default function Custom404({ popularPosts }: { popularPosts: any[] }) {
             <main className="flex-grow flex flex-col items-center justify-center relative overflow-hidden px-4 md:px-8 py-20">
 
                 {/* Background Noise & Vinyl Texture */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-20 pointer-events-none"></div>
 
                 {/* Spinning/Broken Vinyl Visual */}
                 <div className="relative w-64 h-64 md:w-96 md:h-96 mb-12 group">

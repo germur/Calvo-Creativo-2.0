@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
@@ -131,7 +131,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
 
                                         {/* Dynamic "Album Art" Column based on Index/ID */}
                                         <div className={`md:col-span-3 p-6 flex flex-col justify-between border-b-4 md:border-b-0 md:border-r-4 border-ink text-white relative overflow-hidden ${index % 2 === 0 ? 'bg-primary' : 'bg-gray-900'}`}>
-                                            <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                                            <div className="absolute inset-0 opacity-20 bg-[url('/textures/diagmonds-light.png')]"></div>
                                             <div className="font-mono text-xs opacity-70 z-10">TRACK {String(index + 1).padStart(2, '0')}</div>
                                             <div className="mt-4 md:mt-0 z-10">
                                                 <div className="text-white font-display text-5xl leading-none">

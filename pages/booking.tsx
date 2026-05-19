@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
@@ -48,7 +48,7 @@ export default function Booking() {
                     {/* Right Form Card - "Petición de Canción" */}
                     <div className="bg-[#fcfbf7] text-[#3e2723] p-8 md:p-12 rounded shadow-2xl relative rotate-1 transform transition-transform hover:rotate-0 duration-500 max-w-lg mx-auto w-full border-4 border-dashed border-[#d7ccc8]">
                         {/* Paper texture overlay */}
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/paper.png')] opacity-50 pointer-events-none rounded"></div>
+                        <div className="absolute inset-0 bg-[url('/textures/paper.png')] opacity-50 pointer-events-none rounded"></div>
 
                         {/* Badge */}
                         <div className="absolute -top-4 -right-4 size-20 bg-[#f7f3e8] rounded-full shadow-lg border border-[#d7ccc8]"></div>

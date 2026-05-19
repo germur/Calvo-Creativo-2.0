@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
@@ -12,7 +12,7 @@ export default function FightCard() {
             <main className="min-h-screen bg-[#d4a88c] font-sans pt-20 text-[#1a0a00] relative overflow-hidden">
 
                 {/* Paper Texture Overlay */}
-                <div className="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-multiply" style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/cardboard-flat.png")` }}></div>
+                <div className="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-multiply" style={{ backgroundImage: `url("/textures/cardboard-flat.png")` }}></div>
 
                 {/* Main Poster Container */}
                 <div className="max-w-4xl mx-auto px-4 py-12 relative z-10">

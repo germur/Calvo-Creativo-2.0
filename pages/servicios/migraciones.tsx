@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
@@ -14,7 +14,7 @@ export default function MigracionesService() {
                 {/* Hero Section */}
                 <section className="relative w-full max-w-7xl px-4 py-12 md:py-24 md:px-8">
                     <div className="relative overflow-hidden rounded-xl border border-stone-lighter bg-stone-light shadow-2xl">
-                        <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }}></div>
+                        <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: "url('/textures/dark-matter.png')" }}></div>
 
                         <div className="relative z-10 grid gap-12 lg:grid-cols-2 p-8 md:p-12 items-center">
                             <div className="flex flex-col gap-6">

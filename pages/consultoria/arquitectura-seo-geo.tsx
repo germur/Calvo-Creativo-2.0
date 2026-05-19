@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ServiceLayout from '@/components/ServiceLayout';
 import Link from 'next/link';
 
@@ -40,7 +40,7 @@ export default function ArquitecturaSeoGeo() {
 
                     {/* Visual: Knowledge Graph Node Network */}
                     <div className="relative h-[400px] bg-[#1a1a1a] rounded-xl border border-gray-800 shadow-2xl p-6 overflow-hidden flex items-center justify-center">
-                        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
+                        <div className="absolute inset-0 opacity-20 bg-[url('/textures/cubes.png')] animate-pulse"></div>
 
                         {/* Network Animation */}
                         <div className="relative w-full h-full flex items-center justify-center">

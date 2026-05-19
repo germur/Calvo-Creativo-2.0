@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ExperimentLayout from '@/components/ExperimentLayout';
 import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
@@ -111,7 +111,7 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
 
                     {/* Visual Graphic: Human vs AI */}
                     <div className="relative bg-white border-4 border-ink p-8 shadow-brutal overflow-hidden group hover:-translate-y-1 transition-transform">
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-5"></div>
+                        <div className="absolute inset-0 bg-[url('/textures/graphy.png')] opacity-5"></div>
 
                         <div className="relative z-10 flex justify-between items-center text-center">
                             {/* Human Side */}
@@ -159,7 +159,7 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
 
                                     {/* Visual Cover Art (CSS Generated) */}
                                     <div className={`h-48 relative overflow-hidden ${index % 2 === 0 ? 'bg-ink' : 'bg-primary'}`}>
-                                        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                                        <div className="absolute inset-0 opacity-20 bg-[url('/textures/diagmonds-light.png')]"></div>
 
                                         {/* Floating Icon */}
                                         <div className="absolute bottom-4 right-4">

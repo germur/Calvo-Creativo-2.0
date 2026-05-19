@@ -105,7 +105,7 @@ export default function Home() {
             {/* --- 1. HERO SECTION: LA PROPUESTA DE VALOR --- */}
             <header className="relative pt-24 pb-16 md:pt-32 md:pb-24 px-6 md:px-12 overflow-hidden border-b-4 border-black">
                 {/* Background Noise/Texture */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-40 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-40 pointer-events-none"></div>
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-red-600/10 to-transparent pointer-events-none"></div>
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">

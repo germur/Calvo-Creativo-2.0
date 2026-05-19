@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -70,7 +70,7 @@ const Navigation = () => {
             {/* Mobile Menu Overlay */}
             <div className={`fixed inset-0 bg-paper z-[101] flex flex-col items-center justify-center transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
                 {/* Background Texture */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-40 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-40 pointer-events-none"></div>
 
                 <div className="flex flex-col gap-8 text-center relative z-10 w-full px-8">
                     {navItems.map((item) => (

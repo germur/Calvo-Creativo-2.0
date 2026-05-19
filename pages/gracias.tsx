@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -20,7 +20,7 @@ export default function Gracias() {
 
                     {/* Top Tear Part - Perforation effect visual */}
                     <div className="bg-[#ff0000] p-6 text-center relative">
-                        <div className="absolute bottom-0 left-0 w-full h-2 bg-[url('https://www.transparenttextures.com/patterns/dashed-line.png')] opacity-50"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-2 bg-[url('/textures/dashed-line.png')] opacity-50"></div>
 
                         <h1 className="text-4xl font-black uppercase text-white tracking-widest italic animate-pulse">Access Granted</h1>
                         <div className="text-[10px] font-bold uppercase text-white/80 mt-1">Calvo Creativo VibeCoding System</div>

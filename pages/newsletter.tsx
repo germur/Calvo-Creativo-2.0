@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -16,7 +16,7 @@ export default function Newsletter() {
 
             <div className="flex-grow flex items-center justify-center py-24 px-6 relative overflow-hidden">
                 {/* Background Noise */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-30 pointer-events-none"></div>
 
                 <div className="max-w-2xl w-full text-center relative z-10">
                     <div className="inline-block bg-acid-green text-black px-4 py-1 font-mono text-xs font-bold uppercase mb-8 rotate-[-2deg] border-2 border-black shadow-brutal-sm">

@@ -15,12 +15,12 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
             <CookieConsent />
 
-            {/* Google Analytics 4 - Deferred for performance */}
+            {/* Google Analytics 4 - Lazy loaded for performance */}
             <Script
                 src="https://www.googletagmanager.com/gtag/js?id=G-985SWJBWRZ"
-                strategy="afterInteractive"
+                strategy="lazyOnload"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="lazyOnload">
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -29,15 +29,8 @@ export default function App({ Component, pageProps }: AppProps) {
                 `}
             </Script>
 
-            {/* Google AdSense - Lazy loaded */}
-            <Script
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1504078455666002"
-                strategy="lazyOnload"
-                crossOrigin="anonymous"
-            />
-
-            {/* Microsoft Clarity - Deferred for performance */}
-            <Script id="microsoft-clarity" strategy="afterInteractive">
+            {/* Microsoft Clarity - Lazy loaded for performance */}
+            <Script id="microsoft-clarity" strategy="lazyOnload">
                 {`
                     (function(c,l,a,r,i,t,y){
                         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

@@ -4,16 +4,10 @@ export default function Document() {
     return (
         <Html lang="es">
             <Head>
-                {/* Material Symbols - Critical for UI icons */}
+                {/* Material Symbols - Only load the weights/sizes we actually use */}
                 <link
                     rel="stylesheet"
-                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-                />
-                {/* Google AdSense */}
-                <script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9760938521576702"
-                    crossOrigin="anonymous"
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
                 />
             </Head>
             <body className="bg-paper text-ink font-body grain-overlay">
