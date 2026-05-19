@@ -51,7 +51,7 @@ const Navigation = () => {
                     </div>
 
                     <Link href="/contacto" className="bg-ink text-white px-6 py-2 font-display text-xl uppercase border-2 border-ink shadow-brutal-sm hover:bg-primary hover:translate-y-[-2px] transition-all flex items-center gap-2">
-                        LET'S FIGHT <span className="material-symbols-outlined text-sm">front_hand</span>
+                        Hablemos <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </Link>
                 </div>
 
@@ -84,7 +84,7 @@ const Navigation = () => {
                     ))}
                     <div className="h-px bg-ink w-24 mx-auto my-4 opacity-20"></div>
                     <Link href="/contacto" className="bg-black text-white px-8 py-4 font-display text-2xl uppercase border-4 border-black shadow-[8px_8px_0px_#dc2626] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all mx-auto inline-flex items-center gap-3">
-                        Agendar <span className="material-symbols-outlined">calendar_month</span>
+                        Hablemos <span className="material-symbols-outlined">arrow_forward</span>
                     </Link>
                 </div>
             </div>
