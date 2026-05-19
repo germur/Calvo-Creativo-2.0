@@ -349,34 +349,121 @@ export default function Home() {
             </section>
 
             {/* --- 4. WHY NOW (CONTEXT 2026) --- */}
-            <section className="py-24 px-6 md:px-12 bg-gray-100 text-black">
-                <div className="max-w-5xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-display font-bold uppercase mb-12 text-center">
-                        Si tu SEO no está listo para la IA, <br /><span className="text-red-600">eres invisible.</span>
-                    </h2>
-                    <p className="text-center max-w-2xl mx-auto text-gray-600 mb-16 font-medium text-lg">
-                        El 60% de las búsquedas ya terminan sin clic. ChatGPT responde directamente. ¿Estás en esa respuesta o te quedaste fuera?
-                    </p>
+            <section className="relative py-24 px-6 md:px-12 bg-black text-white overflow-hidden border-y-8 border-red-600">
+                {/* Background grid */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_50%,transparent_100%)] opacity-40 pointer-events-none"></div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white p-8 border-2 border-black shadow-sm group hover:shadow-md transition-shadow">
-                            <h4 className="font-bold text-xl mb-4 uppercase text-red-600">Domina el Grafo de Conocimiento</h4>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                Google ya no busca palabras, busca <em>conceptos</em>. Conectamos tu marca con las entidades que definen tu industria para que seas la referencia ineludible.
-                            </p>
+                <div className="relative max-w-6xl mx-auto">
+                    {/* Editorial header */}
+                    <div className="mb-16">
+                        <div className="flex items-center gap-4 mb-6">
+                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-red-500">// Track 04</span>
+                            <div className="h-px bg-red-600 flex-grow max-w-[100px]"></div>
+                            <span className="font-mono text-xs uppercase tracking-widest text-white/40">Context 2026</span>
                         </div>
-                        <div className="bg-white p-8 border-2 border-black shadow-sm">
-                            <h4 className="font-bold text-xl mb-4 uppercase text-red-600">De Búsqueda a Respuesta</h4>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                Si ChatGPT no puede leer tu contenido, no te recomendará. Diseñamos para GEO (Generative Engine Optimization).
-                            </p>
+                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black uppercase tracking-tighter leading-[0.95] mb-6">
+                            Si tu SEO no está<br />
+                            listo para la IA,<br />
+                            <span className="relative inline-block">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-600 to-orange-500">eres invisible.</span>
+                                <svg className="absolute -bottom-2 left-0 w-full h-3 text-red-600" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 25 0 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="2" />
+                                </svg>
+                            </span>
+                        </h2>
+                        <p className="max-w-2xl text-base md:text-lg text-white/70 font-light border-l-4 border-red-600 pl-6">
+                            El <strong className="text-white">60% de las búsquedas</strong> ya terminan sin clic. ChatGPT responde directamente.{' '}
+                            <span className="text-red-400 italic">¿Estás en esa respuesta o te quedaste fuera?</span>
+                        </p>
+                    </div>
+
+                    {/* Stat strip */}
+                    <div className="grid grid-cols-3 gap-px bg-white/10 border border-white/10 mb-16 rounded-sm overflow-hidden">
+                        <div className="bg-black p-5 md:p-6">
+                            <div className="font-display text-3xl md:text-5xl font-black text-red-500 leading-none">60%</div>
+                            <div className="font-mono text-[10px] md:text-xs uppercase tracking-wider text-white/50 mt-2">Zero-click searches</div>
                         </div>
-                        <div className="bg-white p-8 border-2 border-black shadow-sm">
-                            <h4 className="font-bold text-xl mb-4 uppercase text-red-600">De Cantidad a Autoridad</h4>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                Publicar mucho ya no sirve. Publicar con "Information Gain" (Datos únicos y experiencia real) es la única defensa.
-                            </p>
+                        <div className="bg-black p-5 md:p-6">
+                            <div className="font-display text-3xl md:text-5xl font-black text-red-500 leading-none">3x</div>
+                            <div className="font-mono text-[10px] md:text-xs uppercase tracking-wider text-white/50 mt-2">Más citaciones en LLMs</div>
                         </div>
+                        <div className="bg-black p-5 md:p-6">
+                            <div className="font-display text-3xl md:text-5xl font-black text-red-500 leading-none">0</div>
+                            <div className="font-mono text-[10px] md:text-xs uppercase tracking-wider text-white/50 mt-2">Backlinks necesarios</div>
+                        </div>
+                    </div>
+
+                    {/* The 3 shifts */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                        {[
+                            {
+                                number: '01',
+                                icon: 'hub',
+                                title: 'Domina el Grafo de Conocimiento',
+                                before: 'Keywords sueltas',
+                                after: 'Entidades + Conceptos',
+                                desc: 'Google ya no busca palabras, busca conceptos. Conectamos tu marca con las entidades que definen tu industria para que seas la referencia ineludible.',
+                            },
+                            {
+                                number: '02',
+                                icon: 'forum',
+                                title: 'De Búsqueda a Respuesta',
+                                before: '10 links azules',
+                                after: '1 respuesta directa',
+                                desc: 'Si ChatGPT no puede leer tu contenido, no te recomendará. Diseñamos para GEO (Generative Engine Optimization).',
+                            },
+                            {
+                                number: '03',
+                                icon: 'workspace_premium',
+                                title: 'De Cantidad a Autoridad',
+                                before: 'Volumen de posts',
+                                after: 'Information Gain',
+                                desc: 'Publicar mucho ya no sirve. Publicar con datos únicos y experiencia real (Information Gain) es la única defensa.',
+                            },
+                        ].map((shift) => (
+                            <div
+                                key={shift.number}
+                                className="group relative bg-[#0a0a0a] border-2 border-white/10 hover:border-red-600 transition-all p-6 md:p-8 hover:-translate-y-1 hover:shadow-[0_10px_0_-2px_rgba(220,38,38,0.5)]"
+                            >
+                                {/* Big number watermark */}
+                                <div className="absolute top-4 right-4 font-display text-5xl md:text-6xl font-black text-white/5 group-hover:text-red-600/20 transition-colors leading-none select-none">
+                                    {shift.number}
+                                </div>
+
+                                {/* Icon */}
+                                <div className="relative w-12 h-12 bg-red-600/10 border border-red-600/30 flex items-center justify-center mb-6 rounded">
+                                    <span className="material-symbols-outlined text-red-500 text-2xl">{shift.icon}</span>
+                                </div>
+
+                                {/* Title */}
+                                <h4 className="font-display text-xl md:text-2xl font-black uppercase mb-5 text-white leading-tight">
+                                    {shift.title}
+                                </h4>
+
+                                {/* Before / After */}
+                                <div className="flex items-center gap-2 mb-5 text-[10px] font-mono uppercase tracking-wider">
+                                    <span className="line-through text-white/30">{shift.before}</span>
+                                    <span className="material-symbols-outlined text-red-500 text-base">arrow_right_alt</span>
+                                    <span className="text-red-400 font-bold">{shift.after}</span>
+                                </div>
+
+                                {/* Description */}
+                                <p className="text-sm text-white/60 leading-relaxed font-light">
+                                    {shift.desc}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Bottom callout */}
+                    <div className="mt-12 text-center">
+                        <Link
+                            href="/consultoria/arquitectura-seo-geo"
+                            className="inline-flex items-center gap-3 font-mono text-sm uppercase tracking-widest text-white/60 hover:text-red-500 transition-colors border-b border-white/20 hover:border-red-500 pb-1"
+                        >
+                            <span>Ver cómo construimos para GEO</span>
+                            <span className="material-symbols-outlined text-base">arrow_forward</span>
+                        </Link>
                     </div>
                 </div>
             </section>
