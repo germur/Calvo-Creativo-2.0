@@ -18,11 +18,18 @@ const Footer = () => {
                         Ingeniería de Búsqueda & Estrategia Digital.<br /><br />
                         Fusionamos la creatividad latina (Salsa) con el rigor técnico (Fight). No hacemos SEO para rellenar espacios, construimos activos digitales que sobreviven a los algoritmos.
                     </p>
-                    <div className="flex gap-4 text-xl">
-                        <Link href="https://www.linkedin.com/in/rogermur/" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="LinkedIn de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">work</span></Link>
-                        <Link href="https://x.com/Rogermu47429637" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="Twitter de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">flutter_dash</span></Link>
-                        <Link href="https://github.com/germur" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="GitHub de Roger Calvo"><span className="material-symbols-outlined" aria-hidden="true">code</span></Link>
-                        <Link href="https://quimbara.org" target="_blank" rel="noopener" className="hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded transition-colors" aria-label="Quimbara: blog de UFC de Roger"><span className="material-symbols-outlined" aria-hidden="true">sports_mma</span></Link>
+                    <div className="flex flex-wrap gap-3">
+                        {[
+                            { name: 'LinkedIn', icon: 'work', href: 'https://www.linkedin.com/in/rogermur/', label: 'LinkedIn de Roger Calvo' },
+                            { name: 'X', icon: 'alternate_email', href: 'https://x.com/Rogermu47429637', label: 'X (Twitter) de Roger Calvo' },
+                            { name: 'GitHub', icon: 'code', href: 'https://github.com/germur', label: 'GitHub de Roger Calvo' },
+                            { name: 'Quimbara', icon: 'sports_mma', href: 'https://quimbara.org', label: 'Quimbara: blog de UFC' },
+                        ].map((social) => (
+                            <Link key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="flex items-center gap-1.5 border border-white/20 rounded-full px-3 py-1.5 bg-white/5 hover:bg-white/10 hover:text-primary transition-colors text-gray-400">
+                                <span className="material-symbols-outlined text-sm" aria-hidden="true">{social.icon}</span>
+                                <span className="font-mono text-[10px] uppercase tracking-wide">{social.name}</span>
+                            </Link>
+                        ))}
                     </div>
                 </div>
 
