@@ -406,42 +406,36 @@ export default function ElArtista() {
 
                 {/* Liverpool / Culture Banner */}
                 <div className="max-w-7xl mx-auto mt-20 relative rounded-xl overflow-hidden border-2 border-red-900/30 group">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579952363873-1b9a2d677688?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30 grayscale group-hover:grayscale-0 transition-all duration-1000"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-950 to-black"></div>
                     <div className="absolute inset-0 bg-gradient-to-r from-red-900/90 to-transparent"></div>
 
-                    {/* Hip Hop / Culture Badges - RESTORED */}
-
-
-                    {/* Culture References (RESTORED & CLARIFIED) */}
-                    <div className="absolute top-6 right-6 md:top-10 md:right-10 flex flex-col items-end gap-2 z-50">
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-white/50 bg-black/50 px-2 py-1 rounded backdrop-blur-md">
-                            Cultural References
-                        </span>
-                        <div className="flex gap-3">
-                            <div title="Notorious B.I.G. - The Flow" className="group/icon relative w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-yellow-500/50 hover:border-yellow-500 hover:bg-black/80 transition-all cursor-help">
-                                <span className="material-symbols-outlined text-yellow-500 text-lg">crown</span>
-                                <span className="absolute -bottom-8 right-0 text-[10px] bg-black text-white px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Biggie's Flow</span>
-                            </div>
-                            <div title="Wu-Tang Clan - The Strategy" className="group/icon relative w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-yellow-500/50 hover:border-yellow-500 hover:bg-black/80 transition-all cursor-help">
-                                <span className="font-display font-bold text-yellow-500 text-[10px]">WTC</span>
-                                <span className="absolute -bottom-8 right-0 text-[10px] bg-black text-white px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Wu-Tang Strategy</span>
-                            </div>
-                            <div title="UFC - The Mindset" className="group/icon relative w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-red-500/50 hover:border-red-500 hover:bg-black/80 transition-all cursor-help">
-                                <span className="material-symbols-outlined text-red-500 text-lg">sports_mma</span>
-                                <span className="absolute -bottom-8 right-0 text-[10px] bg-black text-white px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">UFC Mindset</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="relative p-12 md:p-24 flex flex-col justify-center">
-                        <span className="font-display text-red-400 text-xl uppercase tracking-widest mb-2 mix-blend-plus-lighter">Culture & Origins</span>
-                        <h2 className="text-6xl md:text-9xl font-display font-black text-white leading-[0.8] uppercase tracking-tighter opacity-90 drop-shadow-2xl">
-                            You'll Never<br />
+                    <div className="relative p-8 md:p-24 flex flex-col justify-center">
+                        <span className="font-display text-red-400 text-sm md:text-xl uppercase tracking-widest mb-2">Culture & Origins</span>
+                        <h2 className="text-4xl sm:text-5xl md:text-9xl font-display font-black text-white leading-[0.85] uppercase tracking-tighter opacity-90 drop-shadow-2xl">
+                            You&apos;ll Never<br />
                             Walk Alone
                         </h2>
-                        <p className="mt-8 text-white/80 max-w-lg font-mono text-sm leading-relaxed border-l-4 border-red-500 pl-6">
+                        <p className="mt-6 md:mt-8 text-white/80 max-w-lg font-mono text-xs md:text-sm leading-relaxed border-l-4 border-red-500 pl-4 md:pl-6">
                             Soy hincha del Liverpool. No solo por los títulos, sino por su identidad. La cultura competitiva, la historia y la conexión con la gente.
                         </p>
+
+                        {/* Culture References — inline on mobile */}
+                        <div className="mt-6 md:mt-10 flex flex-wrap items-center gap-3">
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">
+                                Cultural References:
+                            </span>
+                            <div className="flex gap-2">
+                                <div title="Notorious B.I.G. - The Flow" className="w-9 h-9 md:w-10 md:h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-yellow-500/50">
+                                    <span className="material-symbols-outlined text-yellow-500 text-base md:text-lg">crown</span>
+                                </div>
+                                <div title="Wu-Tang Clan - The Strategy" className="w-9 h-9 md:w-10 md:h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-yellow-500/50">
+                                    <span className="font-display font-bold text-yellow-500 text-[10px]">WTC</span>
+                                </div>
+                                <div title="UFC - The Mindset" className="w-9 h-9 md:w-10 md:h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center border border-red-500/50">
+                                    <span className="material-symbols-outlined text-red-500 text-base md:text-lg">sports_mma</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
