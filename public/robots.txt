@@ -2,6 +2,11 @@
 User-agent: *
 Allow: /
 
+# Block non-content resources from crawl budget
+Disallow: /_next/static/
+Disallow: /textures/
+Disallow: /api/
+
 # Host
 Host: https://calvocreativo.com
 

@@ -1,2 +1,67 @@
+# Force trailing slash removal — prevents duplicate URLs in Google index
+[build]
+  command = "npx next build"
+  publish = ".next"
+
+# Netlify headers for performance & SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+
+[[headers]]
+  for = "/textures/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Trailing slash redirects — Google is crawling /path/ duplicates
+[[redirects]]
+  from = "/el-artista/"
+  to = "/el-artista"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/servicios/narrativa/"
+  to = "/servicios/narrativa"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/seo/madrid/"
+  to = "/seo/madrid"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contacto/"
+  to = "/contacto"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lab/"
+  to = "/lab"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wins/"
+  to = "/wins"
+  status = 301
+  force = true
+
+# Catch-all: strip trailing slash from any path
+[[redirects]]
+  from = "/:path*/"
+  to = "/:path*"
+  status = 301
+  force = true
+
 [[plugins]]
 package = "@netlify/plugin-nextjs"
