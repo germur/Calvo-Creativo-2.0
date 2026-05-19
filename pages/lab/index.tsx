@@ -86,6 +86,26 @@ export default function LabHub() {
                     </div>
                 </section>
 
+                {/* What is the Lab — Context Section */}
+                <section className="py-16 px-6 border-b border-white/5">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Spline Sans, sans-serif' }}>
+                            ¿Qué es el Lab?
+                        </h2>
+                        <div className="space-y-4 text-white/60 font-mono text-sm leading-relaxed">
+                            <p>
+                                El Laboratorio es el <strong className="text-white">Lado B</strong> de Calvo Creativo: un espacio de experimentación pública donde documentamos pruebas reales de SEO, automatización con Python y estrategias de contenido. Cada experimento tiene datos verificables, no opiniones disfrazadas de estudio de caso.
+                            </p>
+                            <p>
+                                Aquí encontrarás desde <strong className="text-white">herramientas gratuitas</strong> (calculadoras de ROI, trackers de GEO) hasta <strong className="text-white">experimentos controlados</strong> como el Fight Club que enfrentó contenido humano contra IA, o el caso Frankenstein donde un enjambre de agentes autónomos gestionó un sitio web completo.
+                            </p>
+                            <p>
+                                Todo lo que publicamos en el Lab sigue un principio: <span className="text-[#ccff00]">si no tiene datos, no es un experimento — es una opinión.</span> Y las opiniones las guardamos para <a href="/liner-notes" className="text-[#f4258c] hover:underline">Liner Notes</a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Categories (The Tracks) - Glass Cards */}
                 <section className="py-20 px-6 border-y border-white/5 bg-white/5 backdrop-blur-sm">
                     <div className="max-w-7xl mx-auto">

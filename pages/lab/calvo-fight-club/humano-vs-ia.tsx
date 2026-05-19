@@ -43,6 +43,22 @@ export default function CalvoFightClubHumanoVsIa() {
                     </ul>
                 </div>
 
+                <div className="my-12">
+                    <h2 className="text-3xl font-bold text-white mb-6">Metodología del Experimento</h2>
+                    <p>
+                        Para que la comparación fuera justa, controlamos todas las variables excepto una: <strong>quién escribió el contenido</strong>. Ambos artículos fueron publicados el mismo día, en el mismo dominio, con la misma estructura de URLs y sin ningún tipo de promoción externa.
+                    </p>
+                    <p>
+                        El artículo de IA fue generado con ChatGPT-4o usando un prompt de ingeniería avanzado que incluía contexto de mercado, estructura SILO y formato optimizado para featured snippets. No fue un prompt genérico — fue lo mejor que la IA puede producir con guía experta.
+                    </p>
+                    <p>
+                        El artículo humano fue escrito por un redactor senior con experiencia en el nicho inmobiliario, aplicando storytelling, datos propietarios de GSC y lo que llamamos <strong>"Information Gain"</strong> — información que no existe en ningún otro resultado de la SERP.
+                    </p>
+                    <p>
+                        Las métricas se midieron con Google Search Console, GA4 y Clarity durante 90 días consecutivos.
+                    </p>
+                </div>
+
                 <div className="my-16">
                     <h2 className="text-3xl font-bold text-white mb-6">El K.O. (Resultados a 90 días)</h2>
 
@@ -96,6 +112,12 @@ export default function CalvoFightClubHumanoVsIa() {
                     <p>
                         La IA es el sparring perfecto, pero no gana el campeonato sola.
                         Necesitas el <strong>'Information Gain'</strong> que solo un humano con experiencia puede dar para convertir tráfico en ventas.
+                    </p>
+                    <p>
+                        Lo que aprendimos: el contenido de IA indexa más rápido (Google lo rastrea sin problemas), pero sufre de lo que llamamos <strong>"AI Content Plateau"</strong> — se estanca en posiciones 8-15 porque carece de señales de engagement. El contenido humano empieza más lento, pero su curva de posicionamiento es ascendente a medida que acumula dwell time, scroll depth y CTR.
+                    </p>
+                    <p>
+                        La conclusión no es "IA mala, humano bueno". Es que <strong>la combinación ganadora es usar IA para la cobertura de volumen</strong> (preguntas FAQ, tablas comparativas, datos estructurados) <strong>y humanos para el contenido de autoridad</strong> (opinión experta, casos de estudio, análisis con datos propios). Eso es exactamente lo que aplicamos en nuestra <a href="/consultoria/estrategia-contenidos-autoridad" className="text-acid-green hover:underline">estrategia de contenidos</a>.
                     </p>
                 </div>
 
