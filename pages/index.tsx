@@ -420,52 +420,20 @@ export default function Home() {
                         <span className="text-gray-500 text-xl md:text-2xl lowercase font-sans font-light">No alquiles tu audiencia. Sé dueño de tu tráfico.</span>
                     </h2>
 
-                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-60 mb-16 grayscale hover:grayscale-0 transition-all duration-500">
-                        {/* Python */}
-                        <div title="Python" className="w-16 h-16 hover:scale-110 transition-transform">
-                            <svg viewBox="0 0 128 128" className="w-full h-full fill-current">
-                                <path fill="#3776AB" d="M63.05 13.91c-9.15.53-17.7 4.14-17.7 13.91v9.26h35.4v3.53H36.3v-4.63c0-10.84 9.27-19.64 20.9-20.73 9.47-.88 20.3 1.94 22.14 12.35l.23 2.1H69.4l-.23-1.92c-1.3-7.5-8.5-12.7-18.12-13.8zm33.3 26.86h-4.63v4.63H36.3v27.95h35.4v5.6c0 10.33 8.35 18.72 18.66 18.72 9.07 0 16.43-7.36 16.43-16.43v-8.8H73.35v-3.53h44.4v4.63c0 9.8-8.55 17.7-17.7 18.23-9.62 1.12-16.82-4.08-18.12-11.58l-.23-2.1H96.1l.23 1.92c1.84 10.4 12.67 13.23 22.14 12.35 11.63-1.1 20.9-9.9 20.9-20.73V53.2c0-9.07-7.36-16.43-16.43-16.43h-6.52v3.96z" />
-                                <path fill="#FFD43B" d="M36.3 84.07h4.63v-4.63h55.43V51.48H60.94V45.9c0-10.33-8.35-18.72-18.66-18.72-9.07 0-16.43 7.36-16.43 16.43v8.8h33.4v3.53H14.85v-4.63c0-9.8 8.55-17.7 17.7-18.23 9.62-1.12 16.82 4.08 18.12 11.58l.23 2.1H35.84l-.23-1.92c-1.84-10.4-12.67-13.23-22.14-12.35C1.84 33.6-7.43 42.4-7.43 53.23v21.57c0 9.07 7.36 16.43 16.43 16.43h6.52v-7.16z" transform="rotate(180 64 64)" />
-                            </svg>
-                        </div>
-                        {/* OpenAI / ChatGPT */}
-                        <div title="OpenAI" className="w-14 h-14 hover:scale-110 transition-transform">
-                            <svg viewBox="0 0 24 24" className="w-full h-full fill-white">
-                                <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.0462 6.0462 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0847 5.7197-3.3016a.8381.8381 0 0 0 .3924-.6801v-6.7218l2.1617 1.2483v5.0455a4.454 4.454 0 0 1-5.5393 5.5352zm-7.6974-2.768a4.4444 4.4444 0 0 1-1.2584-3.3512l2.3601 1.3533a.8191.8191 0 0 0 .8095 0l5.8094-3.3441v2.518L7.331 20.0638a4.45 4.45 0 0 1-1.7685-3.4026zm-1.8016-8.9157a4.4444 4.4444 0 0 1 3.1098-4.4716v5.8202l-2.2045 1.2579-2.3458-1.3533a4.4636 4.4636 0 0 1 1.4405-1.2532zm9.3582-6.526a4.4593 4.4593 0 0 1 5.3811 1.3435l-2.1825 1.2533-5.7486-3.3157v-2.5276a4.445 4.445 0 0 1 2.55-.7535zm7.5501 2.9818a4.4664 4.4664 0 0 1 1.8349 3.3931l-2.3553-1.3533a.8306.8306 0 0 0-.8142 0L13.4867 7.218v-2.518l5.8953 3.4182a4.4373 4.4373 0 0 1-.2237-1.3934zm2.1873 7.828a4.464 4.464 0 0 1-2.5833 3.8647v-5.839l2.2045-1.2674 2.3458 1.3533a4.4795 4.4795 0 0 1-1.967 1.8884zm-6.38-1.4674-5.003-2.8809v-5.768l5.003 2.8903z" />
-                            </svg>
-                        </div>
-                        {/* Screaming Frog */}
-                        <div title="Screaming Frog" className="w-16 h-16 hover:scale-110 transition-transform flex items-center justify-center p-1">
-                            <svg viewBox="0 0 512 512" className="w-full h-full fill-[#589e29]">
-                                <path d="M437 75a66 66 0 100-132 66 66 0 000 132zM75 75a66 66 0 100-132 66 66 0 000 132z" />
-                                <path d="M437 75c-30 0-56-20-63-48-2-8-4-17-4-26 0-36 29-66 66-66s66 30 66 66c0 9-2 18-4 26-7 28-33 48-63 48zM75 75C45 75 19 55 12 27c-2-8-4-17-4-26 0-36 29-66 66-66s66 30 66 66c0 9-2 18-4 26-7 28-33 48-63 48z" />
-                                <path d="M256 128c-68 0-128 35-164 89-12 18-19 39-21 61-2 19 1 39 8 57 11 29 35 53 66 63 15 5 31 8 47 8 10 0 19-3 27-8 12-7 19-20 19-34 0-14-6-27-16-35-17-14-27-35-27-57 0-35 27-64 61-64s61 29 61 64c0 22-10 43-27 57-10 8-16 21-16 35 0 14 7 27 19 35 8 5 17 8 27 8 16 0 32-3 47-8 31-10 55-34 66-63 7-18 10-38 8-57-2-22-9-43-21-61-36-54-96-89-164-89z" />
-                            </svg>
-                        </div>
-                        {/* Semrush (Orange Flame/Pulse) */}
-                        <div title="Semrush" className="w-14 h-14 hover:scale-110 transition-transform">
-                            <svg viewBox="0 0 24 24" className="w-full h-full fill-[#FF642D]">
-                                <path d="M7.4 0l-7.4 12h7.4l-3.2 12 19.8-13.6h-9.8l5.8-10.4z" />
-                            </svg>
-                        </div>
-                        {/* Ahrefs (Bar Chart) */}
-                        <div title="Ahrefs" className="w-14 h-14 bg-[#0070F3] rounded-lg p-3 flex items-center justify-center hover:scale-110 transition-transform">
-                            <svg viewBox="0 0 24 24" className="w-full h-full fill-white">
-                                <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8h2.8v6h-2.8z" />
-                            </svg>
-                        </div>
-                        {/* Google Gemini */}
-                        <div title="Google Gemini" className="w-14 h-14 hover:scale-110 transition-transform">
-                            <svg viewBox="0 0 24 24" className="w-full h-full">
-                                <defs>
-                                    <linearGradient id="geminiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="#4E86F8" />
-                                        <stop offset="100%" stopColor="#D5564D" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#geminiGradient)" d="M11.66 2.05L10.36 6.36C9.65 8.71 7.81 10.55 5.46 11.26L1.15 12.56L5.46 13.86C7.81 14.57 9.65 16.41 10.36 18.76L11.66 23.07L12.96 18.76C13.67 16.41 15.51 14.57 17.86 13.86L22.17 12.56L17.86 11.26C15.51 8.91 13.67 7.07 12.96 4.72L11.66 2.05Z" />
-                            </svg>
-                        </div>
+                    <div className="flex flex-wrap justify-center items-center gap-4 md:gap-5 mb-16">
+                        {[
+                            { name: 'Python', icon: 'code' },
+                            { name: 'Claude AI', icon: 'smart_toy' },
+                            { name: 'Screaming Frog', icon: 'bug_report' },
+                            { name: 'Semrush', icon: 'query_stats' },
+                            { name: 'Ahrefs', icon: 'leaderboard' },
+                            { name: 'Google Search Console', icon: 'monitoring' },
+                        ].map((tool) => (
+                            <div key={tool.name} className="flex items-center gap-2 border border-white/20 rounded-full px-4 py-2 bg-white/5 hover:bg-white/10 transition-colors">
+                                <span className="material-symbols-outlined text-sm text-gray-400">{tool.icon}</span>
+                                <span className="font-mono text-xs uppercase tracking-wide text-gray-300">{tool.name}</span>
+                            </div>
+                        ))}
                     </div>
 
                     <div className="flex flex-col items-center">
