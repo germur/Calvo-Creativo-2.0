@@ -17,5 +17,69 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# ================================================================
+# 410 GONE — páginas programáticas de ciudad (sin equivalente ES)
+# force = true garantiza que gane sobre los redirects de Next.js
+# ================================================================
+[[redirects]]
+  from = "/services/strategic-seo-consulting/gainesville-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/sarasota-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/st-petersburg-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/fort-lauderdale-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/jacksonville-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/tampa-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/miami-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/orlando-fl"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting/*"
+  to = "/404"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/services/strategic-seo-consulting"
+  to = "/404"
+  status = 410
+  force = true
+
 [[plugins]]
 package = "@netlify/plugin-nextjs"
