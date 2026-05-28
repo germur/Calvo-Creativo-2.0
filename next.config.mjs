@@ -92,6 +92,18 @@ const nextConfig = {
                 permanent: true,
             },
 
+            // ⭐ Automatización SEO → equivalente exacto (mejor herencia de autoridad)
+            {
+                source: '/services/seo-automation/:slug*',
+                destination: '/consultoria/automatizacion-seo-ia',
+                permanent: true,
+            },
+            {
+                source: '/services/seo-automation',
+                destination: '/consultoria/automatizacion-seo-ia',
+                permanent: true,
+            },
+
             // Ecommerce y Local
             {
                 source: '/services/ecommerce-seo',
@@ -120,6 +132,11 @@ const nextConfig = {
             // 4. REGLAS GENERALES (cazatodo para URLs viejas de Lovable)
             // ================================================================
 
+            // NOTA: las páginas /services/strategic-seo-consulting/* (ciudades FL)
+            // NO se redirigen aquí. Se interceptan en public/_redirects con un
+            // 410 Gone, porque next.config no puede emitir 410 y un 301 a
+            // /consultoria sería un soft-404 (Google no transfiere autoridad).
+
             // Cualquier otro servicio en inglés → Consultoría
             {
                 source: '/services/:slug*',
@@ -134,10 +151,17 @@ const nextConfig = {
                 permanent: true,
             },
 
-            // Blog antiguo
+            // ⭐ FIX CRÍTICO: el blog antiguo en inglés NO tiene equivalentes ES
+            // con el mismo slug. El :slug* en destino creaba 301 → 404.
+            // Mandamos todo al hub /liner-notes.
             {
                 source: '/blog/:slug*',
-                destination: '/liner-notes/:slug*',
+                destination: '/liner-notes',
+                permanent: true,
+            },
+            {
+                source: '/blog',
+                destination: '/liner-notes',
                 permanent: true,
             },
         ];

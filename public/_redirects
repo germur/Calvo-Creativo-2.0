@@ -1,0 +1,35 @@
+# ============================================================
+# public/_redirects  |  calvocreativo.com
+# ------------------------------------------------------------
+# PROPÓSITO ÚNICO: emitir 410 Gone para las páginas programáticas
+# de ciudad del sitio viejo (strategic-seo-consulting/{ciudad}-fl).
+#
+# Estas NO van en next.config.mjs porque Next solo puede emitir
+# redirects (301/302/307/308), nunca un 410. Un 301 a /consultoria
+# sería un soft-404 (Google no transfiere autoridad y las mantiene
+# en índice más tiempo).
+#
+# Netlify procesa este archivo ANTES que los redirects de Next,
+# así que el 410 gana sobre el cazatodo /services/:slug*.
+#
+# Nota: si Netlify sirviera algún 410 como 404, NO pasa nada:
+# ambos desindexan igual en Google.
+#
+# Todo lo demás (los 301) sigue viviendo en next.config.mjs.
+# ============================================================
+
+# --- Ciudades con impresiones confirmadas en GSC (explícitas primero) ---
+/services/strategic-seo-consulting/gainesville-fl      /  410!
+/services/strategic-seo-consulting/sarasota-fl         /  410!
+/services/strategic-seo-consulting/st-petersburg-fl    /  410!
+/services/strategic-seo-consulting/fort-lauderdale-fl  /  410!
+/services/strategic-seo-consulting/jacksonville-fl     /  410!
+/services/strategic-seo-consulting/tampa-fl            /  410!
+/services/strategic-seo-consulting/miami-fl            /  410!
+/services/strategic-seo-consulting/orlando-fl          /  410!
+
+# --- Comodín de respaldo: caza cualquier ciudad que GSC no listó ---
+/services/strategic-seo-consulting/*                   /  410!
+
+# --- Y el hub de ese servicio (también sin equivalente) ---
+/services/strategic-seo-consulting                     /  410!
