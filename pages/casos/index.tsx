@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -63,7 +64,7 @@ export default function CasosIndex() {
                         <div className="bg-[#1a1a1a] border border-[#333] group hover:border-[#ffb300] transition-colors relative">
                             <div className="absolute top-0 right-10 bg-[#ffb300]/20 h-2 w-12 z-10"></div>
                             <div className="relative h-64 overflow-hidden border-b border-[#333]">
-                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover grayscale mix-blend-overlay opacity-60 group-hover:scale-105 transition-transform duration-700" />
+                                <Image src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="E-commerce SEO case study — technical audit results" fill className="object-cover grayscale mix-blend-overlay opacity-60 group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                                 <div className="absolute top-4 left-4 border border-[#ffb300] text-[#ffb300] size-8 flex items-center justify-center font-bold text-sm bg-black">01</div>
                             </div>
                             <div className="p-6">
@@ -88,7 +89,7 @@ export default function CasosIndex() {
                         <div className="bg-[#1a1a1a] border border-[#333] group hover:border-[#ffb300] transition-colors relative">
                             <div className="absolute top-0 right-10 bg-[#ffb300]/20 h-2 w-12 z-10"></div>
                             <div className="relative h-64 overflow-hidden border-b border-[#333]">
-                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover grayscale mix-blend-overlay opacity-60 group-hover:scale-105 transition-transform duration-700" />
+                                <Image src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Local SEO case study — map pack optimization" fill className="object-cover grayscale mix-blend-overlay opacity-60 group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                                 <div className="absolute top-4 left-4 border border-[#ffb300] text-[#ffb300] size-8 flex items-center justify-center font-bold text-sm bg-black">02</div>
                             </div>
                             <div className="p-6">
@@ -113,7 +114,7 @@ export default function CasosIndex() {
                         <div className="bg-[#1a1a1a] border border-[#333] group hover:border-[#ffb300] transition-colors relative">
                             <div className="absolute top-0 right-10 bg-[#ffb300]/20 h-2 w-12 z-10"></div>
                             <div className="relative h-64 overflow-hidden border-b border-[#333] bg-white">
-                                <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover grayscale mix-blend-multiply opacity-50 group-hover:scale-105 transition-transform duration-700" />
+                                <Image src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=600" alt="Content strategy case study — zombie page revival" fill className="object-cover grayscale mix-blend-multiply opacity-50 group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                                 <div className="absolute top-4 left-4 border border-[#ffb300] text-[#ffb300] size-8 flex items-center justify-center font-bold text-sm bg-black">03</div>
                             </div>
                             <div className="p-6">

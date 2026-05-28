@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -37,7 +38,7 @@ export default function SeoRumbleArticle() {
 
                         <div className="flex items-center gap-4 mb-12">
                             <div className="size-12 rounded-full border-2 border-black overflow-hidden bg-gray-300">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover grayscale" />
+                                <Image src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" alt="Author avatar" fill className="object-cover grayscale" sizes="40px" />
                             </div>
                             <div>
                                 <div className="font-black uppercase text-sm">By Calvo Creativo</div>
@@ -49,7 +50,7 @@ export default function SeoRumbleArticle() {
                         </div>
 
                         <div className="mb-12 border-2 border-black p-1">
-                            <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=1200" className="w-full h-64 md:h-96 object-cover grayscale contrast-125" />
+                            <Image src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=1200" alt="SEO rumble — the fight for search visibility" width={1200} height={384} className="w-full h-64 md:h-96 object-cover grayscale contrast-125" priority />
                             <div className="bg-black text-white text-[9px] font-bold uppercase p-1">Fig 1.1: Ringside Analysis</div>
                         </div>
 

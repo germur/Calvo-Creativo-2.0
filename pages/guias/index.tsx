@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -46,7 +47,7 @@ export default function GuiasIndex() {
                                     </p>
                                     <div className="flex items-center gap-3">
                                         <div className="size-10 rounded-full bg-gray-300 overflow-hidden">
-                                            <img src="https://images.unsplash.com/photo-1577382749553-6232938090bd?auto=format&fit=crop&q=80&w=200" className="object-cover w-full h-full grayscale" />
+                                            <Image src="https://images.unsplash.com/photo-1577382749553-6232938090bd?auto=format&fit=crop&q=80&w=200" alt="The Archivist — Head of SEO" fill className="object-cover grayscale" sizes="40px" />
                                         </div>
                                         <div className="text-xs">
                                             <div className="font-bold">The Archivist</div>
@@ -163,7 +164,7 @@ export default function GuiasIndex() {
 
                                 <div className="flex items-center gap-4 bg-[#f5f5f7] p-4 rounded-lg">
                                     <div className="size-12 bg-gray-300 rounded-full overflow-hidden animate-spin-slow">
-                                        <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" className="w-full h-full object-cover" />
+                                        <Image src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" alt="Album cover — On Rotation playlist" fill className="object-cover" sizes="48px" />
                                     </div>
                                     <div>
                                         <div className="font-bold text-sm">Quimbara</div>

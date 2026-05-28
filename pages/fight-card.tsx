@@ -1,4 +1,5 @@
-﻿import Link from 'next/link';
+﻿import Image from 'next/image';
+import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
@@ -40,7 +41,7 @@ export default function FightCard() {
                                 {/* Fighter Image */}
                                 <div className="relative">
                                     <div className="aspect-[3/4] bg-black grayscale mix-blend-multiply opacity-80 contrast-125">
-                                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" />
+                                        <Image src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=800" alt="SEO fight card — main event fighter" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                                     </div>
                                     <div className="absolute bottom-4 left-4 bg-black text-white px-2 text-[10px] uppercase font-black">Main Event</div>
                                 </div>

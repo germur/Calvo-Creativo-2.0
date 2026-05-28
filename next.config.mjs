@@ -5,6 +5,21 @@ const nextConfig = {
     // URLs más limpias, menos redirects, Netlify lo respeta por defecto.
     trailingSlash: false,
 
+    images: {
+        // AVIF comprime ~20% más que WebP (primera codificación más lenta, luego cacheado)
+        formats: ['image/avif', 'image/webp'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'upload.wikimedia.org',
+            },
+        ],
+    },
+
     async redirects() {
         return [
             // ================================================================

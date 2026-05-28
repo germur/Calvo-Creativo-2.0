@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -35,7 +36,7 @@ export default function EditorialesIndex() {
                         <div className="mb-6 relative group cursor-pointer">
                             <div className="absolute top-4 left-4 bg-black text-white px-2 py-1 text-[10px] uppercase font-bold tracking-widest z-10">Featured</div>
                             <div className="h-[400px] overflow-hidden bg-black mb-6">
-                                <img src="https://images.unsplash.com/photo-1555676329-373d43232822?auto=format&fit=crop&q=80&w=1200" className="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                                <Image src="https://images.unsplash.com/photo-1555676329-373d43232822?auto=format&fit=crop&q=80&w=1200" alt="Technical SEO audit — the ground game of search" fill className="object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" sizes="(max-width: 1024px) 100vw, 66vw" priority />
                             </div>
 
                             <div className="flex items-center gap-4 text-[10px] font-sans font-bold uppercase text-[#f9a825] mb-2">
@@ -58,7 +59,7 @@ export default function EditorialesIndex() {
                             {/* Sub Feature 1 */}
                             <div>
                                 <div className="h-48 overflow-hidden bg-gray-200 mb-4">
-                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover grayscale contrast-125" />
+                                    <Image src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600" alt="Syncopated content strategy — off-beat publishing" fill className="object-cover grayscale contrast-125" sizes="(max-width: 768px) 100vw, 33vw" />
                                 </div>
                                 <div className="text-[9px] font-sans font-bold uppercase text-[#f9a825] mb-1">Salsa Dura Strategy</div>
                                 <h3 className="text-2xl font-black font-headline uppercase leading-tight mb-2">Syncopated Content: Off-Beat Publishing Schedules</h3>
@@ -70,7 +71,7 @@ export default function EditorialesIndex() {
                             {/* Sub Feature 2 */}
                             <div>
                                 <div className="h-48 overflow-hidden bg-gray-200 mb-4">
-                                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover grayscale contrast-125" />
+                                    <Image src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=600" alt="Content remix strategy — repurposing assets" fill className="object-cover grayscale contrast-125" sizes="(max-width: 768px) 100vw, 33vw" />
                                 </div>
                                 <div className="text-[9px] font-sans font-bold uppercase text-[#f9a825] mb-1">Remix Culture</div>
                                 <h3 className="text-2xl font-black font-headline uppercase leading-tight mb-2">Sampling Culture: Hip-Hop's Lesson for Content Strategy</h3>
