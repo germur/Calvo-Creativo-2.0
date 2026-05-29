@@ -82,6 +82,8 @@ export async function getPostData(id: string, type: 'posts' | 'opinion' = 'posts
         title: matterResult.data.title || '',
         tags: matterResult.data.tags || [],
         category: matterResult.data.category || null,
+        // Map excerpt → description so SeoHead gets a unique meta per post
+        description: matterResult.data.description || matterResult.data.excerpt || null,
         ...matterResult.data,
     };
 }

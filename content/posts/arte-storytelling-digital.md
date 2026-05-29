@@ -8,8 +8,8 @@ author: "Roger Calvo"
 category: "Lado B"
 ---
 
-# El Arte del Storytelling Digital
-## De la Cultura Pop a la Ingeniería de la Atención (SEO & Growth)
+## El Arte del Storytelling Digital
+### De la Cultura Pop a la Ingeniería de la Atención (SEO & Growth)
 
 ![Electric Dreams](/images/posts/art-storytelling/uploaded_image_0_1766294105658.jpg)
 

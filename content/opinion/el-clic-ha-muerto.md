@@ -3,6 +3,7 @@ title: "El Clic Ha Muerto: Manifiesto GEO para Motores Generativos"
 date: "2025-12-21"
 updatedDate: "2025-12-21"
 excerpt: "El apocalipsis del tráfico web no es una predicción; es la realidad operativa de hoy. Un manifiesto táctico sobre cómo sobrevivir al cambio de Motor de Búsqueda a Motor de Respuesta."
+description: "¿El clic ha muerto? Qué significan las búsquedas sin clic y los resúmenes de IA para tu tráfico orgánico, y cómo construir visibilidad que no dependa del CTR."
 tags: ["Opinion", "GEO", "Estrategia", "B2B"]
 coverImage: "/images/posts/el-clic-ha-muerto/cover.jpg"
 author: "Roger Calvo"

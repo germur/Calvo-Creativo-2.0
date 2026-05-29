@@ -2,6 +2,7 @@
 title: 'Vibecoding: Por qué dejé las herramientas SEO y empecé a programar'
 date: '2026-01-16'
 excerpt: 'Cuando las herramientas SaaS cuestan $99/mes y hacen lo mismo que un script de Python de 10 líneas, es hora de repensar la estrategia. El nacimiento del "Vibe Coding" en SEO.'
+description: 'Vibecoding vs. herramientas SEO tradicionales: cuándo programar tus propios scripts y cuándo pagar por software. Análisis práctico desde la trinchera.'
 coverImage: '/images/posts/vibecoding.jpg'
 author: 'Roger Murillo'
 tags: ['Python', 'SEO', 'Automation', 'Vibe Coding']

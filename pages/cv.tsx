@@ -172,8 +172,8 @@ export default function CVPage() {
                     content="CV profesional de Roger Murillo (Roger Calvo) — SEO Strategist con 7 años en mercados U.S. y LATAM. Especialista en Topical Authority, GEO y automatización con Python."
                 />
                 <link rel="canonical" href="https://calvocreativo.com/cv" />
-                {/* No index — CV is for direct sharing, not for broad indexing */}
-                <meta name="robots" content="noindex, follow" />
+                {/* Indexable — CV is E-E-A-T signal (experience, expertise, authoritativeness) */}
+                <meta name="robots" content="index, follow" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
