@@ -269,10 +269,16 @@ export default function ConsultoriaHub() {
                 <section className="py-24 text-center px-6 bg-ink text-white border-t-8 border-primary">
                     <h2 className="text-5xl md:text-7xl font-display uppercase mb-6 leading-none">Hablemos de <br />Ingeniería de Crecimiento.</h2>
                     <p className="text-xl text-white/70 font-mono mb-10 max-w-2xl mx-auto">Tu competencia usa IA para escribir basura. Tú úsala para construir imperios.</p>
-                    <Link href="/contacto" className="inline-flex items-center gap-2 px-12 py-5 bg-primary text-white font-display uppercase text-xl border-4 border-white hover:bg-white hover:text-ink hover:border-primary transition-all shadow-[8px_8px_0px_0px_white] hover:shadow-none hover:translate-y-[4px]">
-                        Agendar Discovery Call
-                        <span className="material-symbols-outlined">calendar_month</span>
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Link href="/contacto" className="inline-flex items-center gap-2 px-12 py-5 bg-primary text-white font-display uppercase text-xl border-4 border-white hover:bg-white hover:text-ink hover:border-primary transition-all shadow-[8px_8px_0px_0px_white] hover:shadow-none hover:translate-y-[4px]">
+                            Agendar Discovery Call
+                            <span className="material-symbols-outlined">calendar_month</span>
+                        </Link>
+                        <Link href="/lab/tools/roi-calculator" className="inline-flex items-center gap-2 text-white/70 hover:text-accent font-mono text-sm uppercase tracking-wide transition-colors">
+                            <span className="material-symbols-outlined text-lg">calculate</span>
+                            Calcula el retorno de tu inversión SEO
+                        </Link>
+                    </div>
                 </section>
             </main>
 

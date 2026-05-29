@@ -114,6 +114,31 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                     </div>
                 </div>
 
+                {/* --- ESSENTIAL READS (Priority 3 internal links) --- */}
+                <div className="max-w-6xl mx-auto mb-20">
+                    <div className="flex items-center gap-4 mb-8">
+                        <span className="bg-primary text-white w-8 h-8 flex items-center justify-center font-display text-xl">★</span>
+                        <h2 className="text-3xl font-display uppercase tracking-tighter text-ink">Lecturas Esenciales</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <Link href="/liner-notes/seo-a-geo" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
+                            <span className="font-mono text-[10px] text-primary uppercase tracking-widest">GEO · Estrategia</span>
+                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">Del SEO al GEO</h3>
+                            <p className="text-sm text-ink/70">Guía visual para evolucionar tu estrategia hacia los motores de IA.</p>
+                        </Link>
+                        <Link href="/liner-notes/arte-storytelling-digital" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
+                            <span className="font-mono text-[10px] text-primary uppercase tracking-widest">Storytelling · Growth</span>
+                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">El arte del storytelling digital</h3>
+                            <p className="text-sm text-ink/70">De la cultura pop a la ingeniería SEO: Michael Jackson, Daft Punk y algoritmos.</p>
+                        </Link>
+                        <Link href="/liner-notes/vibecoding-vs-seo-tools" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
+                            <span className="font-mono text-[10px] text-primary uppercase tracking-widest">Python · Automation</span>
+                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">Vibecoding vs herramientas SEO</h3>
+                            <p className="text-sm text-ink/70">Cuándo programar tus propios scripts y cuándo pagar por software.</p>
+                        </Link>
+                    </div>
+                </div>
+
                 {/* --- TRACKS (Dynamic Feed) --- */}
                 <div className="max-w-6xl mx-auto mb-24">
                     <div className="flex items-center gap-4 mb-12">

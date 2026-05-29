@@ -181,6 +181,21 @@ export default function AutomatizacionSeo() {
                 </div>
             </section>
 
+            {/* Related Resources */}
+            <section className="py-12 px-6 bg-gray-50 border-y border-gray-200">
+                <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-sm">
+                    <Link href="/lab/tools/keyword-research" className="inline-flex items-center gap-2 text-[#E11D48] hover:text-black font-mono uppercase tracking-wide transition-colors">
+                        <span className="material-symbols-outlined text-lg">search</span>
+                        Prueba nuestra herramienta de keyword research
+                    </Link>
+                    <span className="hidden sm:block text-gray-300">|</span>
+                    <Link href="/consultoria/estrategia-contenidos-autoridad" className="inline-flex items-center gap-2 text-gray-500 hover:text-black font-mono uppercase tracking-wide transition-colors">
+                        <span className="material-symbols-outlined text-lg">auto_stories</span>
+                        Estrategia de contenidos
+                    </Link>
+                </div>
+            </section>
+
             {/* CTA Final */}
             <section className="py-20 text-center px-6">
                 <h2 className="text-3xl md:text-5xl font-display font-black mb-6">Deja de trabajar duro.</h2>

@@ -439,6 +439,18 @@ export default function ElArtista() {
                     </div>
                 </div>
             </section>
+
+            {/* Author Profile Link */}
+            <section className="py-8 bg-black/90 border-t border-white/10">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <Link href="/autor/roger-calvo" className="inline-flex items-center gap-3 text-white/60 hover:text-white font-mono text-sm uppercase tracking-widest transition-colors">
+                        <span className="material-symbols-outlined text-lg">person</span>
+                        Perfil completo del autor
+                        <span className="material-symbols-outlined text-base">arrow_forward</span>
+                    </Link>
+                </div>
+            </section>
+
             <Footer />
         </div>
     );

@@ -219,10 +219,16 @@ export default function LabHub() {
                             No experimentamos con el dinero de los clientes. Experimentamos aquí, para ir a lo seguro contigo. <br />
                             <span className="text-white">Todo lo que aprendemos rompiendo cosas, lo usamos para construir imperios.</span>
                         </p>
-                        <Link href="/consultoria" className="inline-flex items-center gap-3 px-8 py-4 border border-white/20 hover:border-[#f4258c] rounded-full text-white font-bold uppercase tracking-widest hover:bg-[#f4258c]/10 transition-all group">
-                            <span className="group-hover:text-[#f4258c] transition-colors">Ir a Lado A</span>
-                            <span className="material-symbols-outlined text-[#f4258c] group-hover:translate-x-1 transition-transform">arrow_outward</span>
-                        </Link>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                            <Link href="/consultoria" className="inline-flex items-center gap-3 px-8 py-4 border border-white/20 hover:border-[#f4258c] rounded-full text-white font-bold uppercase tracking-widest hover:bg-[#f4258c]/10 transition-all group">
+                                <span className="group-hover:text-[#f4258c] transition-colors">Ir a Lado A</span>
+                                <span className="material-symbols-outlined text-[#f4258c] group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </Link>
+                            <Link href="/lab/automatizacion-seo-python" className="inline-flex items-center gap-2 text-white/50 hover:text-[#ccff00] font-mono text-xs uppercase tracking-widest transition-colors">
+                                <span className="material-symbols-outlined text-lg">terminal</span>
+                                Automatización SEO con Python
+                            </Link>
+                        </div>
                     </div>
                 </section>
 

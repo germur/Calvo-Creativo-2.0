@@ -464,13 +464,29 @@ export default function Home() {
                         <p className="font-editorial italic text-xl md:text-2xl text-ink max-w-xl leading-snug">
                             &ldquo;El reto no es abandonar la estructura, sino asegurar que nuestras estructuras sirvan a las personas.&rdquo;
                         </p>
-                        <Link
-                            href="/consultoria/arquitectura-seo-geo"
-                            className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink border-b-2 border-ink pb-1 hover:text-red-700 hover:border-red-700 transition-colors whitespace-nowrap"
-                        >
-                            <span>Ver arquitectura GEO</span>
-                            <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                        </Link>
+                        <div className="flex flex-col gap-3">
+                            <Link
+                                href="/consultoria/arquitectura-seo-geo"
+                                className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink border-b-2 border-ink pb-1 hover:text-red-700 hover:border-red-700 transition-colors whitespace-nowrap"
+                            >
+                                <span>Ver arquitectura GEO</span>
+                                <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </Link>
+                            <Link
+                                href="/liner-notes/seo-a-geo"
+                                className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink/60 hover:text-red-700 transition-colors whitespace-nowrap"
+                            >
+                                <span>Artículo destacado: del SEO al GEO</span>
+                                <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">article</span>
+                            </Link>
+                            <Link
+                                href="/lab/tools/roi-calculator"
+                                className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink/60 hover:text-red-700 transition-colors whitespace-nowrap"
+                            >
+                                <span>Prueba nuestra calculadora ROI</span>
+                                <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">calculate</span>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

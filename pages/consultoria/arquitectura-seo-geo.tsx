@@ -186,6 +186,21 @@ export default function ArquitecturaSeoGeo() {
                 </div>
             </section>
 
+            {/* Related Resources */}
+            <section className="py-12 px-6 bg-gray-50 border-y border-gray-200">
+                <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-sm">
+                    <Link href="/liner-notes/seo-a-geo" className="inline-flex items-center gap-2 text-[#E11D48] hover:text-black font-mono uppercase tracking-wide transition-colors">
+                        <span className="material-symbols-outlined text-lg">article</span>
+                        Lee nuestro análisis del SEO al GEO
+                    </Link>
+                    <span className="hidden sm:block text-gray-300">|</span>
+                    <Link href="/consultoria/automatizacion-seo-ia" className="inline-flex items-center gap-2 text-gray-500 hover:text-black font-mono uppercase tracking-wide transition-colors">
+                        <span className="material-symbols-outlined text-lg">terminal</span>
+                        Automatización SEO con IA
+                    </Link>
+                </div>
+            </section>
+
             {/* CTA Final */}
             <section className="py-20 text-center px-6">
                 <h2 className="text-3xl md:text-5xl font-display font-black mb-6">¿Tu web habla el idioma del futuro?</h2>
