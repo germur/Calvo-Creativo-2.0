@@ -20,6 +20,7 @@ export default function IndustryPage({ industry }: Props) {
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
+                <meta name="robots" content="noindex, follow" />
                 <link rel="canonical" href={`https://calvocreativo.com/industrias/${industry.slug}`} />
 
                 {/* Schema specific to industry needs */}

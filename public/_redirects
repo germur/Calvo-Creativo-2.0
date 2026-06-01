@@ -33,3 +33,10 @@
 
 # --- Y el hub de ese servicio (también sin equivalente) ---
 /services/strategic-seo-consulting                     /  410!
+ 
+# ============================================================ 
+# AMPLIACION tanda 2: otros servicios x ciudad FL = doorways. 
+# ============================================================ 
+/services/personal-branding-consulting/*              /  410! 
+/services/seo-automation/*                            /  410! 
+/services/digital-storytelling-services/*             /  410!

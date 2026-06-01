@@ -11,5 +11,8 @@ module.exports = {
         '/cv', // noindex — shared directly, not for broad crawling
         '/gracias', // thank-you page — no indexar
         '/newsletter', // signup form — no indexar
+        '/seo/*', // PSEO ciudades - noindex
+        '/industrias/*', // PSEO industrias - noindex
+        '/wins', // duplica /casos, en ingles - noindex
     ],
 };

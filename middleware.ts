@@ -15,6 +15,9 @@ import type { NextRequest } from 'next/server';
 
 const GONE_PATTERNS = [
     /^\/services\/strategic-seo-consulting(\/|$)/,
+    /^\/services\/personal-branding-consulting(\/|$)/,
+    /^\/services\/seo-automation(\/|$)/,
+    /^\/services\/digital-storytelling-services(\/|$)/,
 ];
 
 export function middleware(request: NextRequest) {

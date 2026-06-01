@@ -20,6 +20,7 @@ export default function CityPage({ city }: Props) {
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
+                <meta name="robots" content="noindex, follow" />
                 <link rel="canonical" href={`https://calvocreativo.com/seo/${city.slug}`} />
 
                 {/* Local Business Schema */}

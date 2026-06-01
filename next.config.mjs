@@ -101,23 +101,7 @@ const nextConfig = {
                 destination: '/servicios/narrativa',
                 permanent: true,
             },
-            {
-                source: '/services/digital-storytelling-services/:slug*',
-                destination: '/servicios/narrativa',
-                permanent: true,
-            },
 
-            // ⭐ Automatización SEO → equivalente exacto (mejor herencia de autoridad)
-            {
-                source: '/services/seo-automation/:slug*',
-                destination: '/consultoria/automatizacion-seo-ia',
-                permanent: true,
-            },
-            {
-                source: '/services/seo-automation',
-                destination: '/consultoria/automatizacion-seo-ia',
-                permanent: true,
-            },
 
             // Ecommerce y Local
             {
@@ -136,12 +120,6 @@ const nextConfig = {
                 permanent: true,
             },
 
-            // Branding Personal
-            {
-                source: '/services/personal-branding-consulting/:slug*',
-                destination: '/el-artista',
-                permanent: true,
-            },
 
             // ================================================================
             // 4. REGLAS GENERALES (cazatodo para URLs viejas de Lovable)

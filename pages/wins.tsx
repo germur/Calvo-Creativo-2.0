@@ -6,7 +6,7 @@ import SeoHead from '@/components/SeoHead';
 export default function Wins() {
     return (
         <>
-            <SeoHead title="Recent Wins: The Fight Record | Calvo Creativo" description="Resultados reales de clientes: incrementos de tráfico, rankings conquistados y conversiones generadas. Datos, no promesas." />
+            <SeoHead title="Recent Wins: The Fight Record | Calvo Creativo" description="Resultados reales de clientes: incrementos de tráfico, rankings conquistados y conversiones generadas. Datos, no promesas." noindex />
             <Navigation />
 
             {/* Comic Book Background */}

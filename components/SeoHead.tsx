@@ -12,9 +12,10 @@ interface SeoProps {
     provider?: string;
     areaServed?: string;
     offerCatalog?: string;
+    noindex?: boolean;
 }
 
-const SeoHead = ({ title, description, type = 'website', image, author, publishDate, modifiedDate, provider, areaServed, offerCatalog }: SeoProps) => {
+const SeoHead = ({ title, description, type = 'website', image, author, publishDate, modifiedDate, provider, areaServed, offerCatalog, noindex = false }: SeoProps) => {
     // ✅ Single useRouter() call at the top — fixes React Hooks rule violation
     const router = useRouter();
 
@@ -107,6 +108,7 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
         <Head>
             <title>{fullTitle}</title>
             <meta name="description" content={metaDescription} />
+            {noindex && <meta name="robots" content="noindex, follow" />}
             <link rel="canonical" href={canonicalUrl} />
 
             {/* OG Tags */}
