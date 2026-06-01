@@ -1,22 +1,10 @@
 import Head from 'next/head';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { getPersonSchema } from '@/lib/person-schema';
 
 export default function AuthorProfile() {
-    const personSchema = {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Roger Calvo",
-        "jobTitle": "SEO Strategist & Marketer-Builder",
-        "url": "https://calvocreativo.com/autor/roger-calvo",
-        "sameAs": [
-            "https://www.linkedin.com/in/rogermur/",
-            "https://github.com/germur",
-            "https://calvocreativo.com"
-        ],
-        "image": "https://calvocreativo.com/images/roger-calvo.jpg",
-        "description": "Estratega SEO especializado en Topical Authority y GEO (Generative Engine Optimization). Ingeniero de Búsqueda y desarrollador de automatizaciones en Python."
-    };
+    const personSchema = getPersonSchema({ pageUrl: 'https://calvocreativo.com/autor/roger-calvo' });
 
     return (
         <div className="min-h-screen flex flex-col bg-paper font-sans text-ink">

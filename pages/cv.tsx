@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { getPersonSchema } from '@/lib/person-schema';
 
 // MrXAvatar uses WebAudio + browser APIs — load client-side only
 const MrXAvatar = dynamic(() => import('@/components/MrXAvatar'), { ssr: false });
@@ -120,24 +121,7 @@ const CV = {
 };
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
-const personSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Roger Murillo',
-    alternateName: 'Roger Calvo',
-    jobTitle: 'SEO Strategist & Content Architect',
-    url: 'https://calvocreativo.com/cv',
-    sameAs: [
-        'https://www.linkedin.com/in/rogermur/',
-        'https://github.com/germur',
-        'https://calvocreativo.com',
-        'https://quimbara.org',
-    ],
-    email: 'roger@calvocreativo.com',
-    knowsAbout: ['SEO', 'Python', 'Generative Engine Optimization', 'Content Strategy', 'Digital Marketing', 'Technical SEO'],
-    description: CV.summary,
-    knowsLanguage: ['Spanish', 'English', 'German'],
-};
+const personSchema = getPersonSchema({ pageUrl: 'https://calvocreativo.com/cv' });
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 function Tag({ label }: { label: string }) {

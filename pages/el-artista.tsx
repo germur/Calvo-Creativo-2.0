@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import SeoHead from '@/components/SeoHead';
 import SpotifyWidget from '@/components/SpotifyWidget';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { personSchemaJson } from '@/lib/person-schema';
 
 // Icons for the Hall of Fame (RESTORED)
 const idols = [
@@ -40,19 +41,7 @@ const idols = [
 ];
 
 export default function ElArtista() {
-    const personSchema = useMemo(() => JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Roger Calvo",
-        "jobTitle": "Consultor SEO & Marketer-Builder",
-        "url": "https://calvocreativo.com/el-artista",
-        "sameAs": [
-            "https://www.linkedin.com/in/rogermur/",
-            "https://github.com/germur"
-        ],
-        "knowsAbout": ["SEO", "Python", "Generative Engine Optimization", "Content Strategy", "Digital Marketing"],
-        "description": "Roger Calvo es un Consultor SEO y Marketer-Builder especializado en estrategias B2B, automatización con Python y optimización para motores generativos (GEO)."
-    }), []);
+    const personSchema = useMemo(() => personSchemaJson('https://calvocreativo.com/el-artista'), []);
 
     return (
         <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-black font-sans">
