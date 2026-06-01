@@ -14,5 +14,6 @@ module.exports = {
         '/seo/*', // PSEO ciudades - noindex
         '/industrias/*', // PSEO industrias - noindex
         '/wins', // duplica /casos, en ingles - noindex
+        '/servicios/automatizacion', // 301 -> consultoria/automatizacion-seo-ia
     ],
 };

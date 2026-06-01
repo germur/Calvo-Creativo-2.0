@@ -23,6 +23,16 @@ const nextConfig = {
     async redirects() {
         return [
             // ================================================================
+            // CANIBALIZACION (tanda 4): servicios/automatizacion duplicaba
+            // exactamente a consultoria/automatizacion-seo-ia (mismo title/kw).
+            // Canonica = /consultoria. 301 permanente.
+            // ================================================================
+            {
+                source: '/servicios/automatizacion',
+                destination: '/consultoria/automatizacion-seo-ia',
+                permanent: true,
+            },
+            // ================================================================
             // 0. RENAME INTERNO: seo-fight-club → calvo-fight-club
             // ================================================================
             {
@@ -106,7 +116,7 @@ const nextConfig = {
             // Ecommerce y Local
             {
                 source: '/services/ecommerce-seo',
-                destination: '/servicios/automatizacion',
+                destination: '/consultoria/automatizacion-seo-ia',
                 permanent: true,
             },
             {
