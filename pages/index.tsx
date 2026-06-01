@@ -125,7 +125,7 @@ export default function Home() {
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-700 font-light max-w-lg mb-10 border-l-4 border-black pl-6">
-                            <strong>Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras.</strong> Nosotros construimos la autoridad que Google premia.
+                            <strong>Consultor SEO &amp; GEO para empresas B2B en USA y Latam.</strong> Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras. Nosotros construimos la autoridad que Google premia.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
