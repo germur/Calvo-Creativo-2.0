@@ -31,3 +31,15 @@ ts-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI agent tooling (no forma parte del sitio)
+.agent/
+.agents/
+.codex/
+.gemini/
+.claude/
+
+# entregables de auditoría / changelogs (viven en disco, no en el repo)
+*.docx
+*.xlsx
+CHANGELOG-SESSION-*.md

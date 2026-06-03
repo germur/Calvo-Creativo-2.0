@@ -38,7 +38,18 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
 }
 
-// Solo corre en las rutas que nos interesan (no penaliza el resto del sitio)
+// Solo corre en las rutas que nos interesan (no penaliza el resto del sitio).
+// IMPORTANTE: el matcher debe cubrir TODOS los GONE_PATTERNS, si no, el
+// middleware nunca se ejecuta para esas rutas y no emite 410.
 export const config = {
-    matcher: ['/services/strategic-seo-consulting/:path*'],
+    matcher: [
+        '/services/strategic-seo-consulting',
+        '/services/strategic-seo-consulting/:path*',
+        '/services/personal-branding-consulting',
+        '/services/personal-branding-consulting/:path*',
+        '/services/seo-automation',
+        '/services/seo-automation/:path*',
+        '/services/digital-storytelling-services',
+        '/services/digital-storytelling-services/:path*',
+    ],
 };
