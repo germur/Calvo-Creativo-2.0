@@ -194,6 +194,11 @@ export default function ArquitecturaSeoGeo() {
                         Lee nuestro análisis del SEO al GEO
                     </Link>
                     <span className="hidden sm:block text-gray-300">|</span>
+                    <Link href="/liner-notes/seo-tecnico-era-ia" className="inline-flex items-center gap-2 text-[#E11D48] hover:text-black font-mono uppercase tracking-wide transition-colors">
+                        <span className="material-symbols-outlined text-lg">terminal</span>
+                        Guía de SEO técnico para la IA
+                    </Link>
+                    <span className="hidden sm:block text-gray-300">|</span>
                     <Link href="/consultoria/automatizacion-seo-ia" className="inline-flex items-center gap-2 text-gray-500 hover:text-black font-mono uppercase tracking-wide transition-colors">
                         <span className="material-symbols-outlined text-lg">terminal</span>
                         Automatización SEO con IA

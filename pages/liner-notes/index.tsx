@@ -136,6 +136,11 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                             <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">Vibecoding vs herramientas SEO</h3>
                             <p className="text-sm text-ink/70">Cuándo programar tus propios scripts y cuándo pagar por software.</p>
                         </Link>
+                        <Link href="/liner-notes/seo-tecnico-era-ia" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
+                            <span className="font-mono text-[10px] text-primary uppercase tracking-widest">SEO Técnico · IA</span>
+                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">SEO técnico para la era de la IA</h3>
+                            <p className="text-sm text-ink/70">La guía definitiva: rastreo, schema y rendimiento cuando tus lectores son los LLMs.</p>
+                        </Link>
                     </div>
                 </div>
 
