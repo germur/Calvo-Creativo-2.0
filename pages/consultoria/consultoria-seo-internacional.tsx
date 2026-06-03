@@ -23,16 +23,16 @@ export default function ConsultoriaInternacional() {
                             Track 04 // Cross-Over Hit
                         </div>
                         <h1 className="text-5xl md:text-7xl font-display font-black text-[#0A0A0A] leading-[0.9] tracking-tighter mb-6">
-                            Visibilidad Global: <br />
-                            <span className="text-[#E11D48]">El Puente entre Latam y USA.</span>
+                            Consultor SEO Internacional: <br />
+                            <span className="text-[#E11D48]">El puente entre Latam y USA.</span>
                         </h1>
                         <p className="text-xl text-gray-600 font-light mb-8 max-w-lg border-l-4 border-[#E11D48] pl-6">
-                            Ingeniería de Silicon Valley, Agilidad Latina.
+                            Consultoría SEO cross-border para el mercado hispano en Estados Unidos y la expansión B2B en Latinoamérica. Ingeniería de Silicon Valley, agilidad latina.
                         </p>
                         <div className="flex gap-4">
-                            <button className="h-14 px-8 rounded bg-[#0A0A0A] text-white font-bold uppercase tracking-wide hover:bg-[#E11D48] transition-colors shadow-xl">
+                            <Link href="/contacto" className="h-14 px-8 rounded bg-[#0A0A0A] text-white font-bold uppercase tracking-wide hover:bg-[#E11D48] transition-colors shadow-xl flex items-center">
                                 Agendar Sesión de Expansión
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -86,8 +86,8 @@ export default function ConsultoriaInternacional() {
             {/* Solution: Cross-Border Strategy */}
             <section className="py-20 px-6 max-w-7xl mx-auto">
                 <div className="mb-12 text-center max-w-3xl mx-auto">
-                    <h2 className="text-3xl md:text-5xl font-display font-black mb-4">Ingeniería de Silicon Valley, Agilidad Latina</h2>
-                    <p className="text-gray-600">Te doy la estrategia técnica de una agencia de Nueva York, con la cercanía cultural de un partner en Latam.</p>
+                    <h2 className="text-3xl md:text-5xl font-display font-black mb-4">Consultoría SEO internacional: ingeniería de Silicon Valley, agilidad latina</h2>
+                    <p className="text-gray-600">Te doy la estrategia técnica de SEO internacional de una agencia de Nueva York, con la cercanía cultural de un partner en Latam.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -98,7 +98,7 @@ export default function ConsultoriaInternacional() {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Arquitectura Técnica</h3>
                         <p className="text-sm leading-relaxed text-white/90 mb-4">
-                            Implementación precisa de <strong>Hreflang</strong> y estructura de URL geo-targetizada (subdirectorios vs ccTLDs) para que Google sepa exactamente a quién mostrar tu contenido.
+                            Implementación precisa de <strong>Hreflang</strong> y estructura de URL geo-targetizada (subdirectorios vs ccTLDs) para que Google sepa exactamente a quién mostrar tu contenido. Todo sobre una base de <Link href="/liner-notes/seo-tecnico-era-ia" className="underline hover:text-white/70">SEO técnico sólido</Link>.
                         </p>
                     </div>
 
