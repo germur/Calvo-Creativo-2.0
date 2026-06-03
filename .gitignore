@@ -39,7 +39,9 @@ next-env.d.ts
 .gemini/
 .claude/
 
-# entregables de auditoría / changelogs (viven en disco, no en el repo)
+# entregables de auditoría / changelogs / docs de trabajo (viven en disco, no en el repo)
 *.docx
 *.xlsx
 CHANGELOG-SESSION-*.md
+Plantilla-Caso-de-Exito.md
+Propuesta-Reestructuracion-Titulos.md
