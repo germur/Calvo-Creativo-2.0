@@ -17,8 +17,8 @@ export default function Home() {
     return (
         <div className="min-h-screen flex flex-col bg-paper font-sans selection:bg-red-600 selection:text-white">
             <Head>
-                <title>Consultor SEO &amp; GEO | Estrategia B2B USA-Latam | Calvo Creativo</title>
-                <meta name="description" content="Ingeniería de búsqueda para la era de la IA. Arquitectura SEO técnica, GEO para LLMs y estrategia de contenidos B2B. Mercado hispano en USA y Latam." />
+                <title>Calvo Creativo | SEO Técnico, Estrategia y Vibecoding · USA-Latam</title>
+                <meta name="description" content="SEO técnico full-stack: arquitectura, estrategia de contenidos y automatización con código. Para empresas y marcas en USA y Latam que quieren la autoridad que Google y la IA premian." />
                 <link rel="canonical" href="https://calvocreativo.com" />
 
                 {/* Schema: Organization */}
@@ -125,7 +125,7 @@ export default function Home() {
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-700 font-light max-w-lg mb-10 border-l-4 border-black pl-6">
-                            <strong>Consultor SEO &amp; GEO para empresas B2B en USA y Latam.</strong> Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras. Nosotros construimos la autoridad que Google premia.
+                            <strong>SEO técnico full-stack para empresas y marcas en USA y Latam.</strong> Estrategia, estructura de contenidos y automatización con código. Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras. Construimos la autoridad que Google —y la IA— premian.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
