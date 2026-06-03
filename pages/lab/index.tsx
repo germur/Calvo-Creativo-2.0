@@ -100,7 +100,7 @@ export default function LabHub() {
                                 Aquí encontrarás desde <strong className="text-white">herramientas gratuitas</strong> (calculadoras de ROI, trackers de GEO) hasta <strong className="text-white">experimentos controlados</strong> como el Fight Club que enfrentó contenido humano contra IA, o el caso Frankenstein donde un enjambre de agentes autónomos gestionó un sitio web completo.
                             </p>
                             <p>
-                                Todo lo que publicamos en el Lab sigue un principio: <span className="text-[#ccff00]">si no tiene datos, no es un experimento — es una opinión.</span> Y las opiniones las guardamos para <a href="/liner-notes" className="text-[#f4258c] hover:underline">Liner Notes</a>.
+                                Todo lo que publicamos en el Lab sigue un principio: <span className="text-[#ccff00]">si no tiene datos, no es un experimento, es una opinión.</span> Y las opiniones las guardamos para <a href="/liner-notes" className="text-[#f4258c] hover:underline">Liner Notes</a>.
                             </p>
                         </div>
                     </div>

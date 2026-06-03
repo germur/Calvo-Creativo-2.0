@@ -57,7 +57,7 @@ El día que ejecutas tu propio código y obtienes datos frescos, sin intermediar
 
 ### Sigue explorando
 
-- 📡 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo) — La evolución de tu estrategia de contenidos para la era de la IA.
-- 🎤 [Storytelling Digital y la Ingeniería de la Atención](/liner-notes/arte-storytelling-digital) — Cómo la cultura pop decodificó los algoritmos humanos antes que los digitales.
-- 🥊 [Humano vs IA: Fight Club](/lab/calvo-fight-club/humano-vs-ia) — El experimento que enfrentó contenido humano contra contenido generado por IA.
-- 🛠️ [Automatización SEO con Python](/lab/automatizacion-seo-python) — Scripts y herramientas para auditorías a escala.
+- 📡 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo): La evolución de tu estrategia de contenidos para la era de la IA.
+- 🎤 [Storytelling Digital y la Ingeniería de la Atención](/liner-notes/arte-storytelling-digital): Cómo la cultura pop decodificó los algoritmos humanos antes que los digitales.
+- 🥊 [Humano vs IA: Fight Club](/lab/calvo-fight-club/humano-vs-ia): El experimento que enfrentó contenido humano contra contenido generado por IA.
+- 🛠️ [Automatización SEO con Python](/lab/automatizacion-seo-python): Scripts y herramientas para auditorías a escala.

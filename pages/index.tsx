@@ -125,7 +125,7 @@ export default function Home() {
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-700 font-light max-w-lg mb-10 border-l-4 border-black pl-6">
-                            <strong>SEO técnico full-stack para empresas y marcas en USA y Latam.</strong> Estrategia, estructura de contenidos y automatización con código. Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras. Construimos la autoridad que Google —y la IA— premian.
+                            <strong>SEO técnico full-stack para empresas y marcas en USA y Latam.</strong> Estrategia, estructura de contenidos y automatización con código. Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras. Construimos la autoridad que premian Google y la IA.
                         </p>
 
                         <div className="flex flex-wrap gap-4">

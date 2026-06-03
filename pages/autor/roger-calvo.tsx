@@ -70,7 +70,7 @@ export default function AuthorProfile() {
                             El marketing moderno requiere más que ideas; requiere ejecución técnica. No solo diseño la estrategia, sino que construyo las herramientas (scripts, scrapers, automatizaciones) para ejecutarla a escala. Cuando un problema se repite, lo automatizo. Cuando una herramienta no existe, la creo.
                         </p>
                         <p>
-                            Esta mentalidad nace de una frustración real: las agencias tradicionales venden PowerPoints bonitos y luego tercerizan la ejecución. Yo hago lo contrario — empiezo por los datos, construyo la infraestructura, y después la estrategia se ejecuta sola.
+                            Esta mentalidad nace de una frustración real: las agencias tradicionales venden PowerPoints bonitos y luego tercerizan la ejecución. Yo hago lo contrario: empiezo por los datos, construyo la infraestructura, y después la estrategia se ejecuta sola.
                         </p>
 
                         <h3>Áreas de Experiencia (E-E-A-T)</h3>
@@ -86,10 +86,10 @@ export default function AuthorProfile() {
                             Además de la consultoría, mantengo un laboratorio público donde documento experimentos reales con datos verificables:
                         </p>
                         <ul>
-                            <li><a href="/liner-notes/seo-a-geo">De SEO a GEO: Guía Visual</a> — La evolución de la estrategia de contenidos para la era de motores generativos.</li>
-                            <li><a href="/lab/opinion/el-clic-ha-muerto">El Clic Ha Muerto: Manifiesto GEO</a> — Por qué el tráfico web ya no es la métrica que importa.</li>
-                            <li><a href="/lab/calvo-fight-club/humano-vs-ia">Humano vs IA: Fight Club</a> — Experimento controlado que enfrentó contenido humano contra contenido generado.</li>
-                            <li><a href="https://quimbara.org" target="_blank" rel="noopener noreferrer">Quimbara.org</a> — Blog personal sobre UFC y artes marciales mixtas.</li>
+                            <li><a href="/liner-notes/seo-a-geo">De SEO a GEO: Guía Visual</a>: la evolución de la estrategia de contenidos para la era de motores generativos.</li>
+                            <li><a href="/lab/opinion/el-clic-ha-muerto">El Clic Ha Muerto: Manifiesto GEO</a>: por qué el tráfico web ya no es la métrica que importa.</li>
+                            <li><a href="/lab/calvo-fight-club/humano-vs-ia">Humano vs IA: Fight Club</a>: experimento controlado que enfrentó contenido humano contra contenido generado.</li>
+                            <li><a href="https://quimbara.org" target="_blank" rel="noopener noreferrer">Quimbara.org</a>: blog personal sobre UFC y artes marciales mixtas.</li>
                         </ul>
 
                         <div className="not-prose mt-12 p-8 bg-gray-100 border-l-4 border-black">

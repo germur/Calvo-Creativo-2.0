@@ -124,7 +124,7 @@ El storytelling digital en 2026 no es adornar textos; es arquitectura de la info
 
 ### Sigue explorando
 
-- 📡 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo) — Cómo adaptar tu estrategia de contenidos para motores generativos.
-- 🔥 [El Clic Ha Muerto: Manifiesto GEO](/lab/opinion/el-clic-ha-muerto) — El manifiesto táctico sobre Concept Ownership y motores de respuesta.
-- ⚡ [Vibecoding: Por qué dejé las herramientas SEO](/liner-notes/vibecoding-vs-seo-tools) — Cuando un script de Python reemplaza un SaaS completo.
-- 🏗️ [Estrategia de Contenidos & Autoridad](/consultoria/estrategia-contenidos-autoridad) — Mi servicio para construir bibliotecas de autoridad temática.
+- 📡 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo): Cómo adaptar tu estrategia de contenidos para motores generativos.
+- 🔥 [El Clic Ha Muerto: Manifiesto GEO](/lab/opinion/el-clic-ha-muerto): El manifiesto táctico sobre Concept Ownership y motores de respuesta.
+- ⚡ [Vibecoding: Por qué dejé las herramientas SEO](/liner-notes/vibecoding-vs-seo-tools): Cuando un script de Python reemplaza un SaaS completo.
+- 🏗️ [Estrategia de Contenidos & Autoridad](/consultoria/estrategia-contenidos-autoridad): Mi servicio para construir bibliotecas de autoridad temática.

@@ -107,7 +107,7 @@ La ventaja competitiva de 2026 no es quién publica más rápido, sino quién se
 
 ### Sigue explorando
 
-- 📊 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo) — El playbook visual paso a paso para evolucionar tu estrategia de búsqueda.
-- 🎤 [Storytelling Digital: De la Cultura Pop a la Ingeniería SEO](/liner-notes/arte-storytelling-digital) — Cómo construir narrativas que los algoritmos (y los humanos) no pueden ignorar.
-- ⚡ [Vibecoding: Automatización SEO con Python](/liner-notes/vibecoding-vs-seo-tools) — La revolución del "Vibe Coder" en el marketing.
-- 🏗️ [Arquitectura SEO & GEO](/consultoria/arquitectura-seo-geo) — Cómo aplicamos estos principios a tu infraestructura de búsqueda.
+- 📊 [De SEO a GEO: Guía Visual](/liner-notes/seo-a-geo): El playbook visual paso a paso para evolucionar tu estrategia de búsqueda.
+- 🎤 [Storytelling Digital: De la Cultura Pop a la Ingeniería SEO](/liner-notes/arte-storytelling-digital): Cómo construir narrativas que los algoritmos (y los humanos) no pueden ignorar.
+- ⚡ [Vibecoding: Automatización SEO con Python](/liner-notes/vibecoding-vs-seo-tools): La revolución del "Vibe Coder" en el marketing.
+- 🏗️ [Arquitectura SEO & GEO](/consultoria/arquitectura-seo-geo): Cómo aplicamos estos principios a tu infraestructura de búsqueda.

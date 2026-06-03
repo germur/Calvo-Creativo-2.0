@@ -113,7 +113,7 @@ El objetivo final no ha cambiado: servir al usuario. Pero ahora, para servir al 
 
 ### Sigue explorando
 
-- 📡 [El Clic Ha Muerto: Manifiesto GEO](/lab/opinion/el-clic-ha-muerto) — El manifiesto táctico sobre cómo sobrevivir al cambio de Motor de Búsqueda a Motor de Respuesta.
-- 🎤 [Storytelling Digital: De la Cultura Pop a la Ingeniería SEO](/liner-notes/arte-storytelling-digital) — Cómo Michael Jackson y Daft Punk decodificaron los algoritmos humanos antes que los digitales.
-- ⚡ [Vibecoding: Por qué dejé las herramientas SEO](/liner-notes/vibecoding-vs-seo-tools) — Cuando un script de Python hace lo mismo que un SaaS de $99/mes.
-- 🏗️ [Consultoría: Arquitectura SEO & GEO](/consultoria/arquitectura-seo-geo) — Mi servicio de ingeniería de búsqueda para la era de la IA.
+- 📡 [El Clic Ha Muerto: Manifiesto GEO](/lab/opinion/el-clic-ha-muerto): El manifiesto táctico sobre cómo sobrevivir al cambio de Motor de Búsqueda a Motor de Respuesta.
+- 🎤 [Storytelling Digital: De la Cultura Pop a la Ingeniería SEO](/liner-notes/arte-storytelling-digital): Cómo Michael Jackson y Daft Punk decodificaron los algoritmos humanos antes que los digitales.
+- ⚡ [Vibecoding: Por qué dejé las herramientas SEO](/liner-notes/vibecoding-vs-seo-tools): Cuando un script de Python hace lo mismo que un SaaS de $99/mes.
+- 🏗️ [Consultoría: Arquitectura SEO & GEO](/consultoria/arquitectura-seo-geo): Mi servicio de ingeniería de búsqueda para la era de la IA.
