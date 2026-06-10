@@ -42,6 +42,14 @@ const Footer = () => {
                         <li><Link href="/consultoria/consultoria-seo-internacional" className="hover:text-white transition-colors">SEO Internacional (USA/Latam)</Link></li>
                         <li><Link href="/casos" className="hover:text-white transition-colors">Casos de Éxito</Link></li>
                         <li><Link href="/consultoria" className="hover:text-white transition-colors">Auditoría Técnica</Link></li>
+                        <li><Link href="/servicios/narrativa" className="hover:text-white transition-colors">Narrativa de Datos</Link></li>
+                        <li><Link href="/servicios/letras" className="hover:text-white transition-colors">UX Writing & Copy SEO</Link></li>
+                        <li><Link href="/servicios/composicion" className="hover:text-white transition-colors">Arquitectura Editorial</Link></li>
+                        <li><Link href="/servicios/geo-ia" className="hover:text-white transition-colors">GEO Local (IA & Maps)</Link></li>
+                        <li><Link href="/servicios/migraciones" className="hover:text-white transition-colors">Migraciones SEO</Link></li>
+                        <li><Link href="/guias" className="hover:text-white transition-colors">Guías Técnicas</Link></li>
+                        <li><Link href="/vs/agencia-tradicional" className="hover:text-white transition-colors">vs. Agencia Tradicional</Link></li>
+                        <li><Link href="/lab/metodologia" className="hover:text-white transition-colors">Metodología</Link></li>
                     </ul>
                 </div>
 

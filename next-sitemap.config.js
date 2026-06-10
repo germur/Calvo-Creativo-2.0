@@ -14,5 +14,8 @@ module.exports = {
         '/industrias/*', // PSEO industrias - noindex
         '/wins', // duplica /casos, en ingles - noindex
         '/servicios/automatizacion', // 301 -> consultoria/automatizacion-seo-ia
+        '/booking', // noindex - duplica intencion con /contacto
+        '/contratar', // noindex - duplica intencion con /contacto
+        '/mapa-del-sitio', // sitemap HTML - no indexar
     ],
 };

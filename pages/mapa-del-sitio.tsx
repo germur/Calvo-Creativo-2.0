@@ -7,6 +7,7 @@ export default function Sitemap() {
     return (
         <div className="min-h-screen flex flex-col bg-paper font-sans">
             <Head>
+                <meta name="robots" content="noindex, follow" />
                 <title>Mapa del Sitio | Calvo Creativo</title>
                 <meta name="description" content="Índice completo de Calvo Creativo. Navegación rápida para usuarios y agentes de IA." />
                 <link rel="canonical" href="https://calvocreativo.com/mapa-del-sitio" />
