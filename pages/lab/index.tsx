@@ -30,6 +30,15 @@ export default function LabHub() {
                 <title>SEO Lab & Vibe Coding | Experimentos de Marketing con IA y Python</title>
                 <meta name="description" content="No confíes en la teoría. En el Lab rompemos algoritmos, probamos agentes de IA y compartimos scripts de Python. Datos reales." />
                 <link rel="canonical" href="https://calvocreativo.com/lab" />
+                {/* Open Graph + Twitter (tanda 6) */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://calvocreativo.com/lab" />
+                <meta property="og:title" content="SEO Lab & Vibe Coding" />
+                <meta property="og:image" content="https://calvocreativo.com/api/og?title=SEO%20Lab%20%26%20Vibe%20Coding" />
+                <meta property="og:site_name" content="Calvo Creativo" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:image" content="https://calvocreativo.com/api/og?title=SEO%20Lab%20%26%20Vibe%20Coding" />
                 <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&family=Shrikhand&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
                 <script
                     type="application/ld+json"

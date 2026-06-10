@@ -20,6 +20,15 @@ export default function Home() {
                 <title>Calvo Creativo | SEO Técnico, Estrategia y Vibecoding · USA-Latam</title>
                 <meta name="description" content="SEO técnico full-stack: arquitectura, estrategia de contenidos y automatización con código. Para empresas y marcas en USA y Latam que quieren la autoridad que Google y la IA premian." />
                 <link rel="canonical" href="https://calvocreativo.com" />
+                {/* Open Graph + Twitter (tanda 6) */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://calvocreativo.com" />
+                <meta property="og:title" content="Consultor SEO & GEO | B2B USA-Latam" />
+                <meta property="og:image" content="https://calvocreativo.com/api/og?title=Consultor%20SEO%20%26%20GEO%20%7C%20B2B%20USA-Latam" />
+                <meta property="og:site_name" content="Calvo Creativo" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:image" content="https://calvocreativo.com/api/og?title=Consultor%20SEO%20%26%20GEO%20%7C%20B2B%20USA-Latam" />
 
                 {/* Schema: Organization */}
                 <script

@@ -58,6 +58,15 @@ export default function ConsultoriaHub() {
                 <title>Consultoría SEO Técnica e Internacional | Calvo Creativo</title>
                 <meta name="description" content="Consultoría SEO full-stack para empresas y marcas en USA y Latam: SEO técnico, arquitectura, estrategia de contenidos y automatización con IA. Sin humo, con criterio." />
                 <link rel="canonical" href="https://calvocreativo.com/consultoria" />
+                {/* Open Graph + Twitter (tanda 6) */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://calvocreativo.com/consultoria" />
+                <meta property="og:title" content="Consultoria SEO B2B & Ingenieria de Busqueda" />
+                <meta property="og:image" content="https://calvocreativo.com/api/og?title=Consultoria%20SEO%20B2B%20%26%20Ingenieria%20de%20Busqueda" />
+                <meta property="og:site_name" content="Calvo Creativo" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:image" content="https://calvocreativo.com/api/og?title=Consultoria%20SEO%20B2B%20%26%20Ingenieria%20de%20Busqueda" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

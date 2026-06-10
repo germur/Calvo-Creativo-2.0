@@ -29,6 +29,15 @@ export default function Contacto() {
                 <title>Contacto Calvo Creativo | Hablemos Sin Pelos en la Lengua</title>
                 <meta name="description" content="¿Listo para dejar de perseguir algoritmos? Agenda una sesión de ingeniería de búsqueda. Sin intermediarios, sin humo, y con mucha estrategia." />
                 <link rel="canonical" href="https://calvocreativo.com/contacto" />
+                {/* Open Graph + Twitter (tanda 6) */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://calvocreativo.com/contacto" />
+                <meta property="og:title" content="Contacto | Calvo Creativo" />
+                <meta property="og:image" content="https://calvocreativo.com/api/og?title=Contacto%20%7C%20Calvo%20Creativo" />
+                <meta property="og:site_name" content="Calvo Creativo" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:image" content="https://calvocreativo.com/api/og?title=Contacto%20%7C%20Calvo%20Creativo" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}

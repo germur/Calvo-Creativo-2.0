@@ -156,6 +156,15 @@ export default function CVPage() {
                     content="CV profesional de Roger Murillo (Roger Calvo) — SEO Strategist con 7 años en mercados U.S. y LATAM. Especialista en Topical Authority, GEO y automatización con Python."
                 />
                 <link rel="canonical" href="https://calvocreativo.com/cv" />
+                {/* Open Graph + Twitter (tanda 6) */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://calvocreativo.com/cv" />
+                <meta property="og:title" content="Roger Murillo CV | SEO Strategist" />
+                <meta property="og:image" content="https://calvocreativo.com/api/og?title=Roger%20Murillo%20CV%20%7C%20SEO%20Strategist" />
+                <meta property="og:site_name" content="Calvo Creativo" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:image" content="https://calvocreativo.com/api/og?title=Roger%20Murillo%20CV%20%7C%20SEO%20Strategist" />
                 {/* Indexable — CV is E-E-A-T signal (experience, expertise, authoritativeness) */}
                 <meta name="robots" content="index, follow" />
                 <script
