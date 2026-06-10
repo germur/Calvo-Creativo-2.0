@@ -23,7 +23,7 @@ export default function LetrasService() {
 
                             <h1 className="text-8xl md:text-[10rem] font-display uppercase leading-[0.8] tracking-tighter text-ink mb-8">
                                 Letras<br />
-                                Que <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Pegann</span>
+                                Que <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Pegan</span>
                             </h1>
 
                             <div className="border-l-8 border-accent pl-8 py-2 mb-10 max-w-xl">
