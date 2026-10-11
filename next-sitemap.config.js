@@ -2,6 +2,11 @@
 module.exports = {
     siteUrl: 'https://calvocreativo.com',
     generateRobotsTxt: true,
+    // Avoid reporting every rebuild as a content update.
+    autoLastmod: false,
+    robotsTxtOptions: {
+        policies: [{ userAgent: '*', allow: '/', disallow: ['/textures/', '/api/'] }],
+    },
     // ⚡ SIN trailing slash — consistente con next.config.mjs
     trailingSlash: false,
     exclude: [
