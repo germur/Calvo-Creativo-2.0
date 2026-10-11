@@ -160,6 +160,30 @@ export default function Post({ postData, relatedPosts }: { postData: any, relate
                                 </ReactMarkdown>
                             </article>
 
+                                {/* Related Posts Cluster */}
+                                {relatedPosts && relatedPosts.length > 0 && (
+                                    <div className="mt-12 bg-stone-light border-2 border-ink p-6 shadow-brutal-sm">
+                                        <h4 className="font-mono text-xs uppercase font-bold text-ink mb-4 border-b-2 border-ink pb-2 flex items-center gap-2">
+                                            <span className="material-symbols-outlined text-sm">hub</span>
+                                            Similares
+                                        </h4>
+                                        <ul className="space-y-4">
+                                            {relatedPosts.map((post: any) => (
+                                                <li key={post.id} className="group">
+                                                    <Link href={`/liner-notes/${post.id}`} className="block">
+                                                        <span className="text-[10px] font-bold text-primary uppercase block mb-1">
+                                                            {post.date}
+                                                        </span>
+                                                        <h5 className="font-display text-lg uppercase leading-none group-hover:text-primary transition-colors">
+                                                            {post.title}
+                                                        </h5>
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
                             {/* Author Box (E-E-A-T) */}
                             <AuthorBox />
 
@@ -230,29 +254,7 @@ export default function Post({ postData, relatedPosts }: { postData: any, relate
                                     </div>
                                 </div>
 
-                                {/* Related Posts Cluster */}
-                                {(postData as any).relatedPosts && (postData as any).relatedPosts.length > 0 && (
-                                    <div className="mt-8 bg-stone-light border-2 border-ink p-6 shadow-brutal-sm">
-                                        <h4 className="font-mono text-xs uppercase font-bold text-ink mb-4 border-b-2 border-ink pb-2 flex items-center gap-2">
-                                            <span className="material-symbols-outlined text-sm">hub</span>
-                                            Similares
-                                        </h4>
-                                        <ul className="space-y-4">
-                                            {(postData as any).relatedPosts.map((post: any) => (
-                                                <li key={post.id} className="group">
-                                                    <Link href={`/liner-notes/${post.id}`} className="block">
-                                                        <span className="text-[10px] font-bold text-primary uppercase block mb-1">
-                                                            {post.date}
-                                                        </span>
-                                                        <h5 className="font-display text-lg uppercase leading-none group-hover:text-primary transition-colors">
-                                                            {post.title}
-                                                        </h5>
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                )}
+
                             </div>
                         </aside>
 

@@ -12,7 +12,7 @@ tags: ["Estrategia Digital", "IA", "GEO", "Guía Visual"]
 **Por: Calvo Creativo** | **Tiempo de lectura:** 10 minutos | **Tema:** Estrategia Digital & IA
 
 ![Re-charting the Map of Search](/images/blog/seo-a-geo/hero-map.jpg)
-*<small>El mapa ha cambiado para siempre.</small>*
+*El mapa ha cambiado para siempre.*
 
 ## El Nuevo Terreno: "The Ground Has Shifted"
 
