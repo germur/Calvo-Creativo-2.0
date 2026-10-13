@@ -2,6 +2,7 @@
 import Document from '@/src/layouts/Document.astro';
 import Navigation from '@/src/components/Navigation.astro';
 import Footer from '@/src/components/Footer.astro';
+import CaseCards from '@/src/components/CaseCards.astro';
 ---
 <Document>
 <Fragment slot="head">
@@ -467,6 +468,13 @@ import Footer from '@/src/components/Footer.astro';
                 </div>
             </section>
 
+            <section class="max-w-7xl mx-auto px-6 py-16">
+                <p class="font-mono text-primary uppercase text-sm mb-4">De la estrategia al trabajo real</p>
+                <h2 class="font-display text-4xl md:text-5xl mb-6">Trabajos y casos de éxito</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mb-8">SEO, desarrollo y Ads: así abordamos proyectos de fisioterapia, asesoría de imagen, reclamaciones y captación de contactos.</p>
+                <CaseCards />
+                <a href="/casos" class="inline-block mt-8 font-bold underline decoration-primary underline-offset-4">Explorar todos los casos →</a>
+            </section>
             {/* --- 6. SOCIAL PROOF & FOOTER --- */}
             <section class="py-20 bg-black text-white text-center">
                 <div class="max-w-7xl mx-auto px-6">

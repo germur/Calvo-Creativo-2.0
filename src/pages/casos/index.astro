@@ -1,6 +1,18 @@
 ---
-import * as view from '@/src/views/casos/index.tsx';
-import Page from '@/src/layouts/Page.astro';
-const props = Astro.props;
+import Document from '@/src/layouts/Document.astro';
+import Navigation from '@/src/components/Navigation.astro';
+import Footer from '@/src/components/Footer.astro';
+import CaseCards from '@/src/components/CaseCards.astro';
+import { cases } from '@/src/cases';
+const url='https://calvocreativo.com/casos';
+const description='Trabajos de Calvo Creativo: SEO y web para Germán Montenegro y Roger Murillo, CRM para All Claims y campañas de Google Ads para Prendaautos.';
+const schema={'@context':'https://schema.org','@type':'CollectionPage','@id':`${url}#webpage`,url,name:'Trabajos y casos de Calvo Creativo',description,isPartOf:{'@id':'https://calvocreativo.com/#website'},mainEntity:{'@type':'ItemList',itemListElement:cases.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.client,url:`${url}/${item.slug}`}))}};
 ---
-<Page component={view.default} pageProps={props} />
+<Document><Fragment slot="head"><title>Trabajos y casos: SEO, CRM y Ads | Calvo Creativo</title><meta name="description" content={description}/><link rel="canonical" href={url}/><meta property="og:type" content="website"/><meta property="og:title" content="Trabajos y casos | Calvo Creativo"/><meta property="og:description" content={description}/><meta property="og:url" content={url}/><meta property="og:image" content="https://calvocreativo.com/api/og?title=Trabajos%20y%20casos"/><meta name="twitter:card" content="summary_large_image"/><script type="application/ld+json" set:html={JSON.stringify(schema)}/></Fragment>
+<Navigation/><main>
+<header class="bg-ink text-white px-6 py-14 md:py-20 border-b-8 border-primary"><div class="max-w-7xl mx-auto"><p class="font-mono text-accent uppercase tracking-widest mb-5">El trabajo detrás de la estrategia</p><h1 class="font-display text-5xl md:text-7xl leading-none mb-6">Trabajos y<br/><span class="text-accent">casos de éxito.</span></h1><p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">SEO, webs, software y publicidad. Proyectos en los que entendimos un problema, construimos una solución y aprendimos del resultado.</p><p class="font-mono text-sm mt-6 text-gray-300">Roger Murillo · Calvo Creativo</p></div></header>
+<section class="max-w-7xl mx-auto px-6 py-14"><h2 class="font-display text-3xl mb-8">Cuatro proyectos, cuatro desafíos</h2><CaseCards/></section>
+<section class="max-w-7xl mx-auto px-6 pb-14"><h2 class="font-display text-3xl mb-5">Más allá del resultado</h2><p class="text-lg leading-relaxed max-w-3xl">Cada caso cuenta el problema, las decisiones y lo que podemos demostrar. Las solicitudes, las ventas y los resultados técnicos tienen medidas distintas; los presentamos con su contexto.</p></section>
+<section class="bg-white border-y-2 border-ink px-6 py-12"><div class="max-w-7xl mx-auto"><h2 class="font-display text-3xl mb-4">Análisis independientes</h2><p class="text-gray-700 mb-5">También estudio proyectos públicos para encontrar oportunidades de arquitectura y búsqueda. Estos análisis no implican una relación comercial.</p><a href="/casos/ufc" class="font-bold underline underline-offset-4">Leer la auditoría SEO de UFC →</a></div></section>
+<section class="max-w-7xl mx-auto px-6 py-16"><h2 class="font-display text-4xl mb-5">Tu proyecto también tiene una historia.</h2><p class="text-lg mb-8">Empecemos por el problema que necesitas resolver.</p><a href="/contacto" class="inline-block bg-primary text-white border-2 border-ink px-8 py-4 font-bold shadow-brutal-sm">Cuéntame tu proyecto →</a></section>
+</main><Footer/></Document>

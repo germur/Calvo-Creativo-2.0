@@ -5,6 +5,7 @@ const isMenuOpen = false;
 const navItems = [
         { name: 'Lado A (Servicios)', path: '/consultoria' },
         { name: 'Lado B (Lab)', path: '/lab' },
+        { name: 'Trabajos y casos', path: '/casos' },
         { name: 'Liner Notes', path: '/liner-notes' },
         { name: 'El Artista', path: '/el-artista' }
     ];
@@ -25,7 +26,7 @@ const navItems = [
                 </a>
 
                 {/* Desktop Menu */}
-                <div class="hidden lg:flex items-center gap-8 mt-4 md:mt-0">
+                <div class="hidden xl:flex items-center gap-8 mt-4 md:mt-0">
                     <div class="flex items-center gap-6 font-display text-lg uppercase">
                         {navItems.map((item) => (
                             <a
@@ -46,7 +47,7 @@ const navItems = [
                 {/* Hamburger Button */}
                 <button
                     data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"
-                    class="lg:hidden z-[102] relative p-2 border-2 border-ink bg-white shadow-brutal-sm active:translate-y-1 active:shadow-none transition-all"
+                    class="xl:hidden z-[102] relative p-2 border-2 border-ink bg-white shadow-brutal-sm active:translate-y-1 active:shadow-none transition-all"
                     aria-label="Menu"
                 >
                     <span class="material-symbols-outlined text-3xl">
@@ -76,3 +77,4 @@ const navItems = [
                 </div>
             </div>
         </nav>
+

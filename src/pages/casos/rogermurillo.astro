@@ -1,6 +1,5 @@
 ---
-import * as view from '@/src/views/casos/rogermurillo.tsx';
-import Page from '@/src/layouts/Page.astro';
-const props = Astro.props;
+import CaseStudy from '@/src/layouts/CaseStudy.astro';
+import { cases } from '@/src/cases';
 ---
-<Page component={view.default} pageProps={props} />
+<CaseStudy item={cases[0]}/>
