@@ -4,7 +4,7 @@ import AlbumCover from './AlbumCover.astro';
 ---
 <div class="portfolio-grid">
 {cases.map(item => <a href={`/casos/${item.slug}`} class="portfolio-card">
- <div class="card-cover"><AlbumCover slug={item.slug} /></div>
+ <div class="card-cover" data-bjj-corner><AlbumCover slug={item.slug} /></div>
  <div class="card-content"><p class="card-category">{item.category}</p><h3>{item.client}</h3><p class="card-summary">{item.summary}</p><div class="card-outcome"><strong>{item.signal}</strong><span>{item.label}</span></div><span class="card-read">Explorar el caso <span aria-hidden="true">→</span></span></div>
 </a>)}
 </div>

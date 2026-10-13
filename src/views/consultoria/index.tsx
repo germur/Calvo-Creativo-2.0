@@ -79,13 +79,13 @@ export default function ConsultoriaHub() {
             {/* GEO Definition Block - Marquee Style */}
             <div className="bg-ink text-paper py-3 border-b-4 border-ink overflow-hidden whitespace-nowrap">
                 <div className="animate-marquee inline-block font-mono text-xs tracking-widest uppercase">
-                    GEO Definition // Ingeniería de Búsqueda // Activos Digitales // Authority First // No More Slop // <span className="text-accent">Calvo Fighter v2.5</span> //
+                    GEO Definition // Ingeniería de Búsqueda // Activos Digitales // Authority First // No More Slop // <span className="text-accent">Calvo Creativo</span> //
                 </div>
             </div>
 
             <main>
                 {/* Hero Section */}
-                <section className="relative pt-24 pb-32 px-6 overflow-hidden border-b-4 border-ink">
+                <section data-bjj-corner="" className="relative pt-24 pb-32 px-6 overflow-hidden border-b-4 border-ink">
                     <div className="max-w-7xl mx-auto mb-8">
                         <Breadcrumbs theme="light" />
                     </div>

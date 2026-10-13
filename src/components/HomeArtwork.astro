@@ -4,7 +4,7 @@ import AlbumCover from './AlbumCover.astro';
 <header class="salsa-hero">
  <div class="hero-grid">
   <div><p class="edition">Roger Murillo / Calvo Creativo</p><h1>SEO con<br/><span>estrategia.</span><br/>Marcas con<br/><em>historia.</em></h1><p class="intro">Estrategia SEO, arquitectura de contenidos y automatización para empresas y marcas en USA y Latam. Entender las búsquedas, construir la solución y contar lo que cambió.</p><div class="actions"><a href="/casos" data-event="click_view_cases" data-category="Navigation" data-label="Hero Cases">Explorar los trabajos <span aria-hidden="true">↘</span></a><a href="/contacto" data-event="click_schedule_audit" data-category="Conversion" data-label="Hero Contact">Hablemos de tu proyecto →</a></div><p class="credit">Estrategia e implementación por Roger Murillo.</p></div>
-  <div class="hero-art"><AlbumCover slug="home" priority /><span class="stamp" aria-hidden="true">Ideas con<br/>criterio.</span></div>
+  <div class="hero-art" data-bjj-corner><AlbumCover slug="home" priority /><span class="stamp" aria-hidden="true">Ideas con<br/>criterio.</span></div>
  </div>
  <div class="liner"><span>SEO estratégico</span><span aria-hidden="true">✳</span><span>Storytelling digital</span><span aria-hidden="true">✳</span><span>Código que resuelve</span></div>
 </header>
@@ -19,4 +19,3 @@ import AlbumCover from './AlbumCover.astro';
  @media(prefers-reduced-motion:reduce){.hero-art,h1>em,.stamp{transform:none}}
  @media(max-width:650px){.salsa-hero{padding-top:28px}.hero-art{order:-1;max-width:320px}.hero-grid{gap:30px}.edition{margin-bottom:18px}}
 </style>
-

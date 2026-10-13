@@ -32,6 +32,20 @@ import '@fontsource-variable/newsreader/standard-italic.css';
   :root { --font-newsreader: 'Newsreader Variable'; }
   .font-body, .font-sans { font-family: 'Outfit Variable', sans-serif; }
   .font-mono { font-family: 'JetBrains Mono Variable', monospace; }
+  /* Small white-belt trims: decorative, with four stripes and stitched edges. */
+  [data-bjj-corner] { position: relative; }
+  [data-bjj-corner]::after { content: ''; position: absolute; z-index: 3; right: -22px; top: 22px; width: 122px; height: 21px; transform: rotate(45deg); pointer-events: none; background: linear-gradient(to right, #f8f4e9 0 56%, #28221b 56% 61%, #f8f4e9 61% 65%, #28221b 65% 70%, #f8f4e9 70% 74%, #28221b 74% 79%, #f8f4e9 79% 83%, #28221b 83% 88%, #f8f4e9 88% 92%, #28221b 92% 100%); border: 1px solid #a89c82; box-shadow: 0 3px 2px #28221b25; outline: 1px dashed #a89c82; outline-offset: -4px; }
+  .portfolio-card:nth-child(even) [data-bjj-corner]::after { right:auto; left:-22px; transform:rotate(-45deg); }
+  .hero-art[data-bjj-corner] { overflow:hidden; }
+  .card-cover[data-bjj-corner] { overflow:hidden; }
+  .card-read::before { content:''; width:24px; height:12px; margin-right:10px; background:repeating-linear-gradient(90deg,#194e56 0 4px,transparent 4px 7px); align-self:center; }
+  .card-read { justify-content:flex-start!important; }
+  .card-read>span { margin-left:auto; }
+  .bjj-knot { position:relative; display:inline-block; width:30px; height:40px; flex-shrink:0; }
+  .bjj-knot::before,.bjj-knot::after { content:''; position:absolute; top:14px; width:9px; height:25px; background:#f0e7d3; border:1px solid #b5a380; transform-origin:top; }
+  .bjj-knot::before { left:9px; transform:rotate(22deg); }
+  .bjj-knot::after { right:9px; transform:rotate(-22deg); }
+  .bjj-knot i { position:absolute; top:8px; left:5px; right:5px; height:11px; z-index:1; background:#e9dec3; border:1px solid #b5a380; transform:rotate(-12deg); }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
   }
