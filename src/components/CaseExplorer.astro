@@ -7,10 +7,10 @@ const searchPaths = [
   { label: 'Por tratamiento', query: '«punción seca Bogotá»', need: 'La persona ya conoce un servicio y quiere encontrarlo.', family: 'Servicios', page: '/servicios/puncion-seca', reason: 'La oferta tiene una entrada propia para quien llega buscando un tratamiento concreto.' },
 ];
 const crmSteps = [
-  { label: '01 · Intake', title: 'Reunir la información', text: 'El equipo completa los datos por secciones. El recorrido necesita explicar qué información falta antes de avanzar.', outcome: 'Un punto de partida para la reclamación.' },
-  { label: '02 · Estado', title: 'Entender el contexto', text: 'La propiedad y el estado determinan qué documento se revisa. Los paneles permiten distinguir la operación por estado.', outcome: 'La información se presenta según el caso.' },
-  { label: '03 · Contrato', title: 'Revisar antes de seguir', text: 'El flujo permite revisar el contrato seleccionado y quiénes firmarían, y regresar a editar los datos.', outcome: 'La revisión queda dentro del recorrido.' },
-  { label: '04 · Beta', title: 'Probar sin enviar', text: 'La beta simula el recorrido de intake y contrato. No envía contratos reales para firma ni demuestra contratos firmados.', outcome: 'Una prueba del proceso antes de activar el envío real.' },
+  { label: '01 · Centralizar', title: 'De archivos a expedientes', text: 'El punto de partida eran hojas de Excel y carpetas en OneDrive. El CRM reúne la reclamación, sus documentos y su seguimiento en un recorrido que utiliza el equipo.', outcome: 'Un sistema compartido para la operación.' },
+  { label: '02 · Priorizar', title: 'Saber qué caso necesita atención', text: 'Filtros, paneles por estado, actividades y seguimientos ayudan a consultar el contexto y los siguientes pasos de cada reclamación.', outcome: 'El archivo se convierte en trabajo que se puede seguir.' },
+  { label: '03 · Automatizar', title: 'La agenda llega al correo', text: 'La integración de Outlook conecta citas y seguimientos con un resumen diario de lunes a viernes. El piloto está configurado para un usuario a las 8:00 a. m., hora de Miami.', outcome: 'La agenda y los pendientes se incorporan al día de trabajo.' },
+  { label: '04 · Contratos', title: 'Revisar el intake y el documento', text: 'El equipo completa datos por secciones y revisa el documento correspondiente al estado y sus firmantes. La versión documentada está en beta: no envía contratos reales para firma.', outcome: 'El contrato se integra al recorrido, con revisión antes de avanzar.' },
 ];
 const campaigns = [
   { label: 'Carros', before: 17518, after: 7715, dailyBefore: '1,36', dailyAfter: '2,84', change: '−56%', lesson: 'Más acciones diarias a menor costo. Los términos de búsqueda también revelaron contactos con intención de comprar vehículos; se añadieron exclusiones.' },

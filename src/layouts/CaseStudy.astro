@@ -5,19 +5,20 @@ import Footer from '@/src/components/Footer.astro';
 import { cases } from '@/src/cases';
 import CaseExplorer from '@/src/components/CaseExplorer.astro';
 import AlbumCover from '@/src/components/AlbumCover.astro';
+import CaseWorkGallery from '@/src/components/CaseWorkGallery.astro';
 const {item} = Astro.props as {item:typeof cases[number]};
 const url = `https://calvocreativo.com/casos/${item.slug}`;
 const image = `https://calvocreativo.com/api/og?title=${encodeURIComponent(item.title)}`;
 const stories = {
  'german-montenegro': {hook:'La web empieza antes de la primera página.',insight:'Entender cómo busca un paciente cambió la forma de construir la web.',explore:'De una búsqueda a una página con sentido.',question:'¿Y si el punto de entrada fuera la necesidad, no el nombre del profesional?',proof:'Arquitectura implementada',image:'/images/case-german-web.jpg',stats:[['23','páginas generadas'],['3','entradas: lesión, deporte, servicio'],['HTML','contenido entregado desde el servidor']]},
- 'rogermurillo': {hook:'La oferta cambió. La web también.',insight:'Una marca de imagen necesitaba un recorrido que conectara su nueva oferta con el interés de las personas.',explore:'Las personas ya están levantando la mano.',question:'¿Cómo explicar una oferta que va más allá del corte de pelo?',proof:'Solicitudes documentadas',image:'/images/case-roger-web.jpg',stats:[['37','solicitudes registradas'],['23','envíos con intereses de imagen'],['26 jul–12 oct','período de 2026']]},
- 'all-claims': {hook:'El equipo necesita un recorrido.',insight:'Un CRM diseñado alrededor de lo que el equipo tiene que completar, revisar y seguir.',explore:'Del intake a la revisión del contrato.',question:'¿Cómo convertir un proceso con documentos y estados en pasos que el equipo pueda seguir?',proof:'Producto y proceso documentados',image:'',stats:[['CRM','seguimiento de reclamaciones'],['Por estado','contexto de la operación'],['Beta','recorrido de contratos']]},
- 'prendaautos': {hook:'La intención cambia el resultado.',insight:'Carros mejoró. Motos reaccionó distinto. Separar la lectura nos ayudó a tomar mejores decisiones.',explore:'La misma estrategia no sirve para todo.',question:'¿Qué pasa cuando una conversión viene de alguien que busca un servicio diferente?',proof:'Comparación de campaña',image:'',stats:[['−56%','costo por acción en carros'],['2,84','acciones de carros por día'],['71','acciones en el segundo período']]},
+ 'rogermurillo': {hook:'Una web a la altura de su autoridad.',insight:'De un WordPress lento y problemático a una base propia que conecta rendimiento, búsquedas y negocio.',explore:'Las personas ya están levantando la mano.',question:'¿Cómo recuperar una web que frenaba una marca con experiencia?' ,proof:'Solicitudes documentadas',image:'/images/case-roger-web.jpg',stats:[['37','solicitudes registradas'],['23','envíos con intereses de imagen'],['26 jul–12 oct','período de 2026']]},
+ 'all-claims': {hook:'Su operación. Su propio CRM.',insight:'De Excel y carpetas de OneDrive a una herramienta compartida que ya utiliza la empresa y sus colaboradores.',explore:'De guardar archivos a trabajar en un sistema.',question:'¿Cómo dejar de reconstruir cada caso entre archivos y carpetas?',proof:'CRM en uso · Confirmado por el responsable',image:'',stats:[['CRM propio','empresa y colaboradores'],['Agenda + correos','automatización diaria'],['Contratos','intake y revisión en beta']]},
+ 'prendaautos': {hook:'Más intención. El mismo presupuesto.',insight:'Una web renovada y campañas que pasan de buscar clics a medir contactos. Cinco o seis meses de trabajo continuo con la clienta.',explore:'Diseño, confianza y campañas con criterio.',question:'¿Cómo conectar una campaña de clics con la necesidad real del cliente?' ,proof:'Comparación de campaña',image:'',stats:[['−56%','costo por acción en carros'],['2,84','acciones de carros por día'],['71','acciones en el segundo período']]},
 };
 const story = stories[item.slug];
 const chapters = [['reto','El reto'],['explorar','Explorar el trabajo'],['decisiones','Las decisiones'],['evidencia','La evidencia']];
 const schema = {'@context':'https://schema.org','@graph':[
- {'@type':'Article','@id':`${url}#article`,headline:item.title,description:item.summary,image,inLanguage:'es',mainEntityOfPage:url,author:{'@id':'https://calvocreativo.com/#roger'},publisher:{'@id':'https://calvocreativo.com/#organization'},datePublished:'2026-10-12',dateModified:'2026-10-12'},
+ {'@type':'Article','@id':`${url}#article`,headline:item.title,description:item.summary,image,inLanguage:'es',mainEntityOfPage:url,author:{'@id':'https://calvocreativo.com/#roger'},publisher:{'@id':'https://calvocreativo.com/#organization'},datePublished:'2026-10-12',dateModified:'2026-10-13'},
  {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Inicio',item:'https://calvocreativo.com'},{'@type':'ListItem',position:2,name:'Trabajos y casos',item:'https://calvocreativo.com/casos'},{'@type':'ListItem',position:3,name:item.client,item:url}]}
 ]};
 ---
@@ -51,7 +52,8 @@ const schema = {'@context':'https://schema.org','@graph':[
         <div class="challenge-copy"><p>{item.problem}</p><div class="challenge-turn"><span aria-hidden="true">↳</span><p>La decisión inicial: {item.decisions[0][0].toLowerCase()}.</p></div></div>
       </section>
       <section id="explorar" data-chapter class="story-section explorer-section">
-        <div class="section-intro"><p class="section-index">02 / Explorar el trabajo</p><h2>{story.explore}</h2><p>Interactúa con el recorrido para entender qué construimos y por qué.</p></div>
+        <div class="section-intro"><p class="section-index">02 / Explorar el trabajo</p><h2>{story.explore}</h2><p>Primero mira el proyecto. Después explora las decisiones y los resultados.</p></div>
+        <CaseWorkGallery slug={item.slug} />
         <CaseExplorer slug={item.slug} />
         {item.slug==='german-montenegro' && <div class="feature-note"><span aria-hidden="true">↗</span><div><h3>También convertimos la navegación en una experiencia.</h3><p>La web real incluye un cuerpo interactivo para explorar zonas de dolor y acceder a páginas de lesiones. Es otra forma de entrar al contenido, junto a los recorridos por deporte y servicio.</p><a href="https://germanmontenegro.fit" target="_blank" rel="noopener noreferrer">Explorar la experiencia en la web de Germán ↗</a></div></div>}
       </section>
@@ -62,7 +64,7 @@ const schema = {'@context':'https://schema.org','@graph':[
       <section id="evidencia" data-chapter class="story-section evidence-section">
         <div class="section-intro"><p class="section-index">04 / La evidencia</p><h2>Lo que podemos demostrar.</h2></div>
         <div class="evidence-grid"><div class="evidence-result"><span class="evidence-label">{story.proof}</span><p class="evidence-number">{item.signal}</p><p>{item.result}</p>{item.website && <a href={item.website} target="_blank" rel="noopener noreferrer">Comprobar el proyecto real ↗</a>}</div><aside class="evidence-scope"><h3>Fuente y alcance</h3><p>{item.measurement}</p></aside></div>
-        {story.image && <figure class="real-project-proof"><a href={item.website} target="_blank" rel="noopener noreferrer"><img src={story.image} alt={`Captura real de la web de ${item.client}`} width="1272" height="920" loading="lazy"/></a><figcaption>La implementación real · {item.website.replace('https://','')} · Captura de octubre de 2026</figcaption></figure>}
+
         <div class="takeaway"><span class="section-index">El aprendizaje</span><p>{item.lesson}</p></div>
       </section>
       <section class="case-closing"><p class="case-kicker">Del caso a tu negocio</p><h2>¿Qué problema necesitas resolver?</h2><p>Cuéntame en qué punto estás. Empecemos por entenderlo.</p><a href="/contacto" class="case-action">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a><a href={item.service} class="service-link">Ver el servicio relacionado →</a><div class="case-author">Estrategia e implementación por <a href="/autor/roger-murillo">Roger Murillo · Calvo Creativo</a></div></section>
