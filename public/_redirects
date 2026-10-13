@@ -1,42 +1,25 @@
-# ============================================================
-# public/_redirects  |  calvocreativo.com
-# ------------------------------------------------------------
-# PROPÓSITO ÚNICO: emitir 410 Gone para las páginas programáticas
-# de ciudad del sitio viejo (strategic-seo-consulting/{ciudad}-fl).
-#
-# Estas NO van en next.config.mjs porque Next solo puede emitir
-# redirects (301/302/307/308), nunca un 410. Un 301 a /consultoria
-# sería un soft-404 (Google no transfiere autoridad y las mantiene
-# en índice más tiempo).
-#
-# Netlify procesa este archivo ANTES que los redirects de Next,
-# así que el 410 gana sobre el cazatodo /services/:slug*.
-#
-# Nota: si Netlify sirviera algún 410 como 404, NO pasa nada:
-# ambos desindexan igual en Google.
-#
-# Todo lo demás (los 301) sigue viviendo en next.config.mjs.
-# ============================================================
-
-# --- Ciudades con impresiones confirmadas en GSC (explícitas primero) ---
-/services/strategic-seo-consulting/gainesville-fl      /  410!
-/services/strategic-seo-consulting/sarasota-fl         /  410!
-/services/strategic-seo-consulting/st-petersburg-fl    /  410!
-/services/strategic-seo-consulting/fort-lauderdale-fl  /  410!
-/services/strategic-seo-consulting/jacksonville-fl     /  410!
-/services/strategic-seo-consulting/tampa-fl            /  410!
-/services/strategic-seo-consulting/miami-fl            /  410!
-/services/strategic-seo-consulting/orlando-fl          /  410!
-
-# --- Comodín de respaldo: caza cualquier ciudad que GSC no listó ---
-/services/strategic-seo-consulting/*                   /  410!
-
-# --- Y el hub de ese servicio (también sin equivalente) ---
-/services/strategic-seo-consulting                     /  410!
- 
-# ============================================================ 
-# AMPLIACION tanda 2: otros servicios x ciudad FL = doorways. 
-# ============================================================ 
-/services/personal-branding-consulting/*              /  410! 
-/services/seo-automation/*                            /  410! 
-/services/digital-storytelling-services/*             /  410!
+# Retired services are handled by the gone edge function before redirects.
+/servicios/automatizacion /consultoria/automatizacion-seo-ia 301!
+/lab/seo-fight-club /lab/calvo-fight-club 301!
+/lab/seo-fight-club/* /lab/calvo-fight-club/:splat 301!
+/contact /contacto 301!
+/about /el-artista 301!
+/how-we-work /consultoria 301!
+/privacy-policy /politica-privacidad 301!
+/terms-of-service /terminos 301!
+/cookie-policy /politica-privacidad 301!
+/resources /lab 301!
+/sitemap /sitemap.xml 301!
+/services/seo-audit /consultoria 301!
+/services/seo-strategy /consultoria/estrategia-contenidos-autoridad 301!
+/services/content-marketing /servicios/narrativa 301!
+/services/ecommerce-seo /consultoria/automatizacion-seo-ia 301!
+/services/local-seo-optimization /consultoria 301!
+/services/google-business-profile /consultoria 301!
+/services /consultoria 301!
+/services/* /consultoria 301!
+/case-studies /casos 301!
+/case-studies/* /casos 301!
+/blog /liner-notes 301!
+/blog/* /liner-notes 301!
+/blog /liner-notes 301!

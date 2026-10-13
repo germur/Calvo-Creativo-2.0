@@ -1,0 +1,26 @@
+---
+import { renderPage } from '@/src/site/render';
+import RoiCalculator from '@/src/islands/RoiCalculator';
+import KeywordResearch from '@/src/islands/KeywordResearch';
+import MrXAvatar from '@/components/MrXAvatar';
+import Document from '@/src/layouts/Document.astro';
+import Navigation from '@/src/components/Navigation.astro';
+import Footer from '@/src/components/Footer.astro';
+
+const { component, pageProps = {} } = Astro.props;
+const { head, chunks, islands } = renderPage(component, pageProps, Astro.url, Astro.params);
+---
+<Document>
+<Fragment slot="head" set:html={head} />
+    {chunks.map((chunk, index) => {
+      const island = islands[index];
+      return <><Fragment set:html={chunk} />
+        {island?.name === 'Navigation' && <Navigation />}
+        {island?.name === 'Footer' && <Footer />}
+        {island?.name === 'RoiCalculator' && <RoiCalculator {...island.props} client:load />}
+        {island?.name === 'KeywordResearch' && <KeywordResearch {...island.props} client:load />}
+        {island?.name === 'MrXAvatar' && <MrXAvatar {...island.props} client:load />}
+      </>;
+    })}
+
+</Document>

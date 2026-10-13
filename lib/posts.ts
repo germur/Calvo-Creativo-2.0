@@ -54,7 +54,7 @@ export function getAllPostIds(type: 'posts' | 'opinion' = 'posts') {
         return [];
     }
     const fileNames = fs.readdirSync(directory);
-    return fileNames.map((fileName) => {
+    return fileNames.filter(fileName => fileName.endsWith('.md') && !fileName.startsWith('_')).map((fileName) => {
         return {
             params: {
                 slug: fileName.replace(/\.md$/, ''),

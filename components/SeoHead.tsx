@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Head from '@/src/site/Head';
+import { useRouter } from '@/src/site/context';
 
 interface SeoProps {
     title: string;

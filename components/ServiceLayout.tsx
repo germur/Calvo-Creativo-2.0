@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Head from '@/src/site/Head';
+import { useRouter } from '@/src/site/context';
+import Navigation from '@/src/site/Navigation';
+import Footer from '@/src/site/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 interface ServiceLayoutProps {

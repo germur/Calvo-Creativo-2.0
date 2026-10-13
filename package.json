@@ -1,43 +1,48 @@
 {
-  "name": "calvo-creativo-next",
+  "name": "calvo-creativo-astro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "postbuild": "next-sitemap && node scripts/generate-llms.mjs",
+    "dev": "astro dev",
+    "build": "node scripts/generate-llms.mjs && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "node scripts/verify-build.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs",
-    "start": "next start",
-    "lint": "next lint"
+    "postbuild": "node scripts/finalize-build.mjs"
   },
   "dependencies": {
-    "@ai-sdk/google": "^2.0.51",
-    "@ai-sdk/react": "^2.0.118",
-    "@google/generative-ai": "^0.24.1",
-    "@netlify/plugin-nextjs": "^5.9.0",
+    "astro": "7.3.8",
+    "@astrojs/react": "7.0.1",
+    "@astrojs/netlify": "8.2.9",
     "@vercel/og": "^0.8.6",
-    "ai": "^5.0.116",
     "date-fns": "^4.1.0",
-    "framer-motion": "^11.15.0",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.15",
-    "next-sitemap": "^4.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-markdown": "^9.0.3",
-    "recharts": "^3.6.0",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.0",
+    "@fontsource/anton": "^5.2.0",
+    "@fontsource/bangers": "^5.2.0",
+    "@fontsource-variable/outfit": "^5.2.0",
+    "@fontsource-variable/jetbrains-mono": "^5.2.0",
+    "@fontsource-variable/newsreader": "^5.2.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.0",
+    "@types/node": "^24",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^20",
-    "@types/react": "^18.3.27",
-    "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.23",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.15",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "3.4.17",
+    "typescript": "^5.9.0",
+    "cheerio": "^1.1.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

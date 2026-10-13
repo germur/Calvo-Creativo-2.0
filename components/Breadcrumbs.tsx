@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from '@/src/site/Link';
+import { useRouter } from '@/src/site/context';
 
 const Breadcrumbs = ({ theme = 'light' }: { theme?: 'light' | 'dark' | 'acid' }) => {
     const router = useRouter();

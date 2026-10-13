@@ -1,0 +1,36 @@
+---
+import CookieConsent from '@/src/components/CookieConsent.astro';
+import '@/styles/globals.css';
+import '@fontsource/anton/latin-400.css';
+import '@fontsource/bangers/latin-400.css';
+import '@fontsource-variable/outfit/index.css';
+import '@fontsource-variable/jetbrains-mono/index.css';
+import '@fontsource-variable/newsreader/index.css';
+import '@fontsource-variable/newsreader/standard-italic.css';
+
+
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <slot name="head" />
+</head>
+<body class="bg-paper text-ink font-body grain-overlay">
+  <slot />
+  <CookieConsent />
+  <script>import '@/src/site/browser';</script>
+</body>
+</html>
+<style is:global>
+  :root { --font-newsreader: 'Newsreader Variable'; }
+  .font-body, .font-sans { font-family: 'Outfit Variable', sans-serif; }
+  .font-mono { font-family: 'JetBrains Mono Variable', monospace; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+  }
+</style>
+

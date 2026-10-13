@@ -1,0 +1,559 @@
+---
+import Document from '@/src/layouts/Document.astro';
+import Navigation from '@/src/components/Navigation.astro';
+import Footer from '@/src/components/Footer.astro';
+---
+<Document>
+<Fragment slot="head">
+                <title>Calvo Creativo | SEO Técnico, Estrategia y Vibecoding · USA-Latam</title>
+                <meta name="description" content="SEO técnico full-stack: arquitectura, estrategia de contenidos y automatización con código. Para empresas y marcas en USA y Latam que quieren la autoridad que Google y la IA premian." />
+                <link rel="canonical" href="https://calvocreativo.com" />
+                {/* Open Graph + Twitter (tanda 6) */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://calvocreativo.com" />
+                <meta property="og:title" content="Consultor SEO & GEO | B2B USA-Latam" />
+                <meta property="og:image" content="https://calvocreativo.com/api/og?title=Consultor%20SEO%20%26%20GEO%20%7C%20B2B%20USA-Latam" />
+                <meta property="og:site_name" content="Calvo Creativo" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Rogermu47429637" />
+                <meta name="twitter:image" content="https://calvocreativo.com/api/og?title=Consultor%20SEO%20%26%20GEO%20%7C%20B2B%20USA-Latam" />
+
+                {/* Schema: Organization */}
+                <script
+                    type="application/ld+json"
+                    set:html={JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "@id": "https://calvocreativo.com/#organization",
+                            "name": "Calvo Creativo",
+                            "url": "https://calvocreativo.com",
+                            "logo": "https://calvocreativo.com/favicon.svg",
+                            "description": "Consultoría SEO estratégica y Generative Engine Optimization (GEO) para la era de la IA.",
+                            "founder": {
+                                "@type": "Person",
+                                "name": "Roger Calvo",
+                                "url": "https://calvocreativo.com/el-artista"
+                            },
+                            "sameAs": [
+                                "https://www.linkedin.com/in/rogermur/",
+                                "https://github.com/germur",
+                                "https://x.com/Rogermu47429637"
+                            ],
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "email": "roger@calvocreativo.com",
+                                "contactType": "customer service",
+                                "availableLanguage": ["Spanish", "English"]
+                            },
+                            "areaServed": ["US", "ES", "MX", "CO", "AR"],
+                            "knowsAbout": ["SEO", "GEO", "Generative Engine Optimization", "Technical SEO", "Python Automation", "Content Strategy"]
+                        })}
+                />
+
+                {/* Schema: WebSite with SearchAction */}
+                <script
+                    type="application/ld+json"
+                    set:html={JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            "@id": "https://calvocreativo.com/#website",
+                            "url": "https://calvocreativo.com",
+                            "name": "Calvo Creativo",
+                            "description": "Ingeniería de Búsqueda para la era de la IA",
+                            "publisher": {
+                                "@id": "https://calvocreativo.com/#organization"
+                            },
+                            "inLanguage": "es"
+                        })}
+                />
+
+                {/* Schema: WebPage */}
+                <script
+                    type="application/ld+json"
+                    set:html={JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "WebPage",
+                            "@id": "https://calvocreativo.com/#webpage",
+                            "url": "https://calvocreativo.com",
+                            "name": "Calvo Creativo | Ingeniería de Búsqueda (SEO & GEO)",
+                            "description": "Consultoría SEO estratégica para la era de la IA. Fusionamos creatividad latina (Salsa) con rigor técnico (Fight).",
+                            "isPartOf": {
+                                "@id": "https://calvocreativo.com/#website"
+                            },
+                            "about": {
+                                "@id": "https://calvocreativo.com/#organization"
+                            },
+                            "primaryImageOfPage": {
+                                "@type": "ImageObject",
+                                "url": "https://calvocreativo.com/api/og?title=Calvo%20Creativo"
+                            }
+                        })}
+                />
+            </Fragment>
+        <div class="min-h-screen flex flex-col bg-paper font-sans selection:bg-red-600 selection:text-white">
+            
+
+            <Navigation />
+
+            {/* --- 1. HERO SECTION: LA PROPUESTA DE VALOR --- */}
+            <header class="relative pt-24 pb-16 md:pt-32 md:pb-24 px-6 md:px-12 overflow-hidden border-b-4 border-black">
+                {/* Background Noise/Texture */}
+                <div class="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-40 pointer-events-none"></div>
+                <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-red-600/10 to-transparent pointer-events-none"></div>
+
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div>
+                        <div class="inline-block bg-black text-white px-3 py-1 text-xs font-mono uppercase tracking-widest mb-6 -rotate-1">
+                            Ingeniería de Búsqueda // SEO & GEO
+                        </div>
+                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-[0.9] tracking-tighter text-black mb-8">
+                            INGENIERÍA DE<br />
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400">BÚSQUEDA</span><br />
+                            PARA LA ERA<br />
+                            <span class="relative inline-block">
+                                DE LA IA.
+                                <svg class="absolute -bottom-2 w-full h-4 text-red-600 opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="3" />
+                                </svg>
+                            </span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-gray-700 font-light max-w-lg mb-10 border-l-4 border-black pl-6">
+                            <strong>SEO técnico full-stack para empresas y marcas en USA y Latam.</strong> Estrategia, estructura de contenidos y automatización con código. Mientras lees esto, tu competencia está capturando el tráfico de IA que tú ignoras. Construimos la autoridad que premian Google y la IA.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a
+                                href="/contacto"
+                                data-event="click_schedule_audit" data-category="Conversion" data-label="Hero CTA"
+                                class="group relative px-8 py-4 bg-black text-white font-display text-xl uppercase tracking-wide overflow-hidden shadow-[8px_8px_0px_#dc2626] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+                            >
+                                <span class="relative z-10 group-hover:text-red-500 transition-colors">Solicitar Auditoría (Cupos Limitados) →</span>
+                            </a>
+                            <a
+                                href="/consultoria"
+                                data-event="click_view_services" data-category="Navigation" data-label="Hero Secondary"
+                                class="group relative px-8 py-4 bg-white text-black border-2 border-black font-display text-xl uppercase tracking-wide hover:bg-red-50 hover:text-red-900 transition-colors"
+                            >
+                                <span class="relative z-10">Ver Servicios</span>
+                            </a>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500 font-mono">✓ Sin compromiso • ✓ Respuesta en 24h • ✓ Auditoría personalizada</p>
+                    </div>
+
+                    {/* Visual: The Vinyl Record (Kept as Brand Identity) */}
+                    <div class="relative hidden lg:flex items-center justify-center">
+                        <div class="relative w-[500px] h-[500px] animate-[spin_20s_linear_infinite] hover:[animation-play-state:paused] transition-all duration-500">
+                            <div class="absolute inset-0 rounded-full bg-black border-[10px] border-gray-900 shadow-2xl">
+                                <div class="absolute inset-4 rounded-full border border-gray-800 opacity-50"></div>
+                                <div class="absolute inset-8 rounded-full border border-gray-800 opacity-50"></div>
+                                <div class="absolute inset-12 rounded-full border border-gray-800 opacity-50"></div>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-red-600 rounded-full flex items-center justify-center border-4 border-white shadow-inner">
+                                <div class="text-center text-black leading-none">
+                                    <span class="block font-display font-black text-3xl uppercase">Calvo</span>
+                                    <span class="block font-mono text-xs tracking-widest uppercase mt-1">Stereo Sound</span>
+                                    <span class="block font-display font-black text-3xl uppercase mt-1">Creativo</span>
+                                    <span class="block font-mono text-[10px] uppercase mt-2 opacity-70">33 ⅓ RPM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-10 right-10 w-64 h-4 bg-gray-400 transform rotate-[25deg] origin-top-right shadow-2xl z-20 rounded-full border-2 border-white"></div>
+                    </div>
+                </div>
+            </header>
+
+            {/* --- 2. THE PHILOSOPHY: SALSA & FIGHT --- */}
+            <section class="py-24 px-6 md:px-12 bg-black text-white relative overflow-hidden">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-5xl md:text-7xl font-display font-bold uppercase mb-8 leading-none">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Salsa</span> & <br />
+                            <span class="text-white">Fight</span>.
+                        </h2>
+                        <p class="text-xl text-gray-300 font-light leading-relaxed mb-6">
+                            El SEO técnico sin narrativa es aburrido. La creatividad sin datos es inútil. Soy un <strong>Marketer-Builder</strong>.
+                        </p>
+                        <p class="text-lg text-white font-medium leading-relaxed mb-6">
+                            Fusiono la agilidad técnica de la programación (Python, Automatización) con la psicología del mercado hispano y estadounidense <strong>para crear estrategias que no solo rankean, sino que venden.</strong>
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="text-2xl">💃</span>
+                                <div>
+                                    <strong class="text-orange-400 uppercase tracking-wider text-sm block mb-1">Salsa</strong>
+                                    <p class="text-sm text-gray-400"><strong>Contenido con pulso.</strong> Marcas que hablan como gente, no como corporaciones. Historias que se comparten, no que se consumen.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-2xl">🥊</span>
+                                <div>
+                                    <strong class="text-red-500 uppercase tracking-wider text-sm block mb-1">Fight</strong>
+                                    <p class="text-sm text-gray-400"><strong>Código que Google ama.</strong> Estructura técnica impecable, Schema que domina la SERP y decisiones basadas en datos, no en corazonadas.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-8 pt-8 border-t border-gray-800 font-mono text-xs text-gray-500 italic">
+                            "No tengo oficinas lujosas ni 50 juniors. Tampoco te cobraré por ellas."
+                        </div>
+                    </div>
+                    {/* Visual Graph: The Algorithm Dashboard */}
+                    <div class="relative h-96 border-2 border-white/20 bg-black/80 p-6 rounded-xl backdrop-blur-md overflow-hidden group shadow-2xl">
+                        {/* Grid Background */}
+                        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+
+                        {/* Central HUD */}
+                        <div class="relative z-10 w-full h-full flex flex-col justify-between font-mono text-xs text-white/60">
+                            {/* Header HUD */}
+                            <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
+                                    <span>CALVO_CORE_V.3.5</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <span>CPU: 12%</span>
+                                    <span class="text-orange-400">LATENCY: 0ms</span>
+                                </div>
+                            </div>
+
+                            {/* The Fusion Visual Content */}
+                            <div class="flex-1 flex items-center justify-around relative px-4">
+
+                                {/* Left: Salsa (Organic Input) */}
+                                <div class="text-center space-y-2">
+                                    <div class="text-[10px] tracking-widest text-orange-400">INPUT: CULTURE</div>
+                                    <div class="flex gap-1 h-24 items-end justify-center">
+                                        {[60, 80, 40, 90, 50].map((h, i) => (
+                                            <div class="w-3 bg-gradient-to-t from-orange-600 to-red-500 rounded-sm animate-pulse" style={{ height: `${h}%`, animationDelay: `${i * 0.15}s` }}></div>
+                                        ))}
+                                    </div>
+                                    <div class="text-xs text-white/40">Human Signal</div>
+                                </div>
+
+                                {/* Center: The Connector */}
+                                <div class="relative">
+                                    <div class="w-24 h-24 rounded-full border-2 border-white/10 flex items-center justify-center bg-black/50 backdrop-blur shadow-[0_0_50px_rgba(220,38,38,0.2)]">
+                                        <span class="material-symbols-outlined text-4xl text-white">psychology</span>
+                                    </div>
+                                    {/* Spinning Ring */}
+                                    <div class="absolute inset-0 rounded-full border-t-2 border-red-500 animate-[spin_3s_linear_infinite]"></div>
+                                    <div class="absolute -inset-2 rounded-full border-b-2 border-orange-500 animate-[spin_5s_linear_infinite_reverse] opacity-50"></div>
+                                </div>
+
+                                {/* Right: Fight (Tech Output) */}
+                                <div class="text-center space-y-2">
+                                    <div class="text-[10px] tracking-widest text-red-500">OUTPUT: RANKING</div>
+                                    <div class="flex flex-col gap-1 items-end w-24">
+                                        <div class="w-full h-1 bg-white/10 rounded overflow-hidden">
+                                            <div class="h-full bg-white w-3/4 animate-[pulse_2s_infinite]"></div>
+                                        </div>
+                                        <div class="w-full h-1 bg-white/10 rounded overflow-hidden">
+                                            <div class="h-full bg-white w-1/2"></div>
+                                        </div>
+                                        <div class="font-mono text-[9px] text-right text-green-400 mt-2 leading-tight">
+                                            {`> SEARCH_INTENT: MATCH`} <br />
+                                            {`> INDEXING: TRUE`} <br />
+                                            {`> AUTHORITY: HIGH`}
+                                        </div>
+                                    </div>
+                                    <div class="text-xs text-white/40">Machine Code</div>
+                                </div>
+                            </div>
+
+                            {/* Connecting Lines (SVG Overlay) */}
+                            <svg class="absolute inset-0 w-full h-full pointer-events-none -z-10 opacity-20">
+                                <path d="M 80 150 Q 150 150 220 150" stroke="url(#gradient-line)" stroke-width="2" fill="none" class="animate-pulse" />
+                                <path d="M 450 150 Q 380 150 310 150" stroke="white" stroke-width="1" stroke-dasharray="4 4" fill="none" />
+                                <defs>
+                                    <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#f97316" />
+                                        <stop offset="100%" stop-color="#ef4444" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            {/* Footer HUD */}
+                            <div class="flex justify-between items-center border-t border-white/10 pt-4 text-[10px] text-white/30">
+                                <div>NON-LINEAR_PROCESS.EXE</div>
+                                <div>STATUS: <span class="text-green-500 font-bold">OPTIMIZED</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- 3. EL SELECTOR DE CAMINO (THE ROUTER) --- */}
+            <section class="py-24 px-6 md:px-12 bg-white text-black border-b-4 border-black">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-6xl font-display font-black uppercase text-black">Elige tu Camino</h2>
+                        <p class="font-mono text-sm tracking-widest text-gray-500 uppercase mt-2">¿Negocio o Investigación?</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        {/* LADO A */}
+                        <div class="group border-4 border-black p-8 hover:bg-gray-50 transition-all shadow-brutal hover:shadow-none hover:translate-x-2 hover:translate-y-2 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-black text-white px-4 py-1 font-mono text-xs font-bold uppercase">Lado A</div>
+                            <div class="mb-6">
+                                <span class="text-6xl">💿</span>
+                            </div>
+                            <h3 class="text-3xl font-display font-bold uppercase mb-4">Consultoría & Servicios</h3>
+                            <p class="text-gray-700 font-medium mb-6">
+                                <strong>Para negocios reales.</strong> Si ya facturas pero estás harto de quemar margen en Google Ads y quieres tráfico que sea tuyo.
+                            </p>
+                            <ul class="mb-8 space-y-2 font-mono text-sm text-gray-600">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>Arquitectura GEO & SEO Técnico</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>Estrategia de Autoridad Temática</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>Expansión Internacional (Cross-Border)</li>
+                            </ul>
+                            <a
+                                href="/consultoria"
+                                data-event="click_view_services" data-category="Navigation" data-label="Lado A Selection"
+                                class="inline-block w-full text-center bg-black text-white font-bold uppercase py-3 hover:bg-red-600 transition-colors"
+                            >
+                                Ir a Servicios →
+                            </a>
+                        </div>
+
+                        {/* LADO B */}
+                        <div class="group border-4 border-black p-8 bg-[#120810] text-white transition-all shadow-brutal hover:shadow-none hover:translate-x-2 hover:translate-y-2 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-acid-green text-black px-4 py-1 font-mono text-xs font-bold uppercase">Lado B</div>
+                            <div class="mb-6">
+                                <span class="text-6xl">🎺</span>
+                            </div>
+                            <h3 class="text-3xl font-display font-bold uppercase mb-4 text-acid-green">The Lab</h3>
+                            <p class="text-gray-300 font-medium mb-6">
+                                <strong>Para los que rompen cosas.</strong> Si abres la consola del navegador antes de leer el contenido, este es tu sitio.
+                            </p>
+                            <ul class="mb-8 space-y-2 font-mono text-sm text-gray-400">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-acid-green rounded-full"></span>SEO Fight Club (Experimentos)</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-acid-green rounded-full"></span>Vibe Coding (Automations)</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-acid-green rounded-full"></span>Liner Notes (Ensayos)</li>
+                            </ul>
+                            <a
+                                href="/lab"
+                                data-event="click_enter_lab" data-category="Navigation" data-label="Lado B Selection"
+                                class="inline-block w-full text-center bg-white text-black font-bold uppercase py-3 hover:bg-acid-green hover:border-acid-green transition-colors"
+                            >
+                                Entrar al Lab →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- 4. WHY NOW (CONTEXT 2026) — Grid & Grain editorial style --- */}
+            <section class="relative py-20 md:py-32 px-6 md:px-12 bg-paper text-ink overflow-hidden border-t border-b border-black/10">
+                {/* Subtle paper texture */}
+                <div class="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('/textures/paper.png')]"></div>
+
+                <div class="relative max-w-6xl mx-auto">
+                    {/* Editorial header — small mono label, big serif headline */}
+                    <div class="max-w-3xl mb-16 md:mb-24">
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-black/50">// Track 04 — Context 2026</span>
+                            <div class="h-px bg-black/20 flex-grow max-w-[80px]"></div>
+                        </div>
+                        <h2 class="font-editorial text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight text-ink mb-8">
+                            Si tu SEO no está<br />
+                            listo para la IA,<br />
+                            <em class="italic font-normal">eres invisible.</em>
+                        </h2>
+                        <p class="font-editorial text-xl md:text-2xl text-black/70 leading-snug max-w-2xl">
+                            El <strong class="font-semibold text-ink">60%</strong> de las búsquedas ya terminan sin clic.
+                            ChatGPT responde directamente. ¿Estás en esa respuesta o te quedaste fuera?
+                        </p>
+                    </div>
+
+                    {/* The stat-as-art — big textured number, like Grid & Grain p.14 */}
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center mb-20 md:mb-32 border-y border-black/15 py-12 md:py-16">
+                        <div class="md:col-span-7 relative">
+                            <div
+                                class="font-editorial font-bold text-[8rem] md:text-[14rem] lg:text-[18rem] leading-[0.85] text-ink select-none"
+                                style={{
+                                    backgroundImage: "url('/textures/cardboard-flat.png')",
+                                    backgroundClip: 'text',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
+                                    filter: 'contrast(1.4) brightness(0.6)',
+                                }}
+                            >
+                                ~60<span class="text-red-700">%</span>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5">
+                            <p class="font-editorial text-lg md:text-xl text-ink leading-snug mb-4">
+                                de búsquedas son <strong>zero-click</strong>. Google y los LLMs responden directamente sin enviarte tráfico.
+                            </p>
+                            <p class="font-mono text-xs uppercase tracking-wider text-black/50">
+                                Source: SparkToro 2024 · SimilarWeb 2025
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* The three shifts — minimal editorial cards with center dividers */}
+                    <div>
+                        <div class="flex items-baseline gap-4 mb-12">
+                            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-black/50">// Los tres cambios</span>
+                            <div class="h-px bg-black/20 flex-grow"></div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-black/15 -mx-6 md:mx-0">
+                            {[
+                                {
+                                    number: '01',
+                                    label: 'Estructura',
+                                    title: 'Domina el grafo de conocimiento.',
+                                    before: 'Keywords sueltas',
+                                    after: 'Entidades & conceptos',
+                                    desc: 'Google ya no busca palabras, busca conceptos. Conectamos tu marca con las entidades que definen tu industria para que seas la referencia ineludible.',
+                                },
+                                {
+                                    number: '02',
+                                    label: 'Lectura',
+                                    title: 'De búsqueda a respuesta.',
+                                    before: '10 links azules',
+                                    after: 'Una respuesta directa',
+                                    desc: 'Si ChatGPT no puede leer tu contenido, no te recomendará. Diseñamos para GEO (Generative Engine Optimization).',
+                                },
+                                {
+                                    number: '03',
+                                    label: 'Autoridad',
+                                    title: 'De cantidad a autoridad.',
+                                    before: 'Volumen de posts',
+                                    after: 'Information Gain',
+                                    desc: 'Publicar mucho ya no sirve. Publicar con datos únicos y experiencia real (Information Gain) es la única defensa.',
+                                },
+                            ].map((shift) => (
+                                <article class="px-6 md:px-8 py-8 md:py-4 border-t md:border-t-0 border-black/15 first:border-t-0">
+                                    <div class="flex items-baseline gap-3 mb-6">
+                                        <span class="font-editorial italic text-3xl text-red-700 leading-none">{shift.number}</span>
+                                        <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-black/40">— {shift.label}</span>
+                                    </div>
+
+                                    <h3 class="font-editorial font-semibold text-2xl md:text-3xl leading-[1.05] text-ink mb-6">
+                                        {shift.title}
+                                    </h3>
+
+                                    {/* Before / After as a quote-style attribution */}
+                                    <div class="mb-6 pb-6 border-b border-black/10">
+                                        <div class="font-mono text-[10px] uppercase tracking-wider text-black/40 mb-1">El ideal · La realidad</div>
+                                        <div class="font-editorial italic text-sm text-black/60">
+                                            <span class="line-through">{shift.before}</span>
+                                            {' → '}
+                                            <span class="not-italic font-semibold text-red-700">{shift.after}</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="font-sans text-[15px] leading-relaxed text-black/75">
+                                        {shift.desc}
+                                    </p>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Bottom — minimal editorial signature */}
+                    <div class="mt-20 md:mt-28 pt-12 border-t border-black/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <p class="font-editorial italic text-xl md:text-2xl text-ink max-w-xl leading-snug">
+                            &ldquo;El reto no es abandonar la estructura, sino asegurar que nuestras estructuras sirvan a las personas.&rdquo;
+                        </p>
+                        <div class="flex flex-col gap-3">
+                            <a
+                                href="/consultoria/arquitectura-seo-geo"
+                                class="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink border-b-2 border-ink pb-1 hover:text-red-700 hover:border-red-700 transition-colors whitespace-nowrap"
+                            >
+                                <span>Ver arquitectura GEO</span>
+                                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </a>
+                            <a
+                                href="/liner-notes/seo-a-geo"
+                                class="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink/60 hover:text-red-700 transition-colors whitespace-nowrap"
+                            >
+                                <span>Artículo destacado: del SEO al GEO</span>
+                                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">article</span>
+                            </a>
+                            <a
+                                href="/lab/tools/roi-calculator"
+                                class="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-ink/60 hover:text-red-700 transition-colors whitespace-nowrap"
+                            >
+                                <span>Prueba nuestra calculadora ROI</span>
+                                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">calculate</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- 5. FEATURED INSIGHT --- */}
+            <section class="py-16 px-6 md:px-12 bg-[#E11D48] text-white">
+                <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 border-4 border-black bg-white text-black p-8 shadow-[8px_8px_0px_#000]">
+                    <div class="flex-1">
+                        <h3 class="font-mono text-xs font-bold uppercase tracking-widest text-[#E11D48] mb-2">Último hallazgo del Laboratorio 🧪</h3>
+                        <h4 class="font-display text-2xl font-bold uppercase mb-2">¿Puede un sitio web rankear en Perplexity sin backlinks?</h4>
+                        <p class="text-gray-700 text-sm">
+                            Descubrimos que el marcado de Schema estructurado correctamente tiene más peso en motores de respuesta que la autoridad de dominio tradicional en ciertos nichos.
+                        </p>
+                    </div>
+                    <a href="/lab" class="shrink-0 bg-black text-white px-6 py-3 font-bold uppercase hover:bg-gray-800 transition-colors whitespace-nowrap">
+                        Leer experimento →
+                    </a>
+                </div>
+            </section>
+
+            {/* --- 5.5. FEATURED IN --- */}
+            <section class="py-12 bg-gray-50 border-b-4 border-black">
+                <div class="max-w-7xl mx-auto px-6 text-center">
+                    <p class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Estrategias validadas por / Featured In</p>
+                    <div class="flex justify-center items-center gap-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
+                        <a href="https://backlinkbuilding.io/qa/25-ways-seo-tools-changed-our-keyword-research-approach/" target="_blank" class="group flex flex-col items-center gap-2">
+                            <div class="font-display text-2xl font-black uppercase tracking-tighter text-black group-hover:text-blue-600 transition-colors">
+                                BacklinkBuilding<span class="text-gray-400">.io</span>
+                            </div>
+                            <span class="text-[10px] font-mono bg-black text-white px-2 py-0.5 rounded-sm group-hover:bg-blue-600 transition-colors">Expert Interview Feature</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- 6. SOCIAL PROOF & FOOTER --- */}
+            <section class="py-20 bg-black text-white text-center">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-display uppercase mb-12">
+                        Construyamos tu activo digital.<br />
+                        <span class="text-gray-500 text-xl md:text-2xl lowercase font-sans font-light">No alquiles tu audiencia. Sé dueño de tu tráfico.</span>
+                    </h2>
+
+                    <div class="flex flex-wrap justify-center items-center gap-4 md:gap-5 mb-16">
+                        {[
+                            { name: 'Python', icon: 'code' },
+                            { name: 'Claude AI', icon: 'smart_toy' },
+                            { name: 'Screaming Frog', icon: 'bug_report' },
+                            { name: 'Semrush', icon: 'query_stats' },
+                            { name: 'Ahrefs', icon: 'leaderboard' },
+                            { name: 'Google Search Console', icon: 'monitoring' },
+                        ].map((tool) => (
+                            <div class="flex items-center gap-2 border border-white/20 rounded-full px-4 py-2 bg-white/5 hover:bg-white/10 transition-colors">
+                                <span class="material-symbols-outlined text-sm text-gray-400">{tool.icon}</span>
+                                <span class="font-mono text-xs uppercase tracking-wide text-gray-300">{tool.name}</span>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <a
+                            href="/contacto"
+                            data-event="click_schedule_audit" data-category="Conversion" data-label="Footer CTA"
+                            class="inline-block bg-white text-black font-display text-xl uppercase px-12 py-5 rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                        >
+                            Agendar Auditoría Estratégica →
+                        </a>
+                        <p class="mt-6 text-gray-400 font-mono text-sm tracking-wide">
+                            Tu plan de ataque personalizado en 30 minutos. <span class="text-white border-b border-white pb-0.5">Sin costo.</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <Footer />
+        </div>
+</Document>
