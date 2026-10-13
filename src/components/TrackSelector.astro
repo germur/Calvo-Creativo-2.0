@@ -1,0 +1,63 @@
+---
+const tracks = [
+  ['01', 'Estrategia', 'Encuentra tu siguiente movimiento', '/consultoria'],
+  ['02', 'Trabajo real', 'Explora los proyectos y sus decisiones', '/casos'],
+  ['03', 'El laboratorio', 'Ideas, herramientas y experimentos', '/lab'],
+  ['04', 'Tu proyecto', 'Hablemos de lo que necesitas resolver', '/contacto'],
+];
+---
+<details class="track-selector">
+  <summary aria-label="Explorar pistas de Calvo Creativo">
+    <span class="record" aria-hidden="true"><span>CC</span></span>
+    <span class="selector-label">Elige<br/><strong>tu pista</strong></span>
+    <span class="selector-plus" aria-hidden="true">+</span>
+  </summary>
+  <div class="track-panel">
+    <div class="track-heading"><span>CALVO CREATIVO / SELECTOR</span><span>33⅓ RPM</span></div>
+    <p>Una idea.<br/><em>Distintas formas de moverla.</em></p>
+    <div class="track-list">
+      {tracks.map(([number, title, description, href]) => <a href={href}><span class="track-number">{number}</span><span><strong>{title}</strong><small>{description}</small></span><span class="track-arrow" aria-hidden="true">↗</span></a>)}
+    </div>
+    <span class="track-footer">ESTRATEGIA CON CABEZA. CREATIVIDAD CON RITMO.</span>
+  </div>
+</details>
+<script>
+  const selector = document.querySelector<HTMLDetailsElement>('.track-selector');
+  document.addEventListener('click', event => {
+    if (selector?.open && !selector.contains(event.target as Node)) selector.open = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && selector?.open) {
+      selector.open = false;
+      selector.querySelector('summary')?.focus();
+    }
+  });
+</script>
+<style>
+  .track-selector { position:relative; margin-left:auto; margin-right:20px; }
+  summary { display:flex; align-items:center; gap:10px; cursor:pointer; list-style:none; min-height:52px; }
+  summary::-webkit-details-marker { display:none; }
+  summary:focus-visible { outline:3px solid #b53026; outline-offset:5px; }
+  .record { width:48px; height:48px; border-radius:50%; display:grid; place-items:center; background:repeating-radial-gradient(circle,#252119 0 2px,#413b31 3px,#252119 4px); box-shadow:0 2px 0 #b53026; transition:transform .7s ease; }
+  .record span { background:#d9b34b; color:#252119; border-radius:50%; width:21px; height:21px; display:grid; place-items:center; font:9px 'JetBrains Mono Variable',monospace; }
+  summary:hover .record, details[open] .record { transform:rotate(150deg); }
+  .selector-label { font:10px/1.3 'JetBrains Mono Variable',monospace; text-transform:uppercase; letter-spacing:.06em; }
+  .selector-label strong { font-weight:700; }
+  .selector-plus { font-size:24px; transition:transform .25s; }
+  details[open] .selector-plus { transform:rotate(45deg); }
+  .track-panel { position:absolute; top:calc(100% + 23px); right:0; width:430px; padding:24px; color:#f1e8cf; background:#252119; border:1px solid #665a42; box-shadow:8px 8px 0 #b53026; animation:track-enter .2s ease-out; }
+  .track-heading { display:flex; justify-content:space-between; color:#d9b34b; font:9px 'JetBrains Mono Variable',monospace; letter-spacing:.08em; }
+  .track-panel p { font:32px/1.12 'Newsreader Variable',serif; margin:22px 0; }
+  .track-panel em { color:#d9b34b; }
+  .track-list a { display:flex; gap:14px; align-items:center; padding:15px 0; border-top:1px solid #615748; text-decoration:none; transition:padding .2s, color .2s; }
+  .track-list a:hover, .track-list a:focus-visible { padding-left:8px; color:#d9b34b; }
+  .track-number { font:11px 'JetBrains Mono Variable',monospace; color:#d9b34b; }
+  .track-list strong { display:block; font-size:18px; }
+  .track-list small { display:block; font-size:12px; color:#c6bba5; margin-top:3px; }
+  .track-arrow { margin-left:auto; font-size:24px; }
+  .track-footer { display:block; font:8px/1.5 'JetBrains Mono Variable',monospace; letter-spacing:.06em; border-top:1px solid #615748; padding-top:16px; margin-top:6px; }
+  @keyframes track-enter { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
+  @media(min-width:1280px) { .track-selector { margin:0 20px; } .selector-label { display:none; } .track-panel { left:0; right:auto; } }
+  @media(max-width:600px) { .track-selector { position:static; margin-right:14px; } .selector-label { display:none; } .record { width:40px; height:40px; } .track-panel { left:12px; right:12px; top:100%; width:auto; max-height:calc(100dvh - 110px); overflow:auto; padding:20px; box-shadow:4px 4px 0 #b53026; } .track-panel p { font-size:28px; } }
+  @media(prefers-reduced-motion:reduce) { .record,.selector-plus,.track-list a { transition:none; } .track-panel { animation:none; } }
+</style>

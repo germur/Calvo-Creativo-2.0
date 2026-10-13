@@ -1,4 +1,5 @@
 ---
+import TrackSelector from './TrackSelector.astro';
 const pathname = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
 const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 const isMenuOpen = false;
@@ -22,6 +23,7 @@ const navItems = [
                     </div>
                 </a>
 
+                <TrackSelector />
                 {/* Desktop Menu */}
                 <div class="hidden xl:flex items-center gap-8 mt-4 md:mt-0">
                     <div class="flex items-center gap-6 font-display text-lg uppercase">
