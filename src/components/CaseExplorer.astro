@@ -2,15 +2,15 @@
 import results from '@/src/contact-results.json';
 const { slug } = Astro.props;
 const searchPaths = [
-  { label: 'Por lesión', query: '«pubalgia en Bogotá»', need: 'La persona conoce el nombre de la lesión.', family: 'Lesiones', page: '/lesiones/pubalgia', reason: 'Una página específica explica la especialidad desde el problema que la persona ya identifica.' },
-  { label: 'Por deporte', query: '«fisioterapia para BJJ»', need: 'La persona busca atención que entienda su deporte.', family: 'Deportes', page: '/deportes/bjj', reason: 'El deporte aporta contexto. La página conecta esa práctica con la atención deportiva del profesional.' },
-  { label: 'Por tratamiento', query: '«punción seca Bogotá»', need: 'La persona ya conoce un servicio y quiere encontrarlo.', family: 'Servicios', page: '/servicios/puncion-seca', reason: 'La oferta tiene una entrada propia para quien llega buscando un tratamiento concreto.' },
+  { label: 'Codo', query: '«me duele el codo por dentro»', zone: 'Codo', page: '/lesiones/epitrocleitis', topic: 'Contenido sobre epitrocleítis', reason: 'La entrada es la zona que reconoce la persona. El contenido explica un tema relacionado; el síntoma por sí solo no confirma esa lesión.' },
+  { label: 'Rodilla', query: '«me duele la rodilla por dentro»', zone: 'Rodilla', page: '/lesiones/tendinitis', topic: 'Contenido sobre tendinitis rotuliana', reason: 'La zona acerca al usuario a información que puede explorar. Esta página es un ejemplo de contenido de la arquitectura, no una equivalencia entre la consulta y un diagnóstico.' },
+  { label: 'Hombro', query: '«me duele el hombro al moverlo»', zone: 'Hombro', page: '/lesiones/hombro', topic: 'Contenido sobre hombro', reason: 'La persona puede comenzar por el hombro sin conocer un nombre técnico. La página ofrece información y una opción de valoración profesional.' },
 ];
 const crmSteps = [
-  { label: '01 · Intake', title: 'Reunir la información', text: 'El equipo completa los datos por secciones. El recorrido necesita explicar qué información falta antes de avanzar.', outcome: 'Un punto de partida para la reclamación.' },
-  { label: '02 · Estado', title: 'Entender el contexto', text: 'La propiedad y el estado determinan qué documento se revisa. Los paneles permiten distinguir la operación por estado.', outcome: 'La información se presenta según el caso.' },
-  { label: '03 · Contrato', title: 'Revisar antes de seguir', text: 'El flujo permite revisar el contrato seleccionado y quiénes firmarían, y regresar a editar los datos.', outcome: 'La revisión queda dentro del recorrido.' },
-  { label: '04 · Beta', title: 'Probar sin enviar', text: 'La beta simula el recorrido de intake y contrato. No envía contratos reales para firma ni demuestra contratos firmados.', outcome: 'Una prueba del proceso antes de activar el envío real.' },
+  { label: '01 · Centralizar', title: 'De archivos a expedientes', text: 'El punto de partida eran hojas de Excel y carpetas en OneDrive. El CRM reúne la reclamación, sus documentos y su seguimiento en un recorrido que utiliza el equipo.', outcome: 'Un sistema compartido para la operación.' },
+  { label: '02 · Priorizar', title: 'Saber qué caso necesita atención', text: 'Filtros, paneles por estado, actividades y seguimientos ayudan a consultar el contexto y los siguientes pasos de cada reclamación.', outcome: 'El archivo se convierte en trabajo que se puede seguir.' },
+  { label: '03 · Automatizar', title: 'La agenda llega al correo', text: 'La integración de Outlook conecta citas y seguimientos con un resumen diario de lunes a viernes. El piloto está configurado para un usuario a las 8:00 a. m., hora de Miami.', outcome: 'La agenda y los pendientes se incorporan al día de trabajo.' },
+  { label: '04 · Contratos', title: 'Revisar el intake y el documento', text: 'El equipo completa datos por secciones y revisa el documento correspondiente al estado y sus firmantes. La versión documentada está en beta: no envía contratos reales para firma.', outcome: 'El contrato se integra al recorrido, con revisión antes de avanzar.' },
 ];
 const campaigns = [
   { label: 'Carros', before: 17518, after: 7715, dailyBefore: '1,36', dailyAfter: '2,84', change: '−56%', lesson: 'Más acciones diarias a menor costo. Los términos de búsqueda también revelaron contactos con intención de comprar vehículos; se añadieron exclusiones.' },
@@ -20,16 +20,21 @@ const campaigns = [
 <div class="case-explorer" data-case-explorer>
   <noscript><p class="explorer-note">Aquí puedes leer todas las vistas del recorrido. Activa JavaScript para alternar entre ellas.</p></noscript>
   {slug === 'german-montenegro' && <>
-    <div class="explorer-top"><span>Mapa de intención</span><span>3 maneras de llegar</span></div>
-    <p class="explorer-instruction">Elige una búsqueda y recorre la arquitectura que construimos.</p>
-    <div class="explorer-controls" data-explorer-controls hidden role="group" aria-label="Forma de buscar">{searchPaths.map((path, index) => <button type="button" data-choice={index} aria-controls={`search-path-${index}`} aria-pressed={index === 0}>{path.label}</button>)}</div>
+    <div class="explorer-top"><span>De la investigación al recorrido</span><span>El síntoma es la entrada</span></div>
+    <p class="explorer-instruction">Elige un ejemplo de búsqueda y recorre la experiencia que planteamos.</p>
+    <div class="explorer-controls" data-explorer-controls hidden role="group" aria-label="Zona del recorrido">{searchPaths.map((path, index) => <button type="button" data-choice={index} aria-controls={`search-path-${index}`} aria-pressed={index === 0}>{path.label}</button>)}</div>
     {searchPaths.map((path, index) => <div data-explorer-panel={index} id={`search-path-${index}`}>
       <div class="search-query"><span aria-hidden="true">⌕</span><p>{path.query}</p></div>
-      <p class="query-context">{path.need}</p>
-      <div class="architecture-path"><div><span>01 / Intención</span><strong>{path.label.replace('Por ', '')}</strong></div><span class="path-arrow" aria-hidden="true">→</span><div><span>02 / Familia</span><strong>{path.family}</strong></div><span class="path-arrow" aria-hidden="true">→</span><div><span>03 / Página</span><strong>{path.page}</strong></div></div>
-      <div class="explorer-conclusion"><h3>Por qué esta entrada importa</h3><p>{path.reason}</p><a href={`https://germanmontenegro.fit${path.page}`} target="_blank" rel="noopener noreferrer">Abrir la página real ↗</a></div>
+      <div class="symptom-journey">
+        <div><span>01 / Necesidad</span><h3>«Me duele aquí»</h3><p>La persona describe lo que siente, sin un término técnico.</p><small>Punto de partida</small></div>
+        <div><span>02 / Zona</span><h3>{path.zone}</h3><p>Señala una zona en el cuerpo interactivo 3D.</p><small>Selector implementado</small></div>
+        <div><span>03 / Contenido</span><h3>Explorar el tema</h3><p>{path.topic}. Una página para entender el contenido relacionado.</p><a href={`https://germanmontenegro.fit${path.page}`} target="_blank" rel="noopener noreferrer">Ver página real ↗</a><small>Transición desde el cuerpo en revisión</small></div>
+        <div class="journey-planned"><span>04 / Explicación</span><h3>La voz de Germán</h3><p>Vídeo de YouTube del especialista para explicar el tema y su abordaje.</p><small>Previsto · No integrado en la página comprobada</small></div>
+        <div><span>05 / Contacto</span><h3>Valoración personal</h3><p>Quien necesita atención puede contactar al profesional.</p><a href="https://germanmontenegro.fit/fisioterapia-deportiva-bogota" target="_blank" rel="noopener noreferrer">Ver opción de valoración ↗</a><small>Contacto disponible</small></div>
+      </div>
+      <div class="explorer-conclusion"><h3>Qué cambió al entender la intención</h3><p>{path.reason}</p><p>El cuerpo 3D responde al bache entre el lenguaje cotidiano y el contenido especializado. El vídeo y el contacto dan continuidad al recorrido diseñado.</p></div>
     </div>)}
-    <p class="explorer-note">Búsquedas ilustrativas para explicar la arquitectura. No representan volúmenes, posiciones ni diagnósticos médicos.</p>
+    <p class="explorer-note">Ejemplos ilustrativos, sin volúmenes ni posiciones atribuidos. Este recorrido explica decisiones de SEO y experiencia; no identifica lesiones ni prescribe ejercicios. Revisión del 13 de octubre: selector y páginas disponibles; transición desde la tarjeta sin navegación verificada y vídeo pendiente en la página de codo.</p>
   </>}
   {slug === 'all-claims' && <>
     <div class="explorer-top"><span>Recorrido del CRM</span><span class="beta-label">Contrato en beta</span></div>
@@ -81,6 +86,7 @@ const campaigns = [
   button{border:1px solid #505b51;background:transparent;color:#f5f4ed;padding:12px 18px;border-radius:30px;font-size:14px;min-height:44px;cursor:pointer;transition:background .2s,color .2s}
   button[aria-pressed=true]{background:#e5b847;border-color:#e5b847;color:#28221b}button:hover{border-color:#e5b847}button:focus-visible,a:focus-visible{outline:3px solid #ffbdcb;outline-offset:5px}
   .search-query{display:flex;gap:14px;align-items:center;border:1px solid #766346;border-radius:12px;padding:18px 20px;background:#372e23}.search-query>span{font-size:32px;color:#e5b847}.search-query p{font-size:clamp(22px,3vw,32px);margin:0;line-height:1.3}.query-context{color:#c8bcaa;line-height:1.6;margin:18px 0}
+.symptom-journey{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:30px 0}.symptom-journey>div{background:#3a3328;border:1px solid #6b5940;padding:20px 14px;display:flex;flex-direction:column;gap:14px;min-width:0}.symptom-journey span{font:10px 'JetBrains Mono Variable',monospace;color:#e5b847}.symptom-journey h3{font-size:20px;margin:0}.symptom-journey p{font-size:14px;line-height:1.6;color:#d1c3a8}.symptom-journey small{font-size:10px;line-height:1.6;color:#c8bcaa;margin-top:auto;padding-top:10px;border-top:1px solid #6b5940}.symptom-journey a{font-size:12px;color:#e5b847;text-decoration:underline;text-underline-offset:4px;min-height:44px;display:flex;align-items:center}.symptom-journey .journey-planned{border-style:dashed;background:#302920}@media(max-width:950px){.symptom-journey{grid-template-columns:1fr}.symptom-journey>div{padding:22px}.symptom-journey h3{font-size:24px}.symptom-journey p{font-size:16px}}
   .architecture-path{display:flex;align-items:center;gap:12px;margin:32px 0}.architecture-path>div{flex:1;min-width:0;background:#3a3328;border:1px solid #6b5940;border-radius:12px;padding:20px 14px;min-height:112px;display:flex;flex-direction:column;justify-content:center;gap:12px}.architecture-path span:not(.path-arrow){font:10px 'JetBrains Mono Variable',monospace;color:#c8bcaa;text-transform:uppercase}.architecture-path strong{font-size:16px;overflow-wrap:anywhere}.path-arrow{color:#e5b847;font-size:24px}
   .explorer-conclusion{padding-top:24px;border-top:1px solid #514b40}.case-explorer h3{font-size:24px;font-weight:600;margin:0 0 16px;line-height:1.3}.explorer-conclusion p,.crm-panel p,.explorer-learning{color:#d1c3a8;line-height:1.7;font-size:17px}.explorer-conclusion a{display:inline-block;color:#e5b847;margin-top:20px;min-height:44px;text-decoration:underline;text-underline-offset:5px}
   .explorer-note{font-size:12px;color:#c8bcaa;line-height:1.7;margin-top:24px}.crm-panel{display:flex;gap:32px;align-items:flex-start;margin-top:40px}.step-watermark{font:100px 'Anton',sans-serif;color:#786541;line-height:1}.panel-kicker{font:10px 'JetBrains Mono Variable',monospace!important;text-transform:uppercase;color:#e5b847!important;margin-bottom:18px}

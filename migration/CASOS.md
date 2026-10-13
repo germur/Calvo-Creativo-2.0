@@ -25,6 +25,31 @@ Rediseño inspirado en la jerarquía editorial del caso BetterUp de Graphite, ad
 - All Claims: cuatro etapas de un recorrido explicado; no ejecuta operaciones ni envía contratos.
 - Prendaautos: selector carros/motos, misma escala de costo y comparación de acciones por día. Muestra resultados favorables y desfavorables.
 
-Capturas públicas propias de las dos webs, tomadas el 12 de octubre de 2026. No se usan capturas del CRM ni datos personales de formularios.
+La primera versión incorporó capturas públicas de dos webs tomadas el 12 de octubre de 2026. La ampliación visual del 13 de octubre añade archivos históricos y pantallas de prueba del CRM, documentadas a continuación. No se publican datos personales de formularios.
 
 Todo el contenido se entrega en HTML; sin JavaScript se leen todas las vistas. Los controles son botones nativos, y las decisiones usan details/summary. No se oculta contenido con animaciones de entrada. Teclado y móvil revisados en las cuatro historias; sin desbordamiento horizontal a 390 px. La barra de capítulos permite desplazamiento lateral en móvil sin bloquear la lectura. Respeta movimiento reducido.
+
+## Ampliación visual y narrativa: 13 octubre de 2026
+
+Confirmación directa del responsable del proyecto en esta conversación:
+
+- All Claims pasó de Excel y carpetas de OneDrive a un CRM propio que utilizan la empresa y sus colaboradores. Incluye agenda y automatización de correos diarios. El código de Microsoft 365 documenta un piloto para un usuario, de lunes a viernes a las 8:00 a. m. Miami. Los contratos siguen en beta de revisión sin envío real en la versión comprobada.
+- Roger Murillo partía de WordPress con plugins problemáticos, lentitud, errores y arquitectura insuficiente. La reconstrucción trabaja Astro, rendimiento, Core Web Vitals, SEO técnico y autoridad. El responsable confirma posicionamiento en búsquedas importantes; faltan informes fechados para publicar posiciones o puntuaciones concretas. No se literaliza su exageración sobre la cantidad de plugins ni se publica una acusación sobre licencias.
+- Prendautos combina el rediseño web con cinco o seis meses de optimización de Google Ads, orientación a contactos y separación de carros/motos. El responsable confirma el mismo presupuesto asignado y feedback positivo continuado de la clienta. No se inventan testimonios textuales ni se equipara presupuesto asignado a gasto ejecutado idéntico en ventanas de diferente duración.
+
+Fuentes de las galerías (`src/case-evidence.ts`):
+
+- Roger antes: https://web.archive.org/web/20250125211143/https://rogermurillo.co/ (25 enero 2025). Después: https://rogermurillo.co/ (13 octubre 2026).
+- Prendautos antes: https://web.archive.org/web/20250711192026/https://www.prestaya.com.co/ (11 julio 2025). prendautos.com redirigía a Prestaya en el archivo. El responsable confirmó que era la web anterior de la misma clienta; la propia captura usa la marca Prendautos y los teléfonos coinciden con la web actual. Después: https://prendautos.com/ (13 octubre 2026).
+- Wayback reproduce recursos incompletos. Se conserva su barra de fecha y se advierte que la reproducción no prueba fallos ni velocidad de la web original.
+- CRM: capturas existentes de la interfaz real de listados, analytics y revisión de contrato. Se inspeccionaron visualmente y se contrastaron con sus pruebas locales: `claims-navigation-smoke.cjs`, `analytics-smoke.cjs` y `pa-flow.cjs`. Usuarios QA, clientes ficticios, correos example.com y cantidades de fixtures; no representan operación real. No se reutilizó la captura de calendario con el correo de un empleado.
+
+Siete imágenes WebP de 10–96 KB, sin recorte ni alteración del contenido. Los controles de galería se muestran solo con JavaScript; sin él permanecen todas las capturas. Cada imagen incluye alternativa, procedencia, alcance y enlace para ampliar. Las capturas sustituyen la imagen de evidencia repetida al final y aparecen al principio de la exploración del trabajo.
+
+## Germán: intención de búsqueda y cuerpo interactivo
+
+El responsable explica que la auditoría y la investigación encontraron búsquedas por síntomas y zonas, sin conocer el término técnico. El caso parte de ese hallazgo y muestra el recorrido diseñado: síntoma → zona en el cuerpo 3D → contenido → explicación de Germán en YouTube → valoración personal. Los ejemplos no son diagnósticos ni datos de volumen o posiciones.
+
+Comprobación pública del 13 de octubre de 2026: seleccionar Codo derecho muestra temas relacionados. La tarjeta de protocolo no navegó en la prueba; la página /lesiones/epitrocleitis existe y permite contactar, pero no contiene el vídeo incrustado. El caso diferencia selector implementado, transición en revisión y vídeo previsto. No se modifica la web de Germán en esta entrega.
+
+Nueva captura pública case-german-body.webp: cuerpo con Codo derecho seleccionado, 1265 × 712, sin alterar su contenido. Sustituye la vista genérica en la galería. El explorador muestra cinco pasos y conserva todos los recorridos en HTML sin JavaScript.
