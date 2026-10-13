@@ -1,0 +1,39 @@
+---
+const moves = [
+  {name:'Observar',position:'Leer la posición',text:'Antes de mover una pieza, entender el terreno: qué busca la gente, qué necesita el negocio y dónde se interrumpe el recorrido.',example:'Germán: escuchar el lenguaje del paciente antes de diseñar la entrada por zonas.',href:'/casos/german-montenegro',x:25,y:30},
+  {name:'Encontrar',position:'Reconocer una apertura',text:'Buscar una oportunidad concreta. Una pregunta sin respuesta, contenido difícil de encontrar o una operación que necesita orden.',example:'All Claims: entender una operación distribuida entre Excel y carpetas de OneDrive.',href:'/casos/all-claims',x:70,y:30},
+  {name:'Ejecutar',position:'Moverse con intención',text:'Convertir la estrategia en algo que se puede usar: arquitectura, contenido, una web o una herramienta propia.',example:'Roger Murillo: reconstruir la web y conectar programas, búsquedas y contacto.',href:'/casos/rogermurillo',x:70,y:70},
+  {name:'Ajustar',position:'Volver a leer',text:'Observar lo que ocurre después, medir con contexto y ajustar. Cada respuesta del usuario ayuda a decidir el siguiente movimiento.',example:'Prendautos: orientar las campañas hacia acciones de contacto con el mismo presupuesto asignado.',href:'/casos/prendaautos',x:25,y:70},
+];
+---
+<section class="bjj-method" aria-labelledby="bjj-title">
+  <div class="bjj-wrap">
+    <div class="bjj-heading"><p>FUERA DEL TATAMI / DENTRO DEL TRABAJO</p><div class="white-belt" role="img" aria-label="Mi cinturón de BJJ: blanco con cuatro rayas"><span><i></i><i></i><i></i><i></i></span></div><span class="belt-caption">CINTURÓN BLANCO · CUATRO RAYAS · SEGUIR APRENDIENDO</span><h2 id="bjj-title">Cada movimiento<br/>tiene una <em>intención.</em></h2><p class="bjj-intro">El BJJ también forma parte de cómo trabajo: observar, encontrar una apertura, ejecutar y volver a ajustar. Aquí, esa disciplina se convierte en decisiones para un proyecto.</p></div>
+    <div class="bjj-experience">
+      <div class="tatami" aria-hidden="true"><span class="mat-label">CC / MAPA DE MOVIMIENTOS</span><svg viewBox="0 0 100 100"><path d="M25 30H70V70H25Z"/><circle class="position-marker" cx="25" cy="30" r="7"/><circle cx="50" cy="50" r="17" class="mat-center"/></svg><span class="mat-caption">LEER → MOVER → VOLVER A LEER</span></div>
+      <div class="move-controls" role="group" aria-label="Explorar el método inspirado en BJJ">{moves.map((move,index)=><button data-move={index} aria-controls={`bjj-move-${index}`} aria-pressed={index===0}>0{index+1} / {move.name}</button>)}</div>
+      {moves.map((move,index)=><div class="move-panel" id={`bjj-move-${index}`} data-move-panel={index}><span>0{index+1} / {move.position}</span><h3>{move.name}</h3><p>{move.text}</p><p class="move-example">{move.example}</p><a href={move.href}>Ver la decisión en un caso real ↗</a></div>)}
+    </div>
+  </div>
+</section>
+<script>
+  const root = document.querySelector('.bjj-method');
+  if (root) {
+    const panels = root.querySelectorAll<HTMLElement>('[data-move-panel]');
+    const buttons = root.querySelectorAll<HTMLButtonElement>('[data-move]');
+    const marker = root.querySelector('.position-marker');
+    const points = [[25,30],[70,30],[70,70],[25,70]];
+    function select(index:number) {
+      panels.forEach((panel,i)=>panel.hidden=i!==index);
+      buttons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+      marker?.setAttribute('cx',String(points[index][0]));
+      marker?.setAttribute('cy',String(points[index][1]));
+    }
+    buttons.forEach((button,index)=>button.addEventListener('click',()=>select(index)));
+    select(0);
+    root.classList.add('bjj-enhanced');
+  }
+</script>
+<style>
+.bjj-method{background:#e9dec3;color:#28221b;padding:80px 32px;border-bottom:3px solid #28221b;background-image:repeating-linear-gradient(45deg,transparent 0 5px,#58452905 5px 6px)}.bjj-wrap{max-width:1184px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:64px}.bjj-heading>p:first-child,.belt-caption{font:9px/1.6 'JetBrains Mono Variable',monospace;letter-spacing:.09em}.white-belt{height:28px;width:230px;background:#f8f4e9;border:1px solid #b7ac96;box-shadow:0 3px 0 #b7ac96;margin:28px 0 10px;position:relative}.white-belt:after{content:'';position:absolute;inset:4px;border-top:1px dashed #b7ac96;border-bottom:1px dashed #b7ac96}.white-belt>span{position:absolute;right:15px;top:0;bottom:0;width:72px;background:#28221b;display:flex;gap:7px;padding:0 9px}.white-belt i{display:block;width:7px;background:#f8f4e9}.belt-caption{color:#67573e;font-size:8px}h2{font:clamp(36px,4.5vw,57px)/1.05 'Anton',sans-serif;text-transform:uppercase;margin:28px 0}h2 em{color:#194e56;font-family:'Bangers',cursive;font-style:normal}.bjj-intro{font-size:17px;line-height:1.8;max-width:440px}.bjj-experience{border:1px dashed #8c7a58;padding:12px;outline:1px solid #b5a380;outline-offset:5px}.tatami{height:210px;position:relative;background:#194e56;background-image:linear-gradient(#ffffff0e 1px,transparent 1px),linear-gradient(90deg,#ffffff0e 1px,transparent 1px);background-size:35px 35px;border:8px solid #28221b;color:#eee3c9}.tatami svg{height:100%;width:100%}.tatami path{fill:none;stroke:#d6b86f;stroke-width:.7;stroke-dasharray:2 2}.mat-center{fill:none;stroke:#eee3c92b;stroke-width:.5}.position-marker{fill:#d6b86f;stroke:#eee3c9;stroke-width:1;transition:cx .4s,cy .4s}.mat-label,.mat-caption{position:absolute;left:12px;font:7px 'JetBrains Mono Variable',monospace;letter-spacing:.06em}.mat-label{top:10px}.mat-caption{bottom:10px}.move-controls{display:none;grid-template-columns:repeat(4,1fr);margin:14px 0;gap:4px}.bjj-enhanced .move-controls{display:grid}.move-controls button{font:9px 'JetBrains Mono Variable',monospace;padding:12px 4px;border:1px solid #8c7a58;min-height:44px;cursor:pointer}.move-controls button[aria-pressed=true]{background:#28221b;color:#eee3c9}.move-panel{padding:20px 12px;border-top:1px solid #b5a380}.move-panel[hidden]{display:none}.move-panel>span{font:9px 'JetBrains Mono Variable',monospace;text-transform:uppercase;color:#67573e}.move-panel h3{font:28px 'Anton',sans-serif;margin:10px 0;text-transform:uppercase}.move-panel p{font-size:15px;line-height:1.7}.move-example{border-left:2px solid #b63726;padding-left:14px;margin:16px 0;color:#67573e}.move-panel a{display:inline-flex;align-items:center;min-height:44px;font-size:13px;text-decoration:underline;text-underline-offset:4px}button:focus-visible,a:focus-visible{outline:3px solid #b63726;outline-offset:3px}@media(max-width:800px){.bjj-method{padding:56px 24px}.bjj-wrap{grid-template-columns:1fr;gap:32px}.move-controls{grid-template-columns:1fr 1fr}.tatami{height:190px}}@media(prefers-reduced-motion:reduce){.position-marker{transition:none}}
+</style>
