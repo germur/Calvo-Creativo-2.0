@@ -28,11 +28,11 @@ export const caseEvidence = {
     ],
   },
   'german-montenegro': {
-    title: 'La arquitectura también se puede recorrer.',
-    intro: 'La web real conecta fisioterapia deportiva, zonas del cuerpo y páginas que responden a necesidades concretas.',
-    note: '',
+    title: 'Señalar una zona es una forma de empezar.',
+    intro: 'Captura real del cuerpo 3D con el codo seleccionado. La entrada visual parte de una necesidad que el usuario reconoce y presenta contenido relacionado.',
+    note: 'La captura muestra la interfaz, no un diagnóstico. El enlace desde la tarjeta de protocolo no avanzó durante la revisión; la página específica existe. El vídeo del especialista sigue previsto en la página comprobada.',
     views: [
-      {label:'La web real',title:'Una experiencia construida alrededor del paciente',image:'/images/case-german-web.jpg',width:1272,height:920,alt:'Captura real de la web de Germán Montenegro, fisioterapeuta deportivo en Bogotá',caption:'Web pública · Captura de octubre de 2026',source:'https://germanmontenegro.fit/',sourceLabel:'Explorar la experiencia real',text:'El mapa de búsquedas organiza las entradas por lesión, deporte y tratamiento. El cuerpo interactivo ofrece otra forma de descubrir ese contenido.'},
+      {label:'Cuerpo interactivo',title:'El hallazgo SEO convertido en navegación',image:'/images/case-german-body.webp',width:1265,height:712,alt:'Cuerpo humano interactivo en la web real de Germán Montenegro, con el codo seleccionado y temas relacionados a la derecha',caption:'Web pública · Codo seleccionado · 13 octubre 2026',source:'https://germanmontenegro.fit/',sourceLabel:'Explorar el cuerpo en la web real',text:'La persona elige dónde le duele, sin tener que empezar por un nombre técnico. El selector presenta temas relacionados y una opción de valoración profesional.'},
     ],
   },
 } as const;

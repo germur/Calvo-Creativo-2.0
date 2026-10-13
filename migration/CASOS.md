@@ -45,3 +45,11 @@ Fuentes de las galerías (`src/case-evidence.ts`):
 - CRM: capturas existentes de la interfaz real de listados, analytics y revisión de contrato. Se inspeccionaron visualmente y se contrastaron con sus pruebas locales: `claims-navigation-smoke.cjs`, `analytics-smoke.cjs` y `pa-flow.cjs`. Usuarios QA, clientes ficticios, correos example.com y cantidades de fixtures; no representan operación real. No se reutilizó la captura de calendario con el correo de un empleado.
 
 Siete imágenes WebP de 10–96 KB, sin recorte ni alteración del contenido. Los controles de galería se muestran solo con JavaScript; sin él permanecen todas las capturas. Cada imagen incluye alternativa, procedencia, alcance y enlace para ampliar. Las capturas sustituyen la imagen de evidencia repetida al final y aparecen al principio de la exploración del trabajo.
+
+## Germán: intención de búsqueda y cuerpo interactivo
+
+El responsable explica que la auditoría y la investigación encontraron búsquedas por síntomas y zonas, sin conocer el término técnico. El caso parte de ese hallazgo y muestra el recorrido diseñado: síntoma → zona en el cuerpo 3D → contenido → explicación de Germán en YouTube → valoración personal. Los ejemplos no son diagnósticos ni datos de volumen o posiciones.
+
+Comprobación pública del 13 de octubre de 2026: seleccionar Codo derecho muestra temas relacionados. La tarjeta de protocolo no navegó en la prueba; la página /lesiones/epitrocleitis existe y permite contactar, pero no contiene el vídeo incrustado. El caso diferencia selector implementado, transición en revisión y vídeo previsto. No se modifica la web de Germán en esta entrega.
+
+Nueva captura pública case-german-body.webp: cuerpo con Codo derecho seleccionado, 1265 × 712, sin alterar su contenido. Sustituye la vista genérica en la galería. El explorador muestra cinco pasos y conserva todos los recorridos en HTML sin JavaScript.
