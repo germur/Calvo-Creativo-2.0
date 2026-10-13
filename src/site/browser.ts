@@ -5,8 +5,8 @@ function closeMenu() {
   menu?.classList.remove('opacity-100', 'visible');
   menu?.setAttribute('aria-hidden', 'true');
   button?.setAttribute('aria-expanded', 'false');
-  const icon = button?.querySelector('span');
-  if (icon) icon.textContent = 'menu';
+  button?.setAttribute('aria-label', 'Abrir menú');
+  document.documentElement.style.overflow = '';
 }
 document.addEventListener('click', event => {
   const target = event.target as Element;
@@ -18,14 +18,27 @@ document.addEventListener('click', event => {
     menu?.classList.add('opacity-100', 'visible');
     menu?.setAttribute('aria-hidden', 'false');
     button.setAttribute('aria-expanded', 'true');
-    const icon = button.querySelector('span');
-    if (icon) icon.textContent = 'close';
+    button.setAttribute('aria-label', 'Cerrar menú');
+    document.documentElement.style.overflow = 'hidden';
   }
   if (target.closest('[data-print]')) window.print();
   const tracked = target.closest<HTMLElement>('[data-event]');
   if (tracked) sendEvent(tracked.dataset.event!, tracked);
 });
-document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+document.addEventListener('keydown', event => {
+  const button = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  if (button?.getAttribute('aria-expanded') !== 'true') return;
+  if (event.key === 'Escape') { closeMenu(); button.focus(); }
+  if (event.key === 'Tab') {
+    const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('#mobile-menu a'));
+    const first = links[0], last = links.at(-1);
+    if (event.shiftKey && document.activeElement === button) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === button) { event.preventDefault(); first?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); button.focus(); }
+    else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); button.focus(); }
+  }
+});
+window.matchMedia('(min-width:1280px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
 document.addEventListener('submit', event => {
   const form = event.target as HTMLFormElement;
   if (form.dataset.submitEvent) sendEvent(form.dataset.submitEvent, form);

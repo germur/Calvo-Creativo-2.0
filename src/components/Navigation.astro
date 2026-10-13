@@ -1,76 +1,60 @@
 ---
+import TrackSelector from './TrackSelector.astro';
 const pathname = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
 const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
-const isMenuOpen = false;
 const navItems = [
-        { name: 'Lado A (Servicios)', path: '/consultoria' },
-        { name: 'Lado B (Lab)', path: '/lab' },
-        { name: 'Trabajos y casos', path: '/casos' },
-        { name: 'Liner Notes', path: '/liner-notes' },
-        { name: 'El Artista', path: '/el-artista' }
-    ];
+  { name: 'Servicios', subtitle: 'Lado A · Estrategia', path: '/consultoria' },
+  { name: 'Laboratorio', subtitle: 'Lado B · Experimentación', path: '/lab' },
+  { name: 'Trabajos y casos', subtitle: 'Decisiones y resultados', path: '/casos' },
+  { name: 'Liner Notes', subtitle: 'Ideas para leer con calma', path: '/liner-notes' },
+  { name: 'El Artista', subtitle: 'Roger Murillo', path: '/el-artista' },
+];
 ---
-        <nav class="sticky top-0 z-[100] w-full bg-paper border-b-4 border-ink px-6 py-4">
-            <div class="flex flex-wrap items-center justify-between">
-                <a href="/" aria-label="Calvo Creativo — Inicio" class="flex items-center gap-2 group z-[102] relative">
-                    <div class="bg-primary text-white p-1 border-2 border-ink group-hover:rotate-12 transition-transform shadow-brutal-sm">
-                        <span class="material-symbols-outlined font-black" aria-hidden="true">bolt</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-display text-4xl leading-none uppercase tracking-tighter text-ink">Calvo</span>
-                        <span class="font-display text-xl leading-none uppercase tracking-wide text-ink">Creativo</span>
-                    </div>
-                </a>
-
-                {/* Desktop Menu */}
-                <div class="hidden xl:flex items-center gap-8 mt-4 md:mt-0">
-                    <div class="flex items-center gap-6 font-display text-lg uppercase">
-                        {navItems.map((item) => (
-                            <a
-                                href={item.path}
-                                class={`relative group ${isActive(item.path) ? 'text-primary' : 'text-ink'}`}
-                            >
-                                {item.name}
-                                <span class={`absolute -bottom-1 left-0 h-1 bg-primary transition-all ${isActive(item.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-                            </a>
-                        ))}
-                    </div>
-
-                    <a href="/contacto" class="bg-ink text-white px-6 py-2 font-display text-xl uppercase border-2 border-ink shadow-brutal-sm hover:bg-primary hover:translate-y-[-2px] transition-all flex items-center gap-2">
-                        Hablemos <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
-                </div>
-
-                {/* Hamburger Button */}
-                <button
-                    data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"
-                    class="xl:hidden z-[102] relative p-2 border-2 border-ink bg-white shadow-brutal-sm active:translate-y-1 active:shadow-none transition-all"
-                    aria-label="Menu"
-                >
-                    <span class="material-symbols-outlined text-3xl">
-                        {isMenuOpen ? 'close' : 'menu'}
-                    </span>
-                </button>
-            </div>
-
-            {/* Mobile Menu Overlay */}
-            <div id="mobile-menu" aria-hidden="true" class={`fixed inset-0 bg-paper z-[101] flex flex-col items-center justify-center transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
-                {/* Background Texture */}
-                <div class="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-40 pointer-events-none"></div>
-
-                <div class="flex flex-col gap-8 text-center relative z-10 w-full px-8">
-                    {navItems.map((item) => (
-                        <a
-                            href={item.path}
-                            class={`font-display text-4xl uppercase tracking-tight py-2 border-b-2 border-transparent hover:border-primary hover:text-primary transition-all ${isActive(item.path) ? 'text-primary border-primary' : 'text-ink'}`}
-                        >
-                            {item.name}
-                        </a>
-                    ))}
-                    <div class="h-px bg-ink w-24 mx-auto my-4 opacity-20"></div>
-                    <a href="/contacto" class="bg-black text-white px-8 py-4 font-display text-2xl uppercase border-4 border-black shadow-[8px_8px_0px_#dc2626] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all mx-auto inline-flex items-center gap-3">
-                        Hablemos <span class="material-symbols-outlined">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-        </nav>
+<nav class="creative-nav" aria-label="Navegación principal">
+  <div class="nav-shell">
+    <a href="/" aria-label="Calvo Creativo — Inicio" class="brand-link">
+      <span class="brand-stamp" aria-hidden="true">↯</span>
+      <span class="brand-wordmark">Calvo<small>Creativo</small></span>
+    </a>
+    <TrackSelector />
+    <div class="desktop-navigation">
+      <div class="nav-tracks">
+        {navItems.map((item, index) => <a href={item.path} aria-current={isActive(item.path) ? 'page' : undefined} class="nav-track"><span class="track-index">0{index + 1}</span><span class="track-title">{item.name}</span><span class="track-dot" aria-hidden="true"></span></a>)}
+      </div>
+      <a href="/contacto" class="nav-contact">Hablemos <span aria-hidden="true">↗</span></a>
+    </div>
+    <button data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" class="menu-toggle"><span>Menú</span><i aria-hidden="true"></i></button>
+  </div>
+  <div id="mobile-menu" aria-hidden="true" class="mobile-navigation opacity-0 invisible pointer-events-none">
+    <div class="menu-inner">
+      <p class="menu-caption">CALVO CREATIVO / LA LISTA DE PISTAS</p>
+      <p class="menu-intro">Encuentra<br/><em>tu siguiente movimiento.</em></p>
+      <div class="mobile-tracks">
+        {navItems.map((item, index) => <a href={item.path} aria-current={isActive(item.path) ? 'page' : undefined}><span class="mobile-number">0{index + 1}</span><span><strong>{item.name}</strong><small>{item.subtitle}</small></span><span class="mobile-arrow" aria-hidden="true">↗</span></a>)}
+      </div>
+      <a href="/contacto" class="mobile-contact">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a>
+      <p class="menu-signature">SEO CON ESTRATEGIA. MARCAS CON HISTORIA.</p>
+    </div>
+  </div>
+</nav>
+<style>
+.creative-nav{position:sticky;top:0;z-index:100;background:#f1e8cf;border-bottom:2px solid #252119;color:#252119}.creative-nav::after{content:'';position:absolute;bottom:4px;left:12px;right:12px;border-bottom:1px dashed #8c7a5866;pointer-events:none;z-index:103}
+.nav-shell{display:flex;align-items:center;gap:16px;min-height:94px;padding:14px 28px;position:relative;z-index:102;background:#f1e8cf}
+.brand-link{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.brand-stamp{display:grid;place-items:center;background:#b53026;color:#f1e8cf;font-size:32px;width:36px;height:45px;border:2px solid #252119;box-shadow:3px 3px 0 #252119;transition:transform .25s}
+.brand-link:hover .brand-stamp{transform:rotate(-8deg)}
+.brand-wordmark{font:34px/.95 'Anton',sans-serif;text-transform:uppercase;letter-spacing:-.04em}.brand-wordmark small{display:block;font-size:19px;letter-spacing:.035em}
+.desktop-navigation{display:flex;align-items:center;gap:24px;margin-left:auto}.nav-tracks{display:flex;gap:6px}
+.nav-track{position:relative;display:grid;grid-template-columns:1fr 6px;gap:5px;padding:8px 11px 12px;text-decoration:none;transition:background .2s;min-height:54px}
+.track-index{grid-column:1/-1;font:8px 'JetBrains Mono Variable',monospace;color:#6c6252;letter-spacing:.13em}.track-title{font:16px 'Anton',sans-serif;text-transform:uppercase;white-space:nowrap}.track-dot{width:5px;height:5px;border-radius:50%;align-self:center;background:#b53026;opacity:0;transform:scale(0);transition:transform .2s,opacity .2s}
+.nav-track::after{content:'';position:absolute;bottom:0;left:11px;right:11px;height:2px;background:#b53026;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav-track:hover,.nav-track:focus-visible{background:#e7dcc1}.nav-track:hover::after,.nav-track[aria-current]::after{transform:scaleX(1)}.nav-track[aria-current]{color:#b53026}.nav-track[aria-current] .track-dot{opacity:1;transform:scale(1)}
+.nav-contact{display:flex;align-items:center;gap:22px;padding:14px 18px;background:#252119;color:#f1e8cf;font:16px 'Anton',sans-serif;text-transform:uppercase;text-decoration:none;transition:background .2s}.nav-contact:hover{background:#b53026}.nav-contact span{transition:transform .2s}.nav-contact:hover span{transform:translate(3px,-3px)}
+.menu-toggle{display:none;align-items:center;gap:12px;border:1px solid #252119;min-height:46px;padding:10px 12px;font:10px 'JetBrains Mono Variable',monospace;text-transform:uppercase;background:transparent;cursor:pointer}.menu-toggle i{width:18px;height:10px;border-top:2px solid;border-bottom:2px solid;transition:transform .2s}.menu-toggle[aria-expanded=true] i{height:0;border-bottom:0;transform:rotate(-45deg)}
+.mobile-navigation{position:fixed;inset:94px 0 0;background:#252119;color:#f1e8cf;overflow:auto;z-index:101;transition:opacity .25s,visibility .25s}.menu-inner{padding:28px;max-width:780px;margin:auto}.menu-caption{font:9px 'JetBrains Mono Variable',monospace;color:#d9b34b;letter-spacing:.12em}.menu-intro{font:38px/1.05 'Newsreader Variable',serif;margin:24px 0}.menu-intro em{color:#d9b34b}.mobile-tracks a{display:flex;align-items:center;gap:18px;padding:15px 0;border-top:1px solid #615748;text-decoration:none;transition:padding .2s,color .2s}.mobile-tracks a:hover,.mobile-tracks a[aria-current]{color:#d9b34b;padding-left:8px}.mobile-number{font:10px 'JetBrains Mono Variable',monospace;color:#d9b34b}.mobile-tracks strong{font:25px 'Anton',sans-serif;text-transform:uppercase;display:block}.mobile-tracks small{font-size:12px;color:#c6bba5;display:block;margin-top:2px}.mobile-arrow{font-size:25px;margin-left:auto}.mobile-contact{display:flex;justify-content:space-between;gap:15px;background:#d9b34b;color:#252119;padding:18px;font-weight:700;text-decoration:none;margin-top:18px}.menu-signature{font:8px/1.6 'JetBrains Mono Variable',monospace;letter-spacing:.08em;margin-top:24px;color:#c6bba5}
+a:focus-visible,button:focus-visible{outline:3px solid #b53026;outline-offset:4px}
+@media(max-width:1279px){.desktop-navigation{display:none}.menu-toggle{display:flex}.nav-shell{gap:0}.nav-shell :global(.track-selector){margin-left:auto}}
+@media(max-width:600px){.nav-shell{padding:12px 18px;min-height:86px}.brand-wordmark{font-size:30px}.brand-wordmark small{font-size:17px}.brand-stamp{width:30px;height:39px}.menu-toggle{padding:10px}.menu-toggle>span{display:none}.mobile-navigation{top:86px}.menu-inner{padding:24px}.menu-intro{font-size:32px;margin:18px 0}.mobile-tracks a{padding:12px 0}.mobile-tracks strong{font-size:23px}}
+@media(min-width:1280px){.mobile-navigation{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
