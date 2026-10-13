@@ -13,36 +13,40 @@
     "postbuild": "node scripts/finalize-build.mjs"
   },
   "dependencies": {
-    "astro": "7.3.8",
-    "@astrojs/react": "7.0.1",
     "@astrojs/netlify": "8.2.9",
+    "@astrojs/react": "7.0.1",
+    "@fontsource-variable/jetbrains-mono": "^5.2.0",
+    "@fontsource-variable/newsreader": "^5.2.0",
+    "@fontsource-variable/outfit": "^5.2.0",
+    "@fontsource/anton": "^5.2.0",
+    "@fontsource/bangers": "^5.2.0",
     "@vercel/og": "^0.8.6",
+    "astro": "7.3.8",
     "date-fns": "^4.1.0",
-    "gray-matter": "^4.0.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "^9.0.3",
     "remark-gfm": "^4.0.0",
-    "@fontsource/anton": "^5.2.0",
-    "@fontsource/bangers": "^5.2.0",
-    "@fontsource-variable/outfit": "^5.2.0",
-    "@fontsource-variable/jetbrains-mono": "^5.2.0",
-    "@fontsource-variable/newsreader": "^5.2.0"
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.0",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^24",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
-    "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.23",
+    "cheerio": "^1.1.0",
     "postcss": "^8",
     "tailwindcss": "3.4.17",
-    "typescript": "^5.9.0",
-    "cheerio": "^1.1.0"
+    "typescript": "^5.9.0"
   },
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
+  },
+  "overrides": {
+    "postcss-selector-parser": "7.1.6",
+    "sharp": "0.35.5"
   }
 }

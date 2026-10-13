@@ -53,6 +53,8 @@ Las funciones Edge no se emulan en `astro dev` por una incompatibilidad del Deno
 
 ## Resultados y límites
 
+La [revisión de dependencias](migration/DEPENDENCIAS.md) documenta las correcciones, los overrides y los dos avisos raíz aún sin parche upstream. La auditoría pasó de 22 a 14 avisos (0 moderados); los avisos heredados se concentran en herramientas de construcción y desarrollo.
+
 `migration/validation.json` recoge comprobaciones de canonical, meta, robots, JSON-LD, contenido inicial, anclas, rutas y formularios. No sustituye medir Core Web Vitals ni comprobar los formularios en Netlify.
 
 La API de keywords mantiene el contrato `/api/keywords`, valida entradas, limita concurrencia por instancia, reutiliza resultados y distingue fallos del proveedor de una búsqueda sin resultados. No proporciona cuotas globales entre múltiples instancias; añadir un límite distribuido requeriría infraestructura adicional.

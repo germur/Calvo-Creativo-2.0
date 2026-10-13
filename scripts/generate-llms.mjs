@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
+import matter from '../lib/frontmatter.mjs';
 
 const BASE_URL = 'https://calvocreativo.com';
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
