@@ -1,0 +1,66 @@
+{
+  "source": "contacto.csv exportado de Netlify Forms y aportado por el responsable",
+  "sourceSha256": "D66212415219F3DC8975765268CDD11D6E0FE50DDA9F7BD59D944D822FC82BF1",
+  "periodStart": "2026-07-26",
+  "periodEnd": "2026-10-12",
+  "timezone": "America/Bogota",
+  "submissions": 37,
+  "distinctEmails": 37,
+  "repeatedNamePhoneGroups": 1,
+  "removedRecords": 0,
+  "selectedImageGoals": 23,
+  "emptyGoals": 4,
+  "onlySalon": 5,
+  "months": [
+    {
+      "month": "2026-07",
+      "submissions": 2
+    },
+    {
+      "month": "2026-08",
+      "submissions": 15
+    },
+    {
+      "month": "2026-09",
+      "submissions": 16
+    },
+    {
+      "month": "2026-10",
+      "submissions": 4
+    }
+  ],
+  "goals": [
+    {
+      "goal": "Visagismo y corte",
+      "submissions": 15
+    },
+    {
+      "goal": "Peluquería",
+      "submissions": 14
+    },
+    {
+      "goal": "Otro",
+      "submissions": 7
+    },
+    {
+      "goal": "Colorimetría",
+      "submissions": 6
+    },
+    {
+      "goal": "Imagen ejecutiva",
+      "submissions": 6
+    },
+    {
+      "goal": "Transición personal",
+      "submissions": 4
+    }
+  ],
+  "limitations": [
+    "Solicitudes, no ventas ni clientes únicos confirmados.",
+    "Opciones de objetivos múltiples: las categorías se superponen.",
+    "Un nombre y teléfono se repiten en dos envíos con correos diferentes; se conservan como solicitudes.",
+    "No se han identificado pruebas evidentes; la clasificación de spam no puede confirmarse con la exportación.",
+    "El referrer identifica la página del formulario, no el canal de adquisición.",
+    "Julio y octubre son períodos parciales; sin línea base ni visitas no se calcula crecimiento o tasa de conversión."
+  ]
+}

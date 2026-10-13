@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Head from '@/src/site/Head';
+import { useRouter } from '@/src/site/context';
+import Navigation from '@/src/site/Navigation';
+import Footer from '@/src/site/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 interface ServiceLayoutProps {
@@ -29,17 +29,6 @@ const ServiceLayout = ({
 
     // Schema: Service + FAQPage + BreadcrumbList
     const generateSchema = () => {
-        const breadcrumbSegments = router.asPath.split('/').filter(Boolean);
-        const breadcrumbItems = [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
-            ...breadcrumbSegments.map((seg, i) => ({
-                "@type": "ListItem",
-                "position": i + 2,
-                "name": seg.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-                "item": `${siteUrl}/${breadcrumbSegments.slice(0, i + 1).join('/')}`
-            }))
-        ];
-
         const schema: any[] = [
             {
                 "@context": "https://schema.org",
@@ -49,7 +38,8 @@ const ServiceLayout = ({
                 "url": canonicalUrl,
                 "provider": {
                     "@type": "Person",
-                    "name": "Roger Calvo",
+                    "@id": "https://calvocreativo.com/#roger",
+                    "name": "Roger Murillo",
                     "url": `${siteUrl}/el-artista`,
                     "sameAs": [
                         "https://www.linkedin.com/in/rogermur/",
@@ -58,11 +48,6 @@ const ServiceLayout = ({
                 },
                 "areaServed": "Worldwide",
                 "serviceType": "Digital Marketing & SEO"
-            },
-            {
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": breadcrumbItems
             }
         ];
 
@@ -107,8 +92,8 @@ const ServiceLayout = ({
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:image" content={ogImage} />
 
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+
 
                 {/* Schema: Service + BreadcrumbList + FAQPage */}
                 <script

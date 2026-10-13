@@ -1,0 +1,23 @@
+{
+  "/servicios/automatizacion": "/consultoria/automatizacion-seo-ia",
+  "/lab/seo-fight-club/:slug*": "/lab/calvo-fight-club/:slug*",
+  "/contact": "/contacto",
+  "/about": "/el-artista",
+  "/how-we-work": "/consultoria",
+  "/privacy-policy": "/politica-privacidad",
+  "/terms-of-service": "/terminos",
+  "/cookie-policy": "/politica-privacidad",
+  "/resources": "/lab",
+  "/sitemap": "/sitemap.xml",
+  "/services/seo-audit": "/consultoria",
+  "/services/seo-strategy": "/consultoria/estrategia-contenidos-autoridad",
+  "/services/content-marketing": "/servicios/narrativa",
+  "/services/ecommerce-seo": "/consultoria/automatizacion-seo-ia",
+  "/services/local-seo-optimization": "/consultoria",
+  "/services/google-business-profile": "/consultoria",
+  "/services/:slug*": "/consultoria",
+  "/case-studies/:slug*": "/casos",
+  "/blog/:slug*": "/liner-notes",
+  "/blog": "/liner-notes",
+  "/autor/roger-calvo": "/autor/roger-murillo"
+}

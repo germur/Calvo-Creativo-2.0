@@ -1,11 +1,9 @@
-# Netlify headers for performance & SEO
-# Note: Trailing slash handling is done by Next.js (trailingSlash: false in next.config.mjs)
-# DO NOT add Netlify-level trailing slash redirects — they conflict with @netlify/plugin-nextjs.
+[build]
+  command = "npm run build && npm run verify"
+  publish = "dist"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "index, follow"
+[build.environment]
+  NODE_VERSION = "24.11.1"
 
 [[headers]]
   for = "/textures/*"
@@ -13,12 +11,10 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/_next/static/*"
+  for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# 410 Gone para /services/strategic-seo-consulting/* se maneja en middleware.ts
-# (netlify.toml redirects no funcionan con @netlify/plugin-nextjs)
-
-[[plugins]]
-package = "@netlify/plugin-nextjs"
+[[edge_functions]]
+  function = "gone"
+  path = "/services/*"

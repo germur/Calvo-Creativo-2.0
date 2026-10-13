@@ -1,0 +1,12 @@
+---
+import * as view from '@/src/views/lab/glosario/[slug].tsx';
+import Page from '@/src/layouts/Page.astro';
+export async function getStaticPaths() {
+  const { paths } = await view.getStaticPaths();
+  return Promise.all(paths.map(async ({ params }) => ({
+    params, props: view.getStaticProps ? (await view.getStaticProps({ params })).props : {}
+  })));
+}
+const props = Astro.props;
+---
+<Page component={view.default} pageProps={props} />

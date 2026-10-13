@@ -1,0 +1,7 @@
+---
+import CaseStudy from '@/src/layouts/CaseStudy.astro';
+import { cases } from '@/src/cases';
+export function getStaticPaths(){return cases.filter(item=>item.slug!=='rogermurillo').map(item=>({params:{slug:item.slug},props:{item}}));}
+const {item}=Astro.props;
+---
+<CaseStudy item={item}/>

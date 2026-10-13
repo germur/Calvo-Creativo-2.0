@@ -12,6 +12,9 @@
 
 # production
 /build
+/dist/
+/.astro/
+/.netlify/
 
 # misc
 .DS_Store

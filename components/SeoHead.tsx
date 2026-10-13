@@ -1,10 +1,11 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Head from '@/src/site/Head';
+import { PERSON_ID, ORG_ID, WEBSITE_ID } from '@/lib/person-schema';
+import { useRouter } from '@/src/site/context';
 
 interface SeoProps {
     title: string;
     description?: string;
-    type?: 'website' | 'article' | 'service';
+    type?: 'website' | 'article' | 'service' | 'profile';
     image?: string;
     author?: string;
     publishDate?: string;
@@ -44,14 +45,18 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
         schema = {
             ...baseSchema,
             "@type": "BlogPosting",
+            "@id": `${canonicalUrl}#article`,
+            "url": canonicalUrl,
+            "inLanguage": "es",
             "headline": title,
             "description": metaDescription,
             "image": ogImage,
             "author": {
                 "@type": "Person",
-                "name": author || "Roger Calvo",
+                "@id": PERSON_ID,
+                "name": author || "Roger Murillo",
                 // ✅ Corregido: /sobre-mi no existe → /el-artista
-                "url": "https://calvocreativo.com/el-artista",
+                "url": "https://calvocreativo.com/autor/roger-murillo",
                 // ✅ Corregidos: LinkedIn y X reales
                 "sameAs": [
                     "https://www.linkedin.com/in/rogermur/",
@@ -60,6 +65,7 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
             },
             "publisher": {
                 "@type": "Organization",
+                "@id": ORG_ID,
                 "name": "Calvo Creativo",
                 "logo": {
                     "@type": "ImageObject",
@@ -81,6 +87,7 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
             "description": metaDescription,
             "provider": {
                 "@type": "Organization",
+                "@id": ORG_ID,
                 "name": provider || "Calvo Creativo",
                 "url": siteUrl
             },
@@ -97,9 +104,11 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
     } else {
         schema = {
             ...baseSchema,
-            "@type": "WebSite",
-            "name": "Calvo Creativo",
-            "url": siteUrl,
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            "name": title,
+            "url": canonicalUrl,
+            "isPartOf": { "@id": WEBSITE_ID },
             "inLanguage": "es"
         };
     }
@@ -126,14 +135,12 @@ const SeoHead = ({ title, description, type = 'website', image, author, publishD
             <meta name="twitter:description" content={metaDescription} />
             <meta name="twitter:image" content={ogImage} />
 
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
             {/* Schema */}
-            <script
+            {type !== 'profile' && <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-            />
+            />}
         </Head>
     );
 };

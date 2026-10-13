@@ -1,0 +1,106 @@
+        <footer class="bg-ink text-white pt-20 pb-10 px-8 mt-20 border-t-8 border-primary relative z-10 font-sans">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                {/* COL 1: IDENTITY */}
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="size-10 bg-accent border-2 border-white flex items-center justify-center">
+                            <span class="material-symbols-outlined text-black font-black">bolt</span>
+                        </div>
+                        <h2 class="font-display text-2xl uppercase tracking-tighter">Calvo Creativo</h2>
+                    </div>
+                    <p class="font-mono text-xs text-gray-400 leading-relaxed uppercase">
+                        Ingeniería de Búsqueda & Estrategia Digital.<br /><br />
+                        Arte inspirado en las carátulas de salsa, estrategia de búsqueda y código. Construimos webs, contenidos y herramientas que responden a problemas concretos.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        {[
+                            { name: 'LinkedIn', icon: 'work', href: 'https://www.linkedin.com/in/rogermur/', label: 'LinkedIn de Roger Murillo' },
+                            { name: 'X', icon: 'alternate_email', href: 'https://x.com/Rogermu47429637', label: 'X (Twitter) de Roger Murillo' },
+                            { name: 'GitHub', icon: 'code', href: 'https://github.com/germur', label: 'GitHub de Roger Murillo' },
+                            { name: 'Quimbara', icon: 'sports_mma', href: 'https://quimbara.org', label: 'Quimbara: blog de UFC' },
+                        ].map((social) => (
+                            <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} class="flex items-center gap-1.5 border border-white/20 rounded-full px-3 py-1.5 bg-white/5 hover:bg-white/10 hover:text-primary transition-colors text-gray-400">
+                                <span class="material-symbols-outlined text-sm" aria-hidden="true">{social.icon}</span>
+                                <span class="font-mono text-[10px] uppercase tracking-wide">{social.name}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+
+                {/* COL 2: LADO A (BUILD) */}
+                <div>
+                    <h3 class="font-display text-xl uppercase text-primary mb-6">Construye (Lado A)</h3>
+                    <ul class="space-y-3 font-mono text-xs uppercase tracking-wide text-gray-400">
+                        <li><a href="/consultoria" class="hover:text-white transition-colors">Consultoría Estratégica</a></li>
+                        <li><a href="/consultoria/arquitectura-seo-geo" class="hover:text-white transition-colors">Arquitectura & GEO</a></li>
+                        <li><a href="/consultoria/consultoria-seo-internacional" class="hover:text-white transition-colors">SEO Internacional (USA/Latam)</a></li>
+                        <li><a href="/casos" class="hover:text-white transition-colors">Trabajos y casos</a></li>
+                        <li><a href="/consultoria" class="hover:text-white transition-colors">Auditoría Técnica</a></li>
+                        <li><a href="/servicios/narrativa" class="hover:text-white transition-colors">Narrativa de Datos</a></li>
+                        <li><a href="/servicios/letras" class="hover:text-white transition-colors">UX Writing & Copy SEO</a></li>
+                        <li><a href="/servicios/composicion" class="hover:text-white transition-colors">Arquitectura Editorial</a></li>
+                        <li><a href="/servicios/geo-ia" class="hover:text-white transition-colors">GEO Local (IA & Maps)</a></li>
+                        <li><a href="/servicios/migraciones" class="hover:text-white transition-colors">Migraciones SEO</a></li>
+                        <li><a href="/guias" class="hover:text-white transition-colors">Guías Técnicas</a></li>
+                        <li><a href="/vs/agencia-tradicional" class="hover:text-white transition-colors">vs. Agencia Tradicional</a></li>
+                        <li><a href="/lab/metodologia" class="hover:text-white transition-colors">Metodología</a></li>
+                    </ul>
+                </div>
+
+                {/* COL 3: LADO B (BREAK) */}
+                <div>
+                    <h3 class="font-display text-xl uppercase text-acid-green mb-6">Rompe (Lado B)</h3>
+                    <ul class="space-y-3 font-mono text-xs uppercase tracking-wide text-gray-400">
+                        <li><a href="/lab" class="hover:text-white transition-colors">El Laboratorio (Hub)</a></li>
+                        <li><a href="/lab/calvo-fight-club" class="hover:text-white transition-colors">Calvo Fight Club</a></li>
+                        <li><a href="/lab/vibe-coding" class="hover:text-white transition-colors">Vibe Coding (Scripts)</a></li>
+                        <li><a href="/liner-notes" class="hover:text-white transition-colors">Liner Notes (Opinión)</a></li>
+                        <li><a href="https://quimbara.org" target="_blank" rel="noopener" class="hover:text-white transition-colors">Quimbara (UFC Blog) ↗</a></li>
+                        <li><a href="/newsletter" class="hover:text-white transition-colors">Newsletter: The Lab Report</a></li>
+                    </ul>
+                </div>
+
+                {/* COL 4: BASE (TRUST) */}
+                <div>
+                    <h3 class="font-display text-xl uppercase text-white mb-6">Base (Trust)</h3>
+                    <ul class="space-y-3 font-mono text-xs text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            Florida, USA / Latam
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                            <a href="mailto:roger@calvocreativo.com" class="hover:text-white">roger@calvocreativo.com</a>
+                        </li>
+                        <li class="flex items-center gap-2 pt-2">
+                            <span class="material-symbols-outlined text-sm">badge</span>
+                            <a href="/cv" class="hover:text-white text-acid-green">Curriculum Vitae</a>
+                        </li>
+                        <li class="pt-4"><a href="/politica-privacidad" class="hover:text-white underline decoration-dotted">Política de Privacidad</a></li>
+                        <li><a href="/terminos" class="hover:text-white underline decoration-dotted">Términos de Servicio</a></li>
+                        <li><a href="/politica-editorial" class="hover:text-white underline decoration-dotted text-primary">Política Editorial de IA</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            {/* BOTTOM BAR */}
+            <div class="max-w-7xl mx-auto border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono uppercase text-gray-600">
+                <div>
+                    © 2026 Calvo Creativo. Todos los derechos reservados.
+                </div>
+                <div class="flex items-center gap-2">
+                    Hecho con Salsa & Python 🐍
+                </div>
+                <div>
+                    {/* 🔧 FIX: era /public/llms.txt (ruta interna de Next), ahora /llms.txt (ruta pública real) */}
+                    <a href="/llms.txt" class="flex items-center gap-1 hover:text-acid-green transition-colors">
+                        <span class="material-symbols-outlined text-sm">smart_toy</span> Access for AI Agents: llms.txt
+                    </a>
+                </div>
+            </div>
+            {/* Clarity Disclosure */}
+            <div class="max-w-7xl mx-auto px-8 mt-4 text-[9px] text-gray-700 font-mono text-center leading-tight opacity-50">
+                Con tu consentimiento, usamos Google Analytics y Microsoft Clarity para entender cómo se utiliza el sitio y mejorarlo. Puedes aceptar o rechazar las cookies de analítica.
+            </div>
+        </footer>

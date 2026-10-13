@@ -7,62 +7,13 @@ const HOST = 'calvocreativo.com';
 const KEY_LOCATION = `https://${HOST}/${API_KEY}.txt`;
 const SUBMIT_ENDPOINT = 'https://api.indexnow.org/indexnow';
 
-const PAGES_DIR = path.join(process.cwd(), 'pages');
+const PAGES_DIR = path.join(process.cwd(), 'src', 'pages');
 const POSTS_DIR = path.join(process.cwd(), 'content', 'posts');
 
-// Helper to get all file paths recursively
-function getAllFiles(dirPath, arrayOfFiles) {
-    const files = fs.readdirSync(dirPath);
-    arrayOfFiles = arrayOfFiles || [];
-
-    files.forEach((file) => {
-        if (fs.statSync(path.join(dirPath, file)).isDirectory()) {
-            arrayOfFiles = getAllFiles(path.join(dirPath, file), arrayOfFiles);
-        } else {
-            arrayOfFiles.push(path.join(dirPath, file));
-        }
-    });
-
-    return arrayOfFiles;
-}
-
-// Generate URL list
 function getUrlList() {
-    const urls = [];
-
-    // 1. Static Pages
-    const pageFiles = getAllFiles(PAGES_DIR);
-    pageFiles.forEach((file) => {
-        // Ignore internal Next.js files and API routes
-        if (file.includes('/api/') || file.includes('/_') || file.includes('.DS_Store')) return;
-
-        let route = file
-            .replace(PAGES_DIR, '')
-            .replace(/\.(tsx|js|jsx)$/, '')
-            .replace('/index', '');
-
-        // Handle dynamic routes (simple logic: skip them or map them manually if known)
-        // For this script, we'll skip dynamic routes containing brackets [] to avoid 404s
-        // unless we strictly know the IDs. We will handle posts separately.
-        if (route.includes('[')) return;
-
-        if (route === '') route = '/'; // Home
-        urls.push(`https://${HOST}${route}`);
-    });
-
-    // 2. Blog Posts (Dynamic: /liner-notes/[slug])
-    if (fs.existsSync(POSTS_DIR)) {
-        const postFiles = fs.readdirSync(POSTS_DIR);
-        postFiles.forEach((file) => {
-            if (file.endsWith('.md')) {
-                const slug = file.replace('.md', '');
-                urls.push(`https://${HOST}/liner-notes/${slug}`);
-            }
-        });
-    }
-
-    // Deduplicate
-    return [...new Set(urls)];
+    const file = path.join(process.cwd(), 'dist', 'sitemap-0.xml');
+    if (!fs.existsSync(file)) throw new Error('Run npm run build first.');
+    return [...fs.readFileSync(file, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 }
 
 async function submitToIndexNow() {

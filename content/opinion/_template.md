@@ -5,7 +5,7 @@ updatedDate: "2025-XX-XX"
 excerpt: "El gancho corto para redes sociales y cards. 2 frases máximo."
 tags: ["Opinion", "Tema1", "Tema2"]
 coverImage: "/images/posts/default-opinion.jpg"
-author: "Roger Calvo"
+author: "Roger Murillo"
 tldr: "Resume tu tesis en 1 frase. El dato clave que lo respalda. Y la solución que propones."
 ---
 
@@ -45,7 +45,7 @@ tldr: "Resume tu tesis en 1 frase. El dato clave que lo respalda. Y la solución
 | **Estadística Clave** | XX% | Estudio Interno / Fuente Confiable |
 | **Impacto** | Alto | Análisis de Mercado |
 
-> "[Frase citable del experto que resume el punto de vista único]" · **Roger Calvo**
+> "[Frase citable del experto que resume el punto de vista único]" · **Roger Murillo**
 
 ---
 

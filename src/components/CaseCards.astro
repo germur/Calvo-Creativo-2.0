@@ -1,0 +1,15 @@
+---
+import { cases } from '@/src/cases';
+import AlbumCover from './AlbumCover.astro';
+---
+<div class="portfolio-grid">
+{cases.map(item => <a href={`/casos/${item.slug}`} class="portfolio-card">
+ <div class="card-cover"><AlbumCover slug={item.slug} /></div>
+ <div class="card-content"><p class="card-category">{item.category}</p><h3>{item.client}</h3><p class="card-summary">{item.summary}</p><div class="card-outcome"><strong>{item.signal}</strong><span>{item.label}</span></div><span class="card-read">Explorar el caso <span aria-hidden="true">→</span></span></div>
+</a>)}
+</div>
+<style>
+ .portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 32px;font-family:'Outfit Variable',sans-serif}.portfolio-card{display:block;min-width:0;transition:transform .25s}.portfolio-card:hover{transform:translateY(-5px)}.portfolio-card:focus-visible{outline:3px solid #b53728;outline-offset:8px}.card-cover{aspect-ratio:1;transform:rotate(-1deg);transition:transform .3s}.portfolio-card:nth-child(even) .card-cover{transform:rotate(1deg)}.portfolio-card:hover .card-cover{transform:rotate(0)}.card-content{padding:28px 12px;background:#f0e7d3;border:1px solid #c5b998;border-top:0;margin:0 7px}.card-category{font:9px 'JetBrains Mono Variable',monospace;text-transform:uppercase;letter-spacing:.07em;color:#665842;line-height:1.8}.card-content h3{font-size:28px;line-height:1.2;letter-spacing:-.02em;font-weight:550;margin:16px 0;color:#29241d}.card-summary{font-size:16px;line-height:1.7;color:#625745}.card-outcome{margin-top:24px;padding-top:20px;border-top:1px solid #c9bea6;display:flex;align-items:center;gap:20px}.card-outcome strong{font-size:26px;line-height:1.1;font-weight:600;white-space:nowrap;letter-spacing:-.025em;color:#29241d}.card-outcome>span{font-size:11px;line-height:1.6;color:#665842}.card-read{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-top:26px;color:#29241d}.card-read>span{color:#b53728}
+ @media(max-width:650px){.portfolio-grid{grid-template-columns:1fr;gap:32px}.card-content{padding:24px 16px}.card-content h3{font-size:26px}.card-outcome{flex-wrap:wrap;gap:10px}}
+ @media(prefers-reduced-motion:reduce){.portfolio-card:hover,.portfolio-card:hover .card-cover{transform:none}}
+</style>

@@ -1,0 +1,7 @@
+export const albumArt = {
+  home: { image: '/images/album-home.webp', title: 'Calvo\nCreativo', subtitle: 'Estrategia · Código · Historias', color: '#d33b28', paper: '#f1e5c9', number: 'CC · LADO A', alt: 'Collage original de Roger Murillo entre mapas, escaleras y una ciudad: una metáfora de estrategia y creatividad.' },
+  rogermurillo: { image: '/images/album-roger.webp', title: 'Otra\nmirada', subtitle: 'Roger Murillo · Asesoría de imagen', color: '#8d2b29', paper: '#eee0bd', number: 'CC · 01', alt: 'Carátula conceptual: un espejo y retratos fragmentados representan la transformación de la imagen personal.' },
+  'german-montenegro': { image: '/images/album-german.webp', title: 'El\nmovimiento', subtitle: 'Germán Montenegro · SEO y web', color: '#194e56', paper: '#ede1c3', number: 'CC · 02', alt: 'Carátula conceptual: una silueta anatómica, una ciudad y caminos que conectan las búsquedas de fisioterapia.' },
+  'all-claims': { image: '/images/album-crm.webp', title: 'Todo\nconecta', subtitle: 'All Claims · CRM y procesos', color: '#bb3526', paper: '#eee0bf', number: 'CC · 03', alt: 'Carátula conceptual: un archivador convertido en ciudad, con puentes de papel que organizan el recorrido de las reclamaciones.' },
+  prendaautos: { image: '/images/album-ads.webp', title: 'La\ndirección', subtitle: 'Prendaautos · Búsqueda y Ads', color: '#244d89', paper: '#eed88f', number: 'CC · 04', alt: 'Carátula conceptual: caminos separados de carros y motos se orientan hacia una lupa, una metáfora de intención de búsqueda.' },
+} as const;

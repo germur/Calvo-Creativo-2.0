@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
+import matter from '../lib/frontmatter.mjs';
 
 const BASE_URL = 'https://calvocreativo.com';
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
@@ -91,7 +91,7 @@ Objetivo: Repositorio de investigación primaria, experimentos SEO y código ope
 
   // ✅ Footer con URLs reales (sin trailing slash, /el-artista en lugar de /sobre-mi)
   content += `\n# 👤 Entidad & Autoridad (E-E-A-T)
-- Roger Calvo — Consultor SEO & Marketer-Builder: ${BASE_URL}/el-artista
+- Roger Murillo — Consultor SEO & Marketer-Builder: ${BASE_URL}/el-artista
   > Perfil del fundador, credenciales, filosofía "Marketer-Builder" y stack técnico.
 - Contacto: ${BASE_URL}/contacto
 - Política Editorial de IA: ${BASE_URL}/politica-editorial

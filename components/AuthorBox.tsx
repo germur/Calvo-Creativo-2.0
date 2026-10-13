@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from '@/src/site/Link';
+import Image from '@/src/site/Image';
 
 const AuthorBox = () => {
     return (
@@ -24,7 +24,7 @@ const AuthorBox = () => {
                 {/* Content */}
                 <div className="flex-grow">
                     <h3 className="font-display text-2xl md:text-3xl uppercase font-black text-ink mb-2">
-                        Roger Calvo
+                        Roger Murillo
                     </h3>
                     <p className="font-mono text-xs text-primary uppercase font-bold mb-4 tracking-wider">
                         SEO Strategist & Marketer-Builder
@@ -47,7 +47,7 @@ const AuthorBox = () => {
                             <span className="sr-only">GitHub</span>
                             <span className="material-symbols-outlined">code</span>
                         </a>
-                        <Link href="/autor/roger-calvo" className="text-ink hover:text-primary transition-colors font-mono text-xs uppercase font-bold underline decoration-2 items-center flex gap-1">
+                        <Link href="/autor/roger-murillo" className="text-ink hover:text-primary transition-colors font-mono text-xs uppercase font-bold underline decoration-2 items-center flex gap-1">
                             Ver Perfil Completo <span className="material-symbols-outlined text-[10px]">arrow_outward</span>
                         </Link>
                     </div>

@@ -1,0 +1,22 @@
+---
+import { albumArt } from '@/src/album-art';
+const { slug, priority = false } = Astro.props as { slug: keyof typeof albumArt; priority?: boolean };
+const art = albumArt[slug];
+---
+<figure class="album-cover" style={`--sleeve-color:${art.color};--sleeve-paper:${art.paper}`}>
+  <img src={art.image} alt={art.alt} width="1024" height="1024" loading={priority ? 'eager' : 'lazy'} fetchpriority={priority ? 'high' : 'auto'} />
+  <div class="sleeve-top" aria-hidden="true"><span>Calvo Creativo</span><span>{art.number}</span></div>
+  <p class="sleeve-title" aria-hidden="true">{art.title.split('\n').map(line => <span>{line}</span>)}</p>
+  <figcaption>{art.subtitle}<span>{slug === 'home' ? 'Carátula original · Calvo Creativo' : 'Carátula conceptual · Proyecto real'}</span></figcaption>
+</figure>
+<style>
+ .album-cover{position:relative;aspect-ratio:1;background:var(--sleeve-paper);border:7px solid var(--sleeve-paper);box-shadow:1px 2px 0 #332715,9px 12px 0 #33271518;isolation:isolate;overflow:hidden;margin:0}
+ img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+ .album-cover:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:4;box-shadow:inset 0 0 22px #50381232;background-image:radial-gradient(#271c1828 .45px,transparent .6px);background-size:3px 3px;opacity:.28}
+ .sleeve-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;background:var(--sleeve-paper);color:#27231c;font:9px 'JetBrains Mono Variable',monospace;text-transform:uppercase;letter-spacing:.1em;border-bottom:1px solid #33271540}
+ .sleeve-title{position:absolute;top:15%;left:5%;z-index:2;display:flex;flex-direction:column;align-items:flex-start;transform:rotate(-3deg);margin:0;max-width:92%;pointer-events:none}
+ .sleeve-title>span{display:block;background:var(--sleeve-paper);color:var(--sleeve-color);font:clamp(30px,4.4vw,67px)/.98 'Anton',sans-serif;text-transform:uppercase;letter-spacing:-.025em;padding:2px 8px 5px;box-shadow:3px 3px 0 #33271512}
+ figcaption{position:absolute;left:0;right:0;bottom:0;background:var(--sleeve-paper);color:#27231c;padding:10px 12px;font:9px 'JetBrains Mono Variable',monospace;line-height:1.6;z-index:2;text-transform:uppercase;letter-spacing:.03em}
+ figcaption>span{display:block;font-size:8px;opacity:.8}
+ @media(max-width:650px){.sleeve-title>span{font-size:clamp(36px,10vw,60px)}.sleeve-top{font-size:8px}.album-cover{border-width:5px}}
+</style>
