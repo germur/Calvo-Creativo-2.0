@@ -1,5 +1,5 @@
 ---
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
 const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 const isMenuOpen = false;
 const navItems = [

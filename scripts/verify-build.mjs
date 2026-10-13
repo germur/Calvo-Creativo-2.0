@@ -65,7 +65,7 @@ const sitemap = load(fs.readFileSync('dist/sitemap-0.xml', 'utf8'), { xmlMode: t
 for (const loc of sitemap('loc').toArray()) {
   const route = new URL(sitemap(loc).text()).pathname;
   check(paths.has(route), `Sitemap points to absent page ${route}`);
-  const file = route === '/' ? 'dist/index.html' : `dist${route}/index.html`;
+  const file = pages.find(file => routeFor(file) === route);
   const $ = load(fs.readFileSync(file, 'utf8'));
   if (!['deploy-preview','branch-deploy'].includes(process.env.CONTEXT)) check(!($('meta[name="robots"]').attr('content') || '').includes('noindex'), `Sitemap contains noindex ${route}`);
 }
