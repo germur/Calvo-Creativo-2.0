@@ -15,3 +15,16 @@ CSV de formularios sin publicar información personal; separar pruebas, spam y d
 
 ## Actualización: formularios de Roger Murillo
 Exportación revisada: 37 solicitudes, 26 julio–12 octubre de 2026 (Bogotá). Resumen agregado en src/contact-results.json; el CSV original y los datos personales no se incorporan al repositorio. 37 correos distintos; una pareja de envíos comparte nombre y teléfono. Se conservan los envíos como solicitudes, sin afirmar personas únicas. 23 envíos seleccionan opciones de imagen; 14 incluyen peluquería y 5 seleccionan únicamente peluquería. No hay prueba de canal SEO, ventas o crecimiento. Las categorías admiten selección múltiple.
+
+## Recorrido experimental de los casos
+
+Rediseño inspirado en la jerarquía editorial del caso BetterUp de Graphite, adaptado a Calvo Creativo y a la evidencia disponible. Cada historia abre con contexto y resultado, incluye capítulos con progreso de lectura, un explorador propio, decisiones desplegables y una sección de fuente y alcance.
+
+- Germán: tres recorridos búsqueda/familia/página, con enlaces al proyecto real y explicación de su navegación corporal interactiva. Las búsquedas son ejemplos ilustrativos, sin volúmenes ni posiciones atribuidos.
+- Roger: gráficos de solicitudes por mes e intereses con períodos parciales y selección múltiple explícitos.
+- All Claims: cuatro etapas de un recorrido explicado; no ejecuta operaciones ni envía contratos.
+- Prendaautos: selector carros/motos, misma escala de costo y comparación de acciones por día. Muestra resultados favorables y desfavorables.
+
+Capturas públicas propias de las dos webs, tomadas el 12 de octubre de 2026. No se usan capturas del CRM ni datos personales de formularios.
+
+Todo el contenido se entrega en HTML; sin JavaScript se leen todas las vistas. Los controles son botones nativos, y las decisiones usan details/summary. No se oculta contenido con animaciones de entrada. Teclado y móvil revisados en las cuatro historias; sin desbordamiento horizontal a 390 px. La barra de capítulos permite desplazamiento lateral en móvil sin bloquear la lectura. Respeta movimiento reducido.
