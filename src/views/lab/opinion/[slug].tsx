@@ -108,10 +108,10 @@ export default function OpinionPost({ postData }: { postData: any }) {
                                 {/* TL;DR Box (GEO Optimization) */}
                                 {postData.tldr && (
                                     <div className="my-8 bg-gray-100 border-l-8 border-acid-green p-6 shadow-sm">
-                                        <h3 className="font-mono text-xs uppercase font-bold mb-2 flex items-center gap-2 text-ink">
+                                        <h2 className="font-mono text-xs uppercase font-bold mb-2 flex items-center gap-2 text-ink">
                                             <span className="material-symbols-outlined text-sm">bolt</span>
                                             TL;DR (Executive Summary)
-                                        </h3>
+                                        </h2>
                                         <p className="font-body text-lg italic text-ink/80">
                                             {postData.tldr}
                                         </p>

@@ -15,6 +15,11 @@ export default function TermPage({ termData }: TermPageProps) {
     // We will use a flexible approach: WebPage with 'mainEntity' as DefinedTerm
     const jsonLd = {
         "@context": "https://schema.org/",
+        "@type": "WebPage",
+        "@id": `https://calvocreativo.com/lab/glosario/${termData.slug}#webpage`,
+        "url": `https://calvocreativo.com/lab/glosario/${termData.slug}`,
+        "name": termData.term,
+        "mainEntity": {
         "@type": "DefinedTerm",
         "name": termData.term,
         "description": termData.definition,
@@ -23,10 +28,12 @@ export default function TermPage({ termData }: TermPageProps) {
             "name": "Wiki Calvo: El Diccionario SEO & GEO",
             "url": "https://calvocreativo.com/lab/glosario"
         },
+        },
         "author": {
             "@type": "Person",
-            "name": "Roger Calvo",
-            "url": "https://calvocreativo.com/autor/roger-calvo"
+            "@id": "https://calvocreativo.com/#roger",
+            "name": "Roger Murillo",
+            "url": "https://calvocreativo.com/autor/roger-murillo"
         }
     };
 

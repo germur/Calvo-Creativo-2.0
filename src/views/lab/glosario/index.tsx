@@ -53,9 +53,9 @@ export default function GlossaryIndex() {
                                 <Link key={term.slug} href={`/lab/glosario/${term.slug}`} className="group block">
                                     <article className="border-l-4 border-gray-200 pl-6 py-2 hover:border-[#FF0080] transition-colors bg-white hover:bg-gray-50 p-4 rounded-r-lg">
                                         <div className="flex items-baseline gap-3 mb-2">
-                                            <h3 className="text-2xl font-bold font-display uppercase group-hover:text-[#FF0080] transition-colors">
+                                            <h2 className="text-2xl font-bold font-display uppercase group-hover:text-[#FF0080] transition-colors">
                                                 {term.term}
-                                            </h3>
+                                            </h2>
                                             <span className="text-[10px] font-mono uppercase text-gray-400 border border-gray-200 px-2 rounded">
                                                 {term.category}
                                             </span>

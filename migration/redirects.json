@@ -18,5 +18,6 @@
   "/services/:slug*": "/consultoria",
   "/case-studies/:slug*": "/casos",
   "/blog/:slug*": "/liner-notes",
-  "/blog": "/liner-notes"
+  "/blog": "/liner-notes",
+  "/autor/roger-calvo": "/autor/roger-murillo"
 }

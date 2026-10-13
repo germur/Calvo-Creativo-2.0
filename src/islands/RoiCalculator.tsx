@@ -109,7 +109,7 @@ export default function RoiCalculator() {
 
                     {/* Chart Visualization */}
                     <div className="space-y-6">
-                        <h3 className="font-bold text-white uppercase text-lg border-l-4 border-acid-green pl-4">Impacto Anualizado</h3>
+                        <h2 className="font-bold text-white uppercase text-lg border-l-4 border-acid-green pl-4">Impacto Anualizado</h2>
 
                         <div className="relative pt-8">
                             {/* Bar Chart Container */}
@@ -157,7 +157,7 @@ export default function RoiCalculator() {
                         <div className="bg-red-900/20 border border-red-500/30 p-4 rounded-lg flex items-start gap-4">
                             <span className="text-2xl">⚠️</span>
                             <div>
-                                <h4 className="text-red-400 font-bold text-sm uppercase">Costo de Inacción</h4>
+                                <h3 className="text-red-400 font-bold text-sm uppercase">Costo de Inacción</h3>
                                 <p className="text-gray-400 text-xs mt-1">
                                     Cada mes que no ejecutas esta estrategia, estás dejando de ganar <strong>${uplift.toLocaleString()}</strong>. En un año, eso son <strong>${(uplift * 12).toLocaleString()}</strong> perdidos.
                                 </p>

@@ -22,11 +22,11 @@ export default function Terminos() {
 
                 <div className="prose prose-sm prose-gray max-w-none">
                     <p>Bienvenido a Calvo Creativo.</p>
-                    <h3>1. Propiedad Intelectual</h3>
+                    <h2>1. Propiedad Intelectual</h2>
                     <p>Todo el código, contenido y metodologías (incluyendo "Lado A" y "Lado B") son propiedad de Calvo Creativo.</p>
-                    <h3>2. Uso de Scripts (Vibe Coding)</h3>
+                    <h2>2. Uso de Scripts (Vibe Coding)</h2>
                     <p>Los scripts compartidos en el Laboratorio son Open Source bajo licencia MIT, a menos que se especifique lo contrario.</p>
-                    <h3>3. Limitación de Responsabilidad</h3>
+                    <h2>3. Limitación de Responsabilidad</h2>
                     <p>No nos hacemos responsables por pérdidas de tráfico derivadas de la mala implementación de nuestras estrategias o scripts.</p>
                 </div>
             </main>

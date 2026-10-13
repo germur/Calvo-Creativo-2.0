@@ -26,10 +26,10 @@ export default function PoliticaPrivacidad() {
                         En Calvo Creativo, respetamos su privacidad y nos comprometemos a proteger sus datos personales. Esta política describe cómo recopilamos, usamos y protegemos su información.
                     </p>
 
-                    <h3>1. Recopilación de Datos</h3>
+                    <h2>1. Recopilación de Datos</h2>
                     <p>Recopilamos información que usted nos proporciona voluntariamente, como su nombre, correo electrónico y detalles del mensaje cuando se pone en contacto con nosotros o se suscribe a nuestro boletín. También usamos cookies técnicas para el funcionamiento del sitio.</p>
 
-                    <h3>2. Uso de la Información</h3>
+                    <h2>2. Uso de la Información</h2>
                     <p>Usamos sus datos para:</p>
                     <ul>
                         <li>Responder a sus consultas de servicios.</li>
@@ -37,13 +37,13 @@ export default function PoliticaPrivacidad() {
                         <li>Mejorar la funcionalidad del sitio web.</li>
                     </ul>
 
-                    <h3>3. Cookies y Rastreo</h3>
+                    <h2>3. Cookies y Rastreo</h2>
                     <p>Utilizamos cookies esenciales para la navegación. No vendemos sus datos a terceros. Utilizamos Google Analytics de forma anonimizada para entender el tráfico general.</p>
 
-                    <h3>4. Sus Derechos</h3>
+                    <h2>4. Sus Derechos</h2>
                     <p>Usted tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento. Para ejercer estos derechos, contáctenos en roger@calvocreativo.com.</p>
 
-                    <h3>5. Microsoft Clarity y Publicidad</h3>
+                    <h2>5. Microsoft Clarity y Publicidad</h2>
                     <p>Nos asociamos con Microsoft Clarity y Microsoft Advertising para capturar cómo usa e interactúa con nuestro sitio web a través de métricas de comportamiento, mapas de calor y reproducción de sesiones para mejorar y comercializar nuestros productos/servicios. Los datos de uso del sitio web se capturan utilizando cookies propias y de terceros y otras tecnologías de seguimiento para determinar la popularidad de los productos/servicios y la actividad en línea. Además, usamos esta información para la optimización del sitio, fines de fraude/seguridad y publicidad. Para obtener más información sobre cómo Microsoft recopila y usa sus datos, visite la Declaración de Privacidad de Microsoft.</p>
                 </div>
             </main>

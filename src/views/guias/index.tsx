@@ -39,9 +39,9 @@ export default function GuiasIndex() {
                             {/* Editor's Note Side */}
                             <div className="lg:col-span-1">
                                 <div className="bg-[#fffde7] p-8 border-t-4 border-[#fff176]">
-                                    <h4 className="flex items-center gap-2 font-bold uppercase text-xs mb-4 text-[#bf9a00]">
+                                    <h2 className="flex items-center gap-2 font-bold uppercase text-xs mb-4 text-[#bf9a00]">
                                         <span className="material-symbols-outlined text-sm">format_quote</span> Editor's Note
-                                    </h4>
+                                    </h2>
                                     <p className="font-serif text-lg italic leading-relaxed text-[#5f4b00] mb-6">
                                         "The rhythm of the algorithm changes, but the fundamentals of the groove remain. Keep your canonicals tight and your sitemaps clean."
                                     </p>
@@ -144,9 +144,9 @@ export default function GuiasIndex() {
                         {/* Sidebar */}
                         <div className="lg:col-span-4">
                             <div className="bg-white border rounded-xl p-8 mb-8 sticky top-24">
-                                <h5 className="text-xs font-bold uppercase text-gray-400 mb-6 flex items-center gap-2">
+                                <h3 className="text-xs font-bold uppercase text-gray-400 mb-6 flex items-center gap-2">
                                     <span className="material-symbols-outlined text-sm">folder</span> Related Rhythms
-                                </h5>
+                                </h3>
 
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {['#TechnicalSEO', '#CrawlBudget', '#Vibecoding', '#SalsaDura', '#Indexing', '#Migrations'].map((tag, i) => (
@@ -158,9 +158,9 @@ export default function GuiasIndex() {
 
                                 <div className="h-px bg-gray-100 w-full mb-8"></div>
 
-                                <h5 className="text-xs font-bold uppercase text-gray-400 mb-6 flex items-center gap-2">
+                                <h3 className="text-xs font-bold uppercase text-gray-400 mb-6 flex items-center gap-2">
                                     <span className="material-symbols-outlined text-sm">headphones</span> On Rotation
-                                </h5>
+                                </h3>
 
                                 <div className="flex items-center gap-4 bg-[#f5f5f7] p-4 rounded-lg">
                                     <div className="size-12 bg-gray-300 rounded-full overflow-hidden animate-spin-slow">

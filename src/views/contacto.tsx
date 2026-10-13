@@ -6,21 +6,11 @@ import { trackEvent } from '@/lib/analytics';
 
 export default function Contacto() {
     const contactSchema = {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Calvo Creativo",
-        "image": "https://calvocreativo.com/favicon.svg",
-        "url": "https://calvocreativo.com",
-        "telephone": "",
-        "email": "roger@calvocreativo.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Miami",
-            "addressRegion": "FL",
-            "addressCountry": "US"
-        },
-        "areaServed": ["US", "FL", "Latin America"],
-        "priceRange": "$$$"
+        "@context": "https://schema.org", "@type": "ContactPage",
+        "@id": "https://calvocreativo.com/contacto#webpage",
+        "url": "https://calvocreativo.com/contacto", "name": "Contacto — Calvo Creativo",
+        "isPartOf": { "@id": "https://calvocreativo.com/#website" },
+        "mainEntity": { "@id": "https://calvocreativo.com/#organization" }
     };
 
     return (
@@ -74,7 +64,7 @@ export default function Contacto() {
 
                     {/* THE FILTER (ANTI-PERSONA) */}
                     <div className="bg-gray-100 p-8 border-l-4 border-black mb-12">
-                        <h3 className="font-display font-bold uppercase text-xl mb-4">🚫 No soy para ti si:</h3>
+                        <h2 className="font-display font-bold uppercase text-xl mb-4">🚫 No soy para ti si:</h2>
                         <ul className="space-y-2 font-mono text-sm text-gray-600">
                             <li>1. Buscas "SEO barato". (La ingeniería cuesta menos que la ignorancia, pero requiere inversión).</li>
                             <li>2. Necesitas resultados "para ayer". (La autoridad real se cocina a fuego lento).</li>
@@ -173,7 +163,7 @@ export default function Contacto() {
 
                     {/* ALTERNATIVE FOR NON-CLIENTS */}
                     <div className="mt-8 text-center bg-gray-100 p-6 border-2 border-dashed border-gray-300">
-                        <h4 className="font-bold uppercase text-sm mb-2">¿Solo estás mirando?</h4>
+                        <h3 className="font-bold uppercase text-sm mb-2">¿Solo estás mirando?</h3>
                         <p className="text-xs text-gray-600 mb-4">
                             Si te gusta la estrategia y romper algoritmos, únete a mi lista privada en el Lado B.
                         </p>

@@ -21,23 +21,23 @@ export default function PoliticaEditorial() {
                 </header>
 
                 <div className="prose prose-lg prose-headings:font-display prose-headings:uppercase prose-p:font-sans prose-strong:text-red-600">
-                    <h3>1. Nuestra Postura sobre la IA</h3>
+                    <h2>1. Nuestra Postura sobre la IA</h2>
                     <p>
                         En Calvo Creativo, <strong>abrazamos la Inteligencia Artificial</strong> como una herramienta de productividad y análisis, no como un sustituto del criterio humano. Creemos en el modelo "Centauro": Humano + Máquina {'>'} Humano solo o Máquina sola.
                     </p>
 
-                    <h3>2. ¿Qué es Generado por IA y qué es Humano?</h3>
+                    <h2>2. ¿Qué es Generado por IA y qué es Humano?</h2>
                     <ul>
                         <li><strong>100% Humano:</strong> La estrategia, la creatividad, las opiniones (Liner Notes), la supervisión final y la relación con el cliente.</li>
                         <li><strong>Asistido por IA:</strong> El procesamiento de datos masivos, la generación de esquemas (outlines), la optimización de código (Vibe Coding) y el análisis de sentimientos.</li>
                     </ul>
 
-                    <h3>3. Verificación de Datos</h3>
+                    <h2>3. Verificación de Datos</h2>
                     <p>
                         Nunca publicamos contenido generado por IA sin una revisión humana exhaustiva (Human-in-the-loop). Sabemos que los LLMs alucinan, y nuestra reputación se basa en la precisión técnica.
                     </p>
 
-                    <h3>4. Compromiso de Transparencia</h3>
+                    <h2>4. Compromiso de Transparencia</h2>
                     <p>
                         Si un experimento o artículo en el "Lab" es generado enteramente por IA con fines de prueba, lo etiquetaremos claramente.
                     </p>

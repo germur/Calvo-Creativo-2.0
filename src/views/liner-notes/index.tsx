@@ -33,7 +33,8 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
         "description": "No es otro blog de marketing. Análisis profundo sobre GEO, Vibe Coding y la nueva era de la búsqueda.",
         "author": {
             "@type": "Person",
-            "name": "Roger Calvo"
+            "@id": "https://calvocreativo.com/#roger",
+            "name": "Roger Murillo"
         }
     };
 
@@ -75,9 +76,9 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
 
                             {/* Concept Block */}
                             <div className="bg-white border-4 border-ink p-8 shadow-brutal relative">
-                                <h3 className="font-display text-2xl uppercase mb-4 text-ink flex items-center gap-2">
+                                <h2 className="font-display text-2xl uppercase mb-4 text-ink flex items-center gap-2">
                                     <span className="material-symbols-outlined">album</span> The Album Sleeve
-                                </h3>
+                                </h2>
                                 <p className="font-body text-lg text-ink/80 leading-relaxed mb-4">
                                     En la era del "contenido infinito", el contexto es el nuevo lujo. Aquí no encontrarás noticias de última hora.
                                 </p>
@@ -92,7 +93,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                             <div className="flex items-center gap-4 mb-4 border-b border-paper/20 pb-4">
                                 <div className="size-12 bg-accent rounded-full border-2 border-white flex items-center justify-center font-display text-ink text-xl">RC</div>
                                 <div>
-                                    <div className="font-bold uppercase tracking-wider">Roger Calvo</div>
+                                    <div className="font-bold uppercase tracking-wider">Roger Murillo</div>
                                     <div className="font-mono text-xs opacity-60">Strategic SEO Consultant</div>
                                 </div>
                             </div>
@@ -123,22 +124,22 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <Link href="/liner-notes/seo-a-geo" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
                             <span className="font-mono text-[10px] text-primary uppercase tracking-widest">GEO · Estrategia</span>
-                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">Del SEO al GEO</h3>
+                            <h2 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">Del SEO al GEO</h2>
                             <p className="text-sm text-ink/70">Guía visual para evolucionar tu estrategia hacia los motores de IA.</p>
                         </Link>
                         <Link href="/liner-notes/arte-storytelling-digital" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
                             <span className="font-mono text-[10px] text-primary uppercase tracking-widest">Storytelling · Growth</span>
-                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">El arte del storytelling digital</h3>
+                            <h2 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">El arte del storytelling digital</h2>
                             <p className="text-sm text-ink/70">De la cultura pop a la ingeniería SEO: Michael Jackson, Daft Punk y algoritmos.</p>
                         </Link>
                         <Link href="/liner-notes/vibecoding-vs-seo-tools" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
                             <span className="font-mono text-[10px] text-primary uppercase tracking-widest">Python · Automation</span>
-                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">Vibecoding vs herramientas SEO</h3>
+                            <h2 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">Vibecoding vs herramientas SEO</h2>
                             <p className="text-sm text-ink/70">Cuándo programar tus propios scripts y cuándo pagar por software.</p>
                         </Link>
                         <Link href="/liner-notes/seo-tecnico-era-ia" className="group bg-white border-4 border-ink p-6 shadow-brutal-sm hover:shadow-brutal hover:-translate-y-1 transition-all">
                             <span className="font-mono text-[10px] text-primary uppercase tracking-widest">SEO Técnico · IA</span>
-                            <h3 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">SEO técnico para la era de la IA</h3>
+                            <h2 className="font-display text-xl uppercase mt-2 mb-3 group-hover:text-primary transition-colors">SEO técnico para la era de la IA</h2>
                             <p className="text-sm text-ink/70">La guía definitiva: rastreo, schema y rendimiento cuando tus lectores son los LLMs.</p>
                         </Link>
                     </div>
@@ -179,9 +180,9 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                                                     </span>
                                                 ))}
                                             </div>
-                                            <h3 className="text-2xl md:text-4xl font-display uppercase leading-tight text-ink mb-4 group-hover:text-primary transition-colors">
+                                            <h2 className="text-2xl md:text-4xl font-display uppercase leading-tight text-ink mb-4 group-hover:text-primary transition-colors">
                                                 {post.title}
-                                            </h3>
+                                            </h2>
                                             <p className="font-body text-ink/80 text-lg leading-snug max-w-3xl mb-6">
                                                 {post.excerpt || 'Click to read full article...'}
                                             </p>
@@ -194,7 +195,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                             ))
                         ) : (
                             <div className="text-center py-20 border-4 border-dashed border-ink/20">
-                                <h3 className="font-display text-3xl text-ink/50 uppercase">No hay tracks aún</h3>
+                                <h2 className="font-display text-3xl text-ink/50 uppercase">No hay tracks aún</h2>
                                 <p className="font-mono text-sm text-ink/40 mt-2">Estamos grabando en el estudio...</p>
                             </div>
                         )}
@@ -214,7 +215,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                         {/* Tech Cut */}
                         <div className="bg-paper border-2 border-ink p-6 hover:bg-white transition-colors">
                             <span className="text-4xl mb-4 block">🎛️</span>
-                            <h4 className="font-bold text-ink uppercase mb-2">Ingeniería de Búsqueda</h4>
+                            <h3 className="font-bold text-ink uppercase mb-2">Ingeniería de Búsqueda</h3>
                             <p className="font-mono text-xs text-ink/70 mb-4 leading-relaxed">
                                 Análisis sobre Schema Markup, Grafos de Conocimiento y cómo estructurar tu web.
                             </p>
@@ -223,7 +224,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                         {/* Editorial Cut */}
                         <div className="bg-paper border-2 border-ink p-6 hover:bg-white transition-colors">
                             <span className="text-4xl mb-4 block">🎹</span>
-                            <h4 className="font-bold text-ink uppercase mb-2">Composición,</h4>
+                            <h3 className="font-bold text-ink uppercase mb-2">Composición,</h3>
                             <p className="font-mono text-xs text-ink/70 mb-4 leading-relaxed">
                                 Cómo crear "Topic Clusters" que dominen nichos y por qué la Autoridad vence a los backlinks.
                             </p>
@@ -232,7 +233,7 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                         {/* Auto Cut */}
                         <div className="bg-paper border-2 border-ink p-6 hover:bg-white transition-colors">
                             <span className="text-4xl mb-4 block">🎚️</span>
-                            <h4 className="font-bold text-ink uppercase mb-2">Automatización</h4>
+                            <h3 className="font-bold text-ink uppercase mb-2">Automatización</h3>
                             <p className="font-mono text-xs text-ink/70 mb-4 leading-relaxed">
                                 Tutoriales sobre el uso de Agentes de IA para escalar operaciones sin perder el alma.
                             </p>
@@ -260,7 +261,8 @@ export default function LinerNotes({ allPostsData }: { allPostsData: Post[] }) {
                     </div>
                 </div>
 
-            </main>
+            <section className="max-w-7xl mx-auto px-6 py-10"><Link href="/liner-notes/editoriales" className="font-bold underline underline-offset-4">Editoriales y manifiestos de Calvo Creativo</Link></section>
+</main>
             <Footer />
         </>
     );

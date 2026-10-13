@@ -70,7 +70,7 @@ export default function AutomatizacionSeo() {
                         En 2026, la velocidad de implementación es un factor de ranking. Si tu equipo dedica 20 horas al mes a tareas manuales que un script podría hacer en 3 minutos, estás perdiendo ventaja competitiva.
                     </p>
                     <div className="bg-red-50 text-red-900 p-6 rounded-lg text-left max-w-2xl mx-auto border border-red-100">
-                        <h4 className="font-bold mb-3 uppercase text-xs tracking-widest">Síntomas de operación obsoleta:</h4>
+                        <h3 className="font-bold mb-3 uppercase text-xs tracking-widest">Síntomas de operación obsoleta:</h3>
                         <ul className="space-y-2 text-sm">
                             <li className="flex items-center gap-2"><span className="text-red-500 material-symbols-outlined text-sm">warning</span> Auditorías técnicas que tardan semanas.</li>
                             <li className="flex items-center gap-2"><span className="text-red-500 material-symbols-outlined text-sm">warning</span> Incapacidad para detectar canibalización a escala.</li>
@@ -133,21 +133,21 @@ export default function AutomatizacionSeo() {
                             <li className="flex items-start gap-4">
                                 <div className="bg-[#E11D48] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
                                 <div>
-                                    <h4 className="font-bold">Unificación de Fuentes</h4>
+                                    <h3 className="font-bold">Unificación de Fuentes</h3>
                                     <p className="text-sm text-gray-500">Conecto GSC, GA4 y CRM en un solo lago de datos.</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
                                 <div className="bg-[#E11D48] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</div>
                                 <div>
-                                    <h4 className="font-bold">Limpieza de Datos</h4>
+                                    <h3 className="font-bold">Limpieza de Datos</h3>
                                     <p className="text-sm text-gray-500">Eliminamos el ruido para evitar alucinaciones en modelos de IA.</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
                                 <div className="bg-[#E11D48] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
                                 <div>
-                                    <h4 className="font-bold">Dashboards Vivos</h4>
+                                    <h3 className="font-bold">Dashboards Vivos</h3>
                                     <p className="text-sm text-gray-500">Reportes en Looker Studio que se actualizan solos.</p>
                                 </div>
                             </li>

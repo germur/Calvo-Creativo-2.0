@@ -70,12 +70,12 @@ export default function ConsultoriaInternacional() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
                         <div className="bg-red-50 p-6 rounded-lg border border-red-100">
-                            <h4 className="font-bold text-red-900 mb-2">❌ Traducción Literal</h4>
+                            <h3 className="font-bold text-red-900 mb-2">❌ Traducción Literal</h3>
                             <p className="text-sm text-red-800">"Apartamentos en arriendo"</p>
                             <p className="text-xs text-red-600 mt-1 italic">(Nadie busca así en Miami)</p>
                         </div>
                         <div className="bg-green-50 p-6 rounded-lg border border-green-100">
-                            <h4 className="font-bold text-green-900 mb-2">✅ Intención Cultural</h4>
+                            <h3 className="font-bold text-green-900 mb-2">✅ Intención Cultural</h3>
                             <p className="text-sm text-green-800">"Condos for rent" / "Departamentos de renta"</p>
                             <p className="text-xs text-green-600 mt-1 italic">(Así buscan tus compradores)</p>
                         </div>
@@ -133,17 +133,17 @@ export default function ConsultoriaInternacional() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="text-center">
                             <div className="w-16 h-16 bg-[#0A0A0A] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-                            <h4 className="font-bold text-lg mb-2">Auditoría de Internacionalización</h4>
+                            <h3 className="font-bold text-lg mb-2">Auditoría de Internacionalización</h3>
                             <p className="text-sm text-gray-600">Revisamos si tu web actual está lista para cruzar fronteras.</p>
                         </div>
                         <div className="text-center">
                             <div className="w-16 h-16 bg-[#0A0A0A] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-                            <h4 className="font-bold text-lg mb-2">Mapeo de Entidades Locales</h4>
+                            <h3 className="font-bold text-lg mb-2">Mapeo de Entidades Locales</h3>
                             <p className="text-sm text-gray-600">Identificamos competidores reales en el país destino.</p>
                         </div>
                         <div className="text-center">
                             <div className="w-16 h-16 bg-[#0A0A0A] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-                            <h4 className="font-bold text-lg mb-2">Despliegue y Monitoreo</h4>
+                            <h3 className="font-bold text-lg mb-2">Despliegue y Monitoreo</h3>
                             <p className="text-sm text-gray-600">Lanzamos la estrategia y medimos adopción por país.</p>
                         </div>
                     </div>

@@ -46,14 +46,16 @@ export default function ElArtista() {
     return (
         <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-black font-sans">
             <SeoHead
-                title="Roger Calvo | Consultor SEO & GEO Marketer-Builder"
-                description="Consultor SEO y Marketer-Builder. La fusión entre la estrategia técnica (The Architect) y la mentalidad competitiva (The Fighter)."
+                title="Roger Murillo | El SEO detrás de Calvo Creativo"
+                type="profile"
+                description="Conoce a Roger Murillo, el SEO detrás de Calvo Creativo. Estrategia SEO, GEO, storytelling y automatización con Python para empresas en EE. UU. y Latinoamérica."
             />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: personSchema }}
             />
             <Navigation />
+            <main id="contenido">
 
             {/* Breadcrumbs for Architecture */}
             <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-24 pt-20">
@@ -71,13 +73,13 @@ export default function ElArtista() {
                             <span className="text-xs font-mono text-gray-400 uppercase tracking-widest">Profile: Marketer-Builder</span>
                         </div>
                         <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.9] mb-8">
-                            THE<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">ARCHITECT.</span>
+                            ROGER<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">MURILLO.</span>
                         </h1>
 
                         {/* 3rd Person Bio Snippet (Entity) - Integrated subtly */}
-                        <div className="mb-6 opacity-60 text-xs font-mono max-w-lg border-l border-gray-700 pl-3">
-                            <p>Roger Calvo: Consultor SEO Estratégico & Python Developer.<br />Especialista en Information Gain y GEO.</p>
+                        <div className="mb-6 text-lg text-gray-200 max-w-lg border-l-2 border-red-500 pl-4">
+                            <p>Soy <strong>Roger Murillo</strong>, el SEO detrás de <strong>Calvo Creativo</strong>.<br />Estrategia SEO, GEO y automatización con Python.</p>
                         </div>
 
                         <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light max-w-xl">
@@ -93,8 +95,12 @@ export default function ElArtista() {
                         </div>
 
                         {/* Tech Stack Icons (Restored) */}
+                        <div className="mt-8 flex flex-wrap gap-4">
+                            <Link href="/casos" className="bg-red-600 text-white px-6 py-3 font-bold hover:bg-red-700">Ver casos de éxito</Link>
+                            <Link href="/contacto" className="border border-white/40 text-white px-6 py-3 font-bold hover:bg-white/10">Hablemos de tu proyecto</Link>
+                        </div>
                         <div className="mt-12 flex flex-wrap gap-4">
-                            {['Technical SEO', 'Python Automations', 'React / Next.js', 'Information Gain', 'Entity Graph'].map((skill) => (
+                            {['Technical SEO', 'Python Automations', 'React / Astro', 'Information Gain', 'Entity Graph'].map((skill) => (
                                 <div key={skill} className="bg-white/5 border border-white/10 px-4 py-2 rounded flex items-center gap-2 hover:bg-white/10 transition-colors cursor-default">
                                     <span className="w-2 h-2 bg-accent rounded-full"></span>
                                     <span className="text-xs font-mono uppercase tracking-wide">{skill}</span>
@@ -433,7 +439,7 @@ export default function ElArtista() {
             {/* Author Profile Link */}
             <section className="py-8 bg-black/90 border-t border-white/10">
                 <div className="max-w-4xl mx-auto px-6 text-center">
-                    <Link href="/autor/roger-calvo" className="inline-flex items-center gap-3 text-white/60 hover:text-white font-mono text-sm uppercase tracking-widest transition-colors">
+                    <Link href="/autor/roger-murillo" className="inline-flex items-center gap-3 text-white/60 hover:text-white font-mono text-sm uppercase tracking-widest transition-colors">
                         <span className="material-symbols-outlined text-lg">person</span>
                         Perfil completo del autor
                         <span className="material-symbols-outlined text-base">arrow_forward</span>
@@ -441,6 +447,7 @@ export default function ElArtista() {
                 </div>
             </section>
 
+            </main>
             <Footer />
         </div>
     );

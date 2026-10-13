@@ -16,7 +16,8 @@ export default function LabHub() {
         "url": "https://calvocreativo.com/lab",
         "provider": {
             "@type": "Person",
-            "name": "Roger Calvo",
+            "@id": "https://calvocreativo.com/#roger",
+            "name": "Roger Murillo",
             "sameAs": [
                 "https://www.linkedin.com/in/rogermur/",
                 "https://github.com/germur"
@@ -244,15 +245,20 @@ export default function LabHub() {
                 {/* Newsletter CTA */}
                 <section className="py-16 px-6 border-t border-white/5 bg-black/40 backdrop-blur-sm text-center">
                     <p className="text-white/40 mb-6 font-mono text-xs uppercase tracking-[0.2em]">&gt; Únete a la Resistencia_</p>
-                    <div className="flex justify-center gap-0 max-w-md mx-auto relative group">
-                        <div className="absolute inset-0 bg-[#f4258c] rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                        <input type="email" placeholder="tu@email.com" className="w-full bg-[#120810] border border-white/20 rounded-l-lg px-6 py-4 text-white font-mono text-sm focus:border-[#f4258c] focus:outline-none relative z-10" />
-                        <button className="bg-[#f4258c] text-white px-8 font-bold uppercase rounded-r-lg hover:bg-[#d91b76] transition-colors relative z-10 text-sm tracking-widest">
-                            Join
-                        </button>
-                    </div>
+                    <Link href="/newsletter" className="inline-flex bg-[#f4258c] text-white px-8 py-4 font-bold uppercase rounded-lg hover:bg-[#d91b76]">Conocer The Lab Report</Link>
                 </section>
-            </main>
+            <section className="max-w-7xl mx-auto px-6 py-16">
+<h2 className="font-display text-3xl text-white uppercase mb-6">Recursos y exploraciones del Lab</h2>
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+{[
+['/lab/glosario', 'Diccionario SEO y GEO', 'Conceptos para entender los experimentos y las estrategias.'],
+['/lab/plantilla-geo-tracker', 'Plantilla GEO Tracker', 'Organiza el seguimiento de tu presencia en motores de respuesta.'],
+['/lab/branding-liquido', 'Branding líquido', 'Exploración de identidad visual y adaptación de marca.'],
+['/lab/copy-con-veneno', 'Copy con veneno', 'Exploración de mensajes y narrativa de marca.'],
+['/lab/ux-sensorial', 'UX sensorial', 'Exploración de experiencias e interacción.']
+].map(([href, title, description]) => <Link key={href} href={href} className="block border border-white/20 p-6 rounded-lg hover:border-pink-500"><h3 className="text-xl text-white font-bold mb-2">{title}</h3><p className="text-white/70">{description}</p></Link>)}
+</div></section>
+</main>
 
             <Footer />
         </div>

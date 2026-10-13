@@ -1,64 +1,40 @@
-// lib/person-schema.ts
-// Entidad canonica unica de Roger Murillo (marca: Calvo Creativo).
-// Las 3 paginas de identidad (/el-artista, /cv, /autor/roger-calvo)
-// comparten el MISMO @id para que Google y los LLMs las consoliden
-// como una sola persona. Cambiar datos aqui los actualiza en todas.
-
-const SITE = 'https://calvocreativo.com';
-
-// @id canonico de la entidad persona (independiente de la URL de cada pagina)
+export const SITE = 'https://calvocreativo.com';
 export const PERSON_ID = `${SITE}/#roger`;
-export const ORG_ID = `${SITE}/#org`;
-
-interface PersonSchemaOpts {
-    /** URL de la pagina concreta que renderiza el schema */
-    pageUrl: string;
+export const ORG_ID = `${SITE}/#organization`;
+export const WEBSITE_ID = `${SITE}/#website`;
+export const personEntity = {
+  '@type': 'Person', '@id': PERSON_ID,
+  name: 'Roger Murillo', url: `${SITE}/el-artista`,
+  jobTitle: 'SEO Strategist & Content Architect',
+  image: `${SITE}/images/roger-calvo.jpg`, email: 'roger@calvocreativo.com',
+  description: 'Roger Murillo es el SEO detrás de Calvo Creativo. Estrategia SEO, arquitectura de contenidos, GEO y automatización con Python para mercados de EE. UU. y Latinoamérica.',
+  knowsAbout: ['SEO', 'SEO técnico', 'Generative Engine Optimization', 'Topical Authority', 'Python', 'Content Strategy', 'Information Gain'],
+  knowsLanguage: ['es', 'en'],
+  sameAs: ['https://www.linkedin.com/in/rogermur/', 'https://x.com/Rogermu47429637', 'https://github.com/germur'],
+  worksFor: { '@id': ORG_ID },
+};
+export const organizationEntity = {
+  '@type': 'Organization', '@id': ORG_ID,
+  name: 'Calvo Creativo', url: SITE,
+  logo: { '@type': 'ImageObject', url: `${SITE}/favicon.svg` },
+  founder: { '@id': PERSON_ID }, email: 'roger@calvocreativo.com',
+};
+export const siteGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [personEntity, organizationEntity, {
+    '@type': 'WebSite', '@id': WEBSITE_ID, name: 'Calvo Creativo',
+    url: SITE, inLanguage: 'es', publisher: { '@id': ORG_ID },
+  }],
+};
+export function getPersonSchema({ pageUrl }: { pageUrl: string }) {
+  return {
+    '@context': 'https://schema.org', '@type': 'ProfilePage',
+    '@id': `${pageUrl}#webpage`, url: pageUrl,
+    name: 'Roger Murillo — Calvo Creativo', inLanguage: 'es',
+    isPartOf: { '@id': WEBSITE_ID },
+    mainEntity: { '@id': PERSON_ID, '@type': 'Person', name: 'Roger Murillo' },
+  };
 }
-
-/**
- * Devuelve el JSON-LD de la entidad Person, listo para JSON.stringify.
- * Pasa la URL de la pagina actual; el @id se mantiene constante.
- */
-export function getPersonSchema({ pageUrl }: PersonSchemaOpts) {
-    return {
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        '@id': PERSON_ID,
-        name: 'Roger Murillo',
-        alternateName: 'Roger Calvo',
-        jobTitle: 'SEO Strategist & Content Architect',
-        url: pageUrl,
-        image: `${SITE}/images/roger-calvo.jpg`,
-        email: 'roger@calvocreativo.com',
-        description:
-            'Roger Murillo (Roger Calvo) es SEO Strategist y Content Architect con 7 anos de experiencia en mercados U.S. y LATAM. Especialista en Topical Authority, GEO (Generative Engine Optimization) y automatizacion con Python.',
-        knowsAbout: [
-            'SEO',
-            'SEO Tecnico',
-            'Generative Engine Optimization',
-            'Topical Authority',
-            'Python',
-            'Content Strategy',
-            'Information Gain',
-            'Digital Marketing',
-        ],
-        knowsLanguage: ['Spanish', 'English'],
-        sameAs: [
-            'https://www.linkedin.com/in/rogermur/',
-            'https://x.com/Rogermu47429637',
-            'https://github.com/germur',
-            'https://quimbara.org',
-        ],
-        worksFor: {
-            '@type': 'Organization',
-            '@id': ORG_ID,
-            name: 'Calvo Creativo',
-            url: SITE,
-        },
-    };
-}
-
-/** Helper: string JSON-LD listo para dangerouslySetInnerHTML */
 export function personSchemaJson(pageUrl: string): string {
-    return JSON.stringify(getPersonSchema({ pageUrl }));
+  return JSON.stringify(getPersonSchema({ pageUrl })).replaceAll('<', '\u003c');
 }

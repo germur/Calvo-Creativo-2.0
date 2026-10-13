@@ -123,14 +123,14 @@ export default function Wins() {
                                     </div>
                                 </div>
 
-                                <h3 className="text-5xl font-black italic shadow-black drop-shadow-md">+10 SPOTS</h3>
+                                <h2 className="text-5xl font-black italic shadow-black drop-shadow-md">+10 SPOTS</h2>
                                 <p className="font-bold uppercase tracking-widest text-sm">Climbed this week</p>
                             </div>
 
                             {/* Recent Fights List */}
                             <div className="bg-white border-8 border-black p-0 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
                                 <div className="p-4 border-b-4 border-black flex justify-between items-center">
-                                    <h3 className="font-black text-2xl uppercase">Recent Fights</h3>
+                                    <h2 className="font-black text-2xl uppercase">Recent Fights</h2>
                                     <span className="material-symbols-outlined text-2xl">print</span>
                                 </div>
                                 <div className="divide-y-4 divide-black">
@@ -168,7 +168,7 @@ export default function Wins() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                         <div className="bg-[#ffc107] border-8 border-black p-6 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between">
                             <div>
-                                <h3 className="font-black uppercase text-xl">Organic Traffic</h3>
+                                <h2 className="font-black uppercase text-xl">Organic Traffic</h2>
                                 <div className="text-7xl font-black italic text-black">+120%</div>
                                 <p className="text-xs font-bold uppercase mt-2">Vs Last Month (The crowd goes wild!)</p>
                             </div>
@@ -179,7 +179,7 @@ export default function Wins() {
 
                         <div className="bg-[#0d47a1] border-8 border-black p-6 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] text-white relative overflow-hidden">
                             <div className="relative z-10">
-                                <h3 className="font-black uppercase text-xl mb-2">Conversion</h3>
+                                <h2 className="font-black uppercase text-xl mb-2">Conversion</h2>
                                 <div className="flex items-end gap-2">
                                     <div className="text-7xl font-black italic">5.2%</div>
                                     <div className="bg-[#00e676] text-black border-2 border-black px-2 py-0.5 font-bold text-xs mb-4 rotate-3">+1.5% LIFT</div>

@@ -107,24 +107,24 @@ export default function LadoBProject() {
                         {/* Metadata Column (The "Liner Notes") */}
                         <div className="md:col-span-4 font-mono text-sm leading-relaxed border-l-4 border-ink pl-6 space-y-6">
                             <div>
-                                <h3 className="uppercase font-bold text-ink/50 text-xs mb-1">Client / Label</h3>
+                                <h2 className="uppercase font-bold text-ink/50 text-xs mb-1">Client / Label</h2>
                                 <p className="text-xl font-bold bg-ink text-paper inline-block px-1 transform -rotate-1">{project.client}</p>
                             </div>
                             <div>
-                                <h3 className="uppercase font-bold text-ink/50 text-xs mb-1">Role / Instrument</h3>
+                                <h2 className="uppercase font-bold text-ink/50 text-xs mb-1">Role / Instrument</h2>
                                 <p className="text-lg border-b-2 border-ink inline-block pb-0.5">{project.role}</p>
                             </div>
                             <div className="flex gap-8">
                                 <div>
-                                    <h3 className="uppercase font-bold text-ink/50 text-xs mb-1">Year</h3>
+                                    <h2 className="uppercase font-bold text-ink/50 text-xs mb-1">Year</h2>
                                     <p className="text-lg font-bold">{project.year}</p>
                                 </div>
                                 <div>
-                                    <h3 className="uppercase font-bold text-ink/50 text-xs mb-1">Length</h3>
+                                    <h2 className="uppercase font-bold text-ink/50 text-xs mb-1">Length</h2>
                                     <p className="text-lg font-bold">{project.track_length}</p>
                                 </div>
                                 <div>
-                                    <h3 className="uppercase font-bold text-ink/50 text-xs mb-1">BPM</h3>
+                                    <h2 className="uppercase font-bold text-ink/50 text-xs mb-1">BPM</h2>
                                     <p className="text-lg font-bold">{project.bpm}</p>
                                 </div>
                             </div>

@@ -36,7 +36,7 @@ export default function Contratar() {
                         <div className="lg:col-span-5 relative">
                             <div className="bg-white border-4 border-black p-8 transform -rotate-2 shadow-[8px_8px_0_black]">
                                 <div className="size-48 mx-auto rounded-full border-4 border-black overflow-hidden mb-6 bg-[#bcaaa4]">
-                                    <Image src="https://images.unsplash.com/photo-1577382749553-6232938090bd?auto=format&fit=crop&q=80&w=600" alt="Roger Calvo — consultor SEO" fill className="object-cover grayscale contrast-125" sizes="192px" />
+                                    <Image src="/images/roger-calvo.jpg" alt="Roger Murillo — consultor SEO" fill className="object-cover grayscale contrast-125" sizes="192px" />
                                 </div>
                                 <div className="text-center">
                                     <h2 className="font-black font-serif text-4xl mb-1">Calvo Creativo</h2>

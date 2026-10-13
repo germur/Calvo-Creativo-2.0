@@ -155,7 +155,7 @@ export default function ComposicionService() {
                         <div className="grid md:grid-cols-3 gap-8">
                             {/* Plan 1 */}
                             <div className="bg-paper p-8 border-4 border-ink shadow-brutal flex flex-col items-start">
-                                <h4 className="text-2xl font-display uppercase text-white mb-2">The Demo Tape</h4>
+                                <h3 className="text-2xl font-display uppercase text-white mb-2">The Demo Tape</h3>
                                 <div className="text-5xl font-display text-accent mb-6">$500<span className="text-base font-mono text-gray-400">/proy</span></div>
                                 <ul className="space-y-4 mb-8 font-mono text-sm text-gray-300 flex-grow w-full">
                                     <li className="flex items-center gap-3 border-b border-gray-700 pb-2"><span className="material-symbols-outlined text-accent">check</span> Basic Keyword Research</li>
@@ -168,7 +168,7 @@ export default function ComposicionService() {
                             {/* Plan 2 (Featured) */}
                             <div className="bg-primary p-8 border-4 border-ink shadow-brutal relative transform md:-translate-y-8 z-10">
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-ink text-white px-4 py-1 font-mono text-xs font-bold uppercase border-2 border-white">Most Popular</div>
-                                <h4 className="text-2xl font-display uppercase text-white mb-2">The Studio Album</h4>
+                                <h3 className="text-2xl font-display uppercase text-white mb-2">The Studio Album</h3>
                                 <div className="text-5xl font-display text-white mb-6">$1500<span className="text-base font-mono text-white/70">/mes</span></div>
                                 <ul className="space-y-4 mb-8 font-mono text-sm text-white flex-grow w-full">
                                     <li className="flex items-center gap-3 border-b border-white/30 pb-2"><span className="material-symbols-outlined text-ink bg-white rounded-full p-0.5">check</span> Estrategia Integral</li>
@@ -181,7 +181,7 @@ export default function ComposicionService() {
 
                             {/* Plan 3 */}
                             <div className="bg-white p-8 border-4 border-ink shadow-brutal flex flex-col items-start text-ink">
-                                <h4 className="text-2xl font-display uppercase text-ink mb-2">Platinum Record</h4>
+                                <h3 className="text-2xl font-display uppercase text-ink mb-2">Platinum Record</h3>
                                 <div className="text-5xl font-display text-primary mb-6">$3000<span className="text-base font-mono text-ink/60">/mes</span></div>
                                 <ul className="space-y-4 mb-8 font-mono text-sm text-ink/80 flex-grow w-full">
                                     <li className="flex items-center gap-3 border-b border-gray-200 pb-2"><span className="material-symbols-outlined text-primary font-bold">check</span> Full Domination</li>

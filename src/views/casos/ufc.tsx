@@ -46,9 +46,9 @@ export default function UfcCase() {
 
                     {/* Executive Summary */}
                     <div className="mb-20">
-                        <h3 className="text-red-500 font-bold uppercase text-lg mb-4 flex items-center gap-2">
+                        <h2 className="text-red-500 font-bold uppercase text-lg mb-4 flex items-center gap-2">
                             <span className="material-symbols-outlined">terminal</span> Executive Summary
-                        </h3>
+                        </h2>
                         <div className="bg-[#110505] border border-red-900/30 p-8 rounded-lg relative overflow-hidden">
                             {/* Scanning Line Effect */}
                             <div className="absolute top-0 left-0 w-full h-[2px] bg-red-500/50 shadow-[0_0_20px_#ff0000] animate-scan-y opacity-30"></div>
@@ -70,9 +70,9 @@ export default function UfcCase() {
                     {/* Tale of the Tape (Comparison) */}
                     <div className="mb-20 relative">
                         <div className="flex justify-between items-end mb-6 border-b border-gray-800 pb-2">
-                            <h3 className="text-white font-bold uppercase text-2xl flex items-center gap-2">
+                            <h2 className="text-white font-bold uppercase text-2xl flex items-center gap-2">
                                 <span className="material-symbols-outlined text-red-600">sports_mma</span> Tale of the Tape
-                            </h3>
+                            </h2>
                             <div className="text-[10px] uppercase bg-gray-900 px-2 py-1 text-gray-500">Vs. Industry Benchmark</div>
                         </div>
 
@@ -80,7 +80,7 @@ export default function UfcCase() {
                             {/* Red Corner */}
                             <div className="bg-[#0f0505] p-8 relative">
                                 <div className="text-[10px] font-bold text-red-500 uppercase absolute top-4 left-4">Red Corner</div>
-                                <h4 className="text-3xl font-black uppercase text-white mb-12 text-center">UFC.com</h4>
+                                <h3 className="text-3xl font-black uppercase text-white mb-12 text-center">UFC.com</h3>
 
                                 <div className="space-y-8">
                                     <div>
@@ -99,7 +99,7 @@ export default function UfcCase() {
                             {/* Blue Corner */}
                             <div className="bg-[#0a0a0a] p-8 relative">
                                 <div className="text-[10px] font-bold text-blue-500 uppercase absolute top-4 right-4">Blue Corner</div>
-                                <h4 className="text-3xl font-black uppercase text-gray-400 mb-12 text-center">Benchmark</h4>
+                                <h3 className="text-3xl font-black uppercase text-gray-400 mb-12 text-center">Benchmark</h3>
 
                                 <div className="space-y-8">
                                     <div className="text-right">

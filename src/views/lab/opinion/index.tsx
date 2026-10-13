@@ -31,7 +31,8 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
         "description": "Análisis profundo y opiniones sin filtro sobre el futuro del SEO. Donde desafiamos el contenido commodity generado por IA.",
         "author": {
             "@type": "Person",
-            "name": "Roger Calvo",
+            "@id": "https://calvocreativo.com/#roger",
+            "name": "Roger Murillo",
             "url": "https://calvocreativo.com/el-artista"
         }
     };
@@ -217,7 +218,7 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
                             <div className="size-10 rounded-full bg-ink flex items-center justify-center text-white font-bold text-xs ring-2 ring-white shadow-md">RC</div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <span className="font-bold text-ink text-sm">Roger Calvo</span>
+                                    <span className="font-bold text-ink text-sm">Roger Murillo</span>
                                     <span className="text-primary material-symbols-outlined text-[14px]">verified</span>
                                     <span className="text-ink/40 text-xs">@calvoseo</span>
                                 </div>
@@ -246,7 +247,7 @@ export default function Opinion({ allPostsData = [] }: { allPostsData?: Post[] }
                             <div className="size-10 rounded-full bg-ink flex items-center justify-center text-white font-bold text-xs ring-2 ring-white shadow-md">RC</div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <span className="font-bold text-ink text-sm">Roger Calvo</span>
+                                    <span className="font-bold text-ink text-sm">Roger Murillo</span>
                                     <span className="text-primary material-symbols-outlined text-[14px]">verified</span>
                                     <span className="text-ink/40 text-xs">@calvoseo</span>
                                 </div>

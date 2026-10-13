@@ -113,7 +113,7 @@ export default function SeoRumbleArticle() {
                         <div className="bg-[#f0f0f0] p-6 border-2 border-black sticky top-24">
                             <div className="flex items-center gap-2 border-b-2 border-black pb-4 mb-6">
                                 <span className="material-symbols-outlined text-2xl text-red-600">queue_music</span>
-                                <h3 className="font-black uppercase text-lg">Side B: Tracks</h3>
+                                <h2 className="font-black uppercase text-lg">Side B: Tracks</h2>
                             </div>
 
                             <ul className="space-y-6">
@@ -144,7 +144,7 @@ export default function SeoRumbleArticle() {
                         {/* Newsletter Ad */}
                         <div className="bg-red-600 text-white p-6 border-2 border-black text-center shadow-[4px_4px_0_black]">
                             <span className="material-symbols-outlined text-4xl mb-4">mail</span>
-                            <h3 className="font-black uppercase text-2xl mb-2 leading-none">Don't Miss<br />The Beat</h3>
+                            <h2 className="font-black uppercase text-2xl mb-2 leading-none">Don't Miss<br />The Beat</h2>
                             <p className="text-[10px] font-mono mb-6 mx-auto max-w-[200px]">Get raw SEO tactics delivered to your inbox weekly. No fluff. Just bars.</p>
                             <input type="email" placeholder="Your email..." className="w-full bg-red-700 border border-white/30 text-white text-xs px-3 py-2 mb-2 placeholder-red-300 outline-none focus:border-white" />
                             <button className="w-full bg-white text-red-600 font-black uppercase text-xs py-2 hover:bg-gray-100 transition-colors">Join the Crew</button>

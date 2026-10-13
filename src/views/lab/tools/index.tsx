@@ -29,9 +29,9 @@ export default function ToolsHub() {
                         v1.0 Live
                     </div>
                     <div className="mb-6 text-4xl">🧮</div>
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-acid-green transition-colors">
+                    <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-acid-green transition-colors">
                         Calculadora ROI SEO
-                    </h3>
+                    </h2>
                     <p className="text-sm text-gray-400 mb-6 line-clamp-3">
                         Proyecta el impacto financiero de una estrategia SEO. Estima ingresos adicionales basados en tráfico, conversión y LTV.
                     </p>
@@ -47,9 +47,9 @@ export default function ToolsHub() {
                         v1.0 Live
                     </div>
                     <div className="mb-6 text-4xl">🔍</div>
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-acid-green transition-colors">
+                    <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-acid-green transition-colors">
                         Keyword Research
-                    </h3>
+                    </h2>
                     <p className="text-sm text-gray-400 mb-6 line-clamp-3">
                         Descubre keywords con Google Suggest y agrúpalas por intención semántica. Sin API key, sin límites, 100% gratis.
                     </p>
@@ -65,9 +65,9 @@ export default function ToolsHub() {
                         In Dev
                     </div>
                     <div className="mb-6 text-4xl">👁️</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h2 className="text-2xl font-bold text-white mb-2">
                         Simulador SERP + AI
-                    </h3>
+                    </h2>
                     <p className="text-sm text-gray-400 mb-6">
                         Visualiza cómo aparecen tus snippets en Google y en respuestas de IA (Perplexity/SearchGPT).
                     </p>
@@ -82,9 +82,9 @@ export default function ToolsHub() {
                         In Dev
                     </div>
                     <div className="mb-6 text-4xl">🏗️</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h2 className="text-2xl font-bold text-white mb-2">
                         Schema Builder
-                    </h3>
+                    </h2>
                     <p className="text-sm text-gray-400 mb-6">
                         Generador de JSON-LD para entidades. Define quién eres para que el Grafo de Conocimiento te entienda.
                     </p>

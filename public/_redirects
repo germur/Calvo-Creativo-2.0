@@ -1,3 +1,4 @@
+/autor/roger-calvo /autor/roger-murillo 301!
 # Retired services are handled by the gone edge function before redirects.
 /servicios/automatizacion /consultoria/automatizacion-seo-ia 301!
 /lab/seo-fight-club /lab/calvo-fight-club 301!
@@ -22,4 +23,3 @@
 /case-studies/* /casos 301!
 /blog /liner-notes 301!
 /blog/* /liner-notes 301!
-/blog /liner-notes 301!

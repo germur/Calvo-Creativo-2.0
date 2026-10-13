@@ -1,9 +1,12 @@
 import Link from '@/src/site/Link';
+import Head from '@/src/site/Head';
 import { useRouter } from '@/src/site/context';
 
 const Breadcrumbs = ({ theme = 'light' }: { theme?: 'light' | 'dark' | 'acid' }) => {
     const router = useRouter();
     const pathSegments = router.asPath.split('/').filter(segment => segment !== '');
+    const parents: Record<string, string> = { '/servicios': '/consultoria', '/autor': '/el-artista' };
+    const destination = (href: string) => parents[href] || href;
 
     // Dictionary for pretty names
     const pathNames: { [key: string]: string } = {
@@ -17,7 +20,9 @@ const Breadcrumbs = ({ theme = 'light' }: { theme?: 'light' | 'dark' | 'acid' })
         'seo-fight-club': 'Calvo Fight Club',
         'calvo-fight-club': 'Calvo Fight Club',
         'vibe-coding': 'Vibe Coding',
-        'opinion': 'Opinion',
+        'opinion': 'Opinión',
+        'autor': 'El Artista',
+        'roger-murillo': 'Roger Murillo',
         'automatizacion-seo-ia': 'Automatización',
         'auditoria-seo-tecnica': 'Auditoría',
         'estrategia-seo-internacional': 'Estrategia'
@@ -64,7 +69,7 @@ const Breadcrumbs = ({ theme = 'light' }: { theme?: 'light' | 'dark' | 'acid' })
                     "@type": "ListItem",
                     "position": index + 2,
                     "name": name,
-                    "item": `https://calvocreativo.com${href}`
+                    "item": `https://calvocreativo.com${destination(href)}`
                 };
             })
         ]
@@ -72,10 +77,10 @@ const Breadcrumbs = ({ theme = 'light' }: { theme?: 'light' | 'dark' | 'acid' })
 
     return (
         <>
-            <script
+            <Head><script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-            />
+            /></Head>
             <nav aria-label="breadcrumb" className="py-4 font-mono text-xs uppercase tracking-wider">
                 <ol className="flex flex-wrap items-center gap-2">
                     <li>
@@ -92,11 +97,11 @@ const Breadcrumbs = ({ theme = 'light' }: { theme?: 'light' | 'dark' | 'acid' })
                             <li key={href} className="flex items-center gap-2">
                                 <span className={currentStyle.separator}>/</span>
                                 {isLast ? (
-                                    <span className={`${currentStyle.text} ${currentStyle.active}`}>
+                                    <span aria-current="page" className={`${currentStyle.text} ${currentStyle.active}`}>
                                         {name}
                                     </span>
                                 ) : (
-                                    <Link href={href} className={`${currentStyle.text} ${currentStyle.hover} transition-colors`}>
+                                    <Link href={destination(href)} className={`${currentStyle.text} ${currentStyle.hover} transition-colors`}>
                                         {name}
                                     </Link>
                                 )}

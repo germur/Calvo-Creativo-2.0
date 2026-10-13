@@ -12,7 +12,7 @@ const MrXAvatar = (props: any) => <Island name="MrXAvatar" islandProps={props} /
 // ─── CV Data ─────────────────────────────────────────────────────────────────
 const CV = {
     name: 'Roger Murillo',
-    alias: 'Roger Calvo',
+    alias: 'Calvo Creativo',
     title: 'SEO Strategist & Content Architect',
     tagline: 'Search intent · Topical authority · Web architecture · AI-native workflows',
     location: 'Bogotá, Colombia · Miami, FL',
@@ -153,7 +153,7 @@ export default function CVPage() {
                 <title>Roger Murillo CV | SEO Strategist & Content Architect</title>
                 <meta
                     name="description"
-                    content="CV profesional de Roger Murillo (Roger Calvo) — SEO Strategist con 7 años en mercados U.S. y LATAM. Especialista en Topical Authority, GEO y automatización con Python."
+                    content="CV profesional de Roger Murillo — Calvo Creativo — SEO Strategist con 7 años en mercados U.S. y LATAM. Especialista en Topical Authority, GEO y automatización con Python."
                 />
                 <link rel="canonical" href="https://calvocreativo.com/cv" />
                 {/* Open Graph + Twitter (tanda 6) */}

@@ -14,7 +14,7 @@ export default function Newsletter() {
 
             <Navigation />
 
-            <div className="flex-grow flex items-center justify-center py-24 px-6 relative overflow-hidden">
+            <main className="flex-grow flex items-center justify-center py-24 px-6 relative overflow-hidden">
                 {/* Background Noise */}
                 <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-30 pointer-events-none"></div>
 
@@ -50,7 +50,7 @@ export default function Newsletter() {
                         </p>
                     </form>
                 </div>
-            </div>
+            </main>
 
             <Footer />
         </div>

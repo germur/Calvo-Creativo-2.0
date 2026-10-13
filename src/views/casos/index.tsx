@@ -46,7 +46,7 @@ export default function CasosIndex() {
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-start mb-4">
-                                    <h3 className="text-xl font-bold uppercase text-white leading-tight">De WordPress<br />a Astro</h3>
+                                    <h2 className="text-xl font-bold uppercase text-white leading-tight">De WordPress<br />a Astro</h2>
                                     <span className="material-symbols-outlined text-gray-600 group-hover:text-[#ffb300] transition-colors -rotate-45 group-hover:rotate-0 transform">arrow_forward</span>
                                 </div>
                                 <p className="text-xs text-gray-400 leading-relaxed mb-6 font-mono">
@@ -66,7 +66,7 @@ export default function CasosIndex() {
                         <div className="bg-[#0f0f0f] border border-[#222] relative flex items-center justify-center min-h-[300px]">
                             <div className="text-center px-8">
                                 <span className="material-symbols-outlined text-4xl text-gray-600 mb-2">hourglass_empty</span>
-                                <h3 className="text-lg font-bold uppercase text-gray-400">Próximamente</h3>
+                                <h2 className="text-lg font-bold uppercase text-gray-400">Próximamente</h2>
                                 <p className="text-[10px] text-gray-600 mt-2">Más casos reales en camino: dashboards, CRMs y proyectos cross-border.</p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ export default function CasosIndex() {
                         <div className="bg-[#0f0f0f] border border-[#222] relative flex items-center justify-center min-h-[300px]">
                             <div className="text-center px-8">
                                 <span className="material-symbols-outlined text-4xl text-gray-600 mb-2">hourglass_empty</span>
-                                <h3 className="text-lg font-bold uppercase text-gray-400">Próximamente</h3>
+                                <h2 className="text-lg font-bold uppercase text-gray-400">Próximamente</h2>
                                 <p className="text-[10px] text-gray-600 mt-2">Documentando resultados antes de publicarlos. Datos reales o nada.</p>
                             </div>
                         </div>
@@ -92,7 +92,8 @@ export default function CasosIndex() {
                         </Link>
                     </div>
                 </section>
-            </main>
+            <section className="max-w-7xl mx-auto px-6 py-12"><h2 className="font-display text-3xl uppercase mb-4">Análisis técnicos</h2><Link href="/casos/ufc" className="block border border-white/20 p-6 hover:border-yellow-500"><h2 className="font-bold text-xl mb-2">Auditoría SEO del dominio de UFC</h2><p className="text-white/70">Análisis de arquitectura y oportunidades de búsqueda. Ver la auditoría técnica.</p></Link></section>
+</main>
             <Footer />
         </>
     );

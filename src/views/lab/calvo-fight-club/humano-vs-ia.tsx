@@ -22,13 +22,13 @@ export default function CalvoFightClubHumanoVsIa() {
                 <div className="bg-[#0f172a] border-4 border-white/10 p-8 rounded-xl mb-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
                     <div className="flex-1">
                         <span className="text-blue-400 font-mono text-xs uppercase tracking-widest block mb-2">Rincón Azul</span>
-                        <h3 className="text-3xl font-black uppercase m-0">ChatGPT-4o</h3>
+                        <h2 className="text-3xl font-black uppercase m-0">ChatGPT-4o</h2>
                         <p className="text-sm opacity-50 m-0">Prompt Engineering Avanzado</p>
                     </div>
                     <div className="font-display text-4xl font-black text-acid-green italic">VS</div>
                     <div className="flex-1 md:text-right">
                         <span className="text-red-500 font-mono text-xs uppercase tracking-widest block mb-2">Rincón Rojo</span>
-                        <h3 className="text-3xl font-black uppercase m-0">Humano</h3>
+                        <h2 className="text-3xl font-black uppercase m-0">Humano</h2>
                         <p className="text-sm opacity-50 m-0">Salsa Mode & Storytelling</p>
                     </div>
                 </div>
@@ -65,10 +65,10 @@ export default function CalvoFightClubHumanoVsIa() {
                     {/* Mock Chart/Data Visualization */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="bg-white/5 p-6 rounded-lg border border-white/10">
-                            <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <span className="material-symbols-outlined text-blue-400">speed</span>
                                 Velocidad de Indexación
-                            </h4>
+                            </h3>
                             <div className="space-y-4">
                                 <div>
                                     <div className="flex justify-between text-sm mb-1"><span>IA</span> <span>4 Horas</span></div>
@@ -82,10 +82,10 @@ export default function CalvoFightClubHumanoVsIa() {
                         </div>
 
                         <div className="bg-white/5 p-6 rounded-lg border border-white/10">
-                            <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <span className="material-symbols-outlined text-green-400">timer</span>
                                 Engagement (Dwell Time)
-                            </h4>
+                            </h3>
                             <div className="space-y-4">
                                 <div>
                                     <div className="flex justify-between text-sm mb-1"><span>IA</span> <span>45 seg</span></div>
@@ -108,7 +108,7 @@ export default function CalvoFightClubHumanoVsIa() {
                 </div>
 
                 <div className="mb-12">
-                    <h3 className="text-2xl font-bold text-white mb-4">Veredicto del Juez</h3>
+                    <h2 className="text-2xl font-bold text-white mb-4">Veredicto del Juez</h2>
                     <p>
                         La IA es el sparring perfecto, pero no gana el campeonato sola.
                         Necesitas el <strong>'Information Gain'</strong> que solo un humano con experiencia puede dar para convertir tráfico en ventas.
@@ -122,7 +122,7 @@ export default function CalvoFightClubHumanoVsIa() {
                 </div>
 
                 <div className="bg-white/5 md:p-8 p-6 rounded-xl text-center border border-white/10">
-                    <h3 className="text-2xl font-bold text-white mb-4">¿Quieres una estrategia híbrida?</h3>
+                    <h2 className="text-2xl font-bold text-white mb-4">¿Quieres una estrategia híbrida?</h2>
                     <p className="mb-6 text-white/70">
                         Combino la velocidad de la IA para cubrir terreno con la profundidad humana para cerrar ventas.
                     </p>

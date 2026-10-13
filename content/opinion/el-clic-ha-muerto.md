@@ -6,7 +6,7 @@ excerpt: "El apocalipsis del tráfico web no es una predicción; es la realidad 
 description: "¿El clic ha muerto? Qué significan las búsquedas sin clic y los resúmenes de IA para tu tráfico orgánico, y cómo construir visibilidad que no dependa del CTR."
 tags: ["Opinion", "GEO", "Estrategia", "B2B"]
 coverImage: "/images/posts/el-clic-ha-muerto/cover.jpg"
-author: "Roger Calvo"
+author: "Roger Murillo"
 tldr: "El clic ha muerto como métrica de vanidad; la nueva moneda es la citación. Para sobrevivir en la era de los 'Answer Engines', debes optimizar para Ganancia de Información (algo que la IA no sepa) y convertirte en una 'Grounding Source' verificable."
 ---
 

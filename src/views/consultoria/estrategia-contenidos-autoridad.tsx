@@ -68,7 +68,7 @@ export default function EstrategiaContenidos() {
                         El algoritmo de Google (y su patente de <strong>Information Gain Score</strong>) ahora penaliza el contenido que no aporta nada nuevo.
                     </p>
                     <div className="bg-red-50 text-red-900 p-6 rounded-lg text-left max-w-2xl mx-auto border border-red-100">
-                        <h4 className="font-bold mb-3 uppercase text-xs tracking-widest">Síntomas de estrategia obsoleta:</h4>
+                        <h3 className="font-bold mb-3 uppercase text-xs tracking-widest">Síntomas de estrategia obsoleta:</h3>
                         <ul className="space-y-2 text-sm">
                             <li className="flex items-center gap-2"><span className="text-red-500 material-symbols-outlined text-sm">close</span> Tráfico estancado a pesar de publicar frecuentemente.</li>
                             <li className="flex items-center gap-2"><span className="text-red-500 material-symbols-outlined text-sm">close</span> Tus artículos se ven bien, pero no convierten.</li>
@@ -150,7 +150,7 @@ export default function EstrategiaContenidos() {
                             <div key={idx} className="relative">
                                 <span className="text-6xl font-black text-gray-200 absolute -top-4 -left-2 z-0">{step.num}</span>
                                 <div className="relative z-10 pt-8">
-                                    <h4 className="font-bold text-lg mb-2">{step.title}</h4>
+                                    <h3 className="font-bold text-lg mb-2">{step.title}</h3>
                                     <p className="text-sm text-gray-600">{step.desc}</p>
                                 </div>
                             </div>

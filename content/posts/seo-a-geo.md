@@ -2,7 +2,7 @@
 title: "De SEO a GEO: Guía Visual para Evolucionar tu Estrategia"
 date: "2025-01-20"
 updatedDate: "2025-01-21"
-author: "Roger Calvo"
+author: "Roger Murillo"
 related_entities: ["SEO", "AEO", "Generative AI", "Google SGE"]
 excerpt: "El manual definitivo sobre Generative Engine Optimization. Gráficos, datos y la estrategia durable que sobrevivirá al hype."
 description: "Del SEO al GEO: cómo adaptar tu estrategia de contenidos para que los motores de IA (ChatGPT, Perplexity, Google AI) citen tu marca. Guía con métodos."

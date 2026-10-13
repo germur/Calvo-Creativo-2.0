@@ -15,7 +15,8 @@ export default function ConsultoriaHub() {
         "url": "https://calvocreativo.com/consultoria",
         "author": {
             "@type": "Person",
-            "name": "Roger Calvo",
+            "@id": "https://calvocreativo.com/#roger",
+            "name": "Roger Murillo",
             "sameAs": [
                 "https://www.linkedin.com/in/rogermur/",
                 "https://github.com/germur"
@@ -126,7 +127,7 @@ export default function ConsultoriaHub() {
                                 La búsqueda ha evolucionado. El 60% de las búsquedas ahora terminan sin un clic (Zero-Click) porque la IA responde directamente.
                             </p>
                             <div className="bg-white p-6 border-4 border-primary shadow-brutal-sm rotate-1">
-                                <h4 className="font-display uppercase text-xl text-primary mb-2">El Reto</h4>
+                                <h3 className="font-display uppercase text-xl text-primary mb-2">El Reto</h3>
                                 <p className="text-ink font-mono text-sm">Dejar de perseguir visitas vacías y empezar a construir Visibilidad de Marca.</p>
                             </div>
                         </div>
@@ -251,24 +252,24 @@ export default function ConsultoriaHub() {
                     <h2 className="text-5xl font-display uppercase mb-12 text-center decoration-wavy underline decoration-primary">Preguntas Frecuentes</h2>
                     <div className="space-y-6">
                         <div className="bg-white p-6 border-4 border-ink shadow-brutal-sm">
-                            <h4 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
+                            <h3 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary">help</span>
                                 ¿Diferencia con Agencias?
-                            </h4>
+                            </h3>
                             <p className="text-ink/80">Obtienes la atención de un senior y la ejecución técnica de un ingeniero, sin la burocracia de una agencia grande.</p>
                         </div>
                         <div className="bg-white p-6 border-4 border-ink shadow-brutal-sm">
-                            <h4 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
+                            <h3 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary">timer</span>
                                 ¿Tiempo de Resultados?
-                            </h4>
+                            </h3>
                             <p className="text-ink/80">Una estrategia de Topical Authority sólida suele madurar entre los 6 y 12 meses, creando un "moat" difícil de copiar.</p>
                         </div>
                         <div className="bg-white p-6 border-4 border-ink shadow-brutal-sm">
-                            <h4 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
+                            <h3 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary">public</span>
                                 ¿Internacional?
-                            </h4>
+                            </h3>
                             <p className="text-ink/80">Sí. El 60% de mi enfoque está en el mercado de Estados Unidos (Florida/Hispano) y Latam.</p>
                         </div>
                     </div>
@@ -289,7 +290,8 @@ export default function ConsultoriaHub() {
                         </Link>
                     </div>
                 </section>
-            </main>
+            <section className="max-w-7xl mx-auto px-6 py-10"><Link href="/fight-card" className="font-bold underline underline-offset-4">Ver la Fight Card: SEO técnico, contenidos y automatización</Link></section>
+</main>
 
             <Footer />
         </div>

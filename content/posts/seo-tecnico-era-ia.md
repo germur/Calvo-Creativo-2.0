@@ -2,7 +2,7 @@
 title: "SEO Técnico para la Era de la IA: La Guía Definitiva (2026)"
 date: "2026-06-03"
 updatedDate: "2026-06-03"
-author: "Calvo Creativo"
+author: "Roger Murillo"
 related_entities: ["SEO Técnico", "Schema Markup", "Core Web Vitals", "Crawl Budget", "LLMs", "Knowledge Graph"]
 excerpt: "El SEO técnico no murió con la IA: se volvió más importante. La guía completa de fundamentos (rastreo, indexación, schema, rendimiento) y cómo cambian cuando tus lectores son ChatGPT y Perplexity."
 description: "Guía de SEO técnico para la era de la IA: rastreo, indexación, schema markup, Core Web Vitals y cómo optimizar tu infraestructura para que Google y los LLMs entiendan tu marca."
@@ -83,4 +83,4 @@ No necesitas perseguir cada sigla nueva que aparece. Necesitas un sitio que los 
 
 ---
 
-*¿Quieres que tu sitio tenga la base técnica para competir en la era de la IA? En Calvo Creativo lo construimos, no solo lo recomendamos. Conoce la [consultoría de Arquitectura SEO Técnica](/consultoria/arquitectura-seo-geo/) o cómo [automatizamos auditorías técnicas con código](/consultoria/automatizacion-seo-ia/).*
+*¿Quieres que tu sitio tenga la base técnica para competir en la era de la IA? En Calvo Creativo lo construimos, no solo lo recomendamos. Conoce la [consultoría de Arquitectura SEO Técnica](/consultoria/arquitectura-seo-geo) o cómo [automatizamos auditorías técnicas con código](/consultoria/automatizacion-seo-ia).*

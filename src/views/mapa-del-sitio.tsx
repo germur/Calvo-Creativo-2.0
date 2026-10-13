@@ -54,7 +54,7 @@ export default function Sitemap() {
                         <h2 className="text-xl font-display font-bold uppercase mb-6 text-gray-500">Entidad & Legal</h2>
                         <ul className="space-y-2 font-mono text-xs text-gray-600">
                             <li><Link href="/el-artista" className="hover:text-black hover:underline">/el-artista (Sobre Mí)</Link></li>
-                            <li><Link href="/autor/roger-calvo" className="hover:text-black hover:underline">/autor/roger-calvo (Perfil Profesional)</Link></li>
+                            <li><Link href="/autor/roger-murillo" className="hover:text-black hover:underline">/autor/roger-murillo (Perfil Profesional)</Link></li>
                             <li><Link href="/cv" className="hover:text-black hover:underline">/cv (Curriculum Vitae)</Link></li>
                             <li><Link href="/contacto" className="hover:text-black hover:underline">/contacto</Link></li>
                             <li><Link href="/politica-editorial" className="hover:text-black hover:underline">/politica-editorial (AI Ethics)</Link></li>

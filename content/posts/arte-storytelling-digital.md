@@ -4,7 +4,7 @@ date: "2026-03-12"
 description: "Cómo Michael Jackson, Daft Punk y TikTok decodificaron los algoritmos humanos antes que los digitales. Una tesis sobre SEO, Growth y Narrativa."
 coverImage: "/images/posts/art-storytelling/uploaded_image_0_1766294105658.jpg"
 tags: ["Storytelling", "SEO", "Growth", "Music"]
-author: "Roger Calvo"
+author: "Roger Murillo"
 category: "Lado B"
 ---
 

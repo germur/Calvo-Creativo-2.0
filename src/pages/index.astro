@@ -18,55 +18,6 @@ import Footer from '@/src/components/Footer.astro';
                 <meta name="twitter:site" content="@Rogermu47429637" />
                 <meta name="twitter:image" content="https://calvocreativo.com/api/og?title=Consultor%20SEO%20%26%20GEO%20%7C%20B2B%20USA-Latam" />
 
-                {/* Schema: Organization */}
-                <script
-                    type="application/ld+json"
-                    set:html={JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Organization",
-                            "@id": "https://calvocreativo.com/#organization",
-                            "name": "Calvo Creativo",
-                            "url": "https://calvocreativo.com",
-                            "logo": "https://calvocreativo.com/favicon.svg",
-                            "description": "Consultoría SEO estratégica y Generative Engine Optimization (GEO) para la era de la IA.",
-                            "founder": {
-                                "@type": "Person",
-                                "name": "Roger Calvo",
-                                "url": "https://calvocreativo.com/el-artista"
-                            },
-                            "sameAs": [
-                                "https://www.linkedin.com/in/rogermur/",
-                                "https://github.com/germur",
-                                "https://x.com/Rogermu47429637"
-                            ],
-                            "contactPoint": {
-                                "@type": "ContactPoint",
-                                "email": "roger@calvocreativo.com",
-                                "contactType": "customer service",
-                                "availableLanguage": ["Spanish", "English"]
-                            },
-                            "areaServed": ["US", "ES", "MX", "CO", "AR"],
-                            "knowsAbout": ["SEO", "GEO", "Generative Engine Optimization", "Technical SEO", "Python Automation", "Content Strategy"]
-                        })}
-                />
-
-                {/* Schema: WebSite with SearchAction */}
-                <script
-                    type="application/ld+json"
-                    set:html={JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "WebSite",
-                            "@id": "https://calvocreativo.com/#website",
-                            "url": "https://calvocreativo.com",
-                            "name": "Calvo Creativo",
-                            "description": "Ingeniería de Búsqueda para la era de la IA",
-                            "publisher": {
-                                "@id": "https://calvocreativo.com/#organization"
-                            },
-                            "inLanguage": "es"
-                        })}
-                />
-
                 {/* Schema: WebPage */}
                 <script
                     type="application/ld+json"
@@ -94,6 +45,7 @@ import Footer from '@/src/components/Footer.astro';
             
 
             <Navigation />
+            <main id="contenido">
 
             {/* --- 1. HERO SECTION: LA PROPUESTA DE VALOR --- */}
             <header class="relative pt-24 pb-16 md:pt-32 md:pb-24 px-6 md:px-12 overflow-hidden border-b-4 border-black">
@@ -554,6 +506,7 @@ import Footer from '@/src/components/Footer.astro';
                 </div>
             </section>
 
+            </main>
             <Footer />
         </div>
 </Document>

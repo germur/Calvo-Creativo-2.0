@@ -83,7 +83,7 @@ export default function ArquitecturaSeoGeo() {
                         Internet ha cambiado. El 60% de las búsquedas en 2026 terminan sin un clic ("Zero-Click"). Los usuarios obtienen respuestas directas de la IA. Si tu sitio sigue estructurado como en 2020 (solo HTML), eres invisible.
                     </p>
                     <div className="bg-orange-50 p-6 rounded-lg text-left max-w-2xl mx-auto border border-orange-100">
-                        <h4 className="font-bold mb-3 uppercase text-xs tracking-widest text-orange-900">El Riesgo Real:</h4>
+                        <h3 className="font-bold mb-3 uppercase text-xs tracking-widest text-orange-900">El Riesgo Real:</h3>
                         <p className="text-orange-800 text-sm">
                             Perder la autoridad temática frente a competidores que sí "hablan el idioma" de los LLMs. Tienes tráfico, pero tus menciones en búsquedas conversacionales son nulas.
                         </p>
@@ -143,14 +143,14 @@ export default function ArquitecturaSeoGeo() {
                             <li className="flex items-center gap-4">
                                 <span className="material-symbols-outlined text-[#ccff00]">speed</span>
                                 <div>
-                                    <h4 className="font-bold">Core Web Vitals (INP)</h4>
+                                    <h3 className="font-bold">Core Web Vitals (INP)</h3>
                                     <p className="text-sm text-white/60">Si tu sitio tarda en responder, la IA asume mala experiencia.</p>
                                 </div>
                             </li>
                             <li className="flex items-center gap-4">
                                 <span className="material-symbols-outlined text-[#ccff00]">javascript</span>
                                 <div>
-                                    <h4 className="font-bold">Rendering para IA</h4>
+                                    <h3 className="font-bold">Rendering para IA</h3>
                                     <p className="text-sm text-white/60">Aseguramos que tu JavaScript sea accesible para crawlers con poco presupuesto.</p>
                                 </div>
                             </li>

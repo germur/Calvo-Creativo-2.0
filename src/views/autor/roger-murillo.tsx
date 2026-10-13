@@ -4,14 +4,14 @@ import Footer from '@/src/site/Footer';
 import { getPersonSchema } from '@/lib/person-schema';
 
 export default function AuthorProfile() {
-    const personSchema = getPersonSchema({ pageUrl: 'https://calvocreativo.com/autor/roger-calvo' });
+    const personSchema = getPersonSchema({ pageUrl: 'https://calvocreativo.com/autor/roger-murillo' });
 
     return (
         <div className="min-h-screen flex flex-col bg-paper font-sans text-ink">
             <Head>
-                <title>Roger Calvo | SEO Strategist & Marketer-Builder</title>
-                <meta name="description" content="Perfil profesional de Roger Calvo. Ingeniero de Búsqueda, Marketer-Builder y especialista en SEO Técnico y GEO." />
-                <link rel="canonical" href="https://calvocreativo.com/autor/roger-calvo" />
+                <title>Roger Murillo | SEO Strategist & Marketer-Builder</title>
+                <meta name="description" content="Perfil profesional de Roger Murillo. Ingeniero de Búsqueda, Marketer-Builder y especialista en SEO Técnico y GEO." />
+                <link rel="canonical" href="https://calvocreativo.com/autor/roger-murillo" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -28,12 +28,12 @@ export default function AuthorProfile() {
                             <div className="aspect-square bg-gray-800 relative grayscale hover:grayscale-0 transition-all overflow-hidden">
                                 {/* Placeholder for real image */}
                                 <div className="absolute inset-0 flex items-center justify-center text-4xl font-display font-black opacity-20 uppercase rotate-[-12deg]">
-                                    Roger<br />Calvo
+                                    Roger<br />Murillo
                                 </div>
                                 {/* <Image src="/path/to/image.jpg" ... /> */}
                             </div>
                             <div className="mt-4 text-center">
-                                <h1 className="font-display text-2xl uppercase leading-none">Roger Calvo</h1>
+                                <h1 className="font-display text-2xl uppercase leading-none">Roger Murillo</h1>
                                 <p className="font-mono text-xs text-gray-400 mt-1 uppercase tracking-widest">Marketer-Builder</p>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export default function AuthorProfile() {
                             </div>
                             <div className="border-b-2 border-gray-200 pb-2">
                                 <span className="block text-gray-400 text-xs uppercase">Stack</span>
-                                <strong>Python, Next.js, SEO</strong>
+                                <strong>Python, Astro, SEO</strong>
                             </div>
                             <div className="border-b-2 border-gray-200 pb-2">
                                 <span className="block text-gray-400 text-xs uppercase">Enfoque</span>

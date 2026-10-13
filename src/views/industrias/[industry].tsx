@@ -33,6 +33,7 @@ export default function IndustryPage({ industry }: Props) {
                             "name": `SEO para ${industry.name}`,
                             "provider": {
                                 "@type": "Organization",
+                                "@id": "https://calvocreativo.com/#organization",
                                 "name": "Calvo Creativo",
                                 "url": "https://calvocreativo.com"
                             },

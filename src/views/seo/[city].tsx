@@ -33,6 +33,7 @@ export default function CityPage({ city }: Props) {
                             "name": `Consultoría SEO ${city.name}`,
                             "provider": {
                                 "@type": "Organization",
+                                "@id": "https://calvocreativo.com/#organization",
                                 "name": "Calvo Creativo",
                                 "url": "https://calvocreativo.com"
                             },

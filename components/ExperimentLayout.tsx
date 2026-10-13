@@ -114,7 +114,7 @@ const ExperimentLayout = ({
                     <div className={`absolute top-0 left-0 w-1 h-full ${themeColor === 'acid-green' ? 'bg-acid-green' : themeColor === 'acid-pink' ? 'bg-acid-pink' : themeColor === 'acid-purple' ? 'bg-acid-purple' : 'bg-acid-orange'} group-hover:w-full transition-all duration-500 opacity-20`}></div>
                     <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
                         <div className="flex-1">
-                            <h3 className="text-2xl font-bold mb-2">¿Te gusta cómo pienso?</h3>
+                            <h2 className="text-2xl font-bold mb-2">¿Te gusta cómo pienso?</h2>
                             <p className={`${mode === 'dark' ? 'text-white/70' : 'text-ink/70'} text-sm`}>
                                 Esto son experimentos. En el <strong>Lado A</strong> aplico esta ingeniería para escalar negocios reales.
                             </p>

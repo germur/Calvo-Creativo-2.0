@@ -11,10 +11,11 @@ export default function VibeCoding() {
         "description": "Aprende a usar Python y LLMs para automatizar SEO. Scripts de detección de canibalización y auditoría de entidades sin saber programar.",
         "author": {
             "@type": "Person",
-            "name": "Roger Calvo"
+            "@id": "https://calvocreativo.com/#roger",
+            "name": "Roger Murillo"
         },
         "proficiencyLevel": "Beginner",
-        "programmingLanguage": "Python"
+        "keywords": "Python, SEO, inteligencia artificial"
     };
 
     return (
@@ -81,10 +82,10 @@ export default function VibeCoding() {
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-[#0A0A0A] border border-white/10 rounded-2xl p-6 hover:border-acid-green/50 transition-colors">
                             <div>
-                                <h4 className="text-xs font-bold uppercase text-white/40 mb-2">El Problema</h4>
+                                <h3 className="text-xs font-bold uppercase text-white/40 mb-2">El Problema</h3>
                                 <p className="text-white/80 text-sm mb-6">Detectar canibalización en 10k URLs manualmente es imposible.</p>
 
-                                <h4 className="text-xs font-bold uppercase text-white/40 mb-2">La Solución (Vibe Code)</h4>
+                                <h3 className="text-xs font-bold uppercase text-white/40 mb-2">La Solución (Vibe Code)</h3>
                                 <p className="text-white/80 text-sm mb-6">Script que descarga GSC, agrupa por clusters de keywords y detecta dónde múltiples URLs compiten.</p>
 
                                 <div className="flex gap-4 text-xs font-mono text-acid-green/80">
@@ -112,10 +113,10 @@ print(duplicates[duplicates > 1])`}</pre>
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-[#0A0A0A] border border-white/10 rounded-2xl p-6 hover:border-acid-green/50 transition-colors">
                             <div>
-                                <h4 className="text-xs font-bold uppercase text-white/40 mb-2">El Problema</h4>
+                                <h3 className="text-xs font-bold uppercase text-white/40 mb-2">El Problema</h3>
                                 <p className="text-white/80 text-sm mb-6">Saber qué entidades menciona la competencia en el Top 3 para replicar autoridad.</p>
 
-                                <h4 className="text-xs font-bold uppercase text-white/40 mb-2">La Solución (Vibe Code)</h4>
+                                <h3 className="text-xs font-bold uppercase text-white/40 mb-2">La Solución (Vibe Code)</h3>
                                 <p className="text-white/80 text-sm mb-6">Scraper de Top 10 + API de NLP para extraer "ingredientes" (entidades) faltantes.</p>
                             </div>
                             <div className="bg-black/50 rounded-lg p-4 font-mono text-xs text-gray-400 overflow-x-auto border border-white/5">
@@ -136,10 +137,10 @@ for ent in doc.ents:
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-[#0A0A0A] border border-white/10 rounded-2xl p-6 hover:border-acid-green/50 transition-colors">
                             <div>
-                                <h4 className="text-xs font-bold uppercase text-white/40 mb-2">El Problema</h4>
+                                <h3 className="text-xs font-bold uppercase text-white/40 mb-2">El Problema</h3>
                                 <p className="text-white/80 text-sm mb-6">Clasificar 5,000 keywords manualmente es una tortura.</p>
 
-                                <h4 className="text-xs font-bold uppercase text-white/40 mb-2">La Solución (Vibe Code)</h4>
+                                <h3 className="text-xs font-bold uppercase text-white/40 mb-2">La Solución (Vibe Code)</h3>
                                 <p className="text-white/80 text-sm mb-6">API OpenAI + Google Sheets. 5k keywords en 15 mins por $2 USD.</p>
                             </div>
                             <div className="bg-black/50 rounded-lg p-4 font-mono text-xs text-gray-400 overflow-x-auto border border-white/5">
@@ -159,17 +160,17 @@ for ent in doc.ents:
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="text-center">
                         <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🧠</div>
-                        <h4 className="font-bold text-white mb-2">El Cerebro</h4>
+                        <h3 className="font-bold text-white mb-2">El Cerebro</h3>
                         <p className="text-sm text-white/60">Claude 3.5 Sonnet o GPT-4o. Son los mejores escribiendo código.</p>
                     </div>
                     <div className="text-center">
                         <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">💻</div>
-                        <h4 className="font-bold text-white mb-2">El Editor</h4>
+                        <h3 className="font-bold text-white mb-2">El Editor</h3>
                         <p className="text-sm text-white/60">Cursor (IDE con IA) o Google Colab (Python en navegador).</p>
                     </div>
                     <div className="text-center">
                         <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🔄</div>
-                        <h4 className="font-bold text-white mb-2">El Loop</h4>
+                        <h3 className="font-bold text-white mb-2">El Loop</h3>
                         <p className="text-sm text-white/60">Pide código &rarr; Erra &rarr; Pega error en IA &rarr; Repite.</p>
                     </div>
                 </div>
