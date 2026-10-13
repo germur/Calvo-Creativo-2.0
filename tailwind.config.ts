@@ -10,13 +10,12 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                // Calvo Fighter (Global)
-                // Calvo Fighter (Global)
-                primary: "#E11D48", // Red Rose
+                // Calvo Creativo: tinta, papel y carátulas de LP
+                primary: "#B53728", // Rojo de impresión
                 secondary: "#0F172A", // Slate 900
-                accent: "#FACC15", // Yellow
-                paper: "#F8F5F0", // Off-White
-                ink: "#0A0A0A", // Almost Black
+                accent: "#E5B847", // Mostaza
+                paper: "#F0E7D3", // Papel crema
+                ink: "#28221B", // Tinta cálida
 
                 // Calvo Aesthetics (Lado B / Acid)
                 'acid-green': '#ccff00',
