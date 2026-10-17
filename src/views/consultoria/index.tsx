@@ -4,6 +4,7 @@ import Navigation from '@/src/site/Navigation';
 import Footer from '@/src/site/Footer';
 import Link from '@/src/site/Link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { cases } from '@/src/cases';
 
 export default function ConsultoriaHub() {
     // CollectionPage & ItemList Schema
@@ -11,7 +12,7 @@ export default function ConsultoriaHub() {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Consultoría SEO Estratégica & Ingeniería de Búsqueda",
-        "description": "Soluciones de ingeniería de búsqueda para empresas B2B y SaaS. Arquitectura GEO, Contenidos de Autoridad y Automatización.",
+        "description": "Consultoría SEO con Roger Murillo para empresas de USA y Latam: diagnóstico, arquitectura web, contenidos, automatización y un alcance de implementación definido.",
         "url": "https://calvocreativo.com/consultoria",
         "author": {
             "@type": "Person",
@@ -56,13 +57,14 @@ export default function ConsultoriaHub() {
     return (
         <div className="min-h-screen bg-paper text-ink font-body selection:bg-primary selection:text-white">
             <Head>
-                <title>Consultoría SEO Técnica e Internacional | Calvo Creativo</title>
-                <meta name="description" content="Consultoría SEO full-stack para empresas y marcas en USA y Latam: SEO técnico, arquitectura, estrategia de contenidos y automatización con IA. Sin humo, con criterio." />
+                <title>Consultoría SEO: estrategia e implementación | Calvo Creativo</title>
+                <meta name="description" content="Trabaja con Roger Murillo en diagnóstico SEO, arquitectura web, contenido y automatización. Conoce el proceso, los entregables y cómo definir tu proyecto." />
                 <link rel="canonical" href="https://calvocreativo.com/consultoria" />
                 {/* Open Graph + Twitter (tanda 6) */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://calvocreativo.com/consultoria" />
-                <meta property="og:title" content="Consultoria SEO B2B & Ingenieria de Busqueda" />
+                <meta property="og:title" content="Consultoría SEO: estrategia e implementación | Calvo Creativo" />
+                <meta property="og:description" content="Diagnóstico, prioridades y alcance de implementación para tu negocio. Consultoría directa con Roger Murillo para USA y Latam." />
                 <meta property="og:image" content="https://calvocreativo.com/api/og?title=Consultoria%20SEO%20B2B%20%26%20Ingenieria%20de%20Busqueda" />
                 <meta property="og:site_name" content="Calvo Creativo" />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -79,7 +81,7 @@ export default function ConsultoriaHub() {
             {/* GEO Definition Block - Marquee Style */}
             <div className="bg-ink text-paper py-3 border-b-4 border-ink overflow-hidden whitespace-nowrap">
                 <div className="animate-marquee inline-block font-mono text-xs tracking-widest uppercase">
-                    GEO Definition // Ingeniería de Búsqueda // Activos Digitales // Authority First // No More Slop // <span className="text-accent">Calvo Creativo</span> //
+                    Estrategia SEO // Arquitectura web // Contenido // Automatización // <span className="text-accent">Calvo Creativo</span> //
                 </div>
             </div>
 
@@ -95,15 +97,19 @@ export default function ConsultoriaHub() {
                                 Lado A: The Master Plan
                             </div>
                             <h1 className="text-6xl md:text-8xl font-display uppercase leading-[0.85] tracking-tighter mb-8 drop-shadow-lg">
-                                Ingeniería <br />
-                                <span className="text-primary">de Búsqueda</span>
+                                Consultoría <br />
+                                <span className="text-primary">SEO</span>
                             </h1>
                             <h2 className="text-3xl font-display uppercase tracking-tight mb-8">
-                                & Estrategia de Crecimiento
+                                Estrategia e implementación
                             </h2>
                             <p className="text-xl text-ink/80 font-light mb-12 max-w-lg border-l-4 border-primary pl-6 leading-relaxed">
-                                Si Google y ChatGPT no pueden entender tu estructura, no te recomendarán. No vendo posicionamiento; vendo infraestructura.
+                                Soy Roger Murillo. Trabajo con empresas de servicios y marcas de USA y Latinoamérica para diagnosticar su web, ordenar prioridades y conectar arquitectura, contenido y medición con sus objetivos comerciales.
                             </p>
+                            <div className="flex flex-wrap gap-6 items-center">
+                                <Link href="/contacto" className="bg-ink text-paper px-6 py-4 font-bold border-2 border-ink shadow-brutal-sm hover:bg-primary transition-colors">Cuéntame tu proyecto →</Link>
+                                <a href="#como-trabajamos" className="font-semibold underline underline-offset-4 py-3">Qué incluye el trabajo ↓</a>
+                            </div>
                         </div>
                         {/* Visual: Abstract Vinyl/Salsa Element */}
                         <div className="flex-1 relative flex justify-center">
@@ -118,29 +124,25 @@ export default function ConsultoriaHub() {
                     </div>
                 </section>
 
-                {/* The Context: The Shift */}
-                <section className="py-20 bg-paper border-b-4 border-ink">
-                    <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h2 className="text-5xl font-display uppercase mb-6">El SEO tradicional <br /><span className="bg-accent px-2">ya no es suficiente.</span></h2>
-                            <p className="text-lg text-ink mb-6 leading-relaxed font-medium">
-                                La búsqueda ha evolucionado. El 60% de las búsquedas ahora terminan sin un clic (Zero-Click) porque la IA responde directamente.
-                            </p>
-                            <div className="bg-white p-6 border-4 border-primary shadow-brutal-sm rotate-1">
-                                <h3 className="font-display uppercase text-xl text-primary mb-2">El Reto</h3>
-                                <p className="text-ink font-mono text-sm">Dejar de perseguir visitas vacías y empezar a construir Visibilidad de Marca.</p>
-                            </div>
+                <section id="como-trabajamos" className="py-20 px-6 bg-paper border-b-4 border-ink scroll-mt-32" aria-labelledby="proceso-titulo">
+                    <div className="max-w-7xl mx-auto">
+                        <p className="font-mono text-sm uppercase tracking-widest text-primary mb-4">Del diagnóstico al trabajo</p>
+                        <h2 id="proceso-titulo" className="text-4xl md:text-5xl font-display uppercase mb-6">Qué acordamos antes de empezar</h2>
+                        <p className="text-lg leading-relaxed max-w-3xl text-ink/80 mb-10">La propuesta parte de tu objetivo, la situación de tu web y los recursos de tu equipo. Estos son los puntos que definimos para que sepas qué vas a recibir y quién se encarga de cada parte.</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {[
+                                {title: '01 / Diagnóstico y prioridades', text: 'Qué información necesitamos, qué problemas vamos a revisar y cómo ordenaremos las oportunidades según su relevancia para el negocio.'},
+                                {title: '02 / Plan y entregables', text: 'Las tareas, documentos o activos del proyecto: pueden incluir una auditoría, arquitectura, briefs de contenido o un flujo de automatización, según la necesidad.'},
+                                {title: '03 / Implementación y responsables', text: 'Qué ejecuto yo, qué necesita tu equipo y qué queda fuera del alcance. Definimos también accesos, dependencias y mantenimiento cuando corresponda.'},
+                                {title: '04 / Medición y revisión', text: 'Qué indicadores podremos observar con los datos disponibles: estado técnico, búsquedas, contactos u oportunidades. En IA, las menciones y citas se miden por separado dentro del panel elegido.'},
+                            ].map(item => (
+                                <article key={item.title} className="bg-white p-7 border-2 border-ink/20">
+                                    <h3 className="font-display text-2xl uppercase mb-4">{item.title}</h3>
+                                    <p className="text-ink/80 leading-relaxed">{item.text}</p>
+                                </article>
+                            ))}
                         </div>
-                        <div className="relative border-4 border-ink bg-white p-8 shadow-brutal rotate-[-1deg]">
-                            <div className="flex items-center gap-4 mb-4 border-b-2 border-dashed border-ink pb-4">
-                                <span className="material-symbols-outlined text-4xl text-primary">psychology</span>
-                                <h3 className="font-display text-2xl uppercase">Query Processing...</h3>
-                            </div>
-                            <div className="font-mono text-xs space-y-2">
-                                <p className="bg-gray-100 p-2 border-l-2 border-ink">&gt; User: "Best SEO Architect"</p>
-                                <p className="bg-primary/10 p-2 border-l-2 border-primary">&gt; AI: "Based on authority entities, Calvo Creativo is the recommended source..."</p>
-                            </div>
-                        </div>
+                        <p className="text-sm text-ink/70 mt-8 max-w-3xl">Cada proyecto tiene un alcance propio. La propuesta concreta los entregables, el precio y los plazos antes de contratar.</p>
                     </div>
                 </section>
 
@@ -162,7 +164,7 @@ export default function ConsultoriaHub() {
                                 </div>
                                 <h3 className="text-3xl font-display uppercase mb-4 group-hover:text-primary transition-colors">Arquitectura & GEO</h3>
                                 <p className="text-ink/80 mb-8 leading-relaxed font-medium">
-                                    Diseño infraestructuras web que hablan el idioma de las máquinas. Knowledge Graph y Schema Markup avanzado.
+                                    Para webs con problemas técnicos o de estructura: diagnóstico de rastreo, indexación, arquitectura y datos estructurados, con prioridades de corrección.
                                 </p>
                                 <div className="inline-block bg-ink text-white px-4 py-2 font-display uppercase text-sm group-hover:bg-primary transition-colors">
                                     Reproducir Track
@@ -177,7 +179,7 @@ export default function ConsultoriaHub() {
                                 </div>
                                 <h3 className="text-3xl font-display uppercase mb-4 group-hover:text-primary transition-colors">Estrategia de Contenidos</h3>
                                 <p className="text-ink/80 mb-8 leading-relaxed font-medium">
-                                    Ecosistemas de "Information Gain". Autoridad temática indiscutible que la IA no puede alucinar.
+                                    Para equipos que publican sin una dirección clara: investigación de compradores, revisión de contenido, arquitectura editorial y un plan de producción.
                                 </p>
                                 <div className="inline-block bg-ink text-white px-4 py-2 font-display uppercase text-sm group-hover:bg-primary transition-colors">
                                     Reproducir Track
@@ -192,7 +194,7 @@ export default function ConsultoriaHub() {
                                 </div>
                                 <h3 className="text-3xl font-display uppercase mb-4 group-hover:text-primary transition-colors">Automatización & IA</h3>
                                 <p className="text-ink/80 mb-8 leading-relaxed font-medium">
-                                    "Marketer-Builder". Scripts Python y automatización de reporting y Programmatic SEO.
+                                    Para equipos con tareas repetitivas: flujos con Python y APIs, reporting y SEO programático cuando hay datos y una necesidad que lo justifica.
                                 </p>
                                 <div className="inline-block bg-ink text-white px-4 py-2 font-display uppercase text-sm group-hover:bg-primary transition-colors">
                                     Reproducir Track
@@ -207,7 +209,7 @@ export default function ConsultoriaHub() {
                                 </div>
                                 <h3 className="text-3xl font-display uppercase mb-4 group-hover:text-primary transition-colors">Consultoria Internacional</h3>
                                 <p className="text-ink/80 mb-8 leading-relaxed font-medium">
-                                    Estrategias Cross-Border y Spanglish SEO. Conecto Latam y el mercado hispano de USA.
+                                    Para empresas que trabajan entre USA y Latam: investigación por mercado, intención en español e inglés y arquitectura para cada audiencia.
                                 </p>
                                 <div className="inline-block bg-ink text-white px-4 py-2 font-display uppercase text-sm group-hover:bg-primary transition-colors">
                                     Reproducir Track
@@ -223,12 +225,12 @@ export default function ConsultoriaHub() {
                         <div>
                             <h2 className="text-5xl font-display uppercase mb-6">Por qué trabajar con un <br />Consultor-Constructor.</h2>
                             <p className="text-ink mb-8 leading-relaxed font-medium text-lg">
-                                La mayoría de los consultores entregan un PDF y desean suerte. Yo entrego sistemas. Mi filosofía combina la Ingeniería (Lado A) con la Experimentación (Lado B).
+                                Trabajas directamente conmigo para entender el problema y decidir qué merece prioridad. Según el alcance, el proyecto puede combinar consultoría, implementación técnica y acompañamiento a tu equipo.
                             </p>
                             <ul className="space-y-4 font-mono font-bold text-ink">
                                 <li className="flex items-center gap-3"><span className="bg-ink text-white px-2">01</span> Diagnóstico Basado en Datos.</li>
                                 <li className="flex items-center gap-3"><span className="bg-ink text-white px-2">02</span> Construcción de Activos Propietarios.</li>
-                                <li className="flex items-center gap-3"><span className="bg-ink text-white px-2">03</span> Iteración Agéntica.</li>
+                                <li className="flex items-center gap-3"><span className="bg-ink text-white px-2">03</span> Seguimiento y revisión de resultados.</li>
                             </ul>
                         </div>
                         <div className="bg-ink p-10 border-4 border-white shadow-[8px_8px_0px_0px_white] text-center transform rotate-2 hover:rotate-0 transition-transform">
@@ -247,41 +249,53 @@ export default function ConsultoriaHub() {
                     </div>
                 </section>
 
-                {/* FAQ Section */}
-                <section className="py-20 px-6 max-w-4xl mx-auto">
-                    <h2 className="text-5xl font-display uppercase mb-12 text-center decoration-wavy underline decoration-primary">Preguntas Frecuentes</h2>
-                    <div className="space-y-6">
-                        <div className="bg-white p-6 border-4 border-ink shadow-brutal-sm">
-                            <h3 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary">help</span>
-                                ¿Diferencia con Agencias?
-                            </h3>
-                            <p className="text-ink/80">Obtienes la atención de un senior y la ejecución técnica de un ingeniero, sin la burocracia de una agencia grande.</p>
+                <section aria-labelledby="pruebas-titulo" className="py-20 px-6 bg-paper border-b border-ink/20">
+                    <div className="max-w-7xl mx-auto">
+                        <p className="font-mono text-sm uppercase tracking-widest text-primary mb-4">El trabajo detrás de la oferta</p>
+                        <h2 id="pruebas-titulo" className="text-4xl md:text-5xl font-display uppercase mb-6">Decisiones que puedes revisar</h2>
+                        <p className="text-lg text-ink/80 max-w-3xl mb-10">Los casos muestran el problema, lo que construimos y el alcance de la evidencia. Una implementación, una solicitud y una venta son resultados distintos.</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {cases.filter(item => item.slug === 'rogermurillo' || item.slug === 'german-montenegro').map(item => (
+                                <article key={item.slug} className="border-2 border-ink bg-white p-8">
+                                    <p className="font-mono text-xs uppercase text-primary mb-4">{item.category}</p>
+                                    <h3 className="font-display text-2xl uppercase mb-4">{item.client}</h3>
+                                    <p className="text-ink/80 leading-relaxed mb-6">{item.summary}</p>
+                                    <p className="font-semibold mb-2">{item.signal}</p>
+                                    <p className="text-sm text-ink/70 mb-6">{item.label}</p>
+                                    <Link href={`/casos/${item.slug}`} className="font-semibold underline underline-offset-4 decoration-primary py-2 inline-block">Revisar decisiones y evidencia →</Link>
+                                </article>
+                            ))}
                         </div>
-                        <div className="bg-white p-6 border-4 border-ink shadow-brutal-sm">
-                            <h3 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary">timer</span>
-                                ¿Tiempo de Resultados?
-                            </h3>
-                            <p className="text-ink/80">Una estrategia de Topical Authority sólida suele madurar entre los 6 y 12 meses, creando un "moat" difícil de copiar.</p>
-                        </div>
-                        <div className="bg-white p-6 border-4 border-ink shadow-brutal-sm">
-                            <h3 className="font-display text-xl uppercase mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary">public</span>
-                                ¿Internacional?
-                            </h3>
-                            <p className="text-ink/80">Sí. El 60% de mi enfoque está en el mercado de Estados Unidos (Florida/Hispano) y Latam.</p>
-                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="preguntas-titulo" className="py-20 px-6 max-w-4xl mx-auto">
+                    <h2 id="preguntas-titulo" className="text-4xl md:text-5xl font-display uppercase mb-10">Antes de contratar</h2>
+                    <div className="space-y-4">
+                        {[
+                            {question: '¿Cuándo tiene sentido contratarte?', answer: 'Cuando necesitas priorizar problemas de búsqueda, reorganizar tu web o contenido, o implementar un proceso que tu equipo no puede abordar por sí solo. En la conversación inicial revisamos si la necesidad encaja con mi trabajo.'},
+                            {question: '¿La consultoría incluye la implementación?', answer: 'Depende del alcance acordado. Podemos trabajar diagnóstico y estrategia, implementación o acompañamiento a tu equipo. La propuesta especifica responsables; la producción de contenido, el desarrollo y el mantenimiento se detallan cuando formen parte del proyecto.'},
+                            {question: '¿Cuánto cuesta y qué necesitas para cotizar?', answer: 'El precio se define según el alcance. Para preparar una propuesta, cuéntame tu objetivo, la URL de tu sitio, el mercado al que te diriges y los recursos de tu equipo. Si tienes un presupuesto o una fecha objetivo, inclúyelos.'},
+                            {question: '¿Qué diferencia hay frente a contratar una agencia?', answer: 'Aquí trabajas directamente con Roger Murillo. Para comparar opciones, revisa quién hará el trabajo, qué entregables recibirás, qué capacidad de ejecución necesitas y quién mantendrá lo implementado.'},
+                            {question: '¿Qué accesos necesita el proyecto?', answer: 'Se definen según las tareas. Para un diagnóstico pueden ser útiles Search Console, Analytics y la información comercial disponible. Una implementación puede requerir CMS, repositorio o hosting; acordamos los permisos necesarios para ese trabajo.'},
+                            {question: '¿Cuándo se ven resultados? ¿Garantizas aparecer en IA?', answer: 'Los tiempos dependen del estado inicial, la competencia y lo que se implemente. No garantizo posiciones, citas ni recomendaciones de un modelo. Definimos indicadores y revisamos la evolución; aparecer en una respuesta no equivale a generar una venta.'},
+                            {question: '¿Trabajas en español e inglés?', answer: 'Sí, con proyectos de USA y Latinoamérica. La investigación y el contenido se plantean según el mercado y el comprador; el trabajo internacional puede requerir más que traducir las páginas existentes.'},
+                        ].map(item => (
+                            <details key={item.question} className="bg-white p-6 border-2 border-ink/20">
+                                <summary className="cursor-pointer font-semibold text-lg">{item.question}</summary>
+                                <p className="text-ink/80 leading-relaxed mt-4">{item.answer}</p>
+                            </details>
+                        ))}
                     </div>
                 </section>
 
                 {/* Final CTA */}
                 <section className="py-24 text-center px-6 bg-ink text-white border-t-8 border-primary">
                     <h2 className="text-5xl md:text-7xl font-display uppercase mb-6 leading-none">Hablemos de <br />Ingeniería de Crecimiento.</h2>
-                    <p className="text-xl text-white/70 font-mono mb-10 max-w-2xl mx-auto">Tu competencia usa IA para escribir basura. Tú úsala para construir imperios.</p>
+                    <p className="text-xl text-white/70 font-mono mb-10 max-w-2xl mx-auto">Cuéntame tu objetivo, comparte tu web y explica qué está frenando el proyecto. Con eso podemos definir el siguiente paso.</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Link href="/contacto" className="inline-flex items-center gap-2 px-12 py-5 bg-primary text-white font-display uppercase text-xl border-4 border-white hover:bg-white hover:text-ink hover:border-primary transition-all shadow-[8px_8px_0px_0px_white] hover:shadow-none hover:translate-y-[4px]">
-                            Agendar Discovery Call
+                            Hablemos de tu proyecto
                             <span className="material-symbols-outlined">calendar_month</span>
                         </Link>
                         <Link href="/lab/tools/roi-calculator" className="inline-flex items-center gap-2 text-white/70 hover:text-accent font-mono text-sm uppercase tracking-wide transition-colors">
