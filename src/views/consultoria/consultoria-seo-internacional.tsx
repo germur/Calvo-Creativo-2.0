@@ -197,6 +197,13 @@ export default function ConsultoriaInternacional() {
                 </div>
             </section>
 
+            <section className="py-12 px-6 border-y border-gray-200 bg-white" aria-labelledby="recursos-internacionales">
+                <div className="max-w-5xl mx-auto"><h2 id="recursos-internacionales" className="text-3xl font-display font-black mb-5">Recursos para planificar tu expansión</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Link href="/liner-notes/estrategia-seo-usa-latam" className="border p-6 block hover:border-[#E11D48]"><h3 className="font-bold text-xl mb-2">Estrategia SEO entre USA y Latinoamérica</h3><p className="text-gray-600">Decide qué mercados investigar y qué páginas priorizar antes de invertir.</p></Link>
+                    <Link href="/liner-notes/seo-internacional-hreflang-arquitectura" className="border p-6 block hover:border-[#E11D48]"><h3 className="font-bold text-xl mb-2">Hreflang y arquitectura internacional</h3><p className="text-gray-600">Guía técnica para decidir las versiones y revisar su implementación.</p></Link>
+                </div></div>
+            </section>
             {/* CTA Final */}
             <section className="py-20 text-center px-6">
                 <h2 className="text-3xl md:text-5xl font-display font-black mb-6">El mundo es grande.</h2>
