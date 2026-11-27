@@ -1,4 +1,4 @@
-<div id="cookie-consent" hidden class="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6">
+<div id="cookie-consent" hidden class="fixed bottom-0 left-0 right-0 z-[10000] p-4 md:p-6">
   <section aria-label="Preferencias de cookies" class="mx-auto bg-[#120810] border border-[#f4258c] p-6 max-w-2xl shadow-[0_0_30px_rgba(244,37,140,0.2)]">
     <div class="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
       <div>
@@ -7,9 +7,85 @@
         <a href="/politica-privacidad" class="inline-block mt-3 text-xs text-white underline">Política de privacidad</a>
       </div>
       <div class="flex gap-3">
-        <button data-consent="accepted" class="bg-[#f4258c] text-white px-5 py-3 font-bold text-xs uppercase">Aceptar</button>
-        <button data-consent="rejected" class="px-5 py-3 text-white border border-white/40 text-xs uppercase">Rechazar</button>
+        <button type="button" data-consent="accepted" class="bg-[#f4258c] text-white px-5 py-3 font-bold text-xs uppercase">Aceptar</button>
+        <button type="button" data-consent="rejected" class="px-5 py-3 text-white border border-white/40 text-xs uppercase">Rechazar</button>
       </div>
     </div>
   </section>
 </div>
+
+<script is:inline>
+  (() => {
+    const w = window;
+    const key = 'calvo-cookie-consent';
+    const measurementId = 'G-985SWJBWRZ';
+    const panel = document.getElementById('cookie-consent');
+    if (!panel) return;
+    let choice = null;
+    try {
+      const stored = localStorage.getItem(key);
+      if (stored === 'accepted' || stored === 'true') choice = 'accepted';
+      if (stored === 'rejected' || stored === 'false') choice = 'rejected';
+    } catch { /* The current visit can still be measured after explicit consent. */ }
+    let started = false;
+
+    function consentUpdate(granted) {
+      w.gtag('consent', 'update', {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+      });
+    }
+    function loadScript(src, id) {
+      if (document.getElementById(id)) return;
+      const tag = document.createElement('script');
+      tag.id = id;
+      tag.async = true;
+      tag.src = src;
+      document.head.append(tag);
+    }
+    function startAnalytics() {
+      if (started || choice !== 'accepted') return;
+      started = true;
+      w['ga-disable-' + measurementId] = false;
+      consentUpdate(true);
+      w.gtag('js', new Date());
+      w.gtag('config', measurementId, { allow_google_signals: false, allow_ad_personalization_signals: false });
+      w.__calvoAnalyticsActive = true;
+      loadScript('https://www.googletagmanager.com/gtag/js?id=' + measurementId, 'calvo-ga4');
+      w.clarity = w.clarity || function () { (w.clarity.q = w.clarity.q || []).push(arguments); };
+      w.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' });
+      loadScript('https://www.clarity.ms/tag/v2v2171aj3', 'calvo-clarity');
+    }
+    function applyChoice(next) {
+      if (next !== 'accepted' && next !== 'rejected') return;
+      choice = next;
+      try { localStorage.setItem(key, next); }
+      catch { /* Keep the explicit choice in memory for this page. */ }
+      panel.hidden = true;
+      if (next === 'accepted') {
+        startAnalytics();
+      } else {
+        w.__calvoAnalyticsActive = false;
+        if (started) {
+          w['ga-disable-' + measurementId] = true;
+          consentUpdate(false);
+          w.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+          // Remove active vendor scripts by reloading with the saved rejection.
+          // If storage is unavailable, the next page asks for consent again.
+          w.location.reload();
+        }
+      }
+    }
+    panel.querySelectorAll('[data-consent]').forEach(button => {
+      button.addEventListener('click', () => applyChoice(button.dataset.consent));
+    });
+    document.querySelectorAll('[data-open-cookie-preferences]').forEach(button => {
+      button.addEventListener('click', () => {
+        panel.hidden = false;
+        panel.querySelector('button')?.focus();
+      });
+    });
+    panel.hidden = choice !== null;
+    if (choice === 'accepted') startAnalytics();
+  })();
+</script>
