@@ -1,5 +1,6 @@
 import Link from '@/src/site/Link';
 import { Selector } from '@/src/components/ServiceEdition';
+import '@/styles/international-spread.css';
 
 const pillar = '/consultoria/consultoria-seo-internacional';
 const marketGuide = '/liner-notes/estrategia-seo-usa-latam';
@@ -27,11 +28,11 @@ const routes = [
 ];
 
 const diagnosis = [
-    ['Demanda comercial', '¿Hay búsquedas que expresan una necesidad que el negocio puede atender?', 'Comparar consultas, competidores y tipos de páginas en resultados locales.'],
-    ['Capacidad de venta', '¿Puedes atender, cobrar y dar soporte en ese mercado?', 'Validar alcance, condiciones, moneda si aplica, idioma de atención y prueba comercial.'],
-    ['Arquitectura', '¿Cambian la oferta o la intención lo suficiente para requerir otra URL?', 'Reutilizar la página o crear una versión diferenciada. Usar hreflang solo entre equivalentes.'],
-    ['Evidencia local', '¿Qué prueba puede verificar el comprador antes de contactar?', 'Identificar casos, demostraciones, referencias o información comercial pertinente al mercado.'],
-    ['Medición', '¿Cómo sabrás si vale la pena ampliar la inversión?', 'Registrar consultas por país y página, contactos cualificados y resultados disponibles antes de escalar.'],
+    ['travel_explore', 'Demanda comercial', '¿Hay búsquedas que expresan una necesidad que el negocio puede atender?', 'Comparar consultas, competidores y tipos de páginas en resultados locales.'],
+    ['storefront', 'Capacidad de venta', '¿Puedes atender, cobrar y dar soporte en ese mercado?', 'Validar alcance, condiciones, moneda si aplica, idioma de atención y prueba comercial.'],
+    ['account_tree', 'Arquitectura', '¿Cambian la oferta o la intención lo suficiente para requerir otra URL?', 'Reutilizar la página o crear una versión diferenciada. Usar hreflang solo entre equivalentes.'],
+    ['fact_check', 'Evidencia local', '¿Qué prueba puede verificar el comprador antes de contactar?', 'Identificar casos, demostraciones, referencias o información comercial pertinente al mercado.'],
+    ['query_stats', 'Medición', '¿Cómo sabrás si vale la pena ampliar la inversión?', 'Registrar consultas por país y página, contactos cualificados y resultados disponibles antes de escalar.'],
 ];
 
 export default function InternationalEdition() {
@@ -75,26 +76,44 @@ export default function InternationalEdition() {
                 </div>
             </section>
 
-            <section id="diagnostico-internacional" className="edition-method edition-intl-checklist" aria-labelledby="diagnosis-title">
-                <div>
+            <section id="diagnostico-internacional" className="intl-checklist" aria-labelledby="diagnosis-title">
+                <div className="intl-checklist-cover">
                     <h2 id="diagnosis-title">Cinco decisiones antes de abrir otro mercado</h2>
-                    <p>Usa una copia de esta revisión por país e idioma. Anota la evidencia y quién debe validar cada decisión.</p>
+                    <p>Repite la revisión por país e idioma. Anota qué evidencia tienes y quién debe validar cada decisión.</p>
+                    <img className="intl-spread-print" src="/images/internacional-diagnostico.webp" width="672" height="504" alt="Brújula de latón sobre un plano urbano impreso, con el trayecto marcado en tinta roja." loading="lazy" decoding="async" />
                 </div>
-                <ol>{diagnosis.map(([topic, question, evidence]) => (
-                    <li key={topic}><h3>{topic}</h3><div><p><strong>{question}</strong></p><p>{evidence}</p></div></li>
+                <ol className="intl-checklist-steps" role="list">{diagnosis.map(([icon, topic, question, evidence]) => (
+                    <li key={topic}>
+                        <span className="intl-ink-icon material-symbols-outlined" aria-hidden="true">{icon}</span>
+                        <div><h3>{topic}</h3><p><strong>{question}</strong></p><p>{evidence}</p></div>
+                    </li>
                 ))}</ol>
             </section>
 
-            <section id="entregables-seo" className="edition-method" aria-labelledby="intl-deliverables-title">
+            <section id="entregables-seo" className="intl-deliverables" aria-labelledby="intl-deliverables-title">
                 <h2 id="intl-deliverables-title">Qué incluye contratar a un consultor SEO internacional</h2>
-                <div className="edition-international-prose">
-                    <h3>Una hoja de ruta que tu equipo pueda ejecutar</h3>
-                    <p>El diagnóstico aterriza en un mapa de oportunidad por mercado, arquitectura de URLs, contenidos prioritarios y un plan de medición. Si hay versiones equivalentes, especificamos sus canonicals, vínculos recíprocos y hreflang. Si hay una migración, definimos qué redirigir y cómo verificar el resultado. <Link href={architectureGuide}>Consulta la guía de arquitectura internacional y hreflang</Link>.</p>
-                    <h3>Cómo construir evidencia y conseguir menciones relevantes</h3>
-                    <p>Identificamos qué puede aportar tu marca a compradores y especialistas de cada mercado. Un caso con metodología verificable, una herramienta o una guía que resuelva una decisión concreta pueden servir como fuente editorial. Buscamos oportunidades de difusión en sitios pertinentes para esa audiencia y hacemos seguimiento de menciones y enlaces ganados.</p>
-                    <h3>Cómo elegir entre consultor y agencia</h3>
-                    <p>Conmigo trabajas directamente en el diagnóstico, la estrategia y las prioridades. Si necesitas varios equipos de producción a la vez, vale la pena <Link href="/vs/agencia-tradicional">comparar el alcance de cada modelo</Link>. Revisa también <Link href="/consultoria">cómo trabajo la consultoría SEO</Link> y usa la <Link href="/lab/tools/roi-calculator">calculadora de ROI SEO</Link> para evaluar tu inversión con tus propios datos.</p>
-                </div>
+                <article className="intl-deliverable">
+                    <img className="intl-spread-print" src="/images/internacional-arquitectura.webp" width="672" height="504" alt="Manos conectando fichas sobre papel cuadriculado para trazar la arquitectura de un sitio." loading="lazy" decoding="async" />
+                    <div>
+                        <h3>Una hoja de ruta que tu equipo pueda ejecutar</h3>
+                        <p>El diagnóstico aterriza en un mapa de oportunidad por mercado, arquitectura de URLs, contenidos prioritarios y un plan de medición. Si hay versiones equivalentes, especificamos sus canonicals, vínculos recíprocos y hreflang. Si hay una migración, definimos qué redirigir y cómo verificar el resultado.</p>
+                        <p><Link href={architectureGuide}>Consulta la guía de arquitectura internacional y hreflang</Link></p>
+                    </div>
+                </article>
+                <article className="intl-deliverable">
+                    <img className="intl-spread-print" src="/images/internacional-menciones.webp" width="672" height="504" alt="Micrófono y recortes de periódico en un collage sobre cómo una historia local llega a otros medios." loading="lazy" decoding="async" />
+                    <div>
+                        <h3>Cómo construir evidencia y conseguir menciones relevantes</h3>
+                        <p>Identificamos qué puede aportar tu marca a compradores y especialistas de cada mercado. Un caso con metodología verificable, una herramienta o una guía que resuelva una decisión concreta pueden servir como fuente editorial. Buscamos oportunidades de difusión en sitios pertinentes para esa audiencia y hacemos seguimiento de menciones y enlaces ganados.</p>
+                    </div>
+                </article>
+                <article className="intl-deliverable">
+                    <img className="intl-spread-print" src="/images/internacional-consultoria.webp" width="672" height="504" alt="Figuras reunidas alrededor de una mesa con cuadernos y documentos de trabajo." loading="lazy" decoding="async" />
+                    <div>
+                        <h3>Cómo elegir entre consultor y agencia</h3>
+                        <p>Conmigo trabajas directamente en el diagnóstico, la estrategia y las prioridades. Si necesitas varios equipos de producción a la vez, vale la pena <Link href="/vs/agencia-tradicional">comparar el alcance de cada modelo</Link>. Revisa también <Link href="/consultoria">cómo trabajo la consultoría SEO</Link> y usa la <Link href="/lab/tools/roi-calculator">calculadora de ROI SEO</Link> para evaluar tu inversión con tus propios datos.</p>
+                    </div>
+                </article>
             </section>
 
             <section className="edition-evidence" aria-labelledby="intl-evidence-title">

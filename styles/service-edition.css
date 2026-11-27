@@ -351,9 +351,6 @@
 .edition-international-prose p + p { margin-block-start: .8rem; }
 .edition-international-prose a { color: var(--edition-accent); text-decoration: underline; text-underline-offset: .19em; }
 .edition-international-prose a:hover { text-decoration-thickness: .16em; }
-.edition-intl-checklist { scroll-margin-block-start: 7rem; background: var(--edition-soft); }
-.edition-intl-checklist h2 + p { margin-block-start: .8rem; }
-.edition-intl-checklist li > div { grid-column: 2; }
 
 .edition-method, .edition-evidence, .edition-resources {
     max-inline-size: 93rem;
