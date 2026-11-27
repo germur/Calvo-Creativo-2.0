@@ -62,4 +62,6 @@ Después de publicar, compara las impresiones, consultas y páginas por país en
 
 La arquitectura resuelve cómo se encuentran las páginas; no decide por sí sola si un país merece inversión. Revisa también la [estrategia de expansión SEO entre USA y Latinoamérica](/liner-notes/estrategia-seo-usa-latam) y el [servicio de consultoría SEO internacional](/consultoria/consultoria-seo-internacional). Si el problema es técnico, puedes explorar el trabajo de [arquitectura SEO](/consultoria/arquitectura-seo-geo).
 
+Si aún estás definiendo países, idiomas y oferta, usa la [revisión previa de expansión](/consultoria/consultoria-seo-internacional#diagnostico-internacional) antes de documentar las URLs equivalentes.
+
 Referencias técnicas: [versiones localizadas según Google Search Central](https://developers.google.com/search/docs/specialty/international/localized-versions?hl=es-419) y [gestión de sitios multirregionales](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites?hl=es-419).

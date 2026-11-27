@@ -53,4 +53,6 @@ Evalúa la inversión con escenarios conservadores. La [calculadora de ROI SEO](
 
 El entregable útil no es una lista infinita de keywords. Es una decisión: qué mercado priorizar, qué páginas crear o mejorar, qué necesita el equipo técnico, quién ejecuta cada tarea y con qué indicadores se evaluará.
 
+Antes de decidir, completa la [revisión de cinco decisiones por mercado](/consultoria/consultoria-seo-internacional#diagnostico-internacional) y registra la evidencia para tu equipo.
+
 Si necesitas desarrollar ese diagnóstico para una empresa en Estados Unidos o Latinoamérica, conoce la [consultoría SEO internacional de Calvo Creativo](/consultoria/consultoria-seo-internacional). El [modelo de trabajo y alcance](/consultoria) explica cómo definimos las prioridades antes de implementar.

@@ -122,7 +122,7 @@ const editions = {
     },
 };
 
-function Selector({ mode, heading, labels, panels }: { mode: Mode; heading: string; labels: string[]; panels: ReactNode[] }) {
+export function Selector({ mode, heading, labels, panels }: { mode: Mode | 'international'; heading: string; labels: string[]; panels: ReactNode[] }) {
     return (
         <fieldset className="edition-selector">
             <legend>{heading}</legend>
