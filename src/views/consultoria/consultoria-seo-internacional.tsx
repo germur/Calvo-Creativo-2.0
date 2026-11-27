@@ -6,13 +6,15 @@ export default function ConsultoriaInternacional() {
     return (
         <ServiceLayout
             title="Consultor SEO Internacional | USA-Latam | Calvo Creativo"
-            description="Consultoría SEO cross-border para el mercado hispano en Estados Unidos y expansión Latam. Spanglish SEO, hreflang y estrategia de entidades culturales."
+            description="Consultor SEO internacional para empresas de Latinoamérica y Estados Unidos. Investigación por mercado, arquitectura multilingüe, estrategia de contenidos y medición."
             serviceName="Consultoría SEO Internacional"
-            geoDefinition="La consultoría SEO internacional es el proceso de optimizar la arquitectura técnica (etiquetas hreflang, estructura de URL) y la relevancia semántica de un sitio web para múltiples regiones e idiomas. A diferencia de la traducción simple, el SEO internacional moderno utiliza 'Cultural Entity Mapping' para adaptar la intención de búsqueda y las entidades de marca a las necesidades específicas de mercados locales, como el sector hispano en Estados Unidos o la expansión B2B en Latinoamérica."
+            geoDefinition="La consultoría SEO internacional ayuda a que un sitio sea descubrible y relevante en distintos mercados e idiomas. Combina investigación de demanda local, arquitectura de URL, hreflang cuando existen versiones equivalentes, contenido adaptado y medición por país. El objetivo es conectar las búsquedas de cada mercado con una oferta comercial adecuada."
             faqItems={[
-                { question: "¿Necesito una web diferente para cada país?", answer: "No necesariamente. Depende de tus recursos y objetivos. A menudo, el uso de subdirectorios (tuweb.com/us/) es la estrategia más eficiente para concentrar la autoridad del dominio (Domain Authority) mientras se segmenta la audiencia." },
-                { question: "¿Puede la IA traducir mi contenido para SEO?", answer: "La IA sirve para una base, pero para rankear en 2026 necesitas 'Human-Only Premium'. La IA no entiende los modismos locales ni la intención cultural profunda. Un humano experto debe adaptar, no solo traducir, para garantizar la conversión y la confianza (Trustworthiness)." },
-                { question: "¿Cómo compito con empresas locales de EE.UU. si estoy fuera?", answer: "Mediante la autoridad temática (Topical Authority). Si creas el contenido más completo y útil sobre tu nicho específico, Google priorizará tu respuesta sobre una empresa local que tenga contenido pobre. La calidad y la estructura semántica vencen a la ubicación física en muchas consultas informativas y comerciales." }
+                { question: "¿Necesito una web diferente para cada país?", answer: "No necesariamente. Depende de tus recursos y objetivos. Los subdirectorios suelen simplificar la gestión en un mismo dominio; los dominios nacionales o subdominios pueden tener sentido por requisitos de negocio, marca o infraestructura. La decisión depende de las versiones existentes y del equipo que las mantendrá." },
+                { question: "¿Puede la IA traducir mi contenido para SEO?", answer: "La IA puede ayudar a traducir y generar borradores. Conviene validar vocabulario, intención de búsqueda, exactitud y oferta con conocimiento del mercado. Traducir literalmente no garantiza posicionamiento ni ventas." },
+                { question: "¿Cómo compito con empresas locales de EE.UU. si estoy fuera?", answer: "Empieza por distinguir búsquedas nacionales, locales y de contratación remota. La relevancia de la oferta, los contenidos, la evidencia y la arquitectura ayudan a competir; las búsquedas locales también pueden depender de proximidad y presencia real. No hay garantía de superar a competidores locales." },
+                { question: "¿Puedo contratar un consultor SEO en Latam para una empresa de Estados Unidos?", answer: "Sí. El trabajo puede hacerse de forma remota, con objetivos, entregables y responsables acordados. Lo importante es definir si buscas captar clientes en Estados Unidos, en Latinoamérica o en ambos mercados, y el alcance de implementación." },
+                { question: "¿Cuánto cuesta una consultoría SEO internacional?", answer: "El presupuesto depende del número de mercados e idiomas, el estado técnico del sitio, la producción de contenidos y el alcance de implementación. Primero revisamos la situación y definimos una propuesta de trabajo, sin prometer posiciones ni ventas." }
             ]}
         >
             {/* Hero Section */}
@@ -27,7 +29,7 @@ export default function ConsultoriaInternacional() {
                             <span className="text-[#E11D48]">El puente entre Latam y USA.</span>
                         </h1>
                         <p className="text-xl text-gray-600 font-light mb-8 max-w-lg border-l-4 border-[#E11D48] pl-6">
-                            Consultoría SEO cross-border para el mercado hispano en Estados Unidos y la expansión B2B en Latinoamérica. Ingeniería de Silicon Valley, agilidad latina.
+                            Soy Roger Murillo. Trabajo con empresas de Latinoamérica y Estados Unidos que necesitan posicionarse en su mercado actual o expandirse a uno nuevo. Investigación, arquitectura SEO y estrategia de contenidos adaptadas a cómo busca y decide cada comprador.
                         </p>
                         <div className="flex gap-4">
                             <Link href="/contacto" className="h-14 px-8 rounded bg-[#0A0A0A] text-white font-bold uppercase tracking-wide hover:bg-[#E11D48] transition-colors shadow-xl flex items-center">
@@ -72,12 +74,12 @@ export default function ConsultoriaInternacional() {
                         <div className="bg-red-50 p-6 rounded-lg border border-red-100">
                             <h3 className="font-bold text-red-900 mb-2">❌ Traducción Literal</h3>
                             <p className="text-sm text-red-800">"Apartamentos en arriendo"</p>
-                            <p className="text-xs text-red-600 mt-1 italic">(Nadie busca así en Miami)</p>
+                            <p className="text-xs text-red-600 mt-1 italic">(Ejemplo de vocabulario habitual en Colombia)</p>
                         </div>
                         <div className="bg-green-50 p-6 rounded-lg border border-green-100">
                             <h3 className="font-bold text-green-900 mb-2">✅ Intención Cultural</h3>
                             <p className="text-sm text-green-800">"Condos for rent" / "Departamentos de renta"</p>
-                            <p className="text-xs text-green-600 mt-1 italic">(Así buscan tus compradores)</p>
+                            <p className="text-xs text-green-600 mt-1 italic">(Variantes que conviene validar en el mercado de destino)</p>
                         </div>
                     </div>
                 </div>
@@ -86,8 +88,8 @@ export default function ConsultoriaInternacional() {
             {/* Solution: Cross-Border Strategy */}
             <section className="py-20 px-6 max-w-7xl mx-auto">
                 <div className="mb-12 text-center max-w-3xl mx-auto">
-                    <h2 className="text-3xl md:text-5xl font-display font-black mb-4">Consultoría SEO internacional: ingeniería de Silicon Valley, agilidad latina</h2>
-                    <p className="text-gray-600">Te doy la estrategia técnica de SEO internacional de una agencia de Nueva York, con la cercanía cultural de un partner en Latam.</p>
+                    <h2 className="text-3xl md:text-5xl font-display font-black mb-4">Consultoría SEO internacional: estrategia para cada mercado</h2>
+                    <p className="text-gray-600">Trabajo directo contigo o con tu equipo: definimos qué mercados tienen sentido, cómo organizar la web y qué contenidos necesitan tus compradores.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -98,7 +100,7 @@ export default function ConsultoriaInternacional() {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Arquitectura Técnica</h3>
                         <p className="text-sm leading-relaxed text-white/90 mb-4">
-                            Implementación precisa de <strong>Hreflang</strong> y estructura de URL geo-targetizada (subdirectorios vs ccTLDs) para que Google sepa exactamente a quién mostrar tu contenido. Todo sobre una base de <Link href="/liner-notes/seo-tecnico-era-ia" className="underline hover:text-white/70">SEO técnico sólido</Link>.
+                            Arquitectura de URL y <strong>hreflang</strong> cuando existan versiones equivalentes por idioma o región, con revisión de canonicals, enlaces internos e indexación. Todo sobre una base de <Link href="/liner-notes/seo-tecnico-era-ia" className="underline hover:text-white/70">SEO técnico sólido</Link>.
                         </p>
                     </div>
 
@@ -109,7 +111,7 @@ export default function ConsultoriaInternacional() {
                         </div>
                         <h3 className="text-xl font-bold mb-4">Spanglish SEO</h3>
                         <p className="text-sm leading-relaxed text-gray-600 mb-4">
-                            Mi "Signature Move". Atacamos el mercado hispano en EE.UU. (60M de personas) optimizando para consultas híbridas que mezclan inglés y español.
+                            Investigación de consultas en inglés, español y combinaciones de ambos idiomas para el mercado hispano de Estados Unidos, según la demanda observada.
                         </p>
                     </div>
 
@@ -120,12 +122,25 @@ export default function ConsultoriaInternacional() {
                         </div>
                         <h3 className="text-xl font-bold mb-4">Autoridad Localizada</h3>
                         <p className="text-sm leading-relaxed text-gray-600 mb-4">
-                            Digital PR Local y contenido con "Information Gain" cultural para validar tu entidad en cada región específica.
+                            Contenido útil y evidencia local relevante para el comprador, con oportunidades de menciones y enlaces editoriales que se ganen por su valor.
                         </p>
                     </div>
                 </div>
             </section>
 
+            <section className="py-20 px-6 bg-white border-y border-gray-200" aria-labelledby="mercados-seo">
+                <div className="max-w-6xl mx-auto">
+                    <h2 id="mercados-seo" className="text-3xl md:text-5xl font-display font-black mb-6">SEO para empresas en Latinoamérica y Estados Unidos</h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mb-10">Contratar un consultor SEO en Latam y hacer SEO internacional no son exactamente lo mismo. El punto de partida es tu objetivo de negocio.</p>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {[
+                          ['Consultoría SEO en Latam','Si tu empresa ya opera en Latinoamérica, investigamos el país, la oferta y las búsquedas comerciales relevantes. Priorizamos las páginas que pueden acercar clientes al contacto.'],
+                          ['De Estados Unidos hacia Latam','Si tu empresa quiere entrar a México, Colombia u otro mercado, comparamos demanda, competidores, lenguaje y capacidad de atender ese mercado antes de crear versiones locales.'],
+                          ['De Latam hacia Estados Unidos','Si necesitas llegar a compradores estadounidenses o al mercado hispano, distinguimos intención en inglés y español, propuesta comercial, cobertura geográfica y rutas de conversión.']
+                        ].map(([title,copy]) => <article key={title} className="border border-gray-200 bg-[#F8F5F0] p-6"><h3 className="font-display text-2xl mb-3">{title}</h3><p className="leading-relaxed text-gray-700">{copy}</p></article>)}
+                    </div>
+                </div>
+            </section>
             {/* Methodology Bridge */}
             <section className="py-20 bg-gray-50 border-y border-gray-200">
                 <div className="max-w-7xl mx-auto px-6">
@@ -150,24 +165,45 @@ export default function ConsultoriaInternacional() {
                 </div>
             </section>
 
+            <section className="py-20 px-6 max-w-6xl mx-auto" aria-labelledby="entregables-seo">
+                <h2 id="entregables-seo" className="text-3xl md:text-5xl font-display font-black mb-6">Qué incluye contratar un consultor SEO internacional</h2>
+                <p className="text-gray-700 max-w-3xl mb-8">El alcance se acuerda después del diagnóstico. Estos son los entregables que podemos definir según las necesidades del proyecto.</p>
+                <div className="grid md:grid-cols-2 gap-6">
+                    {[
+                      ['Estudio de oportunidad por mercado','Consultas, intención, competidores y páginas prioritarias por país o idioma.'],
+                      ['Plan técnico internacional','Arquitectura de URL, indexación, canonicals, hreflang y plan de migración si hace falta.'],
+                      ['Mapa de contenidos y enlazado','Páginas comerciales, contenidos de soporte y conexiones internas sin duplicar intenciones.'],
+                      ['Seguimiento y decisiones','Search Console por país y página; GA4 y contactos cuando la medición esté disponible. Priorización según señales y resultados.']
+                    ].map(([title,copy]) => <article key={title} className="border-l-4 border-[#E11D48] bg-white p-6"><h3 className="text-xl font-bold mb-2">{title}</h3><p className="text-gray-700">{copy}</p></article>)}
+                </div>
+                <p className="mt-8 text-gray-700"><strong>¿Consultor o agencia?</strong> Con un consultor trabajas directamente con quien define el diagnóstico y las prioridades. Una agencia puede resultar adecuada cuando necesitas varios equipos de ejecución a la vez. <Link href="/vs/agencia-tradicional" className="underline text-[#E11D48]">Compara los modelos de trabajo</Link> y revisa el <Link href="/consultoria" className="underline text-[#E11D48]">alcance de la consultoría SEO</Link>.</p>
+                <p className="mt-4 text-gray-700">Si estás evaluando la inversión, puedes usar la <Link href="/lab/tools/roi-calculator" className="underline text-[#E11D48]">calculadora de ROI SEO</Link> para modelar escenarios con tus propios datos.</p>
+            </section>
             {/* Bridge to Lado B Experiment */}
             <section className="py-20 px-6">
                 <div className="max-w-4xl mx-auto bg-black text-white p-12 rounded-[2rem] relative overflow-hidden text-center border border-[#E11D48]/30">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
                     <div className="relative z-10">
                         <span className="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4 block">Del Laboratorio (Lado B)</span>
-                        <h3 className="text-3xl font-bold mb-4">Resultados sin Fronteras.</h3>
+                        <h3 className="text-3xl font-bold mb-4">Experiencia aplicada: del diagnóstico a una web que responde.</h3>
                         <p className="text-white/70 mb-8 max-w-lg mx-auto">
-                            Mira cómo una empresa de servicios logró competir con gigantes en Florida utilizando una estrategia hiper-localizada.
+                            Explora cómo se reorganizó una web de servicios con arquitectura SEO, migración a Astro y recorridos hacia el contacto. El caso documenta decisiones y solicitudes registradas, sin atribuirlas a SEO ni presentarlas como resultados de una expansión internacional.
                         </p>
-                        <Link href="/lab" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
-                            Ver Análisis Cross-Border
+                        <Link href="/casos/rogermurillo" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
+                            Ver caso de arquitectura y migración
                             <span className="material-symbols-outlined">public</span>
                         </Link>
                     </div>
                 </div>
             </section>
 
+            <section className="py-12 px-6 border-y border-gray-200 bg-white" aria-labelledby="recursos-internacionales">
+                <div className="max-w-5xl mx-auto"><h2 id="recursos-internacionales" className="text-3xl font-display font-black mb-5">Recursos para planificar tu expansión</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Link href="/liner-notes/estrategia-seo-usa-latam" className="border p-6 block hover:border-[#E11D48]"><h3 className="font-bold text-xl mb-2">Estrategia SEO entre USA y Latinoamérica</h3><p className="text-gray-600">Decide qué mercados investigar y qué páginas priorizar antes de invertir.</p></Link>
+                    <Link href="/liner-notes/seo-internacional-hreflang-arquitectura" className="border p-6 block hover:border-[#E11D48]"><h3 className="font-bold text-xl mb-2">Hreflang y arquitectura internacional</h3><p className="text-gray-600">Guía técnica para decidir las versiones y revisar su implementación.</p></Link>
+                </div></div>
+            </section>
             {/* CTA Final */}
             <section className="py-20 text-center px-6">
                 <h2 className="text-3xl md:text-5xl font-display font-black mb-6">El mundo es grande.</h2>

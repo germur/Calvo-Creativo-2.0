@@ -207,6 +207,9 @@ export default function ArquitecturaSeoGeo() {
             </section>
 
             {/* CTA Final */}
+            <section className="py-12 px-6 bg-white border-y border-gray-200">
+                <div className="max-w-4xl mx-auto"><h2 className="text-2xl font-bold mb-4">Arquitectura para varios países e idiomas</h2><p className="text-gray-600 mb-4">Las decisiones técnicas cambian cuando una empresa necesita versiones regionales, hreflang y contenidos adaptados al mercado. Definimos esas prioridades dentro de la <Link href="/consultoria/consultoria-seo-internacional" className="underline text-[#E11D48]">consultoría SEO internacional</Link>.</p></div>
+            </section>
             <section className="py-20 text-center px-6">
                 <h2 className="text-3xl md:text-5xl font-display font-black mb-6">¿Tu web habla el idioma del futuro?</h2>
                 <h3 className="text-2xl text-gray-400 font-light mb-8">Auditemos tu arquitectura hoy.</h3>
