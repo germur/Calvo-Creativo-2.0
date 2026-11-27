@@ -9,7 +9,7 @@ export default function GeoIaService() {
             <SeoHead
                 title="GEO Local: SEO para ChatGPT, Gemini y Google Maps | Calvo Creativo"
                 type="service"
-                description="GEO para negocios locales: prepara tu presencia para que ChatGPT, Gemini y Google Maps recomienden tu marca en tu zona. Optimizacion para motores generativos con enfoque local."
+                description="SEO local y GEO para negocios: revisión de Google Business Profile, páginas de servicio, datos de negocio y visibilidad en buscadores y asistentes de IA."
                 provider="Calvo Creativo"
                 areaServed="Global, LATAM, USA"
                 offerCatalog="Geomancia Digital Services"
@@ -30,16 +30,16 @@ export default function GeoIaService() {
                                     <span>Geomancia Digital</span>
                                 </div>
                                 <h1 className="text-4xl md:text-6xl font-black leading-[0.9] tracking-tighter text-white uppercase">
-                                    Geo<br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-[#b88c12]">Optimización</span>
+                                    GEO y SEO local<br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-[#b88c12]">para negocios</span>
                                 </h1>
                                 <p className="text-lg md:text-xl text-parchment max-w-md font-light border-l-2 border-gold pl-4">
-                                    Prepara tu territorio para los nuevos dioses de la IA. Adaptamos tu presencia local para ChatGPT, Gemini y Google Maps.
+                                    Haz que tus servicios y áreas de atención sean fáciles de encontrar y comprender. Revisamos tu presencia en Google Maps, la web y la información que pueden utilizar los asistentes de IA, sin prometer recomendaciones.
                                 </p>
                                 <div className="flex flex-wrap gap-4 pt-4">
-                                    <button className="flex h-12 items-center justify-center rounded bg-gold px-6 text-stone-dark font-bold hover:bg-white transition-colors uppercase tracking-wider">
-                                        Explorar Territorio
-                                    </button>
+                                    <Link href="/contacto" className="flex min-h-12 items-center justify-center rounded bg-gold px-6 py-3 text-stone-dark font-bold hover:bg-white transition-colors uppercase tracking-wider">
+                                        Consultar mi presencia local
+                                    </Link>
                                 </div>
                             </div>
 
@@ -72,7 +72,7 @@ export default function GeoIaService() {
                             </div>
                             <h3 className="text-xl font-bold text-white mb-4 uppercase">Local Sigils</h3>
                             <p className="text-parchment text-sm">
-                                Inscripción de coordenadas exactas y dominancia en Google Business Profile. Tu marca en el mapa, inamovible.
+                                Revisión del perfil de empresa, categorías, horarios, área de atención y datos de contacto reales. El posicionamiento local también depende de relevancia, distancia y prominencia.
                             </p>
                         </div>
 
@@ -84,7 +84,7 @@ export default function GeoIaService() {
                             </div>
                             <h3 className="text-xl font-bold text-white mb-4 uppercase">Semantic Iron</h3>
                             <p className="text-parchment text-sm">
-                                Estructuras de datos (Schema) que los LLMs como Gemini pueden 'entender'. Hablamos el idioma de las máquinas.
+                                Datos estructurados coherentes con el contenido visible y la información real del negocio. El marcado ayuda a describir entidades, pero no garantiza menciones.
                             </p>
                         </div>
 
@@ -95,7 +95,7 @@ export default function GeoIaService() {
                             </div>
                             <h3 className="text-xl font-bold text-white mb-4 uppercase">Neural Flow</h3>
                             <p className="text-parchment text-sm">
-                                Optimización de contenido no estructurado para respuestas conversacionales. Sé la respuesta, no solo un link.
+                                Páginas de servicio, preguntas frecuentes y evidencia local que respondan dudas de compradores, con información verificable y recorridos claros hacia el contacto.
                             </p>
                         </div>
                     </div>
@@ -114,12 +114,12 @@ export default function GeoIaService() {
                             {/* UI Overlay */}
                             <div className="absolute top-4 left-4 font-mono text-xs text-green-500">
                                 TARGET: LOCAL_PACK<br />
-                                CONFIDENCE: 98%
+                                MODO: ILUSTRATIVO
                             </div>
 
                             <div className="absolute bottom-4 right-4 flex items-center gap-2">
                                 <span className="size-2 bg-gold rounded-full animate-pulse"></span>
-                                <span className="text-white text-xs font-bold uppercase">Live Signal</span>
+                                <span className="text-white text-xs font-bold uppercase">Visualización conceptual</span>
                             </div>
 
                             {/* Center Point */}
@@ -130,12 +130,24 @@ export default function GeoIaService() {
                     </div>
                 </section>
 
+                <section className="w-full max-w-5xl px-6 py-16 font-body">
+                    <h2 className="text-3xl font-display font-bold mb-6">Qué incluye una consultoría GEO y SEO local</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {[
+                          ['Diagnóstico local','Comprobamos la presencia del negocio, servicios y áreas reales de atención.'],
+                          ['Arquitectura web','Identificamos páginas comerciales y preguntas locales útiles, sin multiplicar páginas por ciudad de forma artificial.'],
+                          ['Información y confianza','Revisamos datos de contacto, evidencia, consistencia y marcado estructurado cuando corresponda.'],
+                          ['Medición','Definimos una línea base de Search Console, Google Business Profile y contactos medibles; las menciones de IA se evalúan como señales separadas.']
+                        ].map(([title,copy])=><article key={title} className="border border-stone-lighter p-6 rounded"><h3 className="font-bold text-xl mb-3">{title}</h3><p className="text-parchment">{copy}</p></article>)}
+                    </div>
+                    <p className="mt-8 text-parchment">El SEO local y GEO no son sinónimos: uno trabaja visibilidad en búsquedas con intención local y el otro estudia presencia en respuestas generativas. Explora la <Link href="/lab/glosario/geo" className="text-gold underline">definición de GEO</Link> y la <Link href="/consultoria/arquitectura-seo-geo" className="text-gold underline">arquitectura SEO técnica</Link>.</p>
+                </section>
                 {/* CTA */}
                 <section className="py-24 px-4 text-center">
                     <h2 className="text-4xl font-bold text-white uppercase mb-8">Conquista el Mapa</h2>
-                    <button className="bg-gold text-stone-dark font-bold text-lg px-12 py-4 rounded hover:bg-white transition-colors border-2 border-transparent hover:border-gold uppercase tracking-wider">
-                        Estrategia GEO
-                    </button>
+                    <Link href="/contacto" className="inline-block bg-gold text-stone-dark font-bold text-lg px-12 py-4 rounded hover:bg-white transition-colors border-2 border-transparent hover:border-gold uppercase tracking-wider">
+                        Hablemos de tu estrategia GEO
+                    </Link>
                 </section>
 
             </main>
