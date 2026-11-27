@@ -167,6 +167,9 @@ export default function AgencyComparison() {
                 </section>
 
                 {/* Final CTA */}
+                <section className="py-12 px-6 bg-white border-y-4 border-black">
+                    <div className="max-w-4xl mx-auto"><h2 className="text-2xl font-display font-black mb-4">¿Y si necesitas SEO en varios mercados?</h2><p className="text-gray-700">Elige el modelo según el alcance, los idiomas, la capacidad de implementación y la coordinación que necesita tu equipo. Conoce cómo trabajo como <a href="/consultoria/consultoria-seo-internacional" className="underline font-bold">consultor SEO internacional para USA y Latam</a>.</p></div>
+                </section>
                 <section className="py-20 bg-black text-white text-center px-6">
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-4xl font-display font-black uppercase mb-8">¿Listo para dejar de alquilar y empezar a construir?</h2>
