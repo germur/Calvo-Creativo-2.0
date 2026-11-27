@@ -10,6 +10,8 @@ interface ServiceLayoutProps {
     title: string;
     description: string;
     serviceName: string;
+    serviceType?: string;
+    areaServed?: string | string[];
     geoDefinition: string;
     editorial?: boolean;
     faqItems?: { question: string; answer: string }[];
@@ -20,6 +22,8 @@ const ServiceLayout = ({
     title,
     description,
     serviceName,
+    serviceType = 'Digital Marketing & SEO',
+    areaServed = 'Worldwide',
     geoDefinition,
     editorial = false,
     faqItems = []
@@ -48,8 +52,8 @@ const ServiceLayout = ({
                         "https://x.com/Rogermu47429637"
                     ]
                 },
-                "areaServed": "Worldwide",
-                "serviceType": "Digital Marketing & SEO"
+                "areaServed": areaServed,
+                "serviceType": serviceType
             }
         ];
 

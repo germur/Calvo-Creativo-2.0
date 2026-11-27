@@ -9,6 +9,8 @@ export default function ConsultoriaInternacional() {
             title="Consultor SEO Internacional | USA-Latam | Calvo Creativo"
             description="Consultor SEO internacional para empresas de Latinoamérica y Estados Unidos. Investigación por mercado, arquitectura multilingüe, estrategia de contenidos y medición."
             serviceName="Consultoría SEO Internacional"
+            serviceType="Consultoría SEO internacional"
+            areaServed={['Latinoamérica', 'Estados Unidos']}
             geoDefinition="La consultoría SEO internacional ayuda a que un sitio sea descubrible y relevante en distintos mercados e idiomas. Combina investigación de demanda local, arquitectura de URL, hreflang cuando existen versiones equivalentes, contenido adaptado y medición por país. El objetivo es conectar las búsquedas de cada mercado con una oferta comercial adecuada."
             faqItems={[
                 { question: "¿Necesito una web diferente para cada país?", answer: "No necesariamente. Depende de tus recursos y objetivos. Los subdirectorios suelen simplificar la gestión en un mismo dominio; los dominios nacionales o subdominios pueden tener sentido por requisitos de negocio, marca o infraestructura. La decisión depende de las versiones existentes y del equipo que las mantendrá." },

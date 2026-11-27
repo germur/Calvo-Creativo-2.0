@@ -28,6 +28,8 @@ Hreflang comunica que distintas URLs contienen versiones equivalentes dirigidas 
 
 Si solo tienes una versión en español, no inventes alternativas para añadir etiquetas. Primero deben existir páginas reales con un propósito.
 
+Si hay una versión genérica en español que puede atender a varios mercados, usa `es`. Si la página tiene un mercado específico, usa un código admitido como `es-MX` o `es-US`. Google Search no admite `es-419` como valor `hreflang`. Reserva `x-default` para el destino que corresponda cuando ninguna versión localizada coincide, por ejemplo, un selector internacional.
+
 ## Ejemplo de implementación
 
 Supongamos que tres páginas ficticias describen el mismo servicio para México, Estados Unidos en español y Estados Unidos en inglés. En el encabezado de cada una se incluye el mismo conjunto de referencias, incluido el enlace a sí misma:
@@ -57,6 +59,17 @@ Enlaza las versiones relevantes de forma que cualquier usuario pueda cambiar de 
 - El usuario puede navegar entre versiones sin depender de detección geográfica.
 
 Después de publicar, compara las impresiones, consultas y páginas por país en Search Console. Inspecciona ejemplos representativos. No atribuyas un cambio de tráfico exclusivamente a hreflang si también cambiaste contenido, dominio o navegación.
+
+### Si Google muestra la versión equivocada
+
+| Hallazgo | Dónde lo verifico | Corrección que pruebo |
+| --- | --- | --- |
+| La URL mexicana apunta a una URL estadounidense como canonical | HTML e Inspección de URLs | Si ambas ofertas merecen indexación, alinear la canonical de cada página con esa intención y revisar las demás señales de duplicación. |
+| La versión de EE. UU. enlaza a la mexicana y falta el enlace de vuelta | HTML o sitemap de ambos destinos | Declarar el mismo conjunto de equivalentes con reciprocidad y autorreferencia. |
+| La alternativa redirige o deja de ser una página disponible | Respuesta HTTP y destino final | Actualizar la anotación para que apunte a la URL final que el usuario puede abrir. |
+| Las páginas son indexables y la selección sigue sin coincidir | Resultados por país, texto visible y navegación | Revisar si el lenguaje, la oferta y los enlaces visibles reflejan la audiencia prevista. Hreflang solo comunica la relación entre versiones. |
+
+Para verificar, guarda un conjunto representativo de URLs por plantilla y compara el estado antes y después. Incluye al menos una página importante por mercado y una página que haya cambiado de dirección durante la migración.
 
 ## De la implementación a la decisión comercial
 
