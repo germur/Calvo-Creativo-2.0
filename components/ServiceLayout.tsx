@@ -11,6 +11,7 @@ interface ServiceLayoutProps {
     description: string;
     serviceName: string;
     geoDefinition: string;
+    editorial?: boolean;
     faqItems?: { question: string; answer: string }[];
 }
 
@@ -20,6 +21,7 @@ const ServiceLayout = ({
     description,
     serviceName,
     geoDefinition,
+    editorial = false,
     faqItems = []
 }: ServiceLayoutProps) => {
     const router = useRouter();
@@ -105,22 +107,34 @@ const ServiceLayout = ({
             <Navigation />
 
             {/* GEO Definition Block (Hidden/Subtle for Humans, Clear for AI) */}
-            <div className="bg-white border-b border-gray-200 py-3 px-6 text-[10px] text-gray-400 font-mono tracking-wide leading-relaxed">
+            {!editorial && <div className="bg-white border-b border-gray-200 py-3 px-6 text-[10px] text-gray-400 font-mono tracking-wide leading-relaxed">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
                     <span className="uppercase tracking-widest text-[#E11D48] font-bold shrink-0">GEO Definition //</span>
                     <p className="opacity-80">{geoDefinition}</p>
                 </div>
-            </div>
+            </div>}
 
-            <main className="pb-20">
+            <main className={editorial ? 'pb-12' : 'pb-20'}>
                 <div className="max-w-7xl mx-auto px-6 pt-6">
                     <Breadcrumbs theme="light" />
                 </div>
 
                 {children}
 
-                {/* FAQ Section */}
-                {faqItems.length > 0 && (
+                {editorial && <details className="edition-service-definition">
+                    <summary>En qué consiste el servicio</summary>
+                    <p>{geoDefinition}</p>
+                </details>}
+
+                {editorial && faqItems.length > 0 && <section className="edition-service-faq" aria-labelledby="edition-faq-title">
+                    <h2 id="edition-faq-title">Preguntas frecuentes</h2>
+                    {faqItems.map(item => <details key={item.question}>
+                        <summary>{item.question}</summary>
+                        <p>{item.answer}</p>
+                    </details>)}
+                </section>}
+
+                {!editorial && faqItems.length > 0 && (
                     <section className="bg-white border-t border-gray-200 py-20 mt-20">
                         <div className="max-w-4xl mx-auto px-6">
                             <h3 className="text-3xl font-display font-black mb-8 flex items-center gap-3">

@@ -4,3 +4,26 @@ import Page from '@/src/layouts/Page.astro';
 const props = Astro.props;
 ---
 <Page component={view.default} pageProps={props} />
+
+<script>
+    const estimator = document.querySelector<HTMLElement>('[data-time-estimator]');
+    const frequency = document.querySelector<HTMLInputElement>('#edition-frequency');
+    const duration = document.querySelector<HTMLInputElement>('#edition-duration');
+    const output = estimator?.querySelector('output');
+
+    if (estimator && frequency && duration && output) {
+        const formatHours = new Intl.NumberFormat('es-CO', { maximumFractionDigits: 2 });
+
+        function updateEstimate(frequency: HTMLInputElement, duration: HTMLInputElement, output: HTMLOutputElement) {
+            const repetitions = frequency.valueAsNumber;
+            const minutes = duration.valueAsNumber;
+            const valid = frequency.validity.valid && duration.validity.valid && Number.isFinite(repetitions) && Number.isFinite(minutes);
+            output.value = valid ? formatHours.format(repetitions * minutes / 60) : '—';
+        }
+
+        const update = () => updateEstimate(frequency, duration, output);
+        estimator.addEventListener('input', update);
+        update();
+        estimator.hidden = false;
+    }
+</script>
