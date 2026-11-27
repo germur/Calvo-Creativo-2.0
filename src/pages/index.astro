@@ -59,11 +59,12 @@ import HomeArtwork from '@/src/components/HomeArtwork.astro';
                     <p class="font-mono text-xs uppercase tracking-widest text-primary mb-4">Tu punto de partida</p>
                     <h2 id="problema-titulo" class="font-display text-4xl md:text-5xl uppercase mb-6">¿Qué necesita resolver tu negocio?</h2>
                     <p class="text-lg text-ink/80 max-w-2xl mb-10">El problema define el trabajo. Empecemos por lo que hoy está frenando tu siguiente paso.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             {title: 'Tengo visitas, pero pocos contactos', text: 'Revisar qué buscan tus compradores, cómo presentas la oferta y qué recorrido les permite consultar o contratar.', href: '/consultoria/estrategia-contenidos-autoridad', link: 'Ver estrategia de contenidos'},
                             {title: 'Mi web necesita una base más sólida', text: 'Diagnosticar rastreo, arquitectura y problemas técnicos. Priorizar las correcciones y planificar una migración si el proyecto la necesita.', href: '/consultoria/arquitectura-seo-geo', link: 'Ver arquitectura y SEO técnico'},
                             {title: 'Mi equipo repite tareas cada semana', text: 'Identificar qué reportes y procesos se pueden automatizar, con fuentes de datos, mantenimiento y revisión definidos.', href: '/consultoria/automatizacion-seo-ia', link: 'Ver automatización SEO'},
+                            {title: 'Quiero llegar a otro mercado', text: 'Investigar la demanda por país e idioma, adaptar la oferta y definir la arquitectura de una expansión hacia Estados Unidos o Latinoamérica.', href: '/consultoria/consultoria-seo-internacional', link: 'Ver consultoría SEO internacional'},
                         ].map(item => (
                             <article class="border border-black/20 bg-white p-7 flex flex-col">
                                 <h3 class="font-display text-2xl uppercase mb-4">{item.title}</h3>
