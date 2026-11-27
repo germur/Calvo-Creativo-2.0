@@ -40,8 +40,8 @@ export default function InternationalEdition() {
             <section className="edition-cover" aria-labelledby="edition-title">
                 <div className="edition-cover-copy">
                     <h1 id="edition-title">Consultor SEO internacional</h1>
-                    <p className="edition-display">Tu próximo mercado empieza en la búsqueda.</p>
-                    <p className="edition-intro">Soy Roger Murillo. Ayudo a empresas de Latinoamérica y Estados Unidos a decidir dónde competir, cómo estructurar su web y qué contenido necesita cada comprador.</p>
+                    <p className="edition-display">Encuentra tu próximo mercado.</p>
+                    <p className="edition-intro">Soy Roger Murillo. Ayudo a empresas de Latinoamérica y Estados Unidos a elegir mercados, adaptar su web y captar demanda local.</p>
                     <Link href="/contacto" className="edition-cta">Hablemos de tu mercado <span aria-hidden="true">↗</span></Link>
                 </div>
                 <Selector mode="international" heading="Elige tu ruta de expansión" labels={routes.map(route => route.label)} panels={routes.map(route => (
