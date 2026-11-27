@@ -6,13 +6,13 @@ export default function EstrategiaContenidos() {
     return (
         <ServiceLayout
             title="Estrategia de Contenidos y Autoridad Temática | Calvo Creativo"
-            description="Ecosistemas de contenido con datos originales que Google no puede ignorar. Autoridad Temática, clusters semánticos e Information Gain para escalar tráfico B2B."
+            description="Consultoría de estrategia de contenidos SEO: investigación de intención, clusters temáticos, arquitectura editorial, enlazado interno y un plan de medición para empresas."
             serviceName="Estrategia de Contenidos & Autoridad Temática"
-            geoDefinition="Una estrategia de contenidos de Autoridad Temática se enfoca en cubrir un tema en su totalidad (breadth) y profundidad (depth), organizando la información en clústeres semánticos interconectados. A diferencia del SEO tradicional basado en keywords, esta metodología prioriza el 'Information Gain' (Ganancia de Información): la inclusión de datos originales, experiencias de primera mano y perspectivas únicas que la IA no puede replicar, asegurando visibilidad tanto en los rankings de Google como en las respuestas de los Motores Generativos (LLMs)."
+            geoDefinition="Una estrategia de contenidos de Autoridad Temática se enfoca en cubrir un tema en su totalidad (breadth) y profundidad (depth), organizando la información en clústeres semánticos interconectados. A diferencia del SEO tradicional basado en keywords, esta metodología prioriza el 'Information Gain' (Ganancia de Información): la inclusión de datos originales, experiencias de primera mano y perspectivas únicas que la IA no puede replicar, para mejorar la utilidad del contenido y favorecer su descubrimiento en buscadores, sin garantizar rankings ni citas."
             faqItems={[
                 { question: "¿La IA escribirá todo mi contenido?", answer: "No. La IA es una herramienta de eficiencia, no de estrategia. Usamos IA para acelerar la investigación y el esquema, pero la redacción final y los 'insights' de valor provienen de humanos expertos. El contenido 100% IA sin supervisión es un pasivo, no un activo." },
-                { question: "¿Cuánto tarda en funcionar la Autoridad Temática?", answer: "La autoridad no se construye en un día. Generalmente, una estrategia de clústeres bien ejecutada empieza a mostrar tracción sólida entre los 3 y 6 meses, creando un efecto 'bola de nieve' donde cada nuevo contenido rankea más rápido que el anterior." },
-                { question: "¿Por qué necesito 'Information Gain'?", answer: "Porque Google patentó un sistema para puntuar el contenido basado en si aporta información nueva o simplemente repite lo que otros dicen. Si no tienes 'Information Gain', Google no tiene motivos para rankearte por encima de lo que ya existe." }
+                { question: "¿Cuánto tarda en funcionar la Autoridad Temática?", answer: "Depende de la competencia, la capacidad de producción, la indexación y el punto de partida. Acordamos indicadores y revisamos las señales de descubrimiento, consultas y resultados antes de decidir si ampliar el cluster." },
+                { question: "¿Por qué necesito 'Information Gain'?", answer: "Aportar ejemplos, evidencia propia y explicaciones que resuelvan dudas reales diferencia tu contenido de una simple recopilación. Una patente no demuestra que Google aplique una puntuación concreta a todas las páginas." }
             ]}
         >
             {/* Hero Section */}
@@ -27,12 +27,12 @@ export default function EstrategiaContenidos() {
                             <span className="text-[#E11D48]">De Palabras Clave a Autoridad Temática.</span>
                         </h1>
                         <p className="text-xl text-gray-600 font-light mb-8 max-w-lg border-l-4 border-[#E11D48] pl-6">
-                            Deja de publicar "slop". Construye autoridad real.
+                            Si publicas sin saber qué necesita tu comprador, más artículos no necesariamente significan más oportunidades. Conectamos investigación SEO, arquitectura editorial y narrativa para que cada página tenga un propósito.
                         </p>
                         <div className="flex gap-4">
-                            <button className="h-14 px-8 rounded bg-[#0A0A0A] text-white font-bold uppercase tracking-wide hover:bg-[#E11D48] transition-colors shadow-xl">
+                            <Link href="/contacto" className="min-h-14 flex items-center px-8 py-3 rounded bg-[#0A0A0A] text-white font-bold uppercase tracking-wide hover:bg-[#E11D48] transition-colors shadow-xl">
                                 Agendar Sesión de Estrategia
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -64,8 +64,7 @@ export default function EstrategiaContenidos() {
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold mb-6">¿Tu contenido es "música" o simplemente "ruido"?</h2>
                     <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                        Internet se ha inundado de contenido commodity. Si le pides a ChatGPT que escriba un artículo y tu competencia hace lo mismo, ambos tienen cero valor para Google.
-                        El algoritmo de Google (y su patente de <strong>Information Gain Score</strong>) ahora penaliza el contenido que no aporta nada nuevo.
+                        Publicar respuestas genéricas puede dejar al comprador con las mismas dudas. La diferencia no está en producir más texto, sino en entender la intención, aportar evidencia útil y organizar el contenido para facilitar decisiones. La IA puede ayudar en el proceso, pero requiere revisión y criterio editorial.
                     </p>
                     <div className="bg-red-50 text-red-900 p-6 rounded-lg text-left max-w-2xl mx-auto border border-red-100">
                         <h3 className="font-bold mb-3 uppercase text-xs tracking-widest">Síntomas de estrategia obsoleta:</h3>
@@ -165,18 +164,23 @@ export default function EstrategiaContenidos() {
                     <div className="absolute inset-0 bg-gradient-to-r from-[#ccff00] to-green-900 opacity-20"></div>
                     <div className="relative z-10">
                         <span className="font-mono text-xs text-[#ccff00] uppercase tracking-widest mb-4 block">Del Laboratorio (Lado B)</span>
-                        <h3 className="text-3xl font-bold mb-4">La IA vs El Humano</h3>
+                        <h3 className="text-3xl font-bold mb-4">De la búsqueda a una experiencia útil</h3>
                         <p className="text-white/70 mb-8 max-w-lg mx-auto">
-                            Mira cómo un artículo humano con Information Gain superó a 10 artículos de IA en tráfico y retención.
+                            En el caso de Germán Montenegro, la investigación identificó que los usuarios describen el dolor sin conocer el término clínico. La arquitectura de contenidos y una interfaz corporal interactiva partieron de esa necesidad. El caso explica el trabajo y sus límites, no promete resultados de tráfico.
                         </p>
-                        <Link href="/lab/calvo-fight-club/humano-vs-ia" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
-                            Ver Experimento Calvo Fight Club
+                        <Link href="/casos/german-montenegro" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-gray-200 transition-colors">
+                            Ver caso de investigación e intención
                             <span className="material-symbols-outlined">arrow_forward</span>
                         </Link>
                     </div>
                 </div>
             </section>
 
+            <section className="py-12 px-6 max-w-5xl mx-auto" aria-labelledby="entregables-contenido">
+                <h2 id="entregables-contenido" className="text-3xl font-display font-black mb-5">Qué entregamos en una estrategia de contenidos SEO</h2>
+                <p className="text-gray-700 mb-5">El alcance depende del proyecto: inventario de contenidos, investigación de consultas y necesidades, mapa temático, asignación de intención por URL, briefs editoriales, enlaces internos y criterios de medición. Priorizamos qué optimizar, crear, consolidar o retirar antes de producir nuevas páginas.</p>
+                <p className="text-gray-700">Consulta el <Link href="/lab/glosario/topical-authority" className="underline text-[#E11D48]">concepto de autoridad temática</Link> y cómo aplicar <Link href="/lab/glosario/information-gain" className="underline text-[#E11D48]">Information Gain</Link>. Para una empresa que trabaja en varios mercados, revisa la <Link href="/consultoria/consultoria-seo-internacional" className="underline text-[#E11D48]">estrategia SEO internacional</Link>.</p>
+            </section>
             {/* Related Resources */}
             <section className="py-12 px-6 bg-gray-50 border-y border-gray-200">
                 <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-sm">
@@ -196,7 +200,7 @@ export default function EstrategiaContenidos() {
             <section className="py-20 text-center px-6">
                 <h2 className="text-3xl md:text-5xl font-display font-black mb-6">¿Listo para dejar de hacer ruido?</h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Tu competencia sigue persiguiendo keywords de 2015. Vamos a construir la autoridad que te posicionará en 2026.
+                    Hablemos de tus objetivos, tu oferta y el contenido existente. Definimos prioridades y un alcance de trabajo que tu equipo pueda ejecutar.
                 </p>
                 <Link href="/contacto" className="inline-flex items-center gap-2 px-10 py-5 bg-[#E11D48] text-white font-bold uppercase tracking-widest hover:bg-black transition-colors shadow-xl rounded">
                     Agendar Sesión de Estrategia
