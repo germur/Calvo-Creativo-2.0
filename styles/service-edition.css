@@ -29,11 +29,11 @@
 }
 
 .service-edition--international {
-    --edition-paper: #edead9;
-    --edition-ink: #25253c;
-    --edition-accent: #742c40;
-    --edition-soft: #e0d6ba;
-    --edition-line: #827289;
+    --edition-paper: #f7e3b9;
+    --edition-ink: #2a1a13;
+    --edition-accent: #983323;
+    --edition-soft: #eac78b;
+    --edition-line: #8e7251;
 }
 
 .service-edition :focus-visible {
@@ -288,8 +288,35 @@
 .edition-local-reading dt { color: #fbe09a; font-weight: 650; }
 .edition-local-reading dd { margin-block-start: .2rem; }
 
-.service-edition--international .edition-display { font-size: clamp(2.95rem, 1.3rem + 4.3vw, 6.8rem); }
-.edition-crossing { min-block-size: 24rem; padding: clamp(1.1rem, 3.3vw, 2.35rem); background: #27253e; color: #ffefca; }
+.edition-international-cover {
+    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    max-inline-size: none;
+    border-block-end: 3px solid var(--edition-ink);
+}
+
+.edition-international-cover .edition-cover-copy { align-self: center; padding: clamp(2rem, 4.5vw, 4.7rem) clamp(1.3rem, 4.5vw, 5.3rem); }
+.edition-international-cover .edition-display {
+    color: #11504c;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 1.6rem + 3.7vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -.022em;
+    line-height: 1.02;
+    text-transform: uppercase;
+}
+
+.edition-international-picture { display: grid; overflow: hidden; background: #123e39; }
+.edition-international-picture img { display: block; inline-size: 100%; block-size: 100%; min-block-size: 29rem; max-block-size: 43rem; object-fit: cover; object-position: 56% 53%; }
+.edition-find-route { display: table; padding-block: .75rem .15rem; font-weight: 650; text-decoration: underline; text-underline-offset: .25em; }
+.edition-find-route span { margin-inline-start: .3rem; }
+.edition-international-routes { max-inline-size: 93rem; margin-inline: auto; padding: clamp(1.25rem, 3.2vw, 2.5rem) clamp(1.25rem, 5vw, 5rem); scroll-margin-block-start: 6rem; }
+.edition-crossing { padding: clamp(1.1rem, 3.3vw, 2.35rem); background: #163e3a; color: #fff0c9; }
+.edition-output:nth-child(2) .edition-crossing { background: #932c20; }
+.edition-output:nth-child(3) .edition-crossing { background: #282119; }
+.edition-crossing-details { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 2rem; }
 .edition-crossing-route {
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(1rem, 1fr) minmax(0, auto);
@@ -315,9 +342,9 @@
     content: '';
 }
 
-.edition-crossing h2 { max-inline-size: 20ch; margin-block: 1.25rem .7rem; font-family: var(--edition-display); font-size: clamp(1.95rem, 1.2rem + 2.15vw, 3.45rem); font-weight: 650; letter-spacing: -.035em; line-height: 1; }
+.edition-crossing h2 { max-inline-size: 28ch; margin-block: 1.25rem .7rem; font-family: var(--edition-display); font-size: clamp(1.95rem, 1.2rem + 2.15vw, 3.45rem); font-weight: 650; letter-spacing: -.035em; line-height: 1; }
 .edition-crossing p { max-inline-size: 63ch; }
-.edition-crossing-output { margin-block-start: 1.2rem; border-inline-start: 3px solid #f8cba2; padding-inline-start: .8rem; }
+.edition-crossing-output { border-inline-start: 3px solid #f8cba2; padding-inline-start: .8rem; }
 .edition-crossing-output strong { display: block; color: #f8cba2; }
 .edition-international-prose h3 + p { margin-block-start: .22rem; }
 .edition-international-prose p + h3 { margin-block-start: 1.3rem; }
@@ -406,12 +433,16 @@
     .edition-method, .edition-evidence { grid-template-columns: minmax(0, 1fr); }
     .edition-estimator { grid-template-columns: minmax(0, 1fr) minmax(0, .52fr); }
     .edition-estimator > div:first-child { grid-column: 1 / -1; }
+    .edition-international-cover { gap: 0; }
+    .edition-international-cover .edition-cover-copy { max-inline-size: 34rem; }
+    .edition-international-picture img { min-block-size: 0; max-block-size: 28rem; }
 }
 
 @media (max-width: 28rem) {
     .edition-sample { float: none; clear: both; }
     .edition-local-reading dl { grid-template-columns: minmax(0, 1fr); gap: .65rem; }
     .edition-estimator { grid-template-columns: minmax(0, 1fr); }
+    .edition-crossing-details { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (forced-colors: active) {

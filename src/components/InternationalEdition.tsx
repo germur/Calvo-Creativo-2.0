@@ -37,19 +37,29 @@ const diagnosis = [
 export default function InternationalEdition() {
     return (
         <div className="service-edition service-edition--international">
-            <section className="edition-cover" aria-labelledby="edition-title">
+            <section className="edition-cover edition-international-cover" aria-labelledby="edition-title">
                 <div className="edition-cover-copy">
                     <h1 id="edition-title">Consultor SEO internacional</h1>
                     <p className="edition-display">Encuentra tu próximo mercado.</p>
                     <p className="edition-intro">Soy Roger Murillo. Ayudo a empresas de Latinoamérica y Estados Unidos a elegir mercados, adaptar su web y captar demanda local.</p>
                     <Link href="/contacto" className="edition-cta">Hablemos de tu mercado <span aria-hidden="true">↗</span></Link>
+                    <a className="edition-find-route" href="#rutas-expansion">Compara las rutas de expansión <span aria-hidden="true">↓</span></a>
                 </div>
+                <picture className="edition-international-picture">
+                    <source media="(max-width: 46rem)" srcSet="/images/salsa-mercados-560.webp" />
+                    <img src="/images/salsa-mercados.webp" width="900" height="900" {...{ fetchpriority: 'high' }} decoding="async" alt="El metal de una trompeta forma un puente entre un barrio andino y una avenida neoyorquina." />
+                </picture>
+            </section>
+
+            <section className="edition-international-routes" id="rutas-expansion" aria-label="Rutas de expansión">
                 <Selector mode="international" heading="Elige tu ruta de expansión" labels={routes.map(route => route.label)} panels={routes.map(route => (
                     <div className="edition-crossing">
                         <p className="edition-crossing-route"><span>{route.from}</span><span aria-hidden="true" className="edition-crossing-line" /><span className="sr-only">hacia</span><span>{route.to}</span></p>
                         <h2>{route.title}</h2>
-                        <p>{route.context}</p>
-                        <p className="edition-crossing-output"><strong>Qué saldría del diagnóstico</strong>{route.output}</p>
+                        <div className="edition-crossing-details">
+                            <p>{route.context}</p>
+                            <p className="edition-crossing-output"><strong>Qué saldría del diagnóstico</strong>{route.output}</p>
+                        </div>
                     </div>
                 ))} />
             </section>
