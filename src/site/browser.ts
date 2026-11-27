@@ -44,6 +44,7 @@ document.addEventListener('submit', event => {
   if (form.dataset.submitEvent) sendEvent(form.dataset.submitEvent, form);
 });
 function sendEvent(name: string, element: HTMLElement) {
+  if (!(window as any).__calvoAnalyticsActive) return;
   (window as any).gtag?.('event', name, { event_category: element.dataset.category, event_label: element.dataset.label });
 }
 document.addEventListener('input', event => {
@@ -59,36 +60,3 @@ document.addEventListener('input', event => {
   }
 });
 
-let analyticsStarted = false;
-function syncAnalytics() {
-  let consent: string | null;
-  try { consent = localStorage.getItem('calvo-cookie-consent'); } catch { return; }
-  if (analyticsStarted || (consent !== 'accepted' && consent !== 'true')) return;
-  analyticsStarted = true;
-  const w = window as any;
-  w.dataLayer = w.dataLayer || [];
-  w.gtag = function () { w.dataLayer.push(arguments); };
-  w.gtag('js', new Date());
-  w.gtag('config', 'G-985SWJBWRZ');
-  const google = document.createElement('script');
-  google.async = true;
-  google.src = 'https://www.googletagmanager.com/gtag/js?id=G-985SWJBWRZ';
-  document.head.append(google);
-  w.clarity = w.clarity || function () { (w.clarity.q = w.clarity.q || []).push(arguments); };
-  const clarity = document.createElement('script');
-  clarity.async = true;
-  clarity.src = 'https://www.clarity.ms/tag/v2v2171aj3';
-  document.head.append(clarity);
-}
-window.addEventListener('calvo:consent', syncAnalytics);
-syncAnalytics();
-const consentPanel = document.getElementById('cookie-consent');
-try { if (!localStorage.getItem('calvo-cookie-consent') && consentPanel) consentPanel.hidden = false; }
-catch { if (consentPanel) consentPanel.hidden = false; }
-document.querySelectorAll<HTMLButtonElement>('[data-consent]').forEach(button => {
-  button.addEventListener('click', () => {
-    try { localStorage.setItem('calvo-cookie-consent', button.dataset.consent!); } catch { /* Storage can be disabled. */ }
-    if (consentPanel) consentPanel.hidden = true;
-    window.dispatchEvent(new Event('calvo:consent'));
-  });
-});
