@@ -4,7 +4,7 @@ const international = '/consultoria/consultoria-seo-internacional';
 <header class="salsa-cover">
     <div class="salsa-cover-copy">
         <p class="salsa-artist">Roger Murillo / Calvo Creativo</p>
-        <h1>SEO con <span>estrategia.</span><br />Marcas con <em>historia.</em></h1>
+        <h1>SEO con <span>estrategia.</span> Marcas con <em>historia.</em></h1>
         <p class="salsa-intro">Consultoría SEO para empresas en Latinoamérica y Estados Unidos. Trabajo contigo para entender cómo buscan tus clientes y convertir ese conocimiento en una web que genere oportunidades.</p>
         <div class="salsa-actions">
             <a class="salsa-contact" href="/contacto" data-event="click_schedule_audit" data-category="Conversion" data-label="Hero Contact">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a>
@@ -54,7 +54,7 @@ const international = '/consultoria/consultoria-seo-internacional';
         position: relative;
         isolation: isolate;
         align-self: center;
-        padding: clamp(2.2rem, 4.4vw, 5rem) clamp(1.3rem, 3.8vw, 4.25rem) clamp(2.65rem, 5vw, 5.4rem) max(clamp(1.3rem, 5vw, 6.5rem), calc((100vw - 98rem) / 2));
+        padding: clamp(2rem, 3.75vw, 4.6rem) clamp(1.3rem, 3.8vw, 4.25rem) clamp(2.55rem, 4.5vw, 5rem) max(clamp(1.3rem, 5vw, 6.5rem), calc((100vw - 98rem) / 2));
     }
 
     .salsa-cover-copy::before {
@@ -78,9 +78,9 @@ const international = '/consultoria/consultoria-seo-internacional';
     .salsa-actions .salsa-contact { padding: .6rem .85rem; border: 2px solid var(--cover-ink); background: var(--cover-red); color: #fff5de; box-shadow: .22rem .24rem 0 var(--cover-ink); text-decoration: none; }
     .salsa-contact:hover { background: var(--cover-ink); }
 
-    .salsa-art { position: relative; display: grid; overflow: hidden; background: #231a15; }
-    .salsa-art picture { display: grid; }
-    .salsa-art img { display: block; width: 100%; height: 100%; max-height: 55rem; min-height: 33rem; object-fit: cover; object-position: 50% 55%; }
+    .salsa-art { position: relative; min-block-size: 32rem; overflow: hidden; background: #231a15; }
+    .salsa-art picture { position: absolute; inset: 0; }
+    .salsa-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
 
     .salsa-pillar, .salsa-note { padding: clamp(1.45rem, 4vw, 3.15rem) max(clamp(1.3rem, 5vw, 6.5rem), calc((100vw - 88rem) / 2)); }
     .salsa-pillar { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 1rem 2.5rem; align-items: center; background: #155955; color: #fff0c5; border-block-end: 3px solid #241a15; }
@@ -95,7 +95,7 @@ const international = '/consultoria/consultoria-seo-internacional';
 
     @media (max-width: 57rem) {
         .salsa-cover { grid-template-columns: minmax(0, 1fr); }
-        .salsa-art img { min-height: 0; max-height: 33rem; object-position: center 56%; }
+        .salsa-art { min-block-size: 0; aspect-ratio: 1; max-block-size: 33rem; }
         .salsa-pillar, .salsa-note { grid-template-columns: minmax(0, 1fr); }
         .salsa-pillar a { justify-self: start; }
     }
