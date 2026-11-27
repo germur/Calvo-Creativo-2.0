@@ -37,6 +37,12 @@ Una landing comercial debería explicar qué resuelve el servicio, a quién atie
 
 Prioriza primero las páginas con intención comercial y señales existentes. Después amplía los contenidos que las apoyan. Un enlace contextual desde una guía hacia el servicio ayuda al comprador a continuar su investigación; no hace falta repetir el mismo anchor en cada párrafo.
 
+### Documenta el piloto antes de encargar una web completa
+
+Elige una familia de servicios y un país. Reúne consultas comerciales, las páginas que ya reciben impresiones y las preguntas que ventas recibe de ese mercado. Escribe la hipótesis en términos que puedas comprobar. Por ejemplo, si el equipo confirma que el presupuesto y el proceso de contratación difieren, una página regional puede explicar esas diferencias y captar solicitudes mejor informadas.
+
+Registra la URL, el idioma del mercado, la propuesta de valor que vas a probar, el canal de contacto, la persona responsable de responder y el criterio con el que ventas calificará cada solicitud. Después de publicar, revisa si llega la audiencia prevista y si las solicitudes cumplen ese criterio. La [comparación de las ofertas públicas de Shopify en México y EE. UU.](/consultoria/consultoria-seo-internacional#investigacion-mercados) muestra qué observar en una página comercial antes de decidir si hace falta localizarla.
+
 ## Define la arquitectura con el equipo técnico
 
 Decide si necesitas URLs por idioma, por país o una única versión que sirva a varios mercados. Si existen versiones equivalentes, revisa hreflang, canonicals, enlaces y sitemaps antes del lanzamiento. La [guía técnica de hreflang y arquitectura internacional](/liner-notes/seo-internacional-hreflang-arquitectura) explica los criterios de implementación.
@@ -47,10 +53,14 @@ Evita las landings geográficas que solo reemplazan el nombre del país. Una pá
 
 Establece una línea base por país, consulta, página y dispositivo. Separa visibilidad, clics y conversiones. Search Console mide presencia en Google; Analytics aporta información sobre comportamiento cuando está correctamente configurado; el CRM o los registros de contacto ayudan a verificar oportunidades comerciales.
 
+En el informe de [Rendimiento de Search Console](https://support.google.com/webmasters/answer/7576553?hl=es), el país describe dónde ocurrió la búsqueda. En tu registro comercial, el mercado procede de lo que el prospecto necesita atender. Un usuario que busca desde Bogotá puede estar comprando un servicio para Miami. Conserva ambos campos por separado y compara periodos equivalentes antes de decidir si continuar el piloto.
+
 Evalúa la inversión con escenarios conservadores. La [calculadora de ROI SEO](/lab/tools/roi-calculator) permite modelar sesiones adicionales, conversión a cliente, ingresos, margen y coste. No presupongas que todo crecimiento orgánico se convierte en ventas.
 
 ## Qué debe salir del diagnóstico
 
 El entregable útil no es una lista infinita de keywords. Es una decisión: qué mercado priorizar, qué páginas crear o mejorar, qué necesita el equipo técnico, quién ejecuta cada tarea y con qué indicadores se evaluará.
+
+Antes de decidir, completa la [revisión de cinco decisiones por mercado](/consultoria/consultoria-seo-internacional#diagnostico-internacional) y registra la evidencia para tu equipo.
 
 Si necesitas desarrollar ese diagnóstico para una empresa en Estados Unidos o Latinoamérica, conoce la [consultoría SEO internacional de Calvo Creativo](/consultoria/consultoria-seo-internacional). El [modelo de trabajo y alcance](/consultoria) explica cómo definimos las prioridades antes de implementar.

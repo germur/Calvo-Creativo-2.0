@@ -1,21 +1,104 @@
 ---
-import AlbumCover from './AlbumCover.astro';
+const international = '/consultoria/consultoria-seo-internacional';
 ---
-<header class="salsa-hero">
- <div class="hero-grid">
-  <div><p class="edition">Roger Murillo / Calvo Creativo</p><h1>SEO con<br/><span>estrategia.</span><br/>Marcas con<br/><em>historia.</em></h1><p class="intro">Soy Roger Murillo, consultor SEO. Ayudo a empresas de servicios y marcas en USA y Latinoamérica a mejorar su visibilidad y captación con estrategia, arquitectura web, contenido y automatización.</p><div class="actions"><a href="/casos" data-event="click_view_cases" data-category="Navigation" data-label="Hero Cases">Explorar los trabajos <span aria-hidden="true">↘</span></a><a href="/contacto" data-event="click_schedule_audit" data-category="Conversion" data-label="Hero Contact">Hablemos de tu proyecto →</a></div><p class="credit">Trabajo directo conmigo. El diagnóstico define las prioridades y el alcance de implementación.</p></div>
-  <div class="hero-art" data-bjj-corner><AlbumCover slug="home" priority /><span class="stamp" aria-hidden="true">Ideas con<br/>criterio.</span></div>
- </div>
- <div class="liner"><span>SEO estratégico</span><span aria-hidden="true">✳</span><span>Storytelling digital</span><span aria-hidden="true">✳</span><span>Código que resuelve</span></div>
+<header class="salsa-cover">
+    <div class="salsa-cover-copy">
+        <p class="salsa-artist">Roger Murillo / Calvo Creativo</p>
+        <h1>SEO con <span>estrategia.</span> Marcas con <em>historia.</em></h1>
+        <p class="salsa-intro">Consultoría SEO para empresas en Latinoamérica y Estados Unidos. Trabajo contigo para entender cómo buscan tus clientes y convertir ese conocimiento en una web que genere oportunidades.</p>
+        <div class="salsa-actions">
+            <a class="salsa-contact" href="/contacto" data-event="click_schedule_audit" data-category="Conversion" data-label="Hero Contact">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a>
+            <a href="/casos" data-event="click_view_cases" data-category="Navigation" data-label="Hero Cases">Ver trabajos <span aria-hidden="true">↘</span></a>
+        </div>
+    </div>
+    <div class="salsa-art">
+        <picture>
+            <source media="(max-width: 46rem)" srcset="/images/salsa-calvo-560.webp" />
+            <img src="/images/salsa-calvo.webp" width="900" height="900" fetchpriority="high" decoding="async" alt="Collage de una figura que atraviesa un gran círculo hacia un barrio latino nocturno." />
+        </picture>
+    </div>
 </header>
-<section class="philosophy"><div class="philosophy-grid">
- <div><p class="edition">La dirección de arte / El método</p><h2>Una imagen<br/>también cuenta<br/><span>una historia.</span></h2></div>
- <div><p class="lead">Las carátulas de los LPs convertían una idea en algo que se podía mirar, recordar y sentir. Esa es la raíz visual de Calvo Creativo.</p><p>Collage, fotografía, surrealismo y tinta. Cada proyecto tiene su propia portada porque cada problema merece una historia diferente.</p><div class="pair"><div><h3>Salsa</h3><p>Identidad, cultura y narrativa. Una imagen que expresa lo que hace distinta a la marca.</p></div><div><h3>BJJ</h3><p>Leer la posición, moverse con intención y seguir aprendiendo. Disciplina para ejecutar y revisar lo que funciona.</p></div></div><a href="/el-artista">Conoce a Roger Murillo →</a></div>
-</div></section>
+
+<section class="salsa-pillar" aria-labelledby="salsa-pillar-title">
+    <div>
+        <h2 id="salsa-pillar-title">SEO internacional</h2>
+        <p>Define dónde competir, qué páginas necesita cada mercado y cómo medir si la expansión tiene sentido.</p>
+    </div>
+    <a href={international}>Explorar consultoría SEO internacional <span aria-hidden="true">↗</span></a>
+</section>
+
+<section class="salsa-note" aria-labelledby="salsa-note-title">
+    <h2 id="salsa-note-title">Una imagen también cuenta una historia.</h2>
+    <div>
+        <p>Las carátulas de salsa convertían las historias del barrio en imágenes que viajaban con el disco. De ahí sale la dirección artística de Calvo Creativo. El collage reúne lugares, personas y decisiones para mostrar algo que las palabras solas dejan fuera.</p>
+        <a href="/el-artista">Conoce a Roger Murillo <span aria-hidden="true">↗</span></a>
+    </div>
+</section>
+
 <style>
- .salsa-hero{background:#eee3c9;color:#28221b;border-bottom:3px solid #28221b;position:relative;overflow:hidden;padding:54px 0 0}.salsa-hero:before{content:'';position:absolute;inset:0;background-image:radial-gradient(#3c2d2020 .5px,transparent .6px);background-size:4px 4px;pointer-events:none;opacity:.25}.hero-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:0 48px 58px;position:relative}.edition{font:10px 'JetBrains Mono Variable',monospace;text-transform:uppercase;letter-spacing:.12em;color:#66513a;margin-bottom:24px}h1{font:clamp(48px,6vw,78px)/.95 'Anton',sans-serif;text-transform:uppercase;letter-spacing:-.035em;margin:0 0 28px}h1>span{color:#b63726}h1>em{font-family:'Bangers',cursive;color:#194e56;font-style:normal;display:inline-block;transform:rotate(-2deg);letter-spacing:.01em}.intro{font-size:18px;line-height:1.75;max-width:490px;color:#574b3a}.actions{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:30px}.actions>a:first-child{background:#28221b;color:#f1e5c9;padding:16px 22px;border:2px solid #28221b;box-shadow:5px 5px 0 #b63726;font-weight:600;display:flex;gap:25px;min-height:52px}.actions>a:nth-child(2){font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:5px;min-height:44px;display:flex;align-items:center}.credit{font:10px 'JetBrains Mono Variable',monospace;line-height:1.7;color:#6d5e48;margin-top:24px}.hero-art{position:relative;transform:rotate(2deg);padding:0 6px}.stamp{position:absolute;bottom:6%;right:-20px;color:#b63726;border:3px solid #b63726;border-radius:50%;background:#ede1c3e6;width:105px;height:105px;display:grid;place-items:center;text-align:center;text-transform:uppercase;font:19px/1.1 'Anton',sans-serif;transform:rotate(-14deg);box-shadow:2px 2px 0 #30241926}.liner{position:relative;border-top:1px solid #ae9c79;display:flex;gap:32px;justify-content:center;align-items:center;padding:18px 24px;font:10px 'JetBrains Mono Variable',monospace;text-transform:uppercase;letter-spacing:.08em}.liner>span:nth-child(even){color:#b63726;font-size:20px}
- .philosophy{padding:80px 48px;background:#28221b;color:#eee3c9}.philosophy-grid{max-width:1184px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:80px}.philosophy .edition{color:#d6b86f}h2{font:clamp(38px,5vw,64px)/1.05 'Anton',sans-serif;text-transform:uppercase;letter-spacing:-.02em}h2>span{color:#d6b86f}.lead{font-size:22px;line-height:1.6;margin-bottom:24px}.philosophy-grid>div>p:not(.edition):not(.lead){font-size:17px;line-height:1.8;color:#cfc1aa}.pair{display:grid;grid-template-columns:1fr 1fr;gap:28px;border-top:1px solid #766246;margin-top:30px;padding-top:24px}.pair h3{font:27px 'Anton',sans-serif;color:#d6b86f;text-transform:uppercase;margin-bottom:12px}.pair p{font-size:14px;line-height:1.8;color:#cfc1aa}.philosophy a{display:inline-block;margin-top:28px;text-decoration:underline;text-underline-offset:5px;font-size:14px;min-height:36px}a:focus-visible{outline:3px solid #b63726;outline-offset:6px}
- @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:40px;padding:0 24px 48px}.hero-art{max-width:530px;width:100%;margin:auto}h1{font-size:clamp(48px,9vw,74px)}.stamp{right:-8px;width:85px;height:85px;font-size:16px}.philosophy{padding:56px 24px}.philosophy-grid{grid-template-columns:1fr;gap:32px}.liner{gap:15px;font-size:8px;flex-wrap:wrap}h2{font-size:42px}}
- @media(prefers-reduced-motion:reduce){.hero-art,h1>em,.stamp{transform:none}}
- @media(max-width:650px){.salsa-hero{padding-top:28px}.hero-art{order:-1;max-width:320px}.hero-grid{gap:30px}.edition{margin-bottom:18px}}
+    .salsa-cover {
+        --cover-ink: #241a15;
+        --cover-paper: #f7deaa;
+        --cover-red: #a62b1b;
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+        align-items: stretch;
+        overflow: hidden;
+        background: var(--cover-paper);
+        color: var(--cover-ink);
+        border-block-end: 3px solid var(--cover-ink);
+    }
+
+    .salsa-cover-copy {
+        position: relative;
+        isolation: isolate;
+        align-self: center;
+        padding: clamp(2rem, 3.75vw, 4.6rem) clamp(1.3rem, 3.8vw, 4.25rem) clamp(2.55rem, 4.5vw, 5rem) max(clamp(1.3rem, 5vw, 6.5rem), calc((100vw - 98rem) / 2));
+    }
+
+    .salsa-cover-copy::before {
+        position: absolute;
+        z-index: -1;
+        inset: 0 -10% 0 0;
+        background: url('/textures/paper.png') repeat;
+        opacity: .45;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        content: '';
+    }
+
+    .salsa-artist { margin-block-end: 1.3rem; font: 650 .77rem/1.35 'JetBrains Mono Variable', monospace; text-transform: uppercase; letter-spacing: .06em; }
+    .salsa-cover h1 { margin: 0; font: 400 clamp(3.05rem, 1.8rem + 4vw, 5.7rem)/.98 'Anton', sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .salsa-cover h1 span { display: block; color: var(--cover-red); }
+    .salsa-cover h1 em { display: inline-block; color: #14605b; font: 400 1.24em/.78 'Bangers', cursive; letter-spacing: .02em; rotate: -3deg; }
+    .salsa-intro { max-inline-size: 42ch; margin-block: 1.4rem 1rem; font-size: clamp(1.02rem, .9rem + .42vw, 1.24rem); line-height: 1.53; }
+    .salsa-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem 1.4rem; }
+    .salsa-actions a { display: inline-flex; align-items: center; gap: .55rem; min-block-size: 2.85rem; font-weight: 680; text-decoration: underline; text-underline-offset: .26em; }
+    .salsa-actions .salsa-contact { padding: .6rem .85rem; border: 2px solid var(--cover-ink); background: var(--cover-red); color: #fff5de; box-shadow: .22rem .24rem 0 var(--cover-ink); text-decoration: none; }
+    .salsa-contact:hover { background: var(--cover-ink); }
+
+    .salsa-art { position: relative; min-block-size: 32rem; overflow: hidden; background: #231a15; }
+    .salsa-art picture { position: absolute; inset: 0; }
+    .salsa-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+
+    .salsa-pillar, .salsa-note { padding: clamp(1.45rem, 4vw, 3.15rem) max(clamp(1.3rem, 5vw, 6.5rem), calc((100vw - 88rem) / 2)); }
+    .salsa-pillar { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 1rem 2.5rem; align-items: center; background: #155955; color: #fff0c5; border-block-end: 3px solid #241a15; }
+    .salsa-pillar h2 { font: 400 clamp(2.15rem, 1.4rem + 2.4vw, 4rem)/1.04 'Anton', sans-serif; text-transform: uppercase; }
+    .salsa-pillar p, .salsa-note p { max-inline-size: 57ch; margin-block-start: .7rem; font-size: 1.1rem; line-height: 1.55; }
+    .salsa-pillar a, .salsa-note a { display: inline-flex; align-items: center; gap: .7rem; justify-self: end; padding-block: .65rem; color: inherit; font-weight: 680; text-decoration: underline; text-underline-offset: .3em; }
+    .salsa-note { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); align-items: start; gap: 1rem 4rem; background: #281a17; color: #ffedc4; }
+    .salsa-note h2 { max-inline-size: 16ch; font: 650 clamp(2.1rem, 1.4rem + 2vw, 3.65rem)/1 'Newsreader Variable', Georgia, serif; text-wrap: balance; }
+    .salsa-note a { color: #ffbc74; }
+    a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+    .salsa-cover a:focus-visible { outline-color: var(--cover-ink); }
+
+    @media (max-width: 57rem) {
+        .salsa-cover { grid-template-columns: minmax(0, 1fr); }
+        .salsa-art { min-block-size: 0; aspect-ratio: 1; max-block-size: 33rem; }
+        .salsa-pillar, .salsa-note { grid-template-columns: minmax(0, 1fr); }
+        .salsa-pillar a { justify-self: start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { .salsa-cover h1 em { rotate: none; } }
 </style>
